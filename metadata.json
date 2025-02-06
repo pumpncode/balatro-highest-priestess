@@ -1,0 +1,14 @@
+{
+    "id": "HighestPriestess",
+    "name": "Highest Priestess",
+    "display_name": "Highest Priestess",
+    "author": ["TamerSoup625"],
+    "description": "Adds way too many Poker Hands",
+    "prefix": "vhp",
+    "main_file": "main.lua",
+    "priority": 0,
+    "badge_colour": "13afce",
+    "badge_text_colour": "ffffff",
+    "version": "0.0.1",
+    "dependencies": []
+}

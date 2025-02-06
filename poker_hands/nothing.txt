@@ -1,0 +1,19 @@
+name = Nothing
+desc = {
+    How did you even manage to play this?
+}
+base chips = 0
+Base Mult = 0
+Level Chips = 1
+Level Mult = 0
+Eval = {
+()
+}
+order offset = 0
+AUTHOR = TamerSoup625
+
+Joker Mult = 4
+Joker Chips = 25
+Joker XMult = 1.001
+
+Planet Name =                        
