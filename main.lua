@@ -163,7 +163,7 @@ end
 
 
 local function eval_pattern(hand, pattern, options)
-    local has_pareidolia = next(find_joker("Pareidolia"))
+    local has_pareidolia = next(find_joker("Pareidolia")) or false
 
     local rank_vars_set = {}
     local suit_vars_set = {}
@@ -258,7 +258,7 @@ local function eval_pattern(hand, pattern, options)
                         if possible_value == "_face" and is_face then
                             this_var_ok = true
                         end
-                        if possible_ranks == "_nonface" and not is_face then
+                        if possible_value == "_nonface" and not is_face then
                             this_var_ok = true
                         end
                     end
@@ -399,6 +399,10 @@ SMODS.Atlas { key = 'jokers', path = 'jokers.png', px = 71, py = 95 }
 for hand_id, hand_stats in pairs(poker_hands) do
     local function custom_hand_eval(hand)
         update_hand_cache(hand)
+
+        if hand_stats.chance and not (pseudorandom("plain_luck") < G.GAME.probabilities.normal/hand_stats.chance) then
+            return
+        end
 
         local eval = hand_stats.eval
         for key, value in pairs(eval) do
