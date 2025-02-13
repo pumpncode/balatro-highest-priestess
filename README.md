@@ -4,6 +4,7 @@
 
 'Nuff said
 
-![big_icon](https://github.com/user-attachments/assets/72d7b314-20d2-45d7-9d3f-37c1b7994744)
+![Screenshot 2025-02-13 144430](https://github.com/user-attachments/assets/9b4e35db-d238-4c4f-960d-e0cf952be095)
+
 
 [Discord Mod Thread](https://discord.com/channels/1116389027176787968/1337113295391555595)
