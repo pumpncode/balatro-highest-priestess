@@ -143,6 +143,8 @@ def parse_poker_hand(raw_text: str) -> dict:
         match key.lower():
             case "name":
                 result["name"] = value
+            case "credits name":
+                result["credits_name"] = value
             case "base chips":
                 result["base_chips"] = float(value)
             case "base mult":
@@ -224,6 +226,19 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["joker_xmult"] = float(value)
             case "joker xmult name":
                 result["joker_xmult_name"] = value
+            
+            case "chance":
+                result["chance"] = float(value)
+            case "rank sum":
+                result["rank_sum"] = int(value)
+            case "composite only":
+                result["composite_only"] = True
+            case "all enhanced":
+                result["all_enhanced"] = value.lower()
+            case "same enhancement":
+                result["same_enhancement"] = True
+            case "different enhancement":
+                result["different_enhancement"] = True
     return result
 
 

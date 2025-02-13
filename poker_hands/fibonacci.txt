@@ -1,0 +1,31 @@
+Name = Fibonacci
+Desc = {
+    Ace, 2, 3, 5, 8
+}
+Base Chips = 89
+Base Mult = 5
+Level Chips = 55
+Level Mult = 3
+Eval = {
+    (Ace of *, 2 of *, 3 of *, 5 of *, 8 of *),
+}
+Author = Plzbeans
+
+Example = Ace of Hearts, 2 of Hearts, 3 of Diamonds, 5 of Spades, 8 of Clubs
+
+Flush Name = Flushonacci
+Flush Base Chips = 144
+Flush Base Mult = 8
+Flush Level Chips = 89
+Flush Level Mult = 5
+Flush Planet Name = Orbit
+Flush Example = Ace of Clubs, 2 of Clubs, 3 of Clubs, 5 of Clubs, 8 of Clubs
+
+Joker Mult = 13
+Joker Chips = 144
+Joker XMult = 3
+Order Offset = 1
+Planet Name = The Ring
+Joker Mult Name = Fibbing Joker
+Joker Chips Name = Quick-witted Joker
+Joker XMult Name = The Spiral

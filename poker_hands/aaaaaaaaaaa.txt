@@ -1,0 +1,13 @@
+Name = AAAAAAAAAAA
+Desc = {
+    A Five of a Kind of Aces
+}
+Base Chips = 136
+Base Mult = 13
+Level Chips = 36
+Level Mult = 4
+Eval = {
+    (Ace of *, Ace of *, Ace of *, Ace of *, Ace of *)
+}
+Author = NinjaBanana
+Example = Ace of Spades, Ace of Hearts, Ace of Hearts, Ace of Clubs, Ace of Diamonds

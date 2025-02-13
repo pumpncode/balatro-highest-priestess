@@ -1,0 +1,24 @@
+Name = Dead Man's Hand
+Desc = {
+    A Pair of Aces or Jacks and a Pair of 8s or 7s
+}
+Base Chips = 40
+Base Mult = 6
+Level Chips = 20
+Level Mult = 4
+Eval = {
+    (Ace of *, Ace of *, 8 of *, 8 of *),
+    (Ace of *, Ace of *, 7 of *, 7 of *),
+    (Jack of *, Jack of *, 8 of *, 8 of *),
+    (Jack of *, Jack of *, 7 of *, 7 of *),
+}
+Author = Gladofdingldill
+
+Example = Ace of Spades, Ace of Clubs, 8 of Spades, 8 of Clubs
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Planet Name = Phaeton
+Joker Mult Name = Doomed Joker
+Joker Chips Name = Mourning Joker
+Joker XMult Name = The Omen

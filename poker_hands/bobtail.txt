@@ -1,0 +1,24 @@
+Name = Big Bobtail
+Desc = {
+    4 cards in ascending or descending order,
+    all in the same suit
+}
+Base Chips = 100
+Base Mult = 5
+Level Chips = 25
+Level Mult = 1
+Eval = {
+    (a of b, a+1 of b, a+2 of b, a+3 of b),
+}
+Author = Plzbeans
+
+
+Example = 4 of Hearts, 5 of Hearts, 6 of Hearts, 7 of Hearts
+Joker Mult = 10
+Joker Chips = 100
+Joker XMult = 3
+Order Offset = 1
+Planet Name = North Star
+Joker Mult Name = Cheeky Joker
+Joker Chips Name = Sneaky Joker
+Joker XMult Name = The Clique

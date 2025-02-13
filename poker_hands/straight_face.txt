@@ -1,0 +1,20 @@
+Name = Face Straight
+Desc = {
+    5 Face Cards
+}
+Base Chips = 0
+Base Mult = 0
+Level Chips = 0
+Level Mult = 0
+Eval = {
+    (a of *, b of *, c of *, d of *, e of *; a = [face nonunique], b = [face nonunique], c = [face nonunique], d = [face nonunique], e = [face nonunique])
+}
+Composite Only = Yes
+Author = Sustato
+
+Straight Name = Face Straight
+Straight Base Chips = 150
+Straight Base Mult = 50
+Straight Level Chips = 22
+Straight Level Mult = 3
+> Requires Pareidolia

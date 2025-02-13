@@ -1,0 +1,20 @@
+Name = Pair Straight
+Desc = {
+    A Pair
+}
+Base Chips = 0
+Base Mult = 0
+Level Chips = 0
+Level Mult = 0
+Eval = {
+    (a of *, a of *)
+}
+Composite Only = Yes
+Author = Sustato
+
+Straight Name = Pair Straight
+Straight Base Chips = 300
+Straight Base Mult = 30
+Straight Level Chips = 55
+Straight Level Mult = 5
+> Requires 4 Fingers

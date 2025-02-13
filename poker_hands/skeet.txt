@@ -1,0 +1,30 @@
+Name = Skeet
+Desc = {
+    A 2, a 5, and a 9, plus two cards with
+    rank 8 or lower without making a Pair
+}
+Base Chips = 35
+Base Mult = 3
+Level Chips = 25
+Level Mult = 2
+Eval = {
+    (2 of *, a of *, 5 of *, b of *, 9 of *; a = [3, 4, 6, 7, 8], b = [3, 4, 6, 7, 8])
+}
+Author = Plzbeans
+Planet Name = Comet
+Example = 9 of Clubs, 7 of Hearts, 5 of Diamonds, 3 of Clubs, 2 of Diamonds
+
+Flush Name = Skeet Flush
+Flush Base Chips = 110
+Flush Base Mult = 12
+Flush Level Chips = 35
+Flush Level Mult = 4
+Flush Planet Name = Halley
+Flush Example = 9 of Hearts, 7 of Hearts, 5 of Hearts, 3 of Hearts, 2 of Hearts
+
+Joker Mult = 12
+Joker Mult Name = Shooter Joker
+Joker Chips = 100
+Joker Chips Name = Sprayer Joker
+Joker XMult = 3
+Joker XMult Name = The Pelters

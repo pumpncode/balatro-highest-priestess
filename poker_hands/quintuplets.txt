@@ -1,0 +1,15 @@
+Name = Quintuplets
+Desc = {
+    5 enhanced cards with the same
+    rank, suit, and enhancement
+}
+Base Chips = 350
+Base Mult = 30
+Level Chips = 70
+Level Mult = 6
+Eval = {
+    (a of b, a of b, a of b, a of b, a of b)
+}
+Same Enhancement = Yes
+Author = Sustato
+Example = Ace of Hearts, Ace of Hearts, Ace of Hearts, Ace of Hearts, Ace of Hearts

@@ -1,0 +1,17 @@
+Name = Sawtooth
+Desc = {
+    A Full house in two
+    consecutive ranks.
+}
+Base Chips = 50
+Base Mult = 6
+Level Chips = 25
+Level Mult = 2
+Eval = {
+    (a of *, a of *, a of *, a+1 of *, a+1 of *),
+    (a of *, a of *, a+1 of *, a+1 of *, a+1 of *)
+}
+Author = Papyrus Semi
+
+Example = 5 of Hearts, 6 of Clubs, 5 of Spades, 6 of Diamonds, 5 of Diamonds
+Planet Name = Orcus

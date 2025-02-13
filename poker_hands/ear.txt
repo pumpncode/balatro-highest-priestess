@@ -1,0 +1,16 @@
+Name = EAR
+Desc = {
+    (Enhanced And Random)
+    5 cards with different suits,
+    different enhancments, and different ranks
+}
+Base Chips = 61
+Base Mult = 7
+Level Chips = 32
+Level Mult = 4
+Eval = {
+    (a of Spades, b of Hearts, c of Clubs, d of Diamonds, e of Wilds)
+}
+Different Enhancement = Yes
+Author = Poppycars
+Example = Ace of Spades, 4 of Clubs, King of Diamonds, 7 of Hearts, 3 of Wilds

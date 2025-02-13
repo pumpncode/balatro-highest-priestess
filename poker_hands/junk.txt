@@ -1,0 +1,16 @@
+Name = Junk
+Desc = {
+  5 cards of different suits and ranks,
+  which do not contain any straights or pairs.
+}
+Base Chips = 6
+Base Mult = 2
+Level Chips = 6
+Level Mult = 1
+Eval = {
+  (a of Spades, b of Hearts, c of Clubs, d of Diamonds, e of Wilds),
+}
+Author = Papyrus Semi
+
+Example = 2 of Spades, 4 of Hearts, 7 of Clubs, Jack of Diamonds, King of Wilds
+Planet Name = Space Junk

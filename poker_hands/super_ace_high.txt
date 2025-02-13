@@ -1,0 +1,13 @@
+Name = Aces High
+Desc = {
+    5 Wild Aces
+}
+Base Chips = 200
+Base Mult = 50
+Level Chips = 100
+Level Mult = 25
+Eval = {
+    (Ace of Wilds, Ace of Wilds, Ace of Wilds, Ace of Wilds, Ace of Wilds),
+}
+Author = HotlineJolteon
+Example = Ace of Wilds, Ace of Wilds, Ace of Wilds, Ace of Wilds, Ace of Wilds

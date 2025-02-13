@@ -1,0 +1,22 @@
+Name = What, how, this hand is impossible what did you do to get this
+Credits Name = WHTHIIWDYDTGT
+Desc = {
+    Requires all Glass Cards
+    5 Stones
+}
+Base Chips = 1000
+Base Mult = 20
+Level Chips = 1000
+Level Mult = 20
+Eval = {
+    (stone, stone, stone, stone, stone)
+}
+All Enhanced = Glass
+Author = Poppycars
+Planet Name = Missing Texture
+
+> Joker Bonuses added by TamerSoup625
+> I just want to see Jokers with an absurdly long name
+Joker Mult = 100
+Joker Chips = 1000
+Joker XMult = 10

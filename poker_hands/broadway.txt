@@ -1,0 +1,15 @@
+Name = Broadway
+Desc = {
+    An 10 to Ace Straight
+    that is not a Flush
+}
+Base Chips = 50
+Base Mult = 6
+Level Chips = 30
+Level Mult = 3
+Planet Name = Saturn's Rings
+Eval = {
+    (Ace of *, King of *, Queen of *, Jack of *, 10 of *)
+}
+Author = CoolDude
+Example = Ace of Spades, King of Clubs, Queen of Hearts, Jack of Diamonds, 10 of Diamonds

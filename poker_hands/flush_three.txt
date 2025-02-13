@@ -1,0 +1,18 @@
+Name = Flush Three
+Desc = {
+	Three cards with the same rank and suit.
+}
+Base Chips = 40
+Base Mult = 3
+Level Chips = 20
+Level Mult = 3
+Eval = {
+	(A of B, A of B, A of B)
+}
+Example = 6 of Hearts, 6 of Hearts, 6 of Hearts
+Joker Mult = 16
+Joker Chips = 120
+Joker XMult = 3.75
+>couldnt think of a planet or mult/chip joker name
+Joker XMult Name = The Triangle
+Author = TheLemon27

@@ -1,0 +1,21 @@
+Name = Wild Flush
+Desc = {
+    Flush but all wild cards
+}
+Base Chips = 150
+Base Mult = 12
+Level Chips = 45
+Level Mult = 6
+Eval = {
+    (* of Wilds, * of Wilds, * of Wilds, * of Wilds, * of Wilds)
+}
+Author = Sustato
+Example = Ace of Wilds, King of Wilds, 10 of Wilds, 5 of Wilds, 4 of Wilds
+
+
+Straight Name = Wild Straight
+Straight Base Chips = 200
+Straight Base Mult = 17
+Straight Level Chips = 120
+Straight Level Mult = 12
+Straight Example = Queen of Wilds, Jack of Wilds, 10 of Wilds, 9 of Wilds, 8 of Wilds

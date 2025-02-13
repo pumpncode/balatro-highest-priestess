@@ -1,0 +1,18 @@
+Name = Ace High
+Desc = {
+    Wild Ace
+}
+Base Chips = 10
+Base Mult = 10
+Level Chips = 5
+Level Mult = 2
+Eval = {
+    (Ace of Wilds),
+}
+Author = HotlineJolteon
+Example = Ace of Wilds
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3

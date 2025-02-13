@@ -1,0 +1,15 @@
+Name = Just Plain Lucky
+Desc = {
+    1 in 1000 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 777
+Base Mult = 777
+Level Chips = 77
+Level Mult = 77
+Eval = {
+()
+}
+AUTHOR = MathIsFun_
+
+Chance = 1000

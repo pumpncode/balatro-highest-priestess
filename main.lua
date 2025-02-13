@@ -63,6 +63,7 @@ local function match_simple(hand, pattern)
         {"Wilds"},
         {rank}/{suit} with a standard suit,
         {rank}/{suit} with a wild card,
+        {} always true,
     ]]
     -- How the patterns work
     -- [1] = pattern_valid = function(pattern) -> boolean
@@ -103,6 +104,10 @@ local function match_simple(hand, pattern)
         {
             function (p) return p.rank and (not p.suit) end,
             function (card, p) return card._vhp_cache.get_id == p.rank end,
+        },
+        {
+            function (p) return (not p.rank) and (not p.suit) and (not p.stone) end,
+            function (card, p) return true end,
         },
     }
     -- Does the pattern match
@@ -332,7 +337,7 @@ end
 
 
 -- List of {rank = number?, suit = string?, stone = true|nil, unscoring = true|nil}
-local function create_example_hand(pattern)
+local function create_example_hand(pattern, full_stats)
     if not pattern then
         return {}
     end
@@ -342,8 +347,24 @@ local function create_example_hand(pattern)
             table.insert(ret_hand, {"S_A", not value.unscoring, "m_stone"})
         elseif value.suit == "Wilds" then
             table.insert(ret_hand, {"H_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank), not value.unscoring, "m_wild"})
+        elseif full_stats.different_enhancement then
+            table.insert(ret_hand, {
+                    SUIT_CARD_KEY_MAP[value.suit] .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    not value.unscoring,
+                    ({"m_mult", "m_bonus", "m_lucky", "m_glass", "m_steel"})[key]
+            })
+        elseif full_stats.same_enhancement then
+            table.insert(ret_hand, {
+                    SUIT_CARD_KEY_MAP[value.suit] .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    not value.unscoring,
+                    "m_lucky"
+            })
         else
-            table.insert(ret_hand, {SUIT_CARD_KEY_MAP[value.suit] .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank), not value.unscoring})
+            table.insert(ret_hand, {
+                    SUIT_CARD_KEY_MAP[value.suit] .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    not value.unscoring,
+                    (full_stats.all_enhanced and ("m_" .. full_stats.all_enhanced)) or nil
+            })
         end
     end
     return ret_hand
@@ -403,6 +424,50 @@ for hand_id, hand_stats in pairs(poker_hands) do
         if hand_stats.chance and not (pseudorandom("plain_luck") < G.GAME.probabilities.normal/hand_stats.chance) then
             return
         end
+        if hand_stats.rank_sum then
+            local sum = 0
+            for _, card in pairs(hand) do
+                if card.config.center_key ~= 'm_stone' then
+                    sum = sum + card.base.nominal
+                end
+                if card._vhp_cache.get_id == 14 then
+                    -- Ace is 1
+                    sum = sum - 10
+                end
+            end
+            if sum ~= hand_stats.rank_sum then
+                return
+            end
+        end
+        if hand_stats.all_enhanced then
+            local enhancement_to_check = "m_" .. hand_stats.all_enhanced
+            for _, card in pairs(hand) do
+                if card.config.center_key ~= enhancement_to_check then
+                    return
+                end
+            end
+        end
+        if hand_stats.same_enhancement and #hand > 0 then
+            local enhancement_to_check = hand[1].config.center_key
+            if enhancement_to_check == "c_base" then
+                return
+            end
+            for _, card in pairs(hand) do
+                if card.config.center_key ~= enhancement_to_check then
+                    return
+                end
+            end
+        end
+        if hand_stats.different_enhancement then
+            -- All cards must be enhanced, if there's a base it's always skipped
+            local enhancement_set = {["c_base"] = true}
+            for _, card in pairs(hand) do
+                if enhancement_set[card.config.center_key] then
+                    return
+                end
+                enhancement_set[card.config.center_key] = true
+            end
+        end
 
         local eval = hand_stats.eval
         for key, value in pairs(eval) do
@@ -414,29 +479,31 @@ for hand_id, hand_stats in pairs(poker_hands) do
         end
     end
 
-    local base_hand_desc = copy_table(hand_stats.desc)
-    table.insert(base_hand_desc, "Author: " .. hand_stats.author)
-    if not hand_stats.example then
-        table.insert(base_hand_desc, "(No example hand given)")
+    if not hand_stats.composite_only then
+        local base_hand_desc = copy_table(hand_stats.desc)
+        table.insert(base_hand_desc, "Author: " .. hand_stats.author)
+        if not hand_stats.example then
+            table.insert(base_hand_desc, "(No example hand given)")
+        end
+        SMODS.PokerHand {
+            key = "custom" .. tostring(hand_id),
+            chips = hand_stats.base_chips,
+            mult = hand_stats.base_mult,
+            l_chips = hand_stats.level_chips,
+            l_mult = hand_stats.level_mult,
+            example = create_example_hand(hand_stats.example, hand_stats),
+            loc_txt = {
+                name = hand_stats.name,
+                description = base_hand_desc,
+            },
+            visible = new_hands_visible,
+            evaluate = function (parts, hand)
+                return custom_hand_eval(hand)
+            end,
+            order_offset = hand_stats.order_offset,
+            vhp_it_is = true,
+        }
     end
-    SMODS.PokerHand {
-        key = "custom" .. tostring(hand_id),
-        chips = hand_stats.base_chips,
-        mult = hand_stats.base_mult,
-        l_chips = hand_stats.level_chips,
-        l_mult = hand_stats.level_mult,
-        example = create_example_hand(hand_stats.example),
-        loc_txt = {
-            name = hand_stats.name,
-            description = base_hand_desc,
-        },
-        visible = new_hands_visible,
-        evaluate = function (parts, hand)
-            return custom_hand_eval(hand)
-        end,
-        order_offset = hand_stats.order_offset,
-        vhp_it_is = true,
-    }
 
     if hand_stats.flush_name then
         local flush_hand_desc = copy_table(hand_stats.desc)
@@ -450,7 +517,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             mult = hand_stats.flush_base_mult,
             l_chips = hand_stats.flush_level_chips,
             l_mult = hand_stats.flush_level_mult,
-            example = create_example_hand(hand_stats.flush_example),
+            example = create_example_hand(hand_stats.flush_example, hand_stats),
             loc_txt = {
                 name = hand_stats.flush_name,
                 description = flush_hand_desc,
@@ -478,7 +545,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             mult = hand_stats.straight_base_mult,
             l_chips = hand_stats.straight_level_chips,
             l_mult = hand_stats.straight_level_mult,
-            example = create_example_hand(hand_stats.straight_example),
+            example = create_example_hand(hand_stats.straight_example, hand_stats),
             loc_txt = {
                 name = hand_stats.straight_name,
                 description = straight_hand_desc,
@@ -506,7 +573,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             mult = hand_stats.house_base_mult,
             l_chips = hand_stats.house_level_chips,
             l_mult = hand_stats.house_level_mult,
-            example = create_example_hand(hand_stats.house_example),
+            example = create_example_hand(hand_stats.house_example, hand_stats),
             loc_txt = {
                 name = hand_stats.house_name,
                 description = house_hand_desc,
@@ -550,7 +617,9 @@ for hand_id, hand_stats in pairs(poker_hands) do
         }
     end
 
-    create_planet{name = hand_stats.name, planet_name = hand_stats.planet_name, prefix = ""}
+    if not hand_stats.composite_only then
+        create_planet{name = hand_stats.name, planet_name = hand_stats.planet_name, prefix = ""}
+    end
     if hand_stats.flush_name then
         create_planet{name = hand_stats.flush_name, planet_name = hand_stats.flush_planet_name, prefix = "flush"}
     end
@@ -678,7 +747,7 @@ SMODS.current_mod.extra_tabs = function()
                 local author_hands_map = {}
                 for _, hand_stats in pairs(poker_hands) do
                     local author = hand_stats.author
-                    local name = hand_stats.name
+                    local name = hand_stats.credits_name or hand_stats.name
                     if author_hands_map[author] then
                         table.insert(author_hands_map[author], name)
                     else
@@ -702,9 +771,19 @@ SMODS.current_mod.extra_tabs = function()
                     }})
                 end
                 return {n = G.UIT.ROOT, config = {
-                    align = "cm", minh = G.ROOM.T.h*0.25, padding = 0.0, r = 0.1, colour = G.C.CLEAR
+                    align = "cm", minh = G.ROOM.T.h*0.25, padding = 0.2, r = 0.1, colour = G.C.BLACK, emboss = 0.05, minw = 10
                 }, nodes = {
-                    {n=G.UIT.C, config={align = "cm", padding = 0.1,outline_colour = G.C.JOKER_GREY, r = 0.1, outline = 1}, nodes={
+                    {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+                        {n=G.UIT.T, config={text = "Inspired by ", scale = 0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
+                        {n=G.UIT.T, config={text = "Sixty Suits", scale = 0.5, colour = G.C.BLUE, shadow = true}},
+                        {n=G.UIT.T, config={text = " (notmario)", scale = 0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
+                    }},
+                    {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+                        {n=G.UIT.T, config={text = "and ", scale = 0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
+                        {n=G.UIT.T, config={text = '"High" Priestess', scale = 0.5, colour = G.C.BLUE, shadow = true}},
+                        {n=G.UIT.T, config={text = " (Super S.F)", scale = 0.5, colour = G.C.UI.TEXT_LIGHT, shadow = true}},
+                    }},
+                    {n=G.UIT.R, config={align = "cm", padding = 0.1,outline_colour = G.C.JOKER_GREY, r = 0.1, outline = 1}, nodes={
                         {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
                             {n=G.UIT.T, config={text = "Thanks to everyone <3", scale = 0.7, colour = G.C.RED, shadow = true}},
                         }},
@@ -718,44 +797,3 @@ SMODS.current_mod.extra_tabs = function()
         },
     }
 end
-
---[[SMODS.PokerHand {
-    key = "test_hand",
-    chips = 25,
-    mult = 5,
-    l_chips = 5,
-    l_mult = 1,
-    example = {
-        { 'S_2', true },
-        { 'D_5', true },
-    },
-    loc_txt = {
-        name = "Test Hand",
-        description = {
-            "2 + 5",
-        },
-    },
-    visible = false,
-    evaluate = function (parts, hand)
-        local twos = {}
-        local fives = {}
-        for key, value in pairs(hand) do
-            local id = value:get_id()
-            if id == 2 then
-                table.insert(twos, value)
-            elseif id == 5 then
-                table.insert(fives, value)
-            end
-        end
-        if #twos ~= 0 and #fives ~= 0 then
-            local sum = {}
-            for key, value in pairs(twos) do
-                table.insert(sum, value)
-            end
-            for key, value in pairs(fives) do
-                table.insert(sum, value)
-            end
-            return {sum}
-        end
-    end,
-}]]

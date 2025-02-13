@@ -1,0 +1,17 @@
+Name = Pile of Money
+Desc = { 
+    A Diamond Flush
+    1 in 200 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 40
+Base Mult = 7
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (* of Diamonds, * of  Diamonds, * of  Diamonds, * of  Diamonds, * of  Diamonds)
+}
+AUTHOR = CoolDude
+
+Chance = 200
+Example = Ace of Diamonds, King of Diamonds, 10 of Diamonds, 5 of Diamonds, 4 of Diamonds

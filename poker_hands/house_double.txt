@@ -1,0 +1,16 @@
+Name = Double House
+Desc = {
+    A hand that is both a Full House
+    and a Pseudo House, with each
+    rank corresponding to one suit.
+}
+Base Chips = 130
+Base Mult = 13
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (a of x, a of x, a of x, b of y, b of y)
+}
+Author = Papyrus Semi
+
+Example = 7 of Diamonds, 7 of Diamonds, 7 of Diamonds, 2 of Spades, 2 of Spades

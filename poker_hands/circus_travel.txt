@@ -1,0 +1,10 @@
+Name = Travelling Circus
+Desc = {Four of a kind of only Jacks}
+Base Chips = 75
+Base Mult = 9
+Level Chips = 5
+Level Mult = 3
+Planet Name = Carnival
+Eval = {(Jack of *, Jack of *, Jack of *, Jack of *)}
+Author = Violet
+Example = Jack of Clubs, Jack of Diamonds, Jack of Spades, Jack of Spades

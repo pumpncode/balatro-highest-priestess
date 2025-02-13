@@ -1,0 +1,17 @@
+Name = Can You Smell What The Rock Is Cooking
+Credits Name = CYSWTRIC
+Desc = {
+    A Stone card
+}
+Base Chips = 25
+Base Mult = 1
+Level Chips = 25
+Level Mult = 1
+Eval = {
+    (Stone)
+}
+Author = Plzbeans
+
+Example = Stone
+Order Offset = 1
+Planet Name = Meteor

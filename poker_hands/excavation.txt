@@ -1,0 +1,17 @@
+Name = Excavation
+Desc = { 
+    A Spade Flush
+    1 in 200 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 40
+Base Mult = 7
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (* of Spades, * of  Spades, * of  Spades, * of  Spades, * of  Spades)
+}
+AUTHOR = CoolDude
+
+Chance = 200
+Example = Ace of Spades, King of Spades, 10 of Spades, 5 of Spades, 4 of Spades

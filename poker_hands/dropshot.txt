@@ -1,0 +1,22 @@
+Name = Dropshot
+Desc = {
+    4 cards sharing the same suit
+    and a card of a different suit
+    Only the latter scores
+}
+Base Chips = 40
+Base Mult = 6
+Level Chips = 15
+Level Mult = 3
+Eval = {
+    (* of a, nonscoring * of b, nonscoring * of b, nonscoring * of b, nonscoring * of b)
+}
+Author = TamerSoup625
+Example = nonscoring Ace of Hearts, nonscoring King of Hearts, 10 of Clubs, nonscoring 5 of Hearts, nonscoring 4 of Hearts
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Planet Name = Hollow Earth
+Joker Mult Name = Fisher Joker
+Joker Chips Name = Empty Joker
+Joker XMult Name = The Golfer

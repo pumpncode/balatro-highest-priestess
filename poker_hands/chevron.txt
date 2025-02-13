@@ -1,0 +1,22 @@
+Name = Chevron
+Desc = {
+    Two Pair of adjacent ranks and a single card
+    of a rank adjacent to one of those ranks 
+}
+Base Chips = 35
+Base Mult = 3
+Level Chips = 25
+Level Mult = 2
+Eval = {
+    (a of *, a+1 of *, a+1 of *, a+2 of *, a+2 of *)
+    (a of *, a of *, a+1 of *, a+1 of *, a+2 of *)
+}
+Author = John Dorian Smith
+Example = 10 of Spades, 10 of Diamonds, 9 of Clubs, 9 of Diamonds, 8 of Clubs
+
+Flush Name = Flush Chevron
+Flush Base Chips = 130
+Flush Base Mult = 13
+Flush Level Chips = 35
+Flush Level Mult = 4
+Flush Example = 10 of Spades, 10 of Spades, 9 of Spades, 9 of Spades, 8 of Spades

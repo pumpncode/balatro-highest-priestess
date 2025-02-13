@@ -1,0 +1,17 @@
+Name = Just Plain Unlucky
+Desc = {
+    1 in 1000 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 2
+Base Mult = 1
+Level Chips = 1
+Level Mult = 0
+Eval = {
+()
+}
+AUTHOR = noobie
+
+Chance = 1000
+> Goes just below Plain Lucky
+Order Offset = 600000

@@ -1,0 +1,29 @@
+Name = Spanish Laugh
+Desc = {
+    A Two Pair made with Jacks and Aces
+}
+Base Chips = 36
+Base Mult = 5
+Level Chips = 23
+Level Mult = 2
+Eval = {
+    (Jack of *, Ace of *, Jack of *, Ace of *)
+}
+Planet Name = Barnard b
+Author = TamerSoup625
+Example = Jack of Diamonds, Ace of Clubs, Jack of Spades, Ace of Diamonds
+
+Flush Name = Spanish Flush
+Flush Base Chips = 141
+Flush Base Mult = 14
+Flush Level Chips = 41
+Flush Level Mult = 4
+Flush Planet Name = Barnard's Star
+Flush Example = Jack of Diamonds, Ace of Diamonds, Jack of Diamonds, Ace of Diamonds, 7 of Diamonds
+
+Joker Mult = 13
+Joker Chips = 110
+Joker XMult = 3.4
+Joker Mult Name = Spanish Joker
+Joker Chips Name = Delirious Joker
+Joker XMult Name = El Risitas

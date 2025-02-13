@@ -1,0 +1,22 @@
+Name = Glass Houses
+Desc = {A full house of Glass cards}
+Base Chips = 55
+> (155 for flush house)
+Base Mult = 6
+> (16 for flush house)
+Level Chips = 5
+Level Mult = 2
+Planet Name = Glass House
+Eval = {
+    (a of *, a of *, a of *, b of *, b of *)
+}
+All Enhanced = Glass
+Author = Violet
+Example = 7 of Spades, 7 of Clubs, 7 of Hearts, 2 of Diamonds, 2 of Diamonds
+
+Flush Name = Glass Flushes
+Flush Base Chips = 155
+Flush Base Mult = 16
+Flush Level Chips = 14
+Flush Level Mult = 5
+Flush Example = 7 of Clubs, 7 of Clubs, 7 of Clubs, 2 of Clubs, 2 of Clubs

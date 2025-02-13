@@ -1,0 +1,10 @@
+Name = Rigged From The Start
+Desc = {5 Aces of the same suit}
+Base Chips = 170
+Base Mult = 17
+Level Chips = 7
+Level Mult = 7
+Planet Name = Mojave Wasteland
+Eval = {(Ace of a, Ace of a, Ace of a, Ace of a, Ace of a)}
+Author = Violet
+Example = Ace of Spades, Ace of Spades, Ace of Spades, Ace of Spades, Ace of Spades

@@ -1,0 +1,16 @@
+Name = Stone House
+Desc = {
+    A Full House with either the Pair or the
+    Three of a Kind replaced with Stone Cards
+}
+Base Chips = 80
+Base Mult = 8
+Level Chips = 40
+Level Mult = 3
+Eval = {
+    (stone, stone, a of *, a of *, a of *),
+    (stone, stone, stone, a of *, a of *),
+}
+Author = Poppycars
+Example = Stone, Stone, 7 of Diamonds, 7 of Hearts, 7 of Spades
+Planet Name = Limestone Mine

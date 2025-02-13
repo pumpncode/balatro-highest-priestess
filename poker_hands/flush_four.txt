@@ -1,0 +1,18 @@
+Name = Flush Four
+Desc = {
+	Four cards with the same rank and suit.
+}
+Base Chips = 120
+Base Mult = 11
+Level Chips = 40
+Level Mult = 3
+Eval = {
+	(A of B, A of B, A of B, A of B)
+}
+Example = 6 of Hearts, 6 of Hearts, 6 of Hearts, 6 of Hearts
+Joker Mult = 16
+Joker Chips = 200
+Joker XMult = 5
+>couldnt think of a planet or chip/mult joker name
+Joker XMult Name = The Poly
+Author = TheLemon27

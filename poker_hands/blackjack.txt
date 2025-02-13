@@ -1,0 +1,37 @@
+Name = Blackjack
+Desc = {
+    Any amount of cards
+    with sum of ranks equal to 21
+}
+Base Chips = 21
+Base Mult = 5
+Level Chips = 11
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *),
+    (* of *, * of *, * of *, * of *),
+    (* of *, * of *, * of *),
+}
+Rank Sum = 21
+Author = Sustato
+
+Example = Ace of Hearts 2 of Clubs 3 of Diamonds King of Hearts 5 of Spades
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 8
+Joker Chips = 50
+Joker XMult = 2
+
+Flush Name = Flush Blackjack
+Flush Base Chips = 21
+Flush Base Mult = 21
+Flush Level Chips = 21
+Flush Level Mult = 5
+Flush Example = Ace of Hearts 2 of Hearts 3 of Hearts King of Hearts 5 of Hearts
+
+Straight Name = Straight Blackjack
+Straight Base Chips = 210
+Straight Base Mult = 100
+Straight Level Chips = 110
+Straight Level Mult = 20
+> Requires Shortcut

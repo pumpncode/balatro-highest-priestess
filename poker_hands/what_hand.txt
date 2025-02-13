@@ -1,0 +1,28 @@
+Name = What Hand
+Desc = {
+    2 or more Stone cards
+    and no other cards
+}
+Base Chips = 25
+Base Mult = 5
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (stone, stone, stone, stone, stone),
+    (stone, stone, stone, stone),
+    (stone, stone, stone),
+    (stone, stone),
+}
+> All cards except Stone have a positive rank
+> If there's a standard card it won't count
+Rank Sum = 0
+Author = Poppycars
+Example = stone, stone
+> Before HC
+Order Offset = 6
+Planet Name = Boulder
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 4

@@ -1,0 +1,58 @@
+Name = Seeing Double
+Desc = {
+    A 7 of Clubs and the
+    highest ranked non-Club card
+}
+Base Chips = 7
+Base Mult = 2
+Level Chips = 12
+Level Mult = 1
+Eval = {
+    (7 of Clubs, Ace of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, King of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, Queen of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, Jack of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 10 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 9 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 8 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 7 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 6 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 5 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 4 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 3 of a; a = [Spades, Hearts, Diamonds])
+    (7 of Clubs, 2 of a; a = [Spades, Hearts, Diamonds])
+}
+Author = TamerSoup625
+Example = unscoring Ace of Clubs, Ace of Spades, 7 of Clubs, unscoring 4 of Spades, unscoring 3 of Hearts
+Planet Name = Proxima Centauri b
+
+Joker Mult = 7
+Joker Chips = 30
+Joker XMult = 2
+Joker Mult Name = Diplopic Joker
+Joker Chips Name = Diploid Joker
+Joker XMult Name = The S Club
+
+Straight Name = Double Straight
+Straight Base Chips = 37
+Straight Base Mult = 5
+Straight Level Chips = 32
+Straight Level Mult = 3
+Straight Planet Name = Proxima Centauri c
+Straight Example = 10 of Clubs, 9 of Spades, 8 of Hearts, 7 of Clubs, 6 of Spades
+
+House Name = Double House
+House Base Chips = 47
+House Base Mult = 5
+House Level Chips = 27
+House Level Mult = 3
+House Planet Name = Proxima Centauri d
+House Example = 7 of Hearts, 7 of Spades, 7 of Clubs, 3 of Clubs, 3 of Hearts
+
+Flush Name = Seeing Trouble
+Flush Base Chips = 67
+Flush Base Mult = 7
+Flush Level Chips = 37
+Flush Level Mult = 4
+Flush Planet Name = Proxima Centauri
+Flush Example = Ace of Clubs, Ace of Clubs, 7 of Clubs, 4 of Wilds, 3 of Clubs

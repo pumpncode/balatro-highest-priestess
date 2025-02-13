@@ -1,0 +1,18 @@
+Name = Flush Pair
+Desc = {
+	Two cards with the same rank and suit.
+}
+Base Chips = 15
+Base Mult = 2
+Level Chips = 15
+Level Mult = 2
+Eval = {
+	(A of B, A of B)
+}
+Example = 6 of Hearts, 6 of Hearts
+Joker Mult = 9
+Joker Chips = 75
+Joker XMult = 2.5
+>couldnt think of a planet or chip/mult joker name
+Joker XMult Name = The Couple
+Author = TheLemon27

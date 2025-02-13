@@ -1,0 +1,15 @@
+Name = Flush Garage
+Desc = {
+    A hand that is both a Full House
+    and a Flush House, where the triple
+    suit is on the pair. Loses one base Chip for ugliness.
+}
+Base Chips = 129
+Base Mult = 13
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (a of x, a of x, a of y, b of y, b of y)
+}
+Author = Papyrus Semi
+Example = Ace of Spades, Ace of Spades, Ace of Clubs, 3 of Clubs, 3 of Clubs

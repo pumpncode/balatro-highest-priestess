@@ -3,7 +3,7 @@
     "name": "Highest Priestess",
     "display_name": "Highest Priestess",
     "author": ["TamerSoup625"],
-    "description": "Adds way too many Poker Hands",
+    "description": "Adds way too many Poker Hands. Inspired by Sixty Suits (notmario) and \"High\" Priestess (Super S.F)",
     "prefix": "vhp",
     "main_file": "main.lua",
     "priority": 0,

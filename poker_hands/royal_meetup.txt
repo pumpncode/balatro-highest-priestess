@@ -1,0 +1,19 @@
+Name = The Royal Meetup
+Desc = {
+    5 Face cards played together
+}
+Base Chips = 35
+Base Mult = 3
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of *, b of *, c of *, d of *, e of *; a=[face nonunique] b=[face nonunique] c=[face nonunique] d=[face nonunique] e=[face nonunique])
+}
+Author = Poppycars
+Example = King of Spades, King of Diamonds, Queen of Hearts, Queen of Spades, Jack of Diamonds
+Planet Name = Castle
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 10
+Joker Chips = 80
+Joker XMult = 3

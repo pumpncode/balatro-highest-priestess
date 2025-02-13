@@ -1,0 +1,26 @@
+Name = Pi
+Desc = {
+    Self Explanatory
+}
+Base Chips = 31
+Base Mult = 4
+Level Chips = 14
+Level Mult = 3
+Eval = {
+    (3 of *, Ace of *, 4 of *, Ace of *, 5 of *),
+}
+Author = Poppycars
+
+Example = 3 of Hearts, Ace of Hearts, 4 of Diamonds, Ace of Spades, 5 of Clubs
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 14
+Joker Chips = 111
+Joker XMult = 3.141592653589793
+
+Flush Name = Flush Pi
+Flush Base Chips = 141
+Flush Base Mult = 5
+Flush Level Chips = 41
+Flush Level Mult = 5
+Flush Example = 3 of Diamonds, Ace of Diamonds, 4 of Diamonds, Ace of Diamonds, 5 of Diamonds

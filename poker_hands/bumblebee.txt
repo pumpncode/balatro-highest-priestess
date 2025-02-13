@@ -1,0 +1,27 @@
+Name = Bumblebee Straight
+Desc = {
+    5 cards in ascending order,
+    alternating between Diamonds 
+    and Spades
+}
+Base Chips = 125
+Base Mult = 9
+Level Chips = 50
+Level Mult = 4
+Eval = {
+    (a of Diamonds, a+1 of Spades, a+2 of Diamonds, a+3 of Spades, a+4 of Diamonds),
+    (a of Spades, a+1 of Diamonds, a+2 of Spades, a+3 of Diamonds, a+4 of Spades),
+}
+Author = Plzbeans
+
+
+Example =  3 of Spades, 4 of Diamonds, 5 of Spades, 6 of Diamonds, 7 of Spades
+
+Joker Mult = 12
+Joker Chips = 125
+Joker XMult = 3.5
+Order Offset = 1
+Planet Name = Neptune's Rings
+Joker Mult Name = Buzzy Joker
+Joker Chips Name = Stinging Joker
+Joker XMult Name = The Hive

@@ -1,0 +1,20 @@
+Name = War Never Changes
+Desc = {
+    A hand of 2 cards with one card
+    one rank higher or lower than the other
+}
+Base Chips = 11
+Base Mult = 2
+Eval = {
+    (a of *, a+1 of *)
+}
+Level Chips = 11
+Level Mult = 2
+Planet Name = Vault 111
+Author = Violet
+Example = 10 of hearts, 9 of clubs
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 8
+Joker Chips = 50
+Joker XMult = 2

@@ -1,0 +1,18 @@
+Name = The Jackpot
+Desc = {
+    Five Lucky 7 of Hearts
+    1 in 10000 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 7777777
+Base Mult = 7777777
+Level Chips = 77777
+Level Mult = 77777
+Eval = {
+    (7 of Hearts, 7 of Hearts, 7 of Hearts, 7 of Hearts, 7 of Hearts)
+}
+All Enhanced = Lucky
+Chance = 10000
+Author = Poppycars
+Example = 7 of Hearts, 7 of Hearts, 7 of Hearts, 7 of Hearts, 7 of Hearts
+Planet Name = Slot Machine

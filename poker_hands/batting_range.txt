@@ -1,0 +1,17 @@
+Name = Batting Range
+Desc = { 
+    A Club Flush
+    1 in 200 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 40
+Base Mult = 7
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (* of Clubs, * of  Clubs, * of  Clubs, * of  Clubs, * of  Clubs)
+}
+AUTHOR = CoolDude
+
+Chance = 200
+Example = Ace of Clubs, King of Clubs, 10 of Clubs, 5 of Clubs, 4 of Clubs

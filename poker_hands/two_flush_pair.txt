@@ -1,0 +1,15 @@
+Name = Two Flush Pair
+Desc = {
+    A Pair of one suit
+    and a Pair of another suit
+}
+Base Chips = 30
+Base Mult = 2
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of x, a of x, b of y, b of y)
+}
+Author = NinjaBanana
+
+Example = 7 of Diamonds, 7 of Diamonds, 2 of Spades, 2 of Spades

@@ -1,0 +1,17 @@
+Name = Blood Clot
+Desc = { 
+    A Heart Flush
+    1 in 200 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 40
+Base Mult = 7
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (* of Hearts, * of Hearts, * of Hearts, * of Hearts, * of Hearts)
+}
+AUTHOR = CoolDude
+
+Chance = 200
+Example = Ace of Hearts, King of Hearts, 10 of Hearts, 5 of Hearts, 4 of Hearts

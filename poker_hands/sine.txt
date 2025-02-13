@@ -1,0 +1,17 @@
+Name = Sine
+Desc = {
+    Three cards of one rank,
+    plus one card each of the
+    ranks above and below.
+}
+Base Chips = 38
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a+1 of *, a+1 of *, a+1 of *, a+2 of *, a of *)
+}
+Author = Papyrus Semi
+
+Example = 4 of Hearts, 5 of Clubs, 4 of Spades, 3 of Diamonds, 4 of Diamonds
+Planet Name = Orcus

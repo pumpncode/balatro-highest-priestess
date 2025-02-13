@@ -1,0 +1,20 @@
+Name = jnj
+Desc = {
+    2, 7, 6, 3, all of the same suit
+}
+Base Chips = 27
+Base Mult = 6.3
+Level Chips = 27
+Level Mult = 6.3
+Eval = {
+    (2 of a, 7 of a, 6 of a, 3 of a)
+}
+Author = vasreall (+ Plzbeans)
+
+Example = 2 of Spades, 7 of Spades, 6 of Spades, 3 of Spades
+Planet Name = Rice Cake
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 18
+Joker Chips = 130
+Joker XMult = 4

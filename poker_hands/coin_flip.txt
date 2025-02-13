@@ -1,0 +1,24 @@
+Name = Coin Flip
+Desc = {
+    A Gold face card
+    1 in 2 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 50
+Base Mult = 5
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of *; a = [face])
+}
+Chance = 2
+All Enhanced = Gold
+Author = TamerSoup625
+Example = Queen of Clubs
+
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Joker Mult Name = Rich Joker
+Joker Chips Name = Stingy Joker
+Joker XMult Name = The Head

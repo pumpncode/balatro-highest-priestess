@@ -1,0 +1,12 @@
+Name = 7 Leaf Clover
+Desc = {Five Lucky 7 of Clubs}
+Base Chips = 477
+Base Mult = 47
+Level Chips = 100
+Level Mult = 10
+Eval = {
+    (7 of Clubs, 7 of Clubs, 7 of Clubs, 7 of Clubs, 7 of Clubs)
+}
+All Enhanced = Lucky
+Author = noobie
+Example = 7 of Clubs, 7 of Clubs, 7 of Clubs, 7 of Clubs, 7 of Clubs

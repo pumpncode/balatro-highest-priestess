@@ -1,0 +1,20 @@
+Name = AK-47
+Desc = {
+    Nuff said.
+}
+Base Chips = 7
+Base Mult = 4
+Level Chips = 14
+Level Mult = 2
+Eval = {
+    (Ace of *, King of *, 4 of *, 7 of *)
+}
+Author = Papyrus Semi
+
+Example = Ace of Diamonds, King of Spades, 4 of Clubs, 7 of Spades
+Planet Name = Vulkan
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 15
+Joker Chips = 50
+Joker XMult = 2.5

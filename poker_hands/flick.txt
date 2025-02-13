@@ -1,0 +1,18 @@
+Name = Flick
+Desc = {
+    A stone card, a face card,
+    a non-face card, and a wild card.
+}
+Base Chips = 60
+Base Mult = 3
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of *, b of *, * of Wilds, Stone; a = [face], b = [nonface]),
+}
+Author = Plzbeans
+
+
+Example = Jack of Diamonds, 8 of Clubs, 2 of Wilds, Stone
+Order Offset = 1
+Planet Name = Star

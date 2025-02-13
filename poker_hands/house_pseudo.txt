@@ -1,0 +1,20 @@
+Name = Pseudo House
+Desc = {
+    Three cards of one suit, and
+    two cards of another.
+}
+Base Chips = 15
+Base Mult = 2
+Level Chips = 17
+Level Mult = 1
+Eval = {
+    (* of a, * of a, * of a, * of b, * of b)
+}
+Author = Papyrus Semi
+
+Example = 2 of Diamonds, 7 of Diamonds, Ace of Spades, 5 of Spades, 10 of Spades
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 8
+Joker Chips = 50
+Joker XMult = 2

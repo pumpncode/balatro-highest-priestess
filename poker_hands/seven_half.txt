@@ -1,0 +1,35 @@
+Name = Seven and Half
+Desc = {
+    A face card plus any amount of cards
+    with sum of ranks equal to 7
+}
+Base Chips = 15
+Base Mult = 4.5
+Level Chips = 7
+Level Mult = 1.5
+Eval = {
+    (A of *, * of *, * of *, * of *, * of *; A = [face]),
+    (A of *, * of *, * of *, * of *; A = [face]),
+    (A of *, * of *, * of *; A = [face]),
+    (A of *, * of *; A = [face]),
+}
+> Face + 7
+Rank Sum = 17
+Planet Name = Rings of Uranus
+Author = TamerSoup625
+Example = Queen of Hearts, Ace of Diamonds, 2 of Clubs, 4 of Hearts
+
+Flush Name = 7 1/2 Flush
+Flush Base Chips = 105
+Flush Base Mult = 7.5
+Flush Level Chips = 37
+Flush Level Mult = 4.5
+Flush Planet Name = J1407b
+Flush Example = Queen of Spades, Ace of Spades, 2 of Spades, 4 of Spades
+
+Joker Mult = 10.5
+Joker Chips = 77
+Joker XMult = 3
+Joker Mult Name = Neapolitan Joker
+Joker Chips Name = Piacenza Joker
+Joker XMult Name = The Fifteen Halves

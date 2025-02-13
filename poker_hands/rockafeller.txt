@@ -1,0 +1,13 @@
+Name = Rockafeller St
+Desc = {
+    Ace, 2, 7, 3
+}
+Base Chips = 33
+Base Mult = 3
+Level Chips = 22
+Level Mult = 2
+Eval = {
+    (Ace of *, 2 of *, 7 of *, 3 of *)
+}
+Author = John Dorian Smith
+Example = Ace of Spades, 2 of Clubs, 7 of Hearts, 3 of Clubs

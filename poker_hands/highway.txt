@@ -1,0 +1,21 @@
+Name = Highway
+Desc = {
+   A hand containing 5 Jacks 
+}
+Base Chips = 145
+Base Mult = 15
+Level Chips = 30
+Level Mult = 5
+Eval = {
+    (Jack of *, Jack of *, Jack of *, Jack of *, Jack of *)
+}
+Example = Jack of Hearts, Jack of Diamonds, Jack of Diamonds, Jack of Clubs, Jack of Spades
+Author = Super S.F
+
+Joker Mult = 25
+Joker Chips = 225
+Joker XMult = 8
+Planet Name = Planet V
+Joker Mult Name = Rowdy Joker
+Joker Chips Name = Tough Joker
+Joker XMult Name = The Jack
