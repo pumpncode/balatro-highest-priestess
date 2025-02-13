@@ -1,3 +1,9 @@
-# This is just proof I already have working code
+# Highest Priestess
 
-For now you can either look at code or go to https://discord.com/channels/1116389027176787968/1337113295391555595
+# 60 NEW POKER HANDS
+
+'Nuff said
+
+![big_icon](https://github.com/user-attachments/assets/72d7b314-20d2-45d7-9d3f-37c1b7994744)
+
+[Discord Mod Thread](https://discord.com/channels/1116389027176787968/1337113295391555595)
