@@ -1,4 +1,4 @@
-# Highest Priestess
+# Highest Priestess: mod for Balatro Steamodded
 
 # 60 NEW POKER HANDS
 
