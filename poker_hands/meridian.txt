@@ -1,0 +1,29 @@
+Name = Meridian
+Desc = {
+    Five consecutive cards with gaps of 2 ranks between them.
+    Aces can be counted as both high or low, but not both at once.
+}
+Base Chips = 50
+Base Mult = 6
+Level Chips = 25
+Level Mult = 2
+Eval = {
+    (a of *, a+3 of *, a+6 of *, a+9 of *, a+12 of *)
+}
+Author = Post Prototype
+Example = Ace of Spades, Jack of Clubs, 8 of Diamonds, 5 of Clubs, 2 of Hearts
+Joker Mult = 15
+Joker Chips = 120
+Joker XMult = 4
+Planet Name = Chiron
+Joker Mult Name = Loopy Joker
+Joker Chips Name = Subtle Joker
+Joker XMult Name = The Circle
+Flush Name = Prime Meridian
+> Flush Desc = {Five consecutive cards from the same suit with gaps of 2 ranks between them.}
+Flush Base Chips = 140
+Flush Base Mult = 12
+Flush Level Chips = 50
+Flush Level Mult = 5
+Flush Example = Ace of Diamonds, 4 of Diamonds, 7 of Diamonds, 10 of Diamonds, King of Diamonds
+Flush Planet Name = Pholus

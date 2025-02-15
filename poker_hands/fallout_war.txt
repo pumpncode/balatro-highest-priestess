@@ -1,13 +1,14 @@
 Name = War Never Changes
 Desc = {
-    A hand of 2 cards with one card
-    one rank higher or lower than the other
+    Exactly 2 cards with one card
+    one rank higher than the other
 }
 Base Chips = 11
 Base Mult = 2
 Eval = {
     (a of *, a+1 of *)
 }
+Card Count = 2
 Level Chips = 11
 Level Mult = 2
 Planet Name = Vault 111

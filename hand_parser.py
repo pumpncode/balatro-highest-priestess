@@ -8,7 +8,8 @@ from os.path import isfile, join
 REGEX_KEYVALUE = re.compile(r"^(.+?)\s*=\s*(?:{((?:.|\n)*?)}|(.+))", re.MULTILINE)
 REGEX_PARENTHESIS_GROUP = re.compile(r"\((.*?)\)", re.MULTILINE | re.DOTALL)
 REGEX_WHITESPACE = re.compile(r"\s+")
-REGEX_ANY_CARD = re.compile(r"((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)", re.IGNORECASE)
+#REGEX_ANY_CARD = re.compile(r"((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)", re.IGNORECASE)
+REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone))", re.IGNORECASE)
 REGEX_RANK = re.compile(r"(?:(\*)|([a-z]+)(?:\+(\d+))?)", re.IGNORECASE)
 REGEX_OPTIONS = re.compile(r"(\w) ?= ?\[(.+?)\]", re.IGNORECASE)
 REGEX_VALUES_GENERIC = re.compile(r"[a-z0-9]+", re.IGNORECASE)
@@ -58,11 +59,11 @@ def parse_hand_pattern(raw_text: str):
     cards_iter = re.finditer(REGEX_ANY_CARD, cards_text)
     card_list: list[dict] = []
     for card in cards_iter:
-        if card.group(4):
+        if card.group(5):
             card_list.append({"stone": True})
             continue
-        rank = card.group(2)
-        suit = card.group(3)
+        rank = card.group(3)
+        suit = card.group(4)
         card_dict: dict = {}
         rank_token = get_rank_token(rank)
         if rank_token:
@@ -70,8 +71,10 @@ def parse_hand_pattern(raw_text: str):
         suit_token = get_suit_token(suit)
         if suit_token:
             card_dict["suit"] = suit_token
-        if card.group(1):
+        if card.group(2):
             card_dict["unscoring"] = True
+        if card.group(1):
+            card_dict["times"] = int(card.group(1))
         card_list.append(card_dict)
     options_iter = re.finditer(REGEX_OPTIONS, options_text)
     options_dict: dict = {}
@@ -114,11 +117,11 @@ def parse_example_pattern(raw_text: str):
     cards_iter = re.finditer(REGEX_ANY_CARD, text)
     card_list: list[dict] = []
     for card in cards_iter:
-        if card.group(4):
+        if card.group(5):
             card_list.append({"stone": True})
             continue
-        rank = card.group(2)
-        suit = card.group(3)
+        rank = card.group(3)
+        suit = card.group(4)
         card_dict: dict = {}
         rank_token = get_rank_token(rank)
         if rank_token:
@@ -239,6 +242,12 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["same_enhancement"] = True
             case "different enhancement":
                 result["different_enhancement"] = True
+            case "joker texture id":
+                result["joker_texture_id"] = int(value)
+            case "card count":
+                result["card_count"] = int(value)
+            case "all editioned":
+                result["all_editioned"] = value.lower()
     return result
 
 

@@ -8,6 +8,11 @@ local FULL_HOUSE_PATTERN = {
 }
 local RANK_CARD_KEY_MAP = {[10] = "T", [11] = "J", [12] = "Q", [13] = "K", [14] = "A"}
 local SUIT_CARD_KEY_MAP = {Spades = "S", Hearts = "H", Clubs = "C", Diamonds = "D"}
+local CUSTOM_JOKERS_ATLAS_MAP = {
+    "custom_jokers_low_card.png",
+    "custom_jokers_nothing.png",
+    "custom_jokers_bumblebee_straight.png",
+}
 
 local json = assert(SMODS.load_file('json.lua'))()
 local hands_json = assert(SMODS.load_file('parsed_hands.lua'))()
@@ -20,6 +25,24 @@ SMODS.Atlas{
 	px = 34,
 	py = 34,
 }
+for key, value in pairs(CUSTOM_JOKERS_ATLAS_MAP) do
+    SMODS.Atlas{
+        key = "custom_jokers" .. tostring(key),
+        path = value,
+        px = 71,
+        py = 95,
+    }
+end
+
+
+--[[local eval_play_ref = G.FUNCS.evaluate_play
+G.FUNCS.evaluate_play = function (e)
+    if (not G.GAME.vhp_nostalgia_hand) and #G.play.cards == 5 then
+        
+    end
+    local ret = eval_play_ref(e)
+    return ret
+end]]
 
 
 local function time_and_return(func, ...)
@@ -53,7 +76,7 @@ local function cartesian_product(L, N)
 end
 
 
--- List of {rank = number?, suit = string?, stone = true|nil, unscoring = true|nil}
+-- List of {rank = number?, suit = string?, stone = true|nil, unscoring = true|nil, times = number?}
 local function match_simple(hand, pattern)
     --[[Match order:
         {stone}
@@ -137,6 +160,7 @@ local function match_simple(hand, pattern)
     local scoring_cards = {}
     for h_key, h_value in pairs(hand) do
         local is_scoring = false
+        local max_times = 1
         for p_key, p_value in pairs(pattern) do
             if not p_value.unscoring then
                 if p_value.stone and SMODS.has_enhancement(h_value, "m_stone") then
@@ -157,10 +181,18 @@ local function match_simple(hand, pattern)
                     rank_okay = h_value:get_id() == p_value.rank
                 end
                 is_scoring = is_scoring or (suit_okay and rank_okay)
+                if suit_okay and rank_okay then
+                    local p_times = p_value.times or 1
+                    if p_times > max_times then
+                        max_times = p_times
+                    end
+                end
             end
         end
         if is_scoring then
-            table.insert(scoring_cards, h_value)
+            for i = 1, max_times, 1 do
+                table.insert(scoring_cards, h_value)
+            end
         end
     end
     return scoring_cards
@@ -324,6 +356,7 @@ local function eval_pattern(hand, pattern, options)
                         end
                     end
                     pattern_slot.unscoring = value.unscoring
+                    pattern_slot.times = value.times
                     table.insert(simple_pattern, pattern_slot)
                 end
                 local ret = match_simple(hand, simple_pattern)
@@ -466,6 +499,16 @@ for hand_id, hand_stats in pairs(poker_hands) do
                     return
                 end
                 enhancement_set[card.config.center_key] = true
+            end
+        end
+        if hand_stats.card_count and #hand ~= hand_stats.card_count then
+            return
+        end
+        if hand_stats.all_editioned then
+            for _, card in pairs(hand) do
+                if (not card.edition) or (card.edition[hand_stats.all_editioned] ~= true) then
+                    return
+                end
             end
         end
 
@@ -632,14 +675,30 @@ for hand_id, hand_stats in pairs(poker_hands) do
 
 
     math.randomseed(pseudohash(hand_stats.name .. "joker"))
-    local joker_atlas_x = math.random(0, 4)
+    local joker_atlas = ("custom_jokers" .. tostring(hand_stats.joker_texture_id))
+    if not hand_stats.joker_texture_id then
+        joker_atlas = "jokers"
+    end
+    local joker_atlas_random_x = math.random(0, 4)
+    local joker_texture_pos = {
+        {x = joker_atlas_random_x, y = 0},
+        {x = joker_atlas_random_x, y = 1},
+        {x = joker_atlas_random_x, y = 2},
+    }
+    if hand_stats.joker_texture_id then
+        joker_texture_pos = {
+            {x = 0, y = 0},
+            {x = 1, y = 0},
+            {x = 2, y = 0},
+        }
+    end
 
     if hand_stats.joker_mult then
         SMODS.Joker {
             key = "custom" .. tostring(hand_id) .. "_mult_joker",
             config = {t_mult = hand_stats.joker_mult, type = "vhp_custom" .. tostring(hand_id)},
-            atlas = 'jokers',
-            pos = {x = joker_atlas_x, y = 0},
+            atlas = joker_atlas,
+            pos = joker_texture_pos[1],
             process_loc_text = function(self)
                 --use another joker's loc txt instead
                 local target_text = G.localization.descriptions[self.set]['j_jolly'].text
@@ -665,8 +724,8 @@ for hand_id, hand_stats in pairs(poker_hands) do
         SMODS.Joker {
             key = "custom" .. tostring(hand_id) .. "_chips_joker",
             config = {t_chips = hand_stats.joker_chips, type = "vhp_custom" .. tostring(hand_id)},
-            atlas = 'jokers',
-            pos = {x = joker_atlas_x, y = 1},
+            atlas = joker_atlas,
+            pos = joker_texture_pos[2],
             process_loc_text = function(self)
                 --use another joker's loc txt instead
                 local target_text = G.localization.descriptions[self.set]['j_sly'].text
@@ -692,8 +751,8 @@ for hand_id, hand_stats in pairs(poker_hands) do
         SMODS.Joker {
             key = "custom" .. tostring(hand_id) .. "_xmult_joker",
             config = {Xmult = hand_stats.joker_xmult, type = "vhp_custom" .. tostring(hand_id)},
-            atlas = 'jokers',
-            pos = {x = joker_atlas_x, y = 2},
+            atlas = joker_atlas,
+            pos = joker_texture_pos[3],
             process_loc_text = function(self)
                 --use another joker's loc txt instead
                 local target_text = G.localization.descriptions[self.set]['j_duo'].text
@@ -797,3 +856,33 @@ SMODS.current_mod.extra_tabs = function()
         },
     }
 end
+
+
+--[[SMODS.PokerHand {
+    key = "test",
+    chips = 41,
+    mult = 4,
+    l_chips = 999,
+    l_mult = 999,
+    example = {},
+    loc_txt = {
+        name = "Full House?",
+        description = {
+            "Test"
+        },
+    },
+    visible = true,
+    evaluate = function (parts, hand)
+        update_hand_cache(hand)
+        local full_house_cards = eval_pattern(hand, FULL_HOUSE_PATTERN, {})
+        if full_house_cards then
+            local ret = {}
+            for i = 1, 2, 1 do
+                for key, value in pairs(full_house_cards) do
+                    table.insert(ret, value)
+                end
+            end
+            return {ret}
+        end
+    end,
+}]]

@@ -137,9 +137,11 @@ return [[ [
             }
         ],
         "planet_name": "Vulkan",
-        "joker_mult": 15.0,
-        "joker_chips": 50.0,
-        "joker_xmult": 2.5
+        "joker_mult": 11.0,
+        "joker_chips": 47.0,
+        "joker_xmult": 2.5,
+        "joker_mult_name": "Guns Ajimbo",
+        "joker_chips_name": "Sniper Joker"
     },
     {
         "name": "Batting Range",
@@ -681,7 +683,8 @@ return [[ [
         "planet_name": "Neptune's Rings",
         "joker_mult_name": "Buzzy Joker",
         "joker_chips_name": "Stinging Joker",
-        "joker_xmult_name": "The Hive"
+        "joker_xmult_name": "The Hive",
+        "joker_texture_id": 3
     },
     {
         "name": "Chevron",
@@ -1071,13 +1074,11 @@ return [[ [
         "example": [
             {
                 "rank": 14,
-                "suit": "Hearts",
-                "unscoring": true
+                "suit": "Hearts"
             },
             {
                 "rank": 13,
-                "suit": "Hearts",
-                "unscoring": true
+                "suit": "Hearts"
             },
             {
                 "rank": 10,
@@ -1085,13 +1086,11 @@ return [[ [
             },
             {
                 "rank": 5,
-                "suit": "Hearts",
-                "unscoring": true
+                "suit": "Hearts"
             },
             {
                 "rank": 4,
-                "suit": "Hearts",
-                "unscoring": true
+                "suit": "Hearts"
             }
         ],
         "joker_mult": 12.0,
@@ -1347,8 +1346,8 @@ return [[ [
     {
         "name": "War Never Changes",
         "desc": [
-            "A hand of 2 cards with one card",
-            "one rank higher or lower than the other"
+            "Exactly 2 cards with one card",
+            "one rank higher than the other"
         ],
         "base_chips": 11.0,
         "base_mult": 2.0,
@@ -1371,6 +1370,7 @@ return [[ [
                 "options": {}
             }
         ],
+        "card_count": 2,
         "level_chips": 11.0,
         "level_mult": 2.0,
         "planet_name": "Vault 111",
@@ -1886,6 +1886,86 @@ return [[ [
         "author": "TheLemon27"
     },
     {
+        "name": "Flush Two Pair",
+        "desc": [
+            "Two pairs with the same suit."
+        ],
+        "base_chips": 20.0,
+        "base_mult": 4.0,
+        "level_chips": 20.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "A",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "A",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "X",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "X",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 6,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 6,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            }
+        ],
+        "joker_mult": 12.0,
+        "joker_chips": 100.0,
+        "joker_xmult": 3.0,
+        "joker_xmult_name": "The Double",
+        "author": "TheLemon27"
+    },
+    {
         "name": "Fuller House",
         "desc": [
             "A pair and a three of a kind",
@@ -1958,6 +2038,94 @@ return [[ [
         ],
         "order_offset": 2,
         "planet_name": "Earth 2"
+    },
+    {
+        "name": "Fun Is Infinite",
+        "desc": [
+            "4, 6, Queen, 2, and 5."
+        ],
+        "base_chips": 25.0,
+        "base_mult": 3.0,
+        "level_chips": 12.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 6
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 2
+                    },
+                    {
+                        "rank": 5
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Papyrus Semi",
+        "example": [
+            {
+                "rank": 4,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 6,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 2,
+                "suit": "Spades"
+            },
+            {
+                "rank": 5,
+                "suit": "Spades"
+            }
+        ],
+        "joker_chips": 93.0,
+        "joker_mult": 12.0,
+        "planet_name": "Little Planet",
+        "joker_mult_name": "Majin Joker",
+        "joker_chips_name": "Joyous Joker",
+        "flush_name": "Flush Is Infinite",
+        "flush_base_chips": 46.0,
+        "flush_base_mult": 4.0,
+        "flush_level_chips": 25.0,
+        "flush_level_mult": 2.0,
+        "flush_planet_name": "Mobius",
+        "flush_example": [
+            {
+                "rank": 4,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 6,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 12,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 2,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 5,
+                "suit": "Clubs"
+            }
+        ]
     },
     {
         "name": "Glass Houses",
@@ -2055,6 +2223,59 @@ return [[ [
             {
                 "rank": 2,
                 "suit": "Clubs"
+            }
+        ]
+    },
+    {
+        "name": "Hack",
+        "desc": [
+            "A 4-card Straight going from 2 to 5",
+            "Cards that make up this hand score twice"
+        ],
+        "base_chips": 5.0,
+        "base_mult": 2.0,
+        "level_chips": 3.0,
+        "level_mult": 1.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2,
+                        "times": 2
+                    },
+                    {
+                        "rank": 3,
+                        "times": 2
+                    },
+                    {
+                        "rank": 4,
+                        "times": 2
+                    },
+                    {
+                        "rank": 5,
+                        "times": 2
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "TamerSoup625",
+        "example": [
+            {
+                "rank": 5,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 4,
+                "suit": "Spades"
+            },
+            {
+                "rank": 3,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 2,
+                "suit": "Spades"
             }
         ]
     },
@@ -2754,23 +2975,19 @@ return [[ [
         "example": [
             {
                 "rank": 14,
-                "suit": "Hearts",
-                "unscoring": true
+                "suit": "Hearts"
             },
             {
                 "rank": 12,
-                "suit": "Diamonds",
-                "unscoring": true
+                "suit": "Diamonds"
             },
             {
                 "rank": 9,
-                "suit": "Diamonds",
-                "unscoring": true
+                "suit": "Diamonds"
             },
             {
                 "rank": 4,
-                "suit": "Clubs",
-                "unscoring": true
+                "suit": "Clubs"
             },
             {
                 "rank": 3,
@@ -2785,7 +3002,114 @@ return [[ [
         "planet_name": "10 Hygiea",
         "joker_mult_name": "Lowly Joker",
         "joker_chips_name": "Peasant Joker",
-        "joker_xmult_name": "The Prole"
+        "joker_xmult_name": "The Prole",
+        "joker_texture_id": 1
+    },
+    {
+        "name": "Meridian",
+        "desc": [
+            "Five consecutive cards with gaps of 2 ranks between them.",
+            "Aces can be counted as both high or low, but not both at once."
+        ],
+        "base_chips": 50.0,
+        "base_mult": 6.0,
+        "level_chips": 25.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            3
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            6
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            9
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            12
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Post Prototype",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Spades"
+            },
+            {
+                "rank": 11,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 8,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 5,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 2,
+                "suit": "Hearts"
+            }
+        ],
+        "joker_mult": 15.0,
+        "joker_chips": 120.0,
+        "joker_xmult": 4.0,
+        "planet_name": "Chiron",
+        "joker_mult_name": "Loopy Joker",
+        "joker_chips_name": "Subtle Joker",
+        "joker_xmult_name": "The Circle",
+        "flush_name": "Prime Meridian",
+        "flush_base_chips": 140.0,
+        "flush_base_mult": 12.0,
+        "flush_level_chips": 50.0,
+        "flush_level_mult": 5.0,
+        "flush_example": [
+            {
+                "rank": 14,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 4,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 7,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 10,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 13,
+                "suit": "Diamonds"
+            }
+        ],
+        "flush_planet_name": "Pholus"
     },
     {
         "name": "Pile of Money",
@@ -2880,7 +3204,92 @@ return [[ [
         "joker_mult": 4.0,
         "joker_chips": 25.0,
         "joker_xmult": 1.001,
+        "joker_texture_id": 2,
         "planet_name": " "
+    },
+    {
+        "name": "Parable",
+        "desc": [
+            "2, 8, 4, and 5."
+        ],
+        "base_chips": 25.0,
+        "base_mult": 4.0,
+        "level_chips": 25.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2
+                    },
+                    {
+                        "rank": 8
+                    },
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 5
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "JadeInHeaven",
+        "example": [
+            {
+                "rank": 2,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 4,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 5,
+                "suit": "Spades"
+            }
+        ],
+        "planet_name": "Broom Closet",
+        "joker_mult": 12.0,
+        "joker_chips": 100.0,
+        "joker_xmult": 4.0,
+        "joker_mult_name": "The Narrator",
+        "joker_chips_name": "Stanley",
+        "joker_xmult_name": "Skip Button",
+        "flush_name": "Flush Parable",
+        "flush_base_chips": 80.0,
+        "flush_base_mult": 8.0,
+        "flush_level_chips": 40.0,
+        "flush_level_mult": 4.0,
+        "flush_planet_name": "Memory Zone",
+        "flush_example": [
+            {
+                "rank": 2,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 4,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            }
+        ],
+        "order_offset": 1
     },
     {
         "name": "Pi",
@@ -3748,8 +4157,7 @@ return [[ [
         "example": [
             {
                 "rank": 14,
-                "suit": "Clubs",
-                "unscoring": true
+                "suit": "Clubs"
             },
             {
                 "rank": 14,
@@ -3761,13 +4169,11 @@ return [[ [
             },
             {
                 "rank": 4,
-                "suit": "Spades",
-                "unscoring": true
+                "suit": "Spades"
             },
             {
                 "rank": 3,
-                "suit": "Hearts",
-                "unscoring": true
+                "suit": "Hearts"
             }
         ],
         "planet_name": "Proxima Centauri b",
@@ -4841,6 +5247,48 @@ return [[ [
                 "suit": "Spades"
             }
         ]
+    },
+    {
+        "name": "Wee Are Resorting 2 Violence",
+        "desc": [
+            "Five Holographic Glass 2s",
+            "Cards that make up this hand score twice"
+        ],
+        "base_chips": 2.0,
+        "base_mult": 222.0,
+        "level_chips": 2.0,
+        "level_mult": 22.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2,
+                        "times": 2
+                    },
+                    {
+                        "rank": 2,
+                        "times": 2
+                    },
+                    {
+                        "rank": 2,
+                        "times": 2
+                    },
+                    {
+                        "rank": 2,
+                        "times": 2
+                    },
+                    {
+                        "rank": 2,
+                        "times": 2
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "all_enhanced": "glass",
+        "all_editioned": "holo",
+        "order_offset": 17100,
+        "author": "noobie"
     },
     {
         "name": "What Hand",

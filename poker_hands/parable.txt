@@ -1,0 +1,28 @@
+Name = Parable
+Desc = {
+    2, 8, 4, and 5.
+}
+Base Chips = 25
+Base Mult = 4
+Level Chips = 25
+Level Mult = 2
+Eval = {
+ (2 of *, 8 of *, 4 of *, 5 of *),
+}
+Author = JadeInHeaven
+Example = 2 of Hearts, 8 of Clubs, 4 of Diamonds, 5 of Spades
+Planet Name = Broom Closet
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 4
+Joker Mult Name = The Narrator
+Joker Chips Name = Stanley
+Joker XMult Name = Skip Button
+Flush Name = Flush Parable
+Flush Base Chips = 80
+Flush Base Mult = 8
+Flush Level Chips = 40
+Flush Level Mult = 4
+Flush Planet Name = Memory Zone
+Flush Example = 2 of Hearts, 8 of Hearts, 4 of Hearts, 5 of Hearts, Jack of Hearts
+Order Offset = 1

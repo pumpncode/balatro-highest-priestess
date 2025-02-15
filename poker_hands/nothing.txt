@@ -15,5 +15,6 @@ AUTHOR = TamerSoup625
 Joker Mult = 4
 Joker Chips = 25
 Joker XMult = 1.001
+Joker Texture ID = 2
 
 Planet Name =                        

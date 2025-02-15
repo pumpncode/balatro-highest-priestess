@@ -1,0 +1,17 @@
+Name = Flush Two Pair
+Desc = {
+	Two pairs with the same suit.
+}
+Base Chips = 20
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+	(A of B, A of B, X of B, X of B)
+}
+Example = 6 of Hearts, 6 of Hearts, Queen of Hearts, Queen of Hearts
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Joker XMult Name = The Double
+Author = TheLemon27

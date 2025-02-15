@@ -14,7 +14,9 @@ Author = Papyrus Semi
 Example = Ace of Diamonds, King of Spades, 4 of Clubs, 7 of Spades
 Planet Name = Vulkan
 
-> Joker Bonuses added by TamerSoup625
-Joker Mult = 15
-Joker Chips = 50
+Joker Mult = 11
+Joker Chips = 47
+> This Joker bonus added by TamerSoup625
 Joker XMult = 2.5
+Joker Mult Name = Guns Ajimbo
+Joker Chips Name = Sniper Joker

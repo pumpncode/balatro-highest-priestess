@@ -25,3 +25,4 @@ Planet Name = Neptune's Rings
 Joker Mult Name = Buzzy Joker
 Joker Chips Name = Stinging Joker
 Joker XMult Name = The Hive
+Joker Texture ID = 3

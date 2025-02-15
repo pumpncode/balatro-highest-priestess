@@ -1,0 +1,17 @@
+Name = Wee Are Resorting 2 Violence
+Desc = {
+    Five Holographic Glass 2s
+    Cards that make up this hand score twice
+}
+Base Chips = 2
+Base Mult = 222
+Level Chips = 2
+Level Mult = 22
+Eval = {
+    (X2 2 of *, X2 2 of *, X2 2 of *, X2 2 of *, X2 2 of *)
+}
+All Enhanced = Glass
+All Editioned = Holo
+> Above Quintuplets
+Order Offset = 17100
+Author = noobie

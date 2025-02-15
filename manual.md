@@ -87,6 +87,14 @@ Example = Ace of Spades, Stone, 7 of Wilds
 - `Joker Mult Name`: If you defined `Joker Mult`, sets the name of the Joker created by `Joker Mult`. Defaults to "`Name` Joker".
 - `Joker Chips Name`: If you defined `Joker Chips`, sets the name of the Joker created by `Joker Chips`. Defaults to "`Name` Jester".
 - `Joker XMult Name`: If you defined `Joker XMult`, sets the name of the Joker created by `Joker XMult`. Defaults to "The `Name`".
+- `Credits Name`: How the poker hand will be named in the credits. Used for long hand names.
+
+- `Chance`: If added, the poker hand has only a 1 in `Chance` probability to be considered (affected by `G.GAME.probabilities.normal`)
+- `Rank Sum`: If added, the poker hand must have the sum of the cards' ranks to be equal to `Rank Sum`. Jack, Queen, and King count as 10, and Ace as 1.
+- `Composite Only`: If added, the non-composite variant of the poker hand won't be added (see Composite Hands section). No support for Jokers.
+- `All Enhanced`: If added, all cards must have the specified enhancement for the poker hand to be considered.
+- `Same Enhancement`: If added, all cards must have the same enhancement for the poker hand to be considered. Never counts with unenhanced cards.
+- `Different Enhancement`: If added, each card must have a different enhancement for the poker hand to be considered. Never counts with unenhanced cards.
 
 ### Grouped Poker Hand Properties
 

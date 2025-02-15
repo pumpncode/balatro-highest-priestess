@@ -1,0 +1,14 @@
+Name = Hack
+Desc = {
+    A 4-card Straight going from 2 to 5
+    Cards that make up this hand score twice
+}
+Base Chips = 5
+Base Mult = 2
+Level Chips = 3
+Level Mult = 1
+Eval = {
+    (X2 2 of *, X2 3 of *, X2 4 of *, X2 5 of *)
+}
+Author = TamerSoup625
+Example = 5 of Clubs, 4 of Spades, 3 of Hearts, 2 of Spades

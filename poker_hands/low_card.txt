@@ -35,3 +35,4 @@ Planet Name = 10 Hygiea
 Joker Mult Name = Lowly Joker
 Joker Chips Name = Peasant Joker
 Joker XMult Name = The Prole
+Joker Texture ID = 1

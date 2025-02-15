@@ -1,0 +1,26 @@
+Name = Fun Is Infinite
+Desc = {
+    4, 6, Queen, 2, and 5.
+}
+Base Chips = 25
+Base Mult = 3
+Level Chips = 12
+Level Mult = 2
+Eval = {
+    (4 of *, 6 of *, Queen of *, 2 of *, 5 of *)
+}
+Author = Papyrus Semi
+Example = 4 of Clubs, 6 of Hearts, Queen of Hearts, 2 of Spades, 5 of Spades
+Joker Chips = 93
+Joker Mult = 12
+Planet Name = Little Planet
+Joker Mult Name = Majin Joker
+Joker Chips Name = Joyous Joker
+
+Flush Name = Flush Is Infinite
+Flush Base Chips = 46
+Flush Base Mult = 4
+Flush Level Chips = 25
+Flush Level Mult = 2
+Flush Planet Name = Mobius
+Flush Example = 4 of Clubs, 6 of Clubs, Queen of Clubs, 2 of Clubs, 5 of Clubs
