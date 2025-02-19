@@ -95,6 +95,28 @@ Example = Ace of Spades, Stone, 7 of Wilds
 - `All Enhanced`: If added, all cards must have the specified enhancement for the poker hand to be considered.
 - `Same Enhancement`: If added, all cards must have the same enhancement for the poker hand to be considered. Never counts with unenhanced cards.
 - `Different Enhancement`: If added, each card must have a different enhancement for the poker hand to be considered. Never counts with unenhanced cards.
+- `Card Count`: If added, the poker hand must have this exact number of cards.
+- `All Editioned`: If added, all cards must have the specified edition for the poker hand to be considered.
+- `Exact Enhancements`: If added, cards that make up this poker hand must have the listed enhancements, one for each.
+```
+Exact Enhancements = Steel, Gold, Steel, Gold, Steel
+```
+- `Money Min`: If added, you must have atleast the specified amount of money.
+- `Money Max`: If added, you must have at most the specified amount of money.
+- `All Sealed`: If added, all cards must have the specified seal color for the poker hand to be considered.
+```
+All Sealed = Red
+```
+- `Same Edition`: If added, all cards must have the same edition for the poker hand to be considered. Never counts with base cards.
+- `Same Seal`: If added, all cards must have the same seal for the poker hand to be considered. Never counts with unsealed cards.
+- `Unmodified`: If added, all cards must have no enhancement, edition, or seal.
+- `Card Count Min`: If added, the poker hand must have at least this number of cards.
+- `Card Count Max`: If added, the poker hand must have at most this number of cards.
+- `All Debuffed`: If added, all cards must be debuffed.
+- `Nostalgic`: Used by the "Nostalgia" hand. If added, all cards must match the rank and suits of the first 5-card hand that was played this run. Does not count if you haven't played a 5-card hand this run.
+- `RNG`: Used by the "RNG" hand. If added, all cards must match the rank and suits of a set of 5 cards randomly-generated at the start of the run.
+- `Joker Texture ID`: Used internally. If added, Jokers created for the poker hand have custom art.
+- `Planet Texture ID`: Used internally. If added, planets created for the poker hand have custom art.
 
 ### Grouped Poker Hand Properties
 
@@ -196,7 +218,7 @@ A card pattern represent one of the cards that make up an hand pattern, one of t
 
 Most card patterns have the *rank pattern* (see Rank Patterns section), which is the rank(s) the card has to match, followed by `of`, then the *suit pattern* (see Suit Patterns section), which is the suit(s) the card has to match.
 
-A card pattern can also be only `stone` to match exactly a Stone Card.
+A card pattern can be only `stone` to match exactly a Stone Card.
 
 ```
 > Cryptid's Bulwark (5 Stone Cards)
@@ -205,13 +227,23 @@ Eval = {
 }
 ```
 
-A card pattern can also be preceded by `nonscoring` or `unscoring`, in which case it will not count in scoring when played (it's still required for the poker hand).
+A card pattern can be preceded by `nonscoring` or `unscoring`, in which case it will not count in scoring when played (it's still required for the poker hand).
 
 ```
 > Two Hearts and one Club
 > The Heart cards will not score, only the Club will
 Eval = {
     (nonscoring * of Hearts, * of Clubs, nonscoring * of Hearts),
+}
+```
+
+A card pattern can be preceded by `X` immediately followed by a number to make it score multiple times. This is referred to as "multiscoring" and is different than retriggering (cards that score twice and are retriggered trigger 4 times in total!)
+
+```
+> Two Hearts and one Club
+> The Heart cards will score twice, the Club four times
+Eval = {
+    (X2 * of Hearts, X4 * of Clubs, X2 * of Hearts),
 }
 ```
 
