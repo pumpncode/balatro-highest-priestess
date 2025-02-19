@@ -15,6 +15,9 @@ local CUSTOM_JOKERS_ATLAS_MAP = {
     "custom_jokers_parable.png",
     "custom_jokers_royal_sampler.png",
 }
+local CUSTOM_PLANETS_ATLAS_MAP = {
+    "custom_planet_garn47.png",
+}
 
 local json = assert(SMODS.load_file('json.lua'))()
 local hands_json = assert(SMODS.load_file('parsed_hands.lua'))()
@@ -32,6 +35,14 @@ SMODS.Atlas{
 for key, value in pairs(CUSTOM_JOKERS_ATLAS_MAP) do
     SMODS.Atlas{
         key = "custom_jokers" .. tostring(key),
+        path = value,
+        px = 71,
+        py = 95,
+    }
+end
+for key, value in pairs(CUSTOM_PLANETS_ATLAS_MAP) do
+    SMODS.Atlas{
+        key = "custom_planet" .. tostring(key),
         path = value,
         px = 71,
         py = 95,
@@ -507,12 +518,12 @@ local new_hands_visible = not config.new_hands_secret
 SMODS.Atlas { key = 'planets', path = 'planets.png', px = 71, py = 95 }
 SMODS.Atlas { key = 'jokers', path = 'jokers.png', px = 71, py = 95 }
 
-for hand_id, hand_stats in pairs(poker_hands) do
+for _, hand_stats in pairs(poker_hands) do
     if hand_stats.nostalgic then
-        table.insert(nostalgic_hand_ids, "vhp_custom" .. tostring(hand_id))
+        table.insert(nostalgic_hand_ids, "vhp_" .. hand_stats.key)
     end
     if hand_stats.rng then
-        table.insert(rng_hand_ids, "vhp_custom" .. tostring(hand_id))
+        table.insert(rng_hand_ids, "vhp_" .. hand_stats.key)
     end
 
     local function custom_hand_eval(hand)
@@ -670,8 +681,15 @@ for hand_id, hand_stats in pairs(poker_hands) do
                 return
             end
             if G.GAME.vhp_rng_example then
-                G.GAME.hands["vhp_custom" .. tostring(hand_id)].example = create_example_hand(G.GAME.vhp_rng_example, {})
+                G.GAME.hands["vhp_" .. hand_stats.key].example = create_example_hand(G.GAME.vhp_rng_example, {})
                 G.GAME.vhp_rng_example = nil
+            end
+        end
+        if hand_stats.all_debuffed then
+            for _, card in pairs(hand) do
+                if not card.debuff then
+                    return
+                end
             end
         end
         
@@ -692,7 +710,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             table.insert(base_hand_desc, "(No example hand given)")
         end
         SMODS.PokerHand {
-            key = "custom" .. tostring(hand_id),
+            key = hand_stats.key,
             chips = hand_stats.base_chips,
             mult = hand_stats.base_mult,
             l_chips = hand_stats.level_chips,
@@ -718,7 +736,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             table.insert(flush_hand_desc, "(No example hand given)")
         end
         SMODS.PokerHand {
-            key = "customflush" .. tostring(hand_id),
+            key = hand_stats.key .. "_flush",
             chips = hand_stats.flush_base_chips,
             mult = hand_stats.flush_base_mult,
             l_chips = hand_stats.flush_level_chips,
@@ -746,7 +764,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             table.insert(straight_hand_desc, "(No example hand given)")
         end
         SMODS.PokerHand {
-            key = "customstraight" .. tostring(hand_id),
+            key = hand_stats.key .. "_straight",
             chips = hand_stats.straight_base_chips,
             mult = hand_stats.straight_base_mult,
             l_chips = hand_stats.straight_level_chips,
@@ -774,7 +792,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             table.insert(house_hand_desc, "(No example hand given)")
         end
         SMODS.PokerHand {
-            key = "customhouse" .. tostring(hand_id),
+            key = hand_stats.key .. "_house",
             chips = hand_stats.house_base_chips,
             mult = hand_stats.house_base_mult,
             l_chips = hand_stats.house_level_chips,
@@ -800,12 +818,20 @@ for hand_id, hand_stats in pairs(poker_hands) do
 
     local function create_planet(stats)
         math.randomseed(pseudohash(stats.name))
+        local planet_atlas = ("custom_planet" .. tostring(hand_stats.planet_texture_id))
+        if not hand_stats.planet_texture_id then
+            planet_atlas = "planets"
+        end
+        local planet_texture_pos = {x = stats.xpos, y = 0}
+        if not hand_stats.planet_texture_id then
+            planet_texture_pos = {x = math.random(0, 5), y = math.random(0, 1)}
+        end
         SMODS.Consumable {
             set = "Planet",
-            key = "custom" .. stats.prefix .. tostring(hand_id) .. "_planet",
-            config = {hand_type = "vhp_custom" .. stats.prefix .. tostring(hand_id), softlock = not new_hands_visible},
-            atlas = "planets",
-            pos = {x = math.random(0, 5), y = math.random(0, 1)},
+            key = hand_stats.key .. stats.suffix .. "_planet",
+            config = {hand_type = "vhp_" .. hand_stats.key .. stats.suffix, softlock = not new_hands_visible},
+            atlas = planet_atlas,
+            pos = planet_texture_pos,
             set_card_type_badge = function(self, card, badges)
                 badges[1] = create_badge(localize('k_planet_q'), get_type_colour(self or card.config, card), nil, 1.2)
             end,
@@ -824,16 +850,16 @@ for hand_id, hand_stats in pairs(poker_hands) do
     end
 
     if not hand_stats.composite_only then
-        create_planet{name = hand_stats.name, planet_name = hand_stats.planet_name, prefix = ""}
+        create_planet{name = hand_stats.name, planet_name = hand_stats.planet_name, suffix = "", xpos = 0}
     end
     if hand_stats.flush_name then
-        create_planet{name = hand_stats.flush_name, planet_name = hand_stats.flush_planet_name, prefix = "flush"}
+        create_planet{name = hand_stats.flush_name, planet_name = hand_stats.flush_planet_name, suffix = "_flush"}
     end
     if hand_stats.straight_name then
-        create_planet{name = hand_stats.straight_name, planet_name = hand_stats.straight_planet_name, prefix = "straight"}
+        create_planet{name = hand_stats.straight_name, planet_name = hand_stats.straight_planet_name, suffix = "_straight"}
     end
     if hand_stats.house_name then
-        create_planet{name = hand_stats.house_name, planet_name = hand_stats.house_planet_name, prefix = "house"}
+        create_planet{name = hand_stats.house_name, planet_name = hand_stats.house_planet_name, suffix = "_house"}
     end
 
 
@@ -858,8 +884,8 @@ for hand_id, hand_stats in pairs(poker_hands) do
 
     if hand_stats.joker_mult then
         SMODS.Joker {
-            key = "custom" .. tostring(hand_id) .. "_mult_joker",
-            config = {t_mult = hand_stats.joker_mult, type = "vhp_custom" .. tostring(hand_id)},
+            key = hand_stats.key .. "_mult_joker",
+            config = {t_mult = hand_stats.joker_mult, type = "vhp_" .. hand_stats.key},
             atlas = joker_atlas,
             pos = joker_texture_pos[1],
             process_loc_text = function(self)
@@ -875,7 +901,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             cost = 4,
             blueprint_compat = true,
             in_pool = function (self)
-                return new_hands_visible or G.GAME.hands["vhp_custom" .. tostring(hand_id)].played > 0
+                return new_hands_visible or G.GAME.hands["vhp_" .. hand_stats.key].played > 0
             end,
             loc_txt = {
                 name = hand_stats.joker_mult_name or (hand_stats.name .. " Joker"),
@@ -885,8 +911,8 @@ for hand_id, hand_stats in pairs(poker_hands) do
 
     if hand_stats.joker_chips then
         SMODS.Joker {
-            key = "custom" .. tostring(hand_id) .. "_chips_joker",
-            config = {t_chips = hand_stats.joker_chips, type = "vhp_custom" .. tostring(hand_id)},
+            key = hand_stats.key .. "_chips_joker",
+            config = {t_chips = hand_stats.joker_chips, type = "vhp_" .. hand_stats.key},
             atlas = joker_atlas,
             pos = joker_texture_pos[2],
             process_loc_text = function(self)
@@ -902,7 +928,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             cost = 4,
             blueprint_compat = true,
             in_pool = function (self)
-                return new_hands_visible or G.GAME.hands["vhp_custom" .. tostring(hand_id)].played > 0
+                return new_hands_visible or G.GAME.hands["vhp_" .. hand_stats.key].played > 0
             end,
             loc_txt = {
                 name = hand_stats.joker_chips_name or (hand_stats.name .. " Jester"),
@@ -912,8 +938,8 @@ for hand_id, hand_stats in pairs(poker_hands) do
 
     if hand_stats.joker_xmult then
         SMODS.Joker {
-            key = "custom" .. tostring(hand_id) .. "_xmult_joker",
-            config = {Xmult = hand_stats.joker_xmult, type = "vhp_custom" .. tostring(hand_id)},
+            key = hand_stats.key .. "_xmult_joker",
+            config = {Xmult = hand_stats.joker_xmult, type = "vhp_" .. hand_stats.key},
             atlas = joker_atlas,
             pos = joker_texture_pos[3],
             process_loc_text = function(self)
@@ -929,7 +955,7 @@ for hand_id, hand_stats in pairs(poker_hands) do
             cost = 8,
             blueprint_compat = true,
             in_pool = function (self)
-                return new_hands_visible or G.GAME.hands["vhp_custom" .. tostring(hand_id)].played > 0
+                return new_hands_visible or G.GAME.hands["vhp_" .. hand_stats.key].played > 0
             end,
             loc_txt = {
                 name = hand_stats.joker_xmult_name or ("The " .. hand_stats.name),
@@ -1069,8 +1095,8 @@ SMODS.Consumable {
 
 --[[SMODS.PokerHand {
     key = "test",
-    chips = 41,
-    mult = 4,
+    chips = 99,
+    mult = 99,
     l_chips = 999,
     l_mult = 999,
     example = {},
@@ -1082,16 +1108,13 @@ SMODS.Consumable {
     },
     visible = true,
     evaluate = function (parts, hand)
-        update_hand_cache(hand)
-        local full_house_cards = eval_pattern(hand, FULL_HOUSE_PATTERN, {})
-        if full_house_cards then
-            local ret = {}
-            for i = 1, 2, 1 do
-                for key, value in pairs(full_house_cards) do
-                    table.insert(ret, value)
+        for _, card in pairs(G.hand.cards) do
+            if not card.highlighted then
+                if card.config.center_key ~= "m_stone" then
+                    return
                 end
             end
-            return {ret}
         end
+        return {hand}
     end,
 }]]

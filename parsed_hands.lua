@@ -53,7 +53,8 @@ return [[ [
                 "rank": 14,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "aaaaaaaaaaa"
     },
     {
         "name": "Ace High",
@@ -87,7 +88,8 @@ return [[ [
         ],
         "joker_mult": 12.0,
         "joker_chips": 100.0,
-        "joker_xmult": 3.0
+        "joker_xmult": 3.0,
+        "key": "ace_high"
     },
     {
         "name": "AK-47",
@@ -141,7 +143,8 @@ return [[ [
         "joker_chips": 47.0,
         "joker_xmult": 2.5,
         "joker_mult_name": "Guns Ajimbo",
-        "joker_chips_name": "Sniper Joker"
+        "joker_chips_name": "Sniper Joker",
+        "key": "ak47"
     },
     {
         "name": "Batting Range",
@@ -214,7 +217,8 @@ return [[ [
                 "rank": 4,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "batting_range"
     },
     {
         "name": "Binary",
@@ -310,7 +314,8 @@ return [[ [
         "joker_mult": 20.0,
         "planet_name": "NULL ",
         "joker_mult_name": "Corrupted Joker",
-        "joker_chips_name": "Uneasy Joker"
+        "joker_chips_name": "Uneasy Joker",
+        "key": "binary"
     },
     {
         "name": "Blackjack",
@@ -424,7 +429,8 @@ return [[ [
         "straight_base_chips": 210.0,
         "straight_base_mult": 100.0,
         "straight_level_chips": 110.0,
-        "straight_level_mult": 20.0
+        "straight_level_mult": 20.0,
+        "key": "blackjack"
     },
     {
         "name": "Blood Clot",
@@ -497,7 +503,8 @@ return [[ [
                 "rank": 4,
                 "suit": "Hearts"
             }
-        ]
+        ],
+        "key": "blood_clot"
     },
     {
         "name": "Big Bobtail",
@@ -582,7 +589,8 @@ return [[ [
         "planet_name": "North Star",
         "joker_mult_name": "Cheeky Joker",
         "joker_chips_name": "Sneaky Joker",
-        "joker_xmult_name": "The Clique"
+        "joker_xmult_name": "The Clique",
+        "key": "bobtail"
     },
     {
         "name": "Broadway",
@@ -639,7 +647,8 @@ return [[ [
                 "rank": 10,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "broadway"
     },
     {
         "name": "Bumblebee Straight",
@@ -795,7 +804,8 @@ return [[ [
         "joker_mult_name": "Buzzy Joker",
         "joker_chips_name": "Stinging Joker",
         "joker_xmult_name": "The Hive",
-        "joker_texture_id": 3
+        "joker_texture_id": 3,
+        "key": "bumblebee"
     },
     {
         "name": "Candy Cane Straight",
@@ -950,7 +960,8 @@ return [[ [
         "planet_name": "Jupiter's Rings",
         "joker_mult_name": "Festive Joker",
         "joker_chips_name": "Hymnal Joker",
-        "joker_xmult_name": "The Season"
+        "joker_xmult_name": "The Season",
+        "key": "candy_cane"
     },
     {
         "name": "Check It Out Im In The House",
@@ -1020,7 +1031,8 @@ return [[ [
             }
         ],
         "order_offset": 6.0,
-        "planet_name": "Like Carpet"
+        "planet_name": "Like Carpet",
+        "key": "check_it_out"
     },
     {
         "name": "Chevron",
@@ -1153,7 +1165,8 @@ return [[ [
                 "rank": 8,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "chevron"
     },
     {
         "name": "Travelling Circus",
@@ -1202,7 +1215,8 @@ return [[ [
                 "rank": 11,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "circus_travel"
     },
     {
         "name": "Coin Flip",
@@ -1246,7 +1260,8 @@ return [[ [
         "joker_xmult": 3.0,
         "joker_mult_name": "Rich Joker",
         "joker_chips_name": "Stingy Joker",
-        "joker_xmult_name": "The Head"
+        "joker_xmult_name": "The Head",
+        "key": "coin_flip"
     },
     {
         "name": "Collector's Album",
@@ -1271,7 +1286,8 @@ return [[ [
         ],
         "planet_name": "Card Store ",
         "different_enhancement": true,
-        "author": "Talker DRIVE"
+        "author": "Talker DRIVE",
+        "key": "collector_album"
     },
     {
         "name": "Counterspell",
@@ -1315,7 +1331,8 @@ return [[ [
             }
         ],
         "planet_name": "Dominara",
-        "author": "scross"
+        "author": "scross",
+        "key": "counterspell"
     },
     {
         "name": "Country House",
@@ -1407,7 +1424,8 @@ return [[ [
                 "suit": "Spades"
             }
         ],
-        "planet_name": "Janssen"
+        "planet_name": "Janssen",
+        "key": "country_house"
     },
     {
         "name": "Dashed",
@@ -1512,7 +1530,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "flush_planet_name": "Super-Super-Neptune"
+        "flush_planet_name": "Super-Super-Neptune",
+        "key": "dashed"
     },
     {
         "name": "Dead Man's Hand",
@@ -1618,7 +1637,8 @@ return [[ [
         "planet_name": "Phaeton",
         "joker_mult_name": "Doomed Joker",
         "joker_chips_name": "Mourning Joker",
-        "joker_xmult_name": "The Omen"
+        "joker_xmult_name": "The Omen",
+        "key": "dead_man"
     },
     {
         "name": "Devil's Gambit",
@@ -1666,7 +1686,8 @@ return [[ [
                 "suit": "Diamonds",
                 "unscoring": true
             }
-        ]
+        ],
+        "key": "devil_gambit"
     },
     {
         "name": "Discard-Worthy",
@@ -1713,7 +1734,8 @@ return [[ [
                 "suit": "Spades"
             }
         ],
-        "author": "verdant_thePOWER"
+        "author": "verdant_thePOWER",
+        "key": "discard_worthy"
     },
     {
         "name": "Dropshot",
@@ -1800,7 +1822,8 @@ return [[ [
         "planet_name": "Hollow Earth",
         "joker_mult_name": "Fisher Joker",
         "joker_chips_name": "Empty Joker",
-        "joker_xmult_name": "The Golfer"
+        "joker_xmult_name": "The Golfer",
+        "key": "dropshot"
     },
     {
         "name": "EAR",
@@ -1893,7 +1916,8 @@ return [[ [
                 "rank": 3,
                 "suit": "Wilds"
             }
-        ]
+        ],
+        "key": "ear"
     },
     {
         "name": "Even of a Kind",
@@ -1957,7 +1981,8 @@ return [[ [
         "joker_xmult": 3.0,
         "joker_mult_name": "Math Joker",
         "joker_chips_name": "Even Joker",
-        "joker_xmult_name": "Lesser Better"
+        "joker_xmult_name": "Lesser Better",
+        "key": "even_oak"
     },
     {
         "name": "Excavation",
@@ -2030,7 +2055,8 @@ return [[ [
                 "rank": 4,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "excavation"
     },
     {
         "name": "Face Blackjack",
@@ -2106,7 +2132,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "planet_name": "Space Debris"
+        "planet_name": "Space Debris",
+        "key": "face_blackjack"
     },
     {
         "name": "Face Flush",
@@ -2218,7 +2245,8 @@ return [[ [
                 "suit": "Spades"
             }
         ],
-        "planet_name": "Ganymede"
+        "planet_name": "Ganymede",
+        "key": "face_flush"
     },
     {
         "name": "Rigged From The Start",
@@ -2294,7 +2322,8 @@ return [[ [
                 "rank": 14,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "fallout_rigged"
     },
     {
         "name": "War Never Changes",
@@ -2340,7 +2369,58 @@ return [[ [
         ],
         "joker_mult": 8.0,
         "joker_chips": 50.0,
-        "joker_xmult": 2.0
+        "joker_xmult": 2.0,
+        "key": "fallout_war"
+    },
+    {
+        "name": "Fedy Fivebar",
+        "desc": [
+            "A, 9, 8, and 7",
+            "har har ha har har"
+        ],
+        "base_chips": 87.0,
+        "base_mult": 5.0,
+        "level_chips": 19.0,
+        "level_mult": 1.9,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": 9
+                    },
+                    {
+                        "rank": 8
+                    },
+                    {
+                        "rank": 7
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Batu",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 9,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 7,
+                "suit": "Diamonds"
+            }
+        ],
+        "key": "fedy_fivebar"
     },
     {
         "name": "Fibonacci",
@@ -2431,7 +2511,8 @@ return [[ [
         "planet_name": "The Ring",
         "joker_mult_name": "Fibbing Joker",
         "joker_chips_name": "Quick-witted Joker",
-        "joker_xmult_name": "The Spiral"
+        "joker_xmult_name": "The Spiral",
+        "key": "fibonacci"
     },
     {
         "name": "Five And Dime",
@@ -2565,7 +2646,8 @@ return [[ [
                 "rank": 10,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "five_and_dime"
     },
     {
         "name": "Five Guys",
@@ -2642,7 +2724,8 @@ return [[ [
                 "suit": "Wilds"
             }
         ],
-        "planet_name": "Giftcard"
+        "planet_name": "Giftcard",
+        "key": "five_guys"
     },
     {
         "name": "Flick",
@@ -2715,7 +2798,8 @@ return [[ [
             }
         ],
         "order_offset": 1.0,
-        "planet_name": "Star"
+        "planet_name": "Star",
+        "key": "flick"
     },
     {
         "name": "Flower Pot",
@@ -2779,7 +2863,8 @@ return [[ [
                 "suit": "Diamonds"
             }
         ],
-        "author": "TamerSoup625"
+        "author": "TamerSoup625",
+        "key": "flower_pot"
     },
     {
         "name": "Flushless",
@@ -2845,7 +2930,8 @@ return [[ [
                 "stone": true
             }
         ],
-        "author": "tHotoe"
+        "author": "tHotoe",
+        "key": "flushless"
     },
     {
         "name": "Flush Four",
@@ -2925,7 +3011,8 @@ return [[ [
         "joker_chips": 200.0,
         "joker_xmult": 5.0,
         "joker_xmult_name": "The Poly",
-        "author": "TheLemon27"
+        "author": "TheLemon27",
+        "key": "flush_four"
     },
     {
         "name": "Flush Four+",
@@ -3011,7 +3098,8 @@ return [[ [
                 "suit": "Clubs"
             }
         ],
-        "author": "Moticon"
+        "author": "Moticon",
+        "key": "flush_four_plus"
     },
     {
         "name": "Flush Pair",
@@ -3063,7 +3151,8 @@ return [[ [
         "joker_chips": 75.0,
         "joker_xmult": 2.5,
         "joker_xmult_name": "The Couple",
-        "author": "TheLemon27"
+        "author": "TheLemon27",
+        "key": "flush_pair"
     },
     {
         "name": "Flush Three",
@@ -3129,7 +3218,8 @@ return [[ [
         "joker_chips": 120.0,
         "joker_xmult": 3.75,
         "joker_xmult_name": "The Triangle",
-        "author": "TheLemon27"
+        "author": "TheLemon27",
+        "key": "flush_three"
     },
     {
         "name": "Flush Two Pair",
@@ -3209,7 +3299,8 @@ return [[ [
         "joker_chips": 100.0,
         "joker_xmult": 3.0,
         "joker_xmult_name": "The Double",
-        "author": "TheLemon27"
+        "author": "TheLemon27",
+        "key": "flush_two_pair"
     },
     {
         "name": "Fraud Hand :3",
@@ -3264,7 +3355,8 @@ return [[ [
                 "rank": 14,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "fraud_hand"
     },
     {
         "name": "Fuck You",
@@ -3285,7 +3377,8 @@ return [[ [
             }
         ],
         "chance": 100.0,
-        "author": "Salsa"
+        "author": "Salsa",
+        "key": "fuck_you"
     },
     {
         "name": "Fuller House",
@@ -3359,7 +3452,8 @@ return [[ [
             }
         ],
         "order_offset": 2.0,
-        "planet_name": "Earth 2"
+        "planet_name": "Earth 2",
+        "key": "fuller_house"
     },
     {
         "name": "Fun Is Infinite",
@@ -3447,7 +3541,8 @@ return [[ [
                 "rank": 5,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "fun_infinite"
     },
     {
         "name": "Galvanised Square Steel",
@@ -3482,7 +3577,6 @@ return [[ [
         "author": "asmor_",
         "all_enhanced": "steel",
         "card_count": 4,
-        "money_min": 0.0,
         "money_max": 0.0,
         "example": [
             {
@@ -3504,7 +3598,153 @@ return [[ [
         ],
         "planet_name": "0.01m2 apartment",
         "joker_xmult": 100.0,
-        "joker_xmult_name": "screws borrowed from his aunt"
+        "joker_xmult_name": "screws borrowed from his aunt",
+        "key": "galvanized_steel"
+    },
+    {
+        "name": "RNG Hand No. 47",
+        "desc": [
+            "1 in 47 chance to happen when you",
+            "play a Flush, Straight, or Full House."
+        ],
+        "base_chips": 47.0,
+        "base_mult": 4.7,
+        "level_chips": 2.7,
+        "level_mult": 31.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            1
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            2
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            3
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            4
+                        ]
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "y",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "y",
+                            0
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "chance": 47.0,
+        "author": "Papyrus Semi",
+        "example": [
+            {
+                "rank": 4,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 4,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 4,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 7,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 7,
+                "suit": "Diamonds"
+            }
+        ],
+        "planet_name": "Garn47",
+        "planet_texture_id": 1,
+        "key": "garn"
     },
     {
         "name": "Glass Houses",
@@ -3603,7 +3843,8 @@ return [[ [
                 "rank": 2,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "glass_house"
     },
     {
         "name": "Grandeur",
@@ -3644,7 +3885,8 @@ return [[ [
         "flush_base_mult": 6.0,
         "flush_level_chips": 30.0,
         "flush_level_mult": 4.0,
-        "flush_planet_name": "Midas"
+        "flush_planet_name": "Midas",
+        "key": "grandeur"
     },
     {
         "name": "Hack",
@@ -3697,7 +3939,8 @@ return [[ [
                 "rank": 2,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "hack"
     },
     {
         "name": "Highway",
@@ -3759,7 +4002,8 @@ return [[ [
         "planet_name": "Planet V",
         "joker_mult_name": "Rowdy Joker",
         "joker_chips_name": "Tough Joker",
-        "joker_xmult_name": "The Jack"
+        "joker_xmult_name": "The Jack",
+        "key": "highway"
     },
     {
         "name": "Double House",
@@ -3851,7 +4095,8 @@ return [[ [
                 "rank": 2,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "house_double"
     },
     {
         "name": "Flush Garage",
@@ -3943,7 +4188,8 @@ return [[ [
                 "rank": 3,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "house_garage"
     },
     {
         "name": "Pseudo House",
@@ -4017,7 +4263,8 @@ return [[ [
         ],
         "joker_mult": 8.0,
         "joker_chips": 50.0,
-        "joker_xmult": 2.0
+        "joker_xmult": 2.0,
+        "key": "house_pseudo"
     },
     {
         "name": "Jackpot",
@@ -4086,7 +4333,8 @@ return [[ [
                 "rank": 3,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "jackpot"
     },
     {
         "name": "jnj",
@@ -4154,7 +4402,8 @@ return [[ [
         "planet_name": "Rice Cake",
         "joker_mult": 18.0,
         "joker_chips": 130.0,
-        "joker_xmult": 4.0
+        "joker_xmult": 4.0,
+        "key": "jnj"
     },
     {
         "name": "Junk",
@@ -4246,7 +4495,8 @@ return [[ [
                 "suit": "Wilds"
             }
         ],
-        "planet_name": "Space Junk"
+        "planet_name": "Space Junk",
+        "key": "junk"
     },
     {
         "name": "Kingdom",
@@ -4345,7 +4595,8 @@ return [[ [
                 "suit": "Spades"
             }
         ],
-        "planet_name": "Yvaga"
+        "planet_name": "Yvaga",
+        "key": "kingdom"
     },
     {
         "name": "Last-Ditch",
@@ -4378,7 +4629,8 @@ return [[ [
                 "options": {}
             }
         ],
-        "author": "hatstack"
+        "author": "hatstack",
+        "key": "last_ditch"
     },
     {
         "name": "The Late Game Run Killer",
@@ -4435,7 +4687,8 @@ return [[ [
         ],
         "all_editioned": "polychrome",
         "all_sealed": "Red",
-        "author": "asmor_"
+        "author": "asmor_",
+        "key": "late_killer"
     },
     {
         "name": "Laughing Jack",
@@ -4504,7 +4757,8 @@ return [[ [
                 "suit": "Spades"
             }
         ],
-        "planet_name": "Goofball Nebula"
+        "planet_name": "Goofball Nebula",
+        "key": "laughing_jack"
     },
     {
         "name": "Low Card",
@@ -4685,7 +4939,8 @@ return [[ [
         "joker_mult_name": "Lowly Joker",
         "joker_chips_name": "Peasant Joker",
         "joker_xmult_name": "The Prole",
-        "joker_texture_id": 1
+        "joker_texture_id": 1,
+        "key": "low_card"
     },
     {
         "name": "Meridian",
@@ -4791,7 +5046,152 @@ return [[ [
                 "suit": "Diamonds"
             }
         ],
-        "flush_planet_name": "Pholus"
+        "flush_planet_name": "Pholus",
+        "key": "meridian"
+    },
+    {
+        "name": "Metallic Madness",
+        "desc": [
+            "A Full House of 5 Steel cards."
+        ],
+        "base_chips": 120.0,
+        "base_mult": 9.0,
+        "level_chips": 40.0,
+        "level_mult": 4.5,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "all_enhanced": "steel",
+        "author": "hatstack",
+        "planet_name": "Little Planet",
+        "example": [
+            {
+                "rank": 7,
+                "suit": "Spades"
+            },
+            {
+                "rank": 7,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 4,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 4,
+                "suit": "Hearts"
+            }
+        ],
+        "joker_mult": 20.0,
+        "joker_chips": 150.0,
+        "joker_xmult": 4.0,
+        "joker_mult_name": "Mecha Joker",
+        "joker_chips_name": "Silver Joker",
+        "joker_xmult_name": "The Artificial",
+        "key": "metallic_madness"
+    },
+    {
+        "name": "Mining Operation",
+        "desc": [
+            "A 5-card hand with 1 Steel, 1 Gold, and 3 Stones.",
+            "The Steel and Gold card score twice."
+        ],
+        "base_chips": 38.0,
+        "base_mult": 4.0,
+        "level_chips": 15.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "times": 2
+                    },
+                    {
+                        "stone": true
+                    },
+                    {
+                        "stone": true
+                    },
+                    {
+                        "stone": true
+                    },
+                    {
+                        "suit": [
+                            "b",
+                            false
+                        ],
+                        "times": 2,
+                        "rank": [
+                            "_support0",
+                            0
+                        ]
+                    }
+                ],
+                "options": {
+                    "_support0": [
+                        "_nonunique"
+                    ]
+                }
+            }
+        ],
+        "exact_enhancements": [
+            "steel",
+            "gold",
+            "stone",
+            "stone",
+            "stone"
+        ],
+        "joker_mult": 15.0,
+        "joker_chips": 120.0,
+        "joker_xmult": 3.375,
+        "joker_mult_name": "Laborious Joker",
+        "joker_chips_name": "Arduous Joker",
+        "joker_xmult_name": "The Mines",
+        "planet_name": "617 Patroclus",
+        "author": "hatstack",
+        "key": "mining_operation"
     },
     {
         "name": "Pile of Money",
@@ -4864,7 +5264,8 @@ return [[ [
                 "rank": 4,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "money_pile"
     },
     {
         "name": "Nostalgia",
@@ -4906,7 +5307,8 @@ return [[ [
                 "stone": true
             }
         ],
-        "author": "TamerSoup625"
+        "author": "TamerSoup625",
+        "key": "nostalgia"
     },
     {
         "name": "Nothing",
@@ -4929,7 +5331,8 @@ return [[ [
         "joker_chips": 25.0,
         "joker_xmult": 1.001,
         "joker_texture_id": 2,
-        "planet_name": " "
+        "planet_name": " ",
+        "key": "nothing"
     },
     {
         "name": "Not So Straight",
@@ -4997,7 +5400,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "planet_name": "Jupiter?"
+        "planet_name": "Jupiter?",
+        "key": "not_straight"
     },
     {
         "name": "Odd of a Kind",
@@ -5061,7 +5465,8 @@ return [[ [
         "joker_xmult": 3.0,
         "joker_mult_name": "Nerd Joker",
         "joker_chips_name": "Prime Joker",
-        "joker_xmult_name": "Greater Good"
+        "joker_xmult_name": "Greater Good",
+        "key": "odd_oak"
     },
     {
         "name": "Parable",
@@ -5146,7 +5551,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "order_offset": 1.0
+        "order_offset": 1.0,
+        "key": "parable"
     },
     {
         "name": "Perfect Sigma",
@@ -5221,7 +5627,8 @@ return [[ [
                 "stone": true
             }
         ],
-        "author": "verdant_thePOWER"
+        "author": "verdant_thePOWER",
+        "key": "perfect_sigma"
     },
     {
         "name": "Pi",
@@ -5306,7 +5713,8 @@ return [[ [
                 "rank": 5,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "pi"
     },
     {
         "name": "Just Plain Lucky",
@@ -5325,7 +5733,8 @@ return [[ [
             }
         ],
         "author": "MathIsFun_",
-        "chance": 1000.0
+        "chance": 1000.0,
+        "key": "plain_lucky"
     },
     {
         "name": "Just Plain Unlucky",
@@ -5345,7 +5754,8 @@ return [[ [
         ],
         "author": "noobie",
         "chance": 1000.0,
-        "order_offset": 600000.0
+        "order_offset": 600000.0,
+        "key": "plain_unlucky"
     },
     {
         "name": "Polychrome of the Day",
@@ -5382,7 +5792,8 @@ return [[ [
         "joker_mult": 5.0,
         "planet_name": "Planet-Rainbow",
         "joker_mult_name": "Rainbow Joker",
-        "joker_chips_name": "Chroma Joker"
+        "joker_chips_name": "Chroma Joker",
+        "key": "poly_of_the_day"
     },
     {
         "name": "Thinking With Portals",
@@ -5432,7 +5843,8 @@ return [[ [
                 "rank": 4,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "portal"
     },
     {
         "name": "Quarry",
@@ -5482,7 +5894,8 @@ return [[ [
             {
                 "stone": true
             }
-        ]
+        ],
+        "key": "quarry"
     },
     {
         "name": "Quintuplets",
@@ -5574,7 +5987,8 @@ return [[ [
                 "rank": 14,
                 "suit": "Hearts"
             }
-        ]
+        ],
+        "key": "quintuplets"
     },
     {
         "name": "RNG",
@@ -5617,7 +6031,8 @@ return [[ [
         ],
         "rng": true,
         "planet_name": "France",
-        "author": "tHotoe"
+        "author": "tHotoe",
+        "key": "rng"
     },
     {
         "name": "Rockafeller St",
@@ -5665,7 +6080,8 @@ return [[ [
                 "rank": 3,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "rockafeller"
     },
     {
         "name": "Royal Diner",
@@ -5756,7 +6172,65 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "flush_planet_name": "(612) Veronika"
+        "flush_planet_name": "(612) Veronika",
+        "key": "royal_diner"
+    },
+    {
+        "name": "Royal Farce",
+        "desc": [
+            "A debuffed Royal Flush"
+        ],
+        "base_chips": 1.0,
+        "base_mult": 1.0,
+        "level_chips": 100.0,
+        "level_mult": 10.0,
+        "order_offset": 1000.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 14,
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 13,
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 12,
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 10,
+                        "suit": [
+                            "a",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "all_debuffed": true,
+        "author": "Vermilingus",
+        "planet_name": "Debris",
+        "key": "royal_farce"
     },
     {
         "name": "The Royal Meetup",
@@ -5851,7 +6325,8 @@ return [[ [
         "planet_name": "Castle",
         "joker_mult": 10.0,
         "joker_chips": 80.0,
-        "joker_xmult": 3.0
+        "joker_xmult": 3.0,
+        "key": "royal_meetup"
     },
     {
         "name": "Royal Sampler",
@@ -5942,7 +6417,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "flush_planet_name": "Rigel 7"
+        "flush_planet_name": "Rigel 7",
+        "key": "royal_sampler"
     },
     {
         "name": "Sawtooth",
@@ -6049,7 +6525,8 @@ return [[ [
                 "suit": "Diamonds"
             }
         ],
-        "planet_name": "Orcus"
+        "planet_name": "Orcus",
+        "key": "sawtooth"
     },
     {
         "name": "Seeing Double",
@@ -6504,7 +6981,8 @@ return [[ [
                 "rank": 3,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "seeing_double"
     },
     {
         "name": "Seven and Half",
@@ -6638,7 +7116,8 @@ return [[ [
         "joker_xmult": 3.0,
         "joker_mult_name": "Neapolitan Joker",
         "joker_chips_name": "Piacenza Joker",
-        "joker_xmult_name": "The Fifteen Halves"
+        "joker_xmult_name": "The Fifteen Halves",
+        "key": "seven_half"
     },
     {
         "name": "7 Leaf Clover",
@@ -6714,7 +7193,8 @@ return [[ [
                 "rank": 7,
                 "suit": "Clubs"
             }
-        ]
+        ],
+        "key": "seven_leaf"
     },
     {
         "name": "Seximal Straight",
@@ -6865,7 +7345,8 @@ return [[ [
                 "rank": 10,
                 "suit": "Hearts"
             }
-        ]
+        ],
+        "key": "seximal_straight"
     },
     {
         "name": "She a 10",
@@ -6920,7 +7401,8 @@ return [[ [
                 "suit": "Diamonds"
             }
         ],
-        "author": "Runtem"
+        "author": "Runtem",
+        "key": "she_a_10"
     },
     {
         "name": "Sine",
@@ -6993,7 +7475,8 @@ return [[ [
                 "suit": "Diamonds"
             }
         ],
-        "planet_name": "Orcus"
+        "planet_name": "Orcus",
+        "key": "sine"
     },
     {
         "name": "Skeet",
@@ -7105,7 +7588,8 @@ return [[ [
         "joker_chips": 100.0,
         "joker_chips_name": "Sprayer Joker",
         "joker_xmult": 3.0,
-        "joker_xmult_name": "The Pelters"
+        "joker_xmult_name": "The Pelters",
+        "key": "skeet"
     },
     {
         "name": "Can You Smell What The Rock Is Cooking",
@@ -7134,7 +7618,8 @@ return [[ [
             }
         ],
         "order_offset": 1.0,
-        "planet_name": "Meteor"
+        "planet_name": "Meteor",
+        "key": "smell_rock"
     },
     {
         "name": "Spanish Laugh",
@@ -7217,7 +7702,8 @@ return [[ [
         "joker_xmult": 3.4,
         "joker_mult_name": "Spanish Joker",
         "joker_chips_name": "Delirious Joker",
-        "joker_xmult_name": "El Risitas"
+        "joker_xmult_name": "El Risitas",
+        "key": "spanish_laugh"
     },
     {
         "name": "Stones at a Glass House",
@@ -7252,7 +7738,8 @@ return [[ [
         "joker_mult": 16.0,
         "planet_name": "GlassHome",
         "joker_mult_name": "Fragile Joker",
-        "joker_chips_name": "Stone-d Joker"
+        "joker_chips_name": "Stone-d Joker",
+        "key": "stones_at_glass"
     },
     {
         "name": "Stone House",
@@ -7342,7 +7829,8 @@ return [[ [
                 "suit": "Spades"
             }
         ],
-        "planet_name": "Limestone Mine"
+        "planet_name": "Limestone Mine",
+        "key": "stone_house"
     },
     {
         "name": "Face Straight",
@@ -7417,7 +7905,8 @@ return [[ [
         "straight_base_chips": 150.0,
         "straight_base_mult": 50.0,
         "straight_level_chips": 22.0,
-        "straight_level_mult": 3.0
+        "straight_level_mult": 3.0,
+        "key": "straight_face"
     },
     {
         "name": "Pair Straight",
@@ -7453,7 +7942,8 @@ return [[ [
         "straight_base_chips": 300.0,
         "straight_base_mult": 30.0,
         "straight_level_chips": 55.0,
-        "straight_level_mult": 5.0
+        "straight_level_mult": 5.0,
+        "key": "straight_pair"
     },
     {
         "name": "Aces High",
@@ -7528,7 +8018,8 @@ return [[ [
                 "rank": 14,
                 "suit": "Wilds"
             }
-        ]
+        ],
+        "key": "super_ace_high"
     },
     {
         "name": "What, how, this hand is impossible what did you do to get this",
@@ -7568,7 +8059,8 @@ return [[ [
         "planet_name": "Missing Texture",
         "joker_mult": 100.0,
         "joker_chips": 1000.0,
-        "joker_xmult": 10.0
+        "joker_xmult": 10.0,
+        "key": "sus"
     },
     {
         "name": "The Jackpot",
@@ -7648,7 +8140,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "planet_name": "Slot Machine"
+        "planet_name": "Slot Machine",
+        "key": "the_jackpot"
     },
     {
         "name": "Townhouse",
@@ -7740,7 +8233,8 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "planet_name": "Planet V "
+        "planet_name": "Planet V ",
+        "key": "townhouse"
     },
     {
         "name": "Two Birds",
@@ -7791,7 +8285,8 @@ return [[ [
         "joker_mult": 12.0,
         "planet_name": "Park",
         "joker_mult_name": "Bird Joker",
-        "joker_chips_name": "Birdie Joker"
+        "joker_chips_name": "Birdie Joker",
+        "key": "two_birds"
     },
     {
         "name": "Two Flush Pair",
@@ -7868,7 +8363,8 @@ return [[ [
                 "rank": 2,
                 "suit": "Spades"
             }
-        ]
+        ],
+        "key": "two_flush_pair"
     },
     {
         "name": "The Ultimate Flush",
@@ -7941,7 +8437,8 @@ return [[ [
         "same_edition": true,
         "same_seal": true,
         "author": "Papyrus Semi",
-        "planet_name": "The Pearly Gates"
+        "planet_name": "The Pearly Gates",
+        "key": "ultimate_flush"
     },
     {
         "name": "Ultimate Gambit",
@@ -7973,7 +8470,8 @@ return [[ [
                 "rank": 2,
                 "suit": "Diamonds"
             }
-        ]
+        ],
+        "key": "ultimate_gambit"
     },
     {
         "name": "Weezer",
@@ -8043,7 +8541,8 @@ return [[ [
         "joker_xmult": 4.0,
         "joker_mult_name": "Buddy Joker",
         "joker_chips_name": "Holly Joker",
-        "joker_xmult_name": "The Blue Album"
+        "joker_xmult_name": "The Blue Album",
+        "key": "weezer"
     },
     {
         "name": "Wee Are Resorting 2 Violence",
@@ -8085,7 +8584,8 @@ return [[ [
         "all_enhanced": "glass",
         "all_editioned": "holo",
         "order_offset": 17100.0,
-        "author": "noobie"
+        "author": "noobie",
+        "key": "wee_violence"
     },
     {
         "name": "What Hand",
@@ -8175,7 +8675,8 @@ return [[ [
         "planet_name": "Boulder",
         "joker_mult": 12.0,
         "joker_chips": 100.0,
-        "joker_xmult": 4.0
+        "joker_xmult": 4.0,
+        "key": "what_hand"
     },
     {
         "name": "Wild Flush",
@@ -8272,7 +8773,8 @@ return [[ [
                 "rank": 8,
                 "suit": "Wilds"
             }
-        ]
+        ],
+        "key": "wild_flush"
     },
     {
         "name": "Wild West",
@@ -8332,6 +8834,7 @@ return [[ [
         "planet_name": "Veil Nebula",
         "joker_mult_name": "Cowboy Joker",
         "joker_chips_name": "Lasso Joker",
-        "joker_xmult_name": "The Saloon"
+        "joker_xmult_name": "The Saloon",
+        "key": "wild_west"
     }
 ] ]]
