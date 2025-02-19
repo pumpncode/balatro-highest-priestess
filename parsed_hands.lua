@@ -217,6 +217,102 @@ return [[ [
         ]
     },
     {
+        "name": "Binary",
+        "desc": [
+            "Any 5-card combination of Debuffed Cards and Aces.",
+            "There must be at least 2 Debuffed Cards for the hand to count."
+        ],
+        "base_chips": 65.0,
+        "base_mult": 6.0,
+        "level_chips": 20.0,
+        "level_mult": 4.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "debuffed": true
+                    },
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "debuffed": true
+                    },
+                    {
+                        "rank": 14
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_nonunique"
+                    ],
+                    "b": [
+                        "_nonunique"
+                    ]
+                }
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "debuffed": true
+                    },
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "debuffed": true
+                    },
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": [
+                            "c",
+                            0
+                        ],
+                        "debuffed": true
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_nonunique"
+                    ],
+                    "b": [
+                        "_nonunique"
+                    ],
+                    "c": [
+                        "_nonunique"
+                    ]
+                }
+            }
+        ],
+        "author": "Lolhappy909_lol",
+        "joker_chips": 125.0,
+        "joker_mult": 20.0,
+        "planet_name": "NULL ",
+        "joker_mult_name": "Corrupted Joker",
+        "joker_chips_name": "Uneasy Joker"
+    },
+    {
         "name": "Blackjack",
         "desc": [
             "Any amount of cards",
@@ -253,10 +349,23 @@ return [[ [
                     {}
                 ],
                 "options": {}
+            },
+            {
+                "pattern": [
+                    {},
+                    {}
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {}
+                ],
+                "options": {}
             }
         ],
         "rank_sum": 21,
-        "author": "Sustato",
+        "author": "Sustato (+ John Dorian Smith)",
         "example": [
             {
                 "rank": 14,
@@ -279,9 +388,11 @@ return [[ [
                 "suit": "Spades"
             }
         ],
+        "planet_name": "Sagittarius A*",
         "joker_mult": 8.0,
         "joker_chips": 50.0,
         "joker_xmult": 2.0,
+        "joker_xmult_name": "The Sum",
         "flush_name": "Flush Blackjack",
         "flush_base_chips": 21.0,
         "flush_base_mult": 21.0,
@@ -467,7 +578,7 @@ return [[ [
         "joker_mult": 10.0,
         "joker_chips": 100.0,
         "joker_xmult": 3.0,
-        "order_offset": 1,
+        "order_offset": 1.0,
         "planet_name": "North Star",
         "joker_mult_name": "Cheeky Joker",
         "joker_chips_name": "Sneaky Joker",
@@ -679,12 +790,237 @@ return [[ [
         "joker_mult": 12.0,
         "joker_chips": 125.0,
         "joker_xmult": 3.5,
-        "order_offset": 1,
+        "order_offset": 1.0,
         "planet_name": "Neptune's Rings",
         "joker_mult_name": "Buzzy Joker",
         "joker_chips_name": "Stinging Joker",
         "joker_xmult_name": "The Hive",
         "joker_texture_id": 3
+    },
+    {
+        "name": "Candy Cane Straight",
+        "desc": [
+            "5 cards in ascending order,",
+            "alternating between Hearts",
+            "and Clubs"
+        ],
+        "base_chips": 125.0,
+        "base_mult": 9.0,
+        "level_chips": 50.0,
+        "level_mult": 4.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            2
+                        ],
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            3
+                        ],
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            4
+                        ],
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            2
+                        ],
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            3
+                        ],
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            4
+                        ],
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Post Prototype",
+        "example": [
+            {
+                "rank": 8,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 9,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 10,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Clubs"
+            }
+        ],
+        "joker_mult": 12.0,
+        "joker_chips": 125.0,
+        "joker_xmult": 3.5,
+        "order_offset": 1.0,
+        "planet_name": "Jupiter's Rings",
+        "joker_mult_name": "Festive Joker",
+        "joker_chips_name": "Hymnal Joker",
+        "joker_xmult_name": "The Season"
+    },
+    {
+        "name": "Check It Out Im In The House",
+        "credits_name": "CIOIITH",
+        "desc": [
+            "A pair and a three of a kind",
+            "1 in 10000 chance to get this hand"
+        ],
+        "base_chips": 100.0,
+        "base_mult": 10.0,
+        "level_chips": 100.0,
+        "level_mult": 10.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "chance": 10000.0,
+        "author": "Plzbeans",
+        "example": [
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            }
+        ],
+        "order_offset": 6.0,
+        "planet_name": "Like Carpet"
     },
     {
         "name": "Chevron",
@@ -913,6 +1249,272 @@ return [[ [
         "joker_xmult_name": "The Head"
     },
     {
+        "name": "Collector's Album",
+        "desc": [
+            "Five cards with different enhancements"
+        ],
+        "base_chips": 65.0,
+        "base_mult": 3.0,
+        "level_chips": 25.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "planet_name": "Card Store ",
+        "different_enhancement": true,
+        "author": "Talker DRIVE"
+    },
+    {
+        "name": "Counterspell",
+        "desc": [
+            "Two Foil Ace of Clubs"
+        ],
+        "base_chips": 20.0,
+        "base_mult": 2.0,
+        "level_chips": 20.0,
+        "level_mult": 1.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 14,
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 14,
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "all_editioned": "foil",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 14,
+                "suit": "Clubs"
+            }
+        ],
+        "planet_name": "Dominara",
+        "author": "scross"
+    },
+    {
+        "name": "Country House",
+        "desc": [
+            "Three identically-ranked cards with matching suits",
+            "and two identically-ranked cards with other different suits."
+        ],
+        "base_chips": 100.0,
+        "base_mult": 10.0,
+        "level_chips": 45.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "z",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Post Prototype",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 14,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 6,
+                "suit": "Spades"
+            },
+            {
+                "rank": 6,
+                "suit": "Spades"
+            },
+            {
+                "rank": 6,
+                "suit": "Spades"
+            }
+        ],
+        "planet_name": "Janssen"
+    },
+    {
+        "name": "Dashed",
+        "desc": [
+            "5 cards, each with gaps of 1 rank between them."
+        ],
+        "base_chips": 40.0,
+        "base_mult": 3.0,
+        "level_chips": 15.0,
+        "level_mult": 4.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            2
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            4
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            6
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            8
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "hatstack",
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 11,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 9,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 7,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 5,
+                "suit": "Spades"
+            }
+        ],
+        "joker_mult": 10.0,
+        "joker_chips": 120.0,
+        "joker_xmult": 4.0,
+        "planet_name": "Super-Neptune",
+        "joker_mult_name": "Quick Joker",
+        "joker_chips_name": "Nimble Joker",
+        "joker_xmult_name": "The Sprint",
+        "flush_name": "Dashed Flush",
+        "flush_base_chips": 80.0,
+        "flush_base_mult": 10.0,
+        "flush_level_chips": 20.0,
+        "flush_level_mult": 6.0,
+        "flush_example": [
+            {
+                "rank": 14,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 9,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            }
+        ],
+        "flush_planet_name": "Super-Super-Neptune"
+    },
+    {
         "name": "Dead Man's Hand",
         "desc": [
             "A Pair of Aces or Jacks and a Pair of 8s or 7s"
@@ -1019,6 +1621,101 @@ return [[ [
         "joker_xmult_name": "The Omen"
     },
     {
+        "name": "Devil's Gambit",
+        "desc": [
+            "Three 6s of any suit",
+            "When played, none of the cards score"
+        ],
+        "base_chips": 66.0,
+        "base_mult": 6.0,
+        "level_chips": 12.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 6,
+                        "unscoring": true
+                    },
+                    {
+                        "rank": 6,
+                        "unscoring": true
+                    },
+                    {
+                        "rank": 6,
+                        "unscoring": true
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "vasreall",
+        "example": [
+            {
+                "rank": 6,
+                "suit": "Spades",
+                "unscoring": true
+            },
+            {
+                "rank": 6,
+                "suit": "Hearts",
+                "unscoring": true
+            },
+            {
+                "rank": 6,
+                "suit": "Diamonds",
+                "unscoring": true
+            }
+        ]
+    },
+    {
+        "name": "Discard-Worthy",
+        "desc": [
+            "5 cards that don't apply to any other poker hand.",
+            "Excludes High Card, Low Card, and Nothing."
+        ],
+        "base_chips": 20.0,
+        "base_mult": 4.0,
+        "level_chips": 10.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "order_offset": -73.5,
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 6,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 3,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 2,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 8,
+                "suit": "Spades"
+            }
+        ],
+        "author": "verdant_thePOWER"
+    },
+    {
         "name": "Dropshot",
         "desc": [
             "4 cards sharing the same suit",
@@ -1074,11 +1771,13 @@ return [[ [
         "example": [
             {
                 "rank": 14,
-                "suit": "Hearts"
+                "suit": "Hearts",
+                "unscoring": true
             },
             {
                 "rank": 13,
-                "suit": "Hearts"
+                "suit": "Hearts",
+                "unscoring": true
             },
             {
                 "rank": 10,
@@ -1086,11 +1785,13 @@ return [[ [
             },
             {
                 "rank": 5,
-                "suit": "Hearts"
+                "suit": "Hearts",
+                "unscoring": true
             },
             {
                 "rank": 4,
-                "suit": "Hearts"
+                "suit": "Hearts",
+                "unscoring": true
             }
         ],
         "joker_mult": 12.0,
@@ -1195,6 +1896,70 @@ return [[ [
         ]
     },
     {
+        "name": "Even of a Kind",
+        "desc": [
+            "Five cards with consecutive orders according to even numbers",
+            "(I have no idea what the author meant by this)"
+        ],
+        "base_chips": 60.0,
+        "base_mult": 10.0,
+        "level_chips": 30.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 6
+                    },
+                    {
+                        "rank": 8
+                    },
+                    {
+                        "rank": 10
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Kooziefer",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Spades"
+            },
+            {
+                "rank": 4,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 6,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 10,
+                "suit": "Hearts"
+            }
+        ],
+        "order_offset": 5.0,
+        "planet_name": "Lesser Being",
+        "joker_mult": 12.0,
+        "joker_chips": 100.0,
+        "joker_xmult": 3.0,
+        "joker_mult_name": "Math Joker",
+        "joker_chips_name": "Even Joker",
+        "joker_xmult_name": "Lesser Better"
+    },
+    {
         "name": "Excavation",
         "desc": [
             "A Spade Flush",
@@ -1266,6 +2031,194 @@ return [[ [
                 "suit": "Spades"
             }
         ]
+    },
+    {
+        "name": "Face Blackjack",
+        "desc": [
+            "A Blackjack made with",
+            "an Ace and a face card",
+            "I'm sorry, John"
+        ],
+        "base_chips": 11.0,
+        "base_mult": 2.0,
+        "level_chips": 5.0,
+        "level_mult": 1.0,
+        "order_offset": 100.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ]
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_nonunique",
+                        "_face"
+                    ],
+                    "b": [
+                        "_nonunique",
+                        "_face"
+                    ]
+                }
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": 14
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_nonunique",
+                        "_face"
+                    ]
+                }
+            }
+        ],
+        "rank_sum": 21,
+        "author": "TamerSoup625",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Spades"
+            },
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            }
+        ],
+        "planet_name": "Space Debris"
+    },
+    {
+        "name": "Face Flush",
+        "desc": [
+            "A flush that made by face cards"
+        ],
+        "base_chips": 111.0,
+        "base_mult": 10.0,
+        "level_chips": 11.0,
+        "level_mult": 5.0,
+        "author": "Sustato",
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "c",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "d",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "e",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_face",
+                        "_nonunique"
+                    ],
+                    "b": [
+                        "_face",
+                        "_nonunique"
+                    ],
+                    "c": [
+                        "_face",
+                        "_nonunique"
+                    ],
+                    "d": [
+                        "_face",
+                        "_nonunique"
+                    ],
+                    "e": [
+                        "_face",
+                        "_nonunique"
+                    ]
+                }
+            }
+        ],
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 11,
+                "suit": "Spades"
+            }
+        ],
+        "planet_name": "Ganymede"
     },
     {
         "name": "Rigged From The Start",
@@ -1474,7 +2427,7 @@ return [[ [
         "joker_mult": 13.0,
         "joker_chips": 144.0,
         "joker_xmult": 3.0,
-        "order_offset": 1,
+        "order_offset": 1.0,
         "planet_name": "The Ring",
         "joker_mult_name": "Fibbing Joker",
         "joker_chips_name": "Quick-witted Joker",
@@ -1580,7 +2533,7 @@ return [[ [
         "joker_mult": 10.0,
         "joker_chips": 100.0,
         "joker_xmult": 3.0,
-        "order_offset": 1,
+        "order_offset": 1.0,
         "planet_name": "International Space Station",
         "joker_mult_name": "Wacky Joker",
         "joker_chips_name": "Keen Joker",
@@ -1613,6 +2566,83 @@ return [[ [
                 "suit": "Clubs"
             }
         ]
+    },
+    {
+        "name": "Five Guys",
+        "desc": [
+            "Five Jacks of different suits."
+        ],
+        "base_chips": 39.0,
+        "base_mult": 43.0,
+        "level_chips": 19.0,
+        "level_mult": 8.6,
+        "order_offset": 500.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Spades",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Diamonds",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Kooziefer",
+        "example": [
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 11,
+                "suit": "Spades"
+            },
+            {
+                "rank": 11,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 11,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 11,
+                "suit": "Wilds"
+            }
+        ],
+        "planet_name": "Giftcard"
     },
     {
         "name": "Flick",
@@ -1684,8 +2714,138 @@ return [[ [
                 "stone": true
             }
         ],
-        "order_offset": 1,
+        "order_offset": 1.0,
         "planet_name": "Star"
+    },
+    {
+        "name": "Flower Pot",
+        "desc": [
+            "4 cards of different suits",
+            "The Heart card won't score"
+        ],
+        "base_chips": 4.0,
+        "base_mult": 3.0,
+        "level_chips": 3.0,
+        "level_mult": 1.0,
+        "order_offset": -1.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "suit": [
+                            "Spades",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Hearts",
+                            true
+                        ],
+                        "unscoring": true
+                    },
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Diamonds",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 11,
+                "suit": "Spades"
+            },
+            {
+                "rank": 8,
+                "suit": "Hearts",
+                "unscoring": true
+            },
+            {
+                "rank": 6,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 3,
+                "suit": "Diamonds"
+            }
+        ],
+        "author": "TamerSoup625"
+    },
+    {
+        "name": "Flushless",
+        "desc": [
+            "4 cards of different suits and a Stone Card"
+        ],
+        "base_chips": 80.0,
+        "base_mult": 5.0,
+        "level_chips": 30.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "suit": [
+                            "Spades",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Hearts",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Diamonds",
+                            true
+                        ]
+                    },
+                    {
+                        "stone": true
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 4,
+                "suit": "Spades"
+            },
+            {
+                "rank": 8,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 9,
+                "suit": "Diamonds"
+            },
+            {
+                "stone": true
+            }
+        ],
+        "author": "tHotoe"
     },
     {
         "name": "Flush Four",
@@ -1768,6 +2928,92 @@ return [[ [
         "author": "TheLemon27"
     },
     {
+        "name": "Flush Four+",
+        "desc": [
+            "Five Cards of the same suit, Four of which are the same rank"
+        ],
+        "base_chips": 128.0,
+        "base_mult": 13.0,
+        "level_chips": 40.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "A",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "A",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "A",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "A",
+                            0
+                        ],
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 14,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 14,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 14,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 2,
+                "suit": "Clubs"
+            }
+        ],
+        "author": "Moticon"
+    },
+    {
         "name": "Flush Pair",
         "desc": [
             "Two cards with the same rank and suit."
@@ -1824,8 +3070,8 @@ return [[ [
         "desc": [
             "Three cards with the same rank and suit."
         ],
-        "base_chips": 40.0,
-        "base_mult": 3.0,
+        "base_chips": 45.0,
+        "base_mult": 4.0,
         "level_chips": 20.0,
         "level_mult": 3.0,
         "eval": [
@@ -1966,6 +3212,82 @@ return [[ [
         "author": "TheLemon27"
     },
     {
+        "name": "Fraud Hand :3",
+        "desc": [
+            "6, 9, 4, 2, Ace"
+        ],
+        "base_chips": 42.0,
+        "base_mult": 6.9,
+        "level_chips": 15.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 6
+                    },
+                    {
+                        "rank": 9
+                    },
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 2
+                    },
+                    {
+                        "rank": 14
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Doggo",
+        "example": [
+            {
+                "rank": 6,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 9,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 4,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 2,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 14,
+                "suit": "Diamonds"
+            }
+        ]
+    },
+    {
+        "name": "Fuck You",
+        "desc": [
+            "Replaces High Card and Low Card",
+            "1 in 100 chance to get this hand",
+            "(modifiable by Oops! All 6s and similar effects)"
+        ],
+        "base_chips": 0.0,
+        "base_mult": 1.0,
+        "level_chips": 1.0,
+        "level_mult": 1.0,
+        "order_offset": 7.0,
+        "eval": [
+            {
+                "pattern": [],
+                "options": {}
+            }
+        ],
+        "chance": 100.0,
+        "author": "Salsa"
+    },
+    {
         "name": "Fuller House",
         "desc": [
             "A pair and a three of a kind",
@@ -2036,7 +3358,7 @@ return [[ [
                 "suit": "Clubs"
             }
         ],
-        "order_offset": 2,
+        "order_offset": 2.0,
         "planet_name": "Earth 2"
     },
     {
@@ -2126,6 +3448,63 @@ return [[ [
                 "suit": "Clubs"
             }
         ]
+    },
+    {
+        "name": "Galvanised Square Steel",
+        "desc": [
+            "Exactly 4 Steel Card at 0$",
+            "Cards that make up this hand score twice"
+        ],
+        "base_chips": 0.001,
+        "base_mult": 0.001,
+        "level_chips": 100.0,
+        "level_mult": 10.0,
+        "order_offset": 1000.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "times": 2
+                    },
+                    {
+                        "times": 2
+                    },
+                    {
+                        "times": 2
+                    },
+                    {
+                        "times": 2
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "asmor_",
+        "all_enhanced": "steel",
+        "card_count": 4,
+        "money_min": 0.0,
+        "money_max": 0.0,
+        "example": [
+            {
+                "rank": 11,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 7,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 2,
+                "suit": "Diamonds"
+            }
+        ],
+        "planet_name": "0.01m2 apartment",
+        "joker_xmult": 100.0,
+        "joker_xmult_name": "screws borrowed from his aunt"
     },
     {
         "name": "Glass Houses",
@@ -2225,6 +3604,47 @@ return [[ [
                 "suit": "Clubs"
             }
         ]
+    },
+    {
+        "name": "Grandeur",
+        "desc": [
+            "Gold, Steel, Steel, Steel, Gold"
+        ],
+        "base_chips": 25.0,
+        "base_mult": 4.0,
+        "level_chips": 13.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "exact_enhancements": [
+            "gold",
+            "steel",
+            "steel",
+            "steel",
+            "gold"
+        ],
+        "author": "Lolhappy909_lol",
+        "joker_chips": 75.0,
+        "joker_mult": 13.0,
+        "planet_name": "Steelforge",
+        "joker_mult_name": "Exquisite Joker",
+        "joker_chips_name": "Wealthy Joker",
+        "flush_name": "Grand Flush",
+        "flush_base_chips": 50.0,
+        "flush_base_mult": 6.0,
+        "flush_level_chips": 30.0,
+        "flush_level_mult": 4.0,
+        "flush_planet_name": "Midas"
     },
     {
         "name": "Hack",
@@ -2829,6 +4249,264 @@ return [[ [
         "planet_name": "Space Junk"
     },
     {
+        "name": "Kingdom",
+        "desc": [
+            "Three face cards with the same rank and suit,",
+            "and two face cards with a different rank and suit."
+        ],
+        "base_chips": 200.0,
+        "base_mult": 16.0,
+        "level_chips": 60.0,
+        "level_mult": 6.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_face"
+                    ],
+                    "b": [
+                        "_face"
+                    ]
+                }
+            }
+        ],
+        "author": "Post Prototype",
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 13,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 13,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            }
+        ],
+        "planet_name": "Yvaga"
+    },
+    {
+        "name": "Last-Ditch",
+        "desc": [
+            "5 Debuffed cards"
+        ],
+        "base_chips": 60.0,
+        "base_mult": 5.0,
+        "level_chips": 20.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "debuffed": true
+                    },
+                    {
+                        "debuffed": true
+                    },
+                    {
+                        "debuffed": true
+                    },
+                    {
+                        "debuffed": true
+                    },
+                    {
+                        "debuffed": true
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "hatstack"
+    },
+    {
+        "name": "The Late Game Run Killer",
+        "desc": [
+            "Either 5 Kings or 5 Queens,",
+            "all Polychrome with Red Seals"
+        ],
+        "base_chips": 0.0,
+        "base_mult": 0.0,
+        "level_chips": 0.0,
+        "level_mult": 0.0,
+        "order_offset": 10000.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 13
+                    },
+                    {
+                        "rank": 13
+                    },
+                    {
+                        "rank": 13
+                    },
+                    {
+                        "rank": 13
+                    },
+                    {
+                        "rank": 13
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 12
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "all_editioned": "polychrome",
+        "all_sealed": "Red",
+        "author": "asmor_"
+    },
+    {
+        "name": "Laughing Jack",
+        "desc": [
+            "A jack and two nonscoring non-jack face cards.",
+            "Jack scores three times."
+        ],
+        "base_chips": 22.0,
+        "base_mult": 2.2,
+        "level_chips": 11.0,
+        "level_mult": 1.1,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 11,
+                        "times": 3
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "unscoring": true
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "unscoring": true
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_face",
+                        {
+                            "not": 11
+                        },
+                        "_nonunique"
+                    ],
+                    "b": [
+                        "_face",
+                        {
+                            "not": 11
+                        },
+                        "_nonunique"
+                    ]
+                }
+            }
+        ],
+        "author": "John Dorian Smith",
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Diamonds",
+                "unscoring": true
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts",
+                "unscoring": true
+            },
+            {
+                "rank": 11,
+                "suit": "Spades"
+            }
+        ],
+        "planet_name": "Goofball Nebula"
+    },
+    {
         "name": "Low Card",
         "desc": [
             "If the played hand is not any of the above",
@@ -2975,19 +4653,23 @@ return [[ [
         "example": [
             {
                 "rank": 14,
-                "suit": "Hearts"
+                "suit": "Hearts",
+                "unscoring": true
             },
             {
                 "rank": 12,
-                "suit": "Diamonds"
+                "suit": "Diamonds",
+                "unscoring": true
             },
             {
                 "rank": 9,
-                "suit": "Diamonds"
+                "suit": "Diamonds",
+                "unscoring": true
             },
             {
                 "rank": 4,
-                "suit": "Clubs"
+                "suit": "Clubs",
+                "unscoring": true
             },
             {
                 "rank": 3,
@@ -2995,7 +4677,7 @@ return [[ [
             }
         ],
         "author": "WilsontheWolf (+ Super S.F)",
-        "order_offset": 1,
+        "order_offset": 1.0,
         "joker_mult": 4.0,
         "joker_chips": 25.0,
         "joker_xmult": 1.5,
@@ -3185,6 +4867,48 @@ return [[ [
         ]
     },
     {
+        "name": "Nostalgia",
+        "desc": [
+            "The first 5-card hand you've played this run,",
+            "matching both suits and ranks"
+        ],
+        "base_chips": 160.0,
+        "base_mult": 12.0,
+        "level_chips": 30.0,
+        "level_mult": 4.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "nostalgic": true,
+        "example": [
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            }
+        ],
+        "author": "TamerSoup625"
+    },
+    {
         "name": "Nothing",
         "desc": [
             "How did you even manage to play this?"
@@ -3199,13 +4923,145 @@ return [[ [
                 "options": {}
             }
         ],
-        "order_offset": 0,
+        "order_offset": 0.0,
         "author": "TamerSoup625",
         "joker_mult": 4.0,
         "joker_chips": 25.0,
         "joker_xmult": 1.001,
         "joker_texture_id": 2,
         "planet_name": " "
+    },
+    {
+        "name": "Not So Straight",
+        "desc": [
+            "Any 4 cards in numerial order, and a Jack"
+        ],
+        "base_chips": 30.0,
+        "base_mult": 2.0,
+        "level_chips": 10.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            2
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            3
+                        ]
+                    },
+                    {
+                        "rank": 11
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "tHotoe",
+        "example": [
+            {
+                "rank": 14,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 13,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 11,
+                "suit": "Spades"
+            },
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            }
+        ],
+        "planet_name": "Jupiter?"
+    },
+    {
+        "name": "Odd of a Kind",
+        "desc": [
+            "Five cards with consecutive orders according to odd numbers",
+            "(I have no idea what the author meant by this)"
+        ],
+        "base_chips": 80.0,
+        "base_mult": 8.0,
+        "level_chips": 50.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2
+                    },
+                    {
+                        "rank": 3
+                    },
+                    {
+                        "rank": 5
+                    },
+                    {
+                        "rank": 7
+                    },
+                    {
+                        "rank": 11
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Kooziefer",
+        "example": [
+            {
+                "rank": 2,
+                "suit": "Spades"
+            },
+            {
+                "rank": 3,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            }
+        ],
+        "order_offset": 5.0,
+        "planet_name": "Greater Being",
+        "joker_mult": 12.0,
+        "joker_chips": 100.0,
+        "joker_xmult": 3.0,
+        "joker_mult_name": "Nerd Joker",
+        "joker_chips_name": "Prime Joker",
+        "joker_xmult_name": "Greater Good"
     },
     {
         "name": "Parable",
@@ -3261,6 +5117,7 @@ return [[ [
         "joker_mult_name": "The Narrator",
         "joker_chips_name": "Stanley",
         "joker_xmult_name": "Skip Button",
+        "joker_texture_id": 4,
         "flush_name": "Flush Parable",
         "flush_base_chips": 80.0,
         "flush_base_mult": 8.0,
@@ -3289,7 +5146,82 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "order_offset": 1
+        "order_offset": 1.0
+    },
+    {
+        "name": "Perfect Sigma",
+        "desc": [
+            "Any amount of cards where the total",
+            "card ranks add up to 28 (perfect number)"
+        ],
+        "base_chips": 28.0,
+        "base_mult": 6.0,
+        "level_chips": 6.0,
+        "level_mult": 1.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {},
+                    {}
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "rank_sum": 28,
+        "example": [
+            {
+                "rank": 10,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 10,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 8,
+                "suit": "Spades"
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            }
+        ],
+        "author": "verdant_thePOWER"
     },
     {
         "name": "Pi",
@@ -3413,13 +5345,50 @@ return [[ [
         ],
         "author": "noobie",
         "chance": 1000.0,
-        "order_offset": 600000
+        "order_offset": 600000.0
+    },
+    {
+        "name": "Polychrome of the Day",
+        "desc": [
+            "Exactly 1 Polychrome Face Card",
+            "Cards that make up this hand score twice"
+        ],
+        "base_chips": 50.0,
+        "base_mult": 25.0,
+        "level_chips": 10.0,
+        "level_mult": 5.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "times": 2
+                    }
+                ],
+                "options": {
+                    "a": [
+                        "_face"
+                    ]
+                }
+            }
+        ],
+        "author": "Runtem",
+        "all_editioned": "polychrome",
+        "card_count": 1,
+        "joker_chips": 50.0,
+        "joker_mult": 5.0,
+        "planet_name": "Planet-Rainbow",
+        "joker_mult_name": "Rainbow Joker",
+        "joker_chips_name": "Chroma Joker"
     },
     {
         "name": "Thinking With Portals",
         "desc": [
-            "A pair that contains one Heart",
-            "or Diamond and one Spade or Club"
+            "A Pair made with a",
+            "Diamond card and a Club card"
         ],
         "base_chips": 20.0,
         "base_mult": 2.0,
@@ -3435,8 +5404,8 @@ return [[ [
                             0
                         ],
                         "suit": [
-                            "x",
-                            false
+                            "Diamonds",
+                            true
                         ]
                     },
                     {
@@ -3445,21 +5414,12 @@ return [[ [
                             0
                         ],
                         "suit": [
-                            "y",
-                            false
+                            "Clubs",
+                            true
                         ]
                     }
                 ],
-                "options": {
-                    "x": [
-                        "Hearts",
-                        "Diamonds"
-                    ],
-                    "y": [
-                        "Spades",
-                        "Clubs"
-                    ]
-                }
+                "options": {}
             }
         ],
         "author": "Violet",
@@ -3471,6 +5431,56 @@ return [[ [
             {
                 "rank": 4,
                 "suit": "Clubs"
+            }
+        ]
+    },
+    {
+        "name": "Quarry",
+        "desc": [
+            "5 Stone Cards"
+        ],
+        "base_chips": 120.0,
+        "base_mult": 6.0,
+        "level_chips": 20.0,
+        "level_mult": 1.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "stone": true
+                    },
+                    {
+                        "stone": true
+                    },
+                    {
+                        "stone": true
+                    },
+                    {
+                        "stone": true
+                    },
+                    {
+                        "stone": true
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Lolhappy909_lol",
+        "example": [
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
             }
         ]
     },
@@ -3567,6 +5577,49 @@ return [[ [
         ]
     },
     {
+        "name": "RNG",
+        "desc": [
+            "5 specific cards,",
+            "chosen randomly at the start of game"
+        ],
+        "base_chips": 20000.0,
+        "base_mult": 80.0,
+        "level_chips": 1.0,
+        "level_mult": 10.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            },
+            {
+                "stone": true
+            }
+        ],
+        "rng": true,
+        "planet_name": "France",
+        "author": "tHotoe"
+    },
+    {
         "name": "Rockafeller St",
         "desc": [
             "Ace, 2, 7, 3"
@@ -3613,6 +5666,97 @@ return [[ [
                 "suit": "Clubs"
             }
         ]
+    },
+    {
+        "name": "Royal Diner",
+        "desc": [
+            "A pair of kings, a pair of queens",
+            "and a Jack in the middle"
+        ],
+        "base_chips": 90.0,
+        "base_mult": 10.0,
+        "level_chips": 25.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 13
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 11
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 13
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Mistyk__",
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 13,
+                "suit": "Diamonds"
+            }
+        ],
+        "joker_mult": 16.0,
+        "joker_chips": 150.0,
+        "joker_xmult": 3.0,
+        "planet_name": "B612",
+        "joker_mult_name": "Motherly Joker",
+        "joker_chips_name": "Noble Joker",
+        "joker_xmult_name": "The Delight",
+        "flush_name": "Flush Diner",
+        "flush_base_chips": 150.0,
+        "flush_base_mult": 18.0,
+        "flush_level_chips": 60.0,
+        "flush_level_mult": 8.0,
+        "flush_example": [
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 11,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            }
+        ],
+        "flush_planet_name": "(612) Veronika"
     },
     {
         "name": "The Royal Meetup",
@@ -3708,6 +5852,97 @@ return [[ [
         "joker_mult": 10.0,
         "joker_chips": 80.0,
         "joker_xmult": 3.0
+    },
+    {
+        "name": "Royal Sampler",
+        "desc": [
+            "A King, a Queen, a 10, a 6, and a 3"
+        ],
+        "base_chips": 60.0,
+        "base_mult": 14.0,
+        "level_chips": 20.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 13
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 6
+                    },
+                    {
+                        "rank": 3
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "hatstack",
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 10,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 6,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 3,
+                "suit": "Spades"
+            }
+        ],
+        "joker_mult": 14.0,
+        "joker_chips": 150.0,
+        "joker_xmult": 4.0,
+        "planet_name": "Planet Simpson",
+        "joker_mult_name": "Cromulent Joker",
+        "joker_chips_name": "Radical Joker",
+        "joker_xmult_name": "The Homer",
+        "joker_texture_id": 5,
+        "flush_name": "Flush Sampler",
+        "flush_base_chips": 160.0,
+        "flush_base_mult": 28.0,
+        "flush_level_chips": 40.0,
+        "flush_level_mult": 7.0,
+        "flush_example": [
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 12,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 10,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 6,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 3,
+                "suit": "Hearts"
+            }
+        ],
+        "flush_planet_name": "Rigel 7"
     },
     {
         "name": "Sawtooth",
@@ -4157,7 +6392,8 @@ return [[ [
         "example": [
             {
                 "rank": 14,
-                "suit": "Clubs"
+                "suit": "Clubs",
+                "unscoring": true
             },
             {
                 "rank": 14,
@@ -4169,11 +6405,13 @@ return [[ [
             },
             {
                 "rank": 4,
-                "suit": "Spades"
+                "suit": "Spades",
+                "unscoring": true
             },
             {
                 "rank": 3,
-                "suit": "Hearts"
+                "suit": "Hearts",
+                "unscoring": true
             }
         ],
         "planet_name": "Proxima Centauri b",
@@ -4479,6 +6717,212 @@ return [[ [
         ]
     },
     {
+        "name": "Seximal Straight",
+        "desc": [
+            "A straight that skips",
+            "the ranks 6, 7, 8, and 9."
+        ],
+        "base_chips": 25.0,
+        "base_mult": 3.5,
+        "level_chips": 25.0,
+        "level_mult": 2.5,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2
+                    },
+                    {
+                        "rank": 3
+                    },
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 5
+                    },
+                    {
+                        "rank": 10
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": 3
+                    },
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 5
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 11
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 5
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 11
+                    },
+                    {
+                        "rank": 12
+                    }
+                ],
+                "options": {}
+            },
+            {
+                "pattern": [
+                    {
+                        "rank": 5
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 11
+                    },
+                    {
+                        "rank": 12
+                    },
+                    {
+                        "rank": 13
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Papyrus Semi",
+        "example": [
+            {
+                "rank": 11,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 10,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 4,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 3,
+                "suit": "Clubs"
+            }
+        ],
+        "joker_mult": 11.0,
+        "joker_chips": 90.0,
+        "joker_xmult": 2.5,
+        "planet_name": "Triton",
+        "joker_mult_name": "Nifty Joker",
+        "joker_chips_name": "jan Joka",
+        "joker_xmult_name": "jan Nasin",
+        "flush_name": "Seximal Straight Flush",
+        "flush_base_chips": 90.0,
+        "flush_base_mult": 7.5,
+        "flush_level_chips": 30.0,
+        "flush_level_mult": 3.5,
+        "flush_planet_name": "Europa",
+        "flush_example": [
+            {
+                "rank": 2,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 3,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 4,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 10,
+                "suit": "Hearts"
+            }
+        ]
+    },
+    {
+        "name": "She a 10",
+        "desc": [
+            "5oak 10s."
+        ],
+        "base_chips": 100.0,
+        "base_mult": 15.0,
+        "level_chips": 50.0,
+        "level_mult": 5.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 10
+                    },
+                    {
+                        "rank": 10
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 10,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 10,
+                "suit": "Spades"
+            },
+            {
+                "rank": 10,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 10,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 10,
+                "suit": "Diamonds"
+            }
+        ],
+        "author": "Runtem"
+    },
+    {
         "name": "Sine",
         "desc": [
             "Three cards of one rank,",
@@ -4689,7 +7133,7 @@ return [[ [
                 "stone": true
             }
         ],
-        "order_offset": 1,
+        "order_offset": 1.0,
         "planet_name": "Meteor"
     },
     {
@@ -4774,6 +7218,41 @@ return [[ [
         "joker_mult_name": "Spanish Joker",
         "joker_chips_name": "Delirious Joker",
         "joker_xmult_name": "El Risitas"
+    },
+    {
+        "name": "Stones at a Glass House",
+        "desc": [
+            "One Stone Card with four Glass Cards."
+        ],
+        "base_chips": 100.0,
+        "base_mult": 6.0,
+        "level_chips": 25.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ],
+                "options": {}
+            }
+        ],
+        "exact_enhancements": [
+            "stone",
+            "glass",
+            "glass",
+            "glass",
+            "glass"
+        ],
+        "author": "Lolhappy909_lol",
+        "joker_chips": 145.0,
+        "joker_mult": 16.0,
+        "planet_name": "GlassHome",
+        "joker_mult_name": "Fragile Joker",
+        "joker_chips_name": "Stone-d Joker"
     },
     {
         "name": "Stone House",
@@ -5172,6 +7651,149 @@ return [[ [
         "planet_name": "Slot Machine"
     },
     {
+        "name": "Townhouse",
+        "desc": [
+            "Three identically-ranked cards with different suits",
+            "and two identically-ranked cards that share any other suit."
+        ],
+        "base_chips": 75.0,
+        "base_mult": 8.0,
+        "level_chips": 35.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "w",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "z",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "b",
+                            0
+                        ],
+                        "suit": [
+                            "z",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Post Prototype",
+        "example": [
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 12,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 5,
+                "suit": "Hearts"
+            }
+        ],
+        "planet_name": "Planet V "
+    },
+    {
+        "name": "Two Birds",
+        "desc": [
+            "A Pair along with 1 Stone Card."
+        ],
+        "base_chips": 25.0,
+        "base_mult": 3.0,
+        "level_chips": 15.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "stone": true
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "Lolhappy909_lol",
+        "example": [
+            {
+                "stone": true
+            },
+            {
+                "rank": 12,
+                "suit": "Spades"
+            },
+            {
+                "rank": 12,
+                "suit": "Clubs"
+            }
+        ],
+        "joker_chips": 70.0,
+        "joker_mult": 12.0,
+        "planet_name": "Park",
+        "joker_mult_name": "Bird Joker",
+        "joker_chips_name": "Birdie Joker"
+    },
+    {
         "name": "Two Flush Pair",
         "desc": [
             "A Pair of one suit",
@@ -5249,6 +7871,181 @@ return [[ [
         ]
     },
     {
+        "name": "The Ultimate Flush",
+        "desc": [
+            "Five cards of the same suit, rank, enhancement, edition, and seal.",
+            "Good luck."
+        ],
+        "base_chips": 300.0,
+        "base_mult": 52.0,
+        "level_chips": 50.0,
+        "level_mult": 13.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "x",
+                            0
+                        ],
+                        "suit": [
+                            "y",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "same_enhancement": true,
+        "same_edition": true,
+        "same_seal": true,
+        "author": "Papyrus Semi",
+        "planet_name": "The Pearly Gates"
+    },
+    {
+        "name": "Ultimate Gambit",
+        "desc": [
+            "A single unmodified 2",
+            "1 in 1500 chance to get this hand",
+            "(modifiable by Oops! All 6s and similar effects)"
+        ],
+        "base_chips": 2.0,
+        "base_mult": 1e+35,
+        "level_chips": 0.0,
+        "level_mult": 0.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "card_count": 1,
+        "unmodified": true,
+        "chance": 1500.0,
+        "author": "HotlineJolteon",
+        "example": [
+            {
+                "rank": 2,
+                "suit": "Diamonds"
+            }
+        ]
+    },
+    {
+        "name": "Weezer",
+        "desc": [
+            "Four Kings of different suits"
+        ],
+        "base_chips": 80.0,
+        "base_mult": 7.0,
+        "level_chips": 35.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 13,
+                        "suit": [
+                            "A",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 13,
+                        "suit": [
+                            "B",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 13,
+                        "suit": [
+                            "C",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": 13,
+                        "suit": [
+                            "D",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "KotetsuRedwood",
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Spades"
+            },
+            {
+                "rank": 13,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 13,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 13,
+                "suit": "Diamonds"
+            }
+        ],
+        "joker_mult": 20.0,
+        "joker_chips": 160.0,
+        "joker_xmult": 4.0,
+        "joker_mult_name": "Buddy Joker",
+        "joker_chips_name": "Holly Joker",
+        "joker_xmult_name": "The Blue Album"
+    },
+    {
         "name": "Wee Are Resorting 2 Violence",
         "desc": [
             "Five Holographic Glass 2s",
@@ -5287,7 +8084,7 @@ return [[ [
         ],
         "all_enhanced": "glass",
         "all_editioned": "holo",
-        "order_offset": 17100,
+        "order_offset": 17100.0,
         "author": "noobie"
     },
     {
@@ -5374,7 +8171,7 @@ return [[ [
                 "stone": true
             }
         ],
-        "order_offset": 6,
+        "order_offset": 6.0,
         "planet_name": "Boulder",
         "joker_mult": 12.0,
         "joker_chips": 100.0,
@@ -5476,5 +8273,65 @@ return [[ [
                 "suit": "Wilds"
             }
         ]
+    },
+    {
+        "name": "Wild West",
+        "desc": [
+            "Three Wild Jacks"
+        ],
+        "base_chips": 90.0,
+        "base_mult": 9.0,
+        "level_chips": 39.0,
+        "level_mult": 3.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "author": "AlexZGreat",
+        "example": [
+            {
+                "rank": 11,
+                "suit": "Wilds"
+            },
+            {
+                "rank": 11,
+                "suit": "Wilds"
+            },
+            {
+                "rank": 11,
+                "suit": "Wilds"
+            }
+        ],
+        "joker_mult": 19.0,
+        "joker_chips": 169.0,
+        "joker_xmult": 3.9,
+        "planet_name": "Veil Nebula",
+        "joker_mult_name": "Cowboy Joker",
+        "joker_chips_name": "Lasso Joker",
+        "joker_xmult_name": "The Saloon"
     }
 ] ]]
