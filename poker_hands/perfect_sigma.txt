@@ -1,0 +1,19 @@
+Name = Perfect Sigma
+Desc = {
+    Any amount of cards where the total
+    card ranks add up to 28 (perfect number)
+}
+Base Chips = 28
+Base Mult = 6
+Level Chips = 6
+Level Mult = 1
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+    (* of *, * of *, * of *, * of *)
+    (* of *, * of *, * of *)
+    (* of *, * of *)
+    (* of *)
+}
+Rank Sum = 28
+Example = 10 of Hearts, 10 of Clubs, 8 of Spades, Stone, Stone
+Author = verdant_thePOWER

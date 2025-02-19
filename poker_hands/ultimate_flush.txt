@@ -1,0 +1,17 @@
+Name = The Ultimate Flush
+Desc = {
+    Five cards of the same suit, rank, enhancement, edition, and seal.
+    Good luck.
+}
+Base chips = 300
+Base Mult = 52
+Level Chips = 50
+Level Mult = 13
+Eval = {
+    (x of y, x of y, x of y, x of y, x of y)
+}
+Same Enhancement = Yes
+Same Edition = Yes
+Same Seal = Yes
+Author = Papyrus Semi
+Planet Name = The Pearly Gates

@@ -1,0 +1,15 @@
+Name = Nostalgia
+Desc = {
+    The first 5-card hand you've played this run,
+    matching both suits and ranks
+}
+Base Chips = 160
+Base Mult = 12
+Level Chips = 30
+Level Mult = 4
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Nostalgic = When the Flush was 40X3
+Example = Stone, Stone, Stone, Stone, Stone
+Author = TamerSoup625

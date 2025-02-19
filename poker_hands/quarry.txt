@@ -1,0 +1,13 @@
+Name = Quarry
+Desc = {
+    5 Stone Cards
+}
+Base Chips = 120
+Base Mult = 6
+Level Chips = 20
+Level Mult = 1
+Eval = {
+    (Stone, Stone, Stone, Stone, Stone)
+}
+Author = Lolhappy909_lol
+Example = Stone, Stone, Stone, Stone, Stone

@@ -1,0 +1,17 @@
+Name = RNG
+Desc = {
+    5 specific cards,
+    chosen randomly at the start of game
+}
+Base Chips = 20000
+Base Mult = 80
+Level Chips = 1
+Level Mult = 1e1
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+
+Example = Stone, Stone, Stone, Stone, Stone
+RNG = Yes
+Planet Name = France
+Author = tHotoe

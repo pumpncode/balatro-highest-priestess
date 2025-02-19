@@ -1,0 +1,18 @@
+Name = Two Birds
+Desc = {
+    A Pair along with 1 Stone Card.
+}
+Base Chips = 25
+Base Mult = 3
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (Stone, x of *, x of *)
+}
+Author = Lolhappy909_lol
+Example = Stone, Queen of Spades, Queen of Clubs.
+Joker Chips = 70
+Joker Mult = 12
+Planet Name = Park
+Joker Mult Name = Bird Joker
+Joker Chips Name = Birdie Joker

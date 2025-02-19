@@ -1,0 +1,15 @@
+Name = She a 10
+Desc = {5oak 10s.}
+
+Base Chips = 100
+Base Mult = 15
+Level Chips = +50
+Level Mult = +5
+
+Eval = {
+    (10 of *, 10 of *, 10 of *, 10 of *, 10 of *)
+}
+
+Example = 10 of Diamonds, 10 of Spades, 10 of Diamonds, 10 of Hearts, 10 of Diamonds
+
+Author = Runtem

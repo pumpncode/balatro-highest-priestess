@@ -1,0 +1,35 @@
+Name = Royal Sampler
+Desc = {
+    A King, a Queen, a 10, a 6, and a 3
+}
+Base Chips = 60
+Base Mult = 14
+Level Chips = 20
+Level Mult = 3
+Eval = {
+    (King of *, Queen of *, 10 of *, 6 of *, 3 of *)
+}
+Author = hatstack
+Example = King of Hearts, Queen of Clubs, 10 of Diamonds, 6 of Clubs, 3 of Spades
+Joker Mult = 14
+Joker Chips = 150
+Joker Xmult = 4
+Planet Name = Planet Simpson
+Joker Mult Name = Cromulent Joker
+Joker Chips Name = Radical Joker
+Joker Xmult Name = The Homer
+Joker Texture ID = 5
+
+Flush Name = Flush Sampler
+Flush Base Chips = 160
+Flush Base Mult = 28
+Flush Level Chips = 40
+Flush Level Mult = 7
+Flush Example = King of Hearts, Queen of Hearts, 10 of Hearts, 6 of Hearts, 3 of Hearts
+>Joker Mult = 14
+>Joker Chips = 150
+>Joker Xmult = 4
+Flush Planet Name = Rigel 7
+>Joker Mult Name = Cromulent Joker
+>Joker Chips Name = Radical Joker
+>Joker Xmult Name = The Homer

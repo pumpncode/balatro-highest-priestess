@@ -1,0 +1,19 @@
+Name = Ultimate Gambit
+Desc = {
+    A single unmodified 2
+    1 in 1500 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 2
+Base Mult = 1e35
+Level Chips = 0
+Level Mult = 0
+Eval = {
+    (2 of *),
+}
+Card Count = 1
+Unmodified = Yes
+Chance = 1500
+Author = HotlineJolteon
+Example = 2 of Diamonds
+> DO NOT ADD JOKERS

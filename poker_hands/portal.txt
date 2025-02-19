@@ -1,7 +1,7 @@
 Name = Thinking With Portals
 Desc = {
-    A pair that contains one Heart
-    or Diamond and one Spade or Club
+    A Pair made with a
+    Diamond card and a Club card
 }
 Base Chips = 20
 Base Mult = 2
@@ -9,7 +9,7 @@ Level Chips = 5
 Level Mult = 2
 Planet Name = Aperture Science Lab
 Eval = {
-    (a of x, a of y; x = [Hearts, Diamonds], y = [Spades, Clubs])
+    (a of Diamonds, a of Clubs)
 }
 Author = Violet
 Example = 4 of Diamonds, 4 of Clubs

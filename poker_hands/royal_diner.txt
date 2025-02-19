@@ -1,0 +1,35 @@
+Name = Royal Diner
+Desc = {
+    A pair of kings, a pair of queens
+    and a Jack in the middle
+}
+Base Chips  = 90
+Base Mult = 10
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (King of *, Queen of *, Jack of *, Queen of *, King of *)
+}
+Author = Mistyk__
+Example = King of Hearts, Queen of Clubs, Jack of Hearts, Queen of Spades, King of Diamonds
+Joker Mult = 16
+Joker Chips = 150
+Joker Xmult = 3
+Planet Name = B612
+Joker Mult Name = Motherly Joker
+Joker Chips Name = Noble Joker
+Joker Xmult Name = The Delight
+
+Flush Name = Flush Diner
+Flush Base Chips = 150
+Flush Base Mult = 18
+Flush Level Chips = 60
+Flush Level Mult = 8
+Flush Example = King of Hearts, Queen of Hearts, Jack of Hearts, Queen of Hearts, King of Hearts
+>Joker Mult = 24
+>Joker Chips = 220
+>Joker Xmult = 5
+Flush Planet Name = (612) Veronika
+>Joker Mult Name = Tender Joker
+>Joker Chips Name = Heroic Joker
+>Joker Xmult Name = The Argument

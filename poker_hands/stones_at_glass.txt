@@ -1,0 +1,18 @@
+Name = Stones at a Glass House
+Desc = {
+    One Stone Card with four Glass Cards.
+}
+Base Chips = 100
+Base Mult = 6
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Stone, Glass, Glass, Glass, Glass
+Author = Lolhappy909_lol
+Joker Chips = 145
+Joker Mult = 16
+Planet Name = GlassHome
+Joker Mult Name = Fragile Joker
+Joker Chips Name = Stone-d Joker

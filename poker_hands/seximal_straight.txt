@@ -1,0 +1,32 @@
+Name = Seximal Straight
+Desc = {
+    A straight that skips
+    the ranks 6, 7, 8, and 9.
+}
+Base Chips  = 25
+Base Mult = 3.5
+Level Chips = 25
+Level Mult = 2.5
+Eval = {
+    (2 of *, 3 of *, 4 of *, 5 of *, 10 of *),
+    (3 of *, 4 of *, 5 of *, 10 of *, Jack of *),
+    (4 of *, 5 of *, 10 of *, Jack of *, Queen of *),
+    (5 of *, 10 of *, Jack of *, Queen of *, King of *)
+}
+Author = Papyrus Semi
+Example = Jack of Diamonds, 10 of Clubs, 5 of Hearts, 4 of Hearts, 3 of Clubs
+Joker Mult = 11
+Joker Chips = 90
+Joker Xmult = 2.5
+Planet Name = Triton
+Joker Mult Name = Nifty Joker
+Joker Chips Name = jan Joka
+Joker Xmult Name = jan Nasin
+
+Flush Name = Seximal Straight Flush
+Flush Base Chips = 90
+Flush Base Mult = 7.5
+Flush Level Chips = 30
+Flush Level Mult = 3.5
+Flush Planet Name = Europa
+Flush Example = 2 of Hearts, 3 of Hearts, 4 of Hearts, 5 of Hearts, 10 of Hearts

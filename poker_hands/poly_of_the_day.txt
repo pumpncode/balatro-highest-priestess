@@ -1,0 +1,20 @@
+Name = Polychrome of the Day
+Desc = {
+    Exactly 1 Polychrome Face Card
+    Cards that make up this hand score twice
+}
+Base Chips = 50
+Base Mult = 25
+Level Chips = 10
+Level Mult = 5
+Eval = {
+  (X2 a of *; a = [face])
+}
+Author = Runtem
+All Editioned = Polychrome
+Card Count = 1
+Joker Chips = 50
+Joker Mult = 5
+Planet Name = Planet-Rainbow
+Joker Mult Name = Rainbow Joker
+Joker Chips Name = Chroma Joker

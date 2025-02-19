@@ -1,0 +1,15 @@
+Name = Not So Straight
+Desc = {
+    Any 4 cards in numerial order, and a Jack
+}
+Base Chips = 30
+Base Mult = 2
+Level Chips = 10
+Level Mult = 2
+Eval = {
+    (a of *, a+1 of *, a+2 of *, a+3 of *, Jack of *)
+}
+Author = tHotoe
+
+Example = Ace of Hearts, King of Spades, Queen of Diamonds, Jack of Spades, Jack of Hearts
+Planet Name = Jupiter?

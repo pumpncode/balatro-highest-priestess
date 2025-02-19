@@ -18,6 +18,7 @@ Joker XMult = 4
 Joker Mult Name = The Narrator
 Joker Chips Name = Stanley
 Joker XMult Name = Skip Button
+Joker Texture ID = 4
 Flush Name = Flush Parable
 Flush Base Chips = 80
 Flush Base Mult = 8

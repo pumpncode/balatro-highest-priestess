@@ -1,0 +1,15 @@
+Name = Townhouse
+Desc = {
+   Three identically-ranked cards with different suits
+   and two identically-ranked cards that share any other suit.
+}
+Base Chips = 75
+Base Mult = 8
+Level Chips = 35
+Level Mult = 3
+Eval = {
+    (a of w, a of x, a of y, b of z, b of z)
+}
+Author = Post Prototype
+Example = Queen of Spades, Queen of Clubs, Queen of Diamonds, 5 of Hearts, 5 of Hearts
+Planet Name = Planet V 

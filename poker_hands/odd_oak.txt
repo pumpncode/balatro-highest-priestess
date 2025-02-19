@@ -1,0 +1,24 @@
+Name = Odd of a Kind
+Desc = {
+    Five cards with consecutive orders according to odd numbers
+    (I have no idea what the author meant by this)
+}
+Base Chips = 80
+Base Mult = 8
+Level Chips = 50
+Level Mult = 2
+Eval = {
+    (2 of *, 3 of *, 5 of *, 7 of *, Jack of *)
+}
+Author = Kooziefer
+Example = 2 of Spades, 3 of Clubs, 5 of Hearts, 7 of Diamonds, Jack of Hearts
+Order Offset = 5
+Planet Name = Greater Being
+
+> Joker bonuses (not the names) added by TamerSoup625
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Joker Mult Name = Nerd Joker
+Joker Chips Name = Prime Joker
+Joker XMult Name = Greater Good

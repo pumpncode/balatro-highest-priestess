@@ -1,0 +1,20 @@
+Name = Wild West
+Desc = {
+    Three Wild Jacks
+}
+Base Chips = 90
+Base Mult = 9
+Level Chips = 39
+Level Mult = 3
+Eval = {
+    (Jack of Wilds, Jack of Wilds, Jack of Wilds)
+}
+Author = AlexZGreat
+Example = Jack of Wilds, Jack of Wilds, Jack of Wilds
+Joker Mult = 19
+Joker Chips = 169
+Joker XMult = 3.9
+Planet Name = Veil Nebula
+Joker Mult Name = Cowboy Joker
+Joker Chips Name = Lasso Joker
+Joker XMult Name = The Saloon
