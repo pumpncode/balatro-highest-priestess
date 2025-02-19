@@ -1,0 +1,15 @@
+Name = Laughing Jack
+Desc = {
+    A jack and two nonscoring non-jack face cards.
+    Jack scores three times.
+}
+Base Chips = 22
+Base Mult = 2.2
+Level Chips = 11
+Level Mult = 1.1
+Eval = {
+    (X3 Jack of *, nonscoring a of *, nonscoring b of *; a=[face !Jack nonunique], b=[face !Jack nonunique])
+}
+Author = John Dorian Smith
+Example = nonscoring King of Diamonds, nonscoring Queen of Hearts, Jack of Spades
+Planet Name = Goofball Nebula

@@ -1,0 +1,16 @@
+Name = Fuck You
+Desc = {
+    Replaces High Card and Low Card
+    1 in 100 chance to get this hand
+    (modifiable by Oops! All 6s and similar effects)
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 1
+Level Mult = 1
+Order Offset = 7
+Eval = {
+    (),
+}
+Chance = 100
+Author = Salsa

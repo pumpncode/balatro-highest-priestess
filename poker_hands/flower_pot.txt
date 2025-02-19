@@ -1,0 +1,15 @@
+Name = Flower Pot
+Desc = {
+    4 cards of different suits
+    The Heart card won't score
+}
+Base Chips = 4
+Base Mult = 3
+Level Chips = 3
+Level Mult = 1
+Order Offset = -1
+Eval = {
+    (* of Spades, unscoring * of Hearts, * of Clubs, * of Diamonds),
+}
+Example = Jack of Spades, unscoring 8 of Hearts, 6 of Clubs, 3 of Diamonds
+Author = TamerSoup625

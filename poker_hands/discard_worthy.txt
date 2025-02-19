@@ -1,0 +1,15 @@
+Name = Discard-Worthy
+Desc = {
+    5 cards that don't apply to any other poker hand.
+    Excludes High Card, Low Card, and Nothing.
+}
+Base Chips = 20
+Base Mult = 4
+Level Chips = 10
+Level Mult = 2
+Eval = {
+      (* of *, * of *, * of *, * of *, * of *)
+}
+Order Offset = -73.5
+Example = Ace of Hearts, 6 of Hearts, 3 of Diamonds, 2 of Diamonds, 8 of Spades
+Author = verdant_thePOWER

@@ -1,0 +1,22 @@
+Name = Galvanised Square Steel
+Desc = {
+    Exactly 4 Steel Card at 0$
+    Cards that make up this hand score twice
+}
+Base Chips = 0.001
+Base Mult = 0.001
+Level Chips = 100
+Level Mult = 10
+Order Offset = 1000
+Eval = {
+    (X2 * of *, X2 * of *, X2 * of *, X2 * of *)
+}
+Author = asmor_
+All Enhanced = Steel
+Card Count = 4
+Money Min = 0
+Money Max = 0
+Example = Jack of Clubs, 7 of Clubs, 5 of Hearts, 2 of Diamonds
+Planet Name = 0.01m2 apartment
+Joker XMult = 100
+Joker XMult Name = screws borrowed from his aunt

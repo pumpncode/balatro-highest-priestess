@@ -1,0 +1,34 @@
+Name = Dashed
+Desc = {
+    5 cards, each with gaps of 1 rank between them.
+}
+Base Chips  = 40
+Base Mult = 3
+Level Chips = 15
+Level Mult = 4
+Eval = {
+    (a of *, a+2 of *, a+4 of *, a+6 of *, a+8 of *)
+}
+Author = hatstack
+Example = King of Hearts, Jack of Diamonds, 9 of Diamonds, 7 of Clubs, 5 of Spades
+Joker Mult = 10
+Joker Chips = 120
+Joker Xmult = 4
+Planet Name = Super-Neptune
+Joker Mult Name = Quick Joker
+Joker Chips Name = Nimble Joker
+Joker Xmult Name = The Sprint
+
+Flush Name = Dashed Flush
+Flush Base Chips = 80
+Flush Base Mult = 10
+Flush Level Chips = 20
+Flush Level Mult = 6
+Flush Example = Ace of Hearts, Queen of Hearts, 9 of Hearts, 7 of Hearts, 5 of Hearts
+>Joker Mult = 14
+>Joker Chips = 150
+>Joker Xmult = 4
+Flush Planet Name = Super-Super-Neptune
+>Joker Mult Name = Quick Joker
+>Joker Chips Name = Nimble Joker
+>Joker Xmult Name = The Sprint

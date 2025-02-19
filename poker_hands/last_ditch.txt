@@ -1,0 +1,12 @@
+Name = Last-Ditch
+Desc = {
+    5 Debuffed cards
+}
+Base Chips = 60
+Base Mult = 5
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (* of * debuffed, * of * debuffed, * of * debuffed, * of * debuffed, * of * debuffed)
+}
+Author = hatstack

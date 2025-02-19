@@ -1,0 +1,19 @@
+Name = Binary
+Desc = {
+    Any 5-card combination of Debuffed Cards and Aces.
+    There must be at least 2 Debuffed Cards for the hand to count.
+}
+Base Chips = 65
+Base Mult = 6
+Level Chips = 20
+Level Mult = 4
+Eval = {
+    (Ace of *, a of * debuffed, Ace of *, b of * debuffed, Ace of *; a = [nonunique], b = [nonunique])
+    (a of * debuffed, Ace of *, b of * debuffed, Ace of *, c of * debuffed; a = [nonunique], b = [nonunique], c = [nonunique])
+}
+Author = Lolhappy909_lol
+Joker Chips = 125
+Joker Mult = 20
+Planet Name = NULL 
+Joker Mult Name = Corrupted Joker
+Joker Chips Name = Uneasy Joker

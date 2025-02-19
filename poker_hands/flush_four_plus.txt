@@ -1,0 +1,14 @@
+Name = Flush Four+
+Desc = {Five Cards of the same suit, Four of which are the same rank}
+
+Base Chips = 128
+Base Mult = 13
+Level Chips = 40
+Level Mult = 3
+Eval = {
+	(A of B, A of B, A of B, A of B, * of B)
+}
+
+Example = Ace of Clubs, Ace of Clubs, Ace of Clubs, Ace of Clubs, 2 of Clubs
+
+Author = Moticon

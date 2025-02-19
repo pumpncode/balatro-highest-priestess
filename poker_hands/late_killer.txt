@@ -1,0 +1,17 @@
+Name = The Late Game Run Killer
+Desc = {
+    Either 5 Kings or 5 Queens,
+    all Polychrome with Red Seals
+}
+Base Chips = 0
+Base Mult = 0
+Level Chips = 0
+Level Mult = 0
+Order Offset = 10000
+Eval = {
+    (King of *, King of *, King of *, King of *, King of *)
+    (Queen of *, Queen of *, Queen of *, Queen of *, Queen of *)
+}
+All Editioned = Polychrome
+All Sealed = Red
+Author = asmor_

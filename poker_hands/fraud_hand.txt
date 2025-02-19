@@ -1,0 +1,13 @@
+Name = Fraud Hand :3
+Desc = {
+    6, 9, 4, 2, Ace
+}
+Base Chips = 42
+Base Mult = 6.9
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (6 of *, 9 of *, 4 of *, 2 of *, Ace of *),
+}
+Author = Doggo
+Example = 6 of Clubs, 9 of Hearts, 4 of Diamonds, 2 of Clubs, Ace of Diamonds

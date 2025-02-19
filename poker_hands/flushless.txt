@@ -1,0 +1,11 @@
+Name = Flushless
+Desc = { 4 cards of different suits and a Stone Card }
+Base Chips = 80
+Base Mult = 5
+Level Chips  = 30
+Level Mult = 3
+Eval = {
+    (* of Spades, * of Hearts, * of Clubs, * of Diamonds, Stone)
+}
+Example = King of Hearts, 4 of Spades, 8 of Clubs, 9 of Diamonds, Stone
+Author = tHotoe

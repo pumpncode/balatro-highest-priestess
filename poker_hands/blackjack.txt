@@ -11,16 +11,20 @@ Eval = {
     (* of *, * of *, * of *, * of *, * of *),
     (* of *, * of *, * of *, * of *),
     (* of *, * of *, * of *),
+    (* of *, * of *),
+    (* of *),
 }
 Rank Sum = 21
-Author = Sustato
+Author = Sustato (+ John Dorian Smith)
 
 Example = Ace of Hearts 2 of Clubs 3 of Diamonds King of Hearts 5 of Spades
+Planet Name = Sagittarius A*
 
-> Joker Bonuses added by TamerSoup625
+> Joker Bonuses added by TamerSoup625 (not the names)
 Joker Mult = 8
 Joker Chips = 50
 Joker XMult = 2
+Joker XMult Name = The Sum
 
 Flush Name = Flush Blackjack
 Flush Base Chips = 21

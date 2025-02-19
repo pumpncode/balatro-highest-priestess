@@ -1,0 +1,18 @@
+Name = Check It Out Im In The House
+Credits Name = CIOIITH
+Desc = {
+    A pair and a three of a kind
+    1 in 10000 chance to get this hand
+}
+Base Chips = 100
+Base Mult = 10
+Level Chips = 100
+Level Mult = 10
+Eval = {
+    (a of *, a of *, b of *, b of *, b of *)
+}
+Chance = 10000
+Author = Plzbeans
+Example = Stone, Stone, Stone, Stone, Stone
+Order Offset = 6
+Planet Name = Like Carpet

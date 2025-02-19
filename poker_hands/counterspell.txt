@@ -1,0 +1,15 @@
+Name = Counterspell
+Desc = { Two Foil Ace of Clubs }
+Base Chips = 20
+Base Mult = 2
+Level Chips = 20
+Level Mult = 1
+
+Eval = {
+    (Ace of Clubs, Ace of Clubs)
+}
+All Editioned = Foil
+
+Example = Ace of Clubs, Ace of Clubs
+Planet Name = Dominara
+Author = scross

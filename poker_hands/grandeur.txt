@@ -1,0 +1,25 @@
+Name = Grandeur
+Desc = {
+    Gold, Steel, Steel, Steel, Gold
+}
+Base Chips = 25
+Base Mult = 4
+Level Chips = 13
+Level Mult = 3
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Gold, Steel, Steel, Steel, Gold
+Author = Lolhappy909_lol
+Joker Chips = 75
+Joker Mult = 13
+Planet Name = Steelforge
+Joker Mult Name = Exquisite Joker
+Joker Chips Name = Wealthy Joker
+
+Flush Name = Grand Flush
+Flush Base Chips = 50
+Flush Base Mult = 6
+Flush Level Chips = 30
+Flush Level Mult = 4
+Flush Planet Name = Midas

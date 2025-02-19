@@ -1,0 +1,15 @@
+Name = Country House
+Desc = {
+   Three identically-ranked cards with matching suits
+   and two identically-ranked cards with other different suits.
+}
+Base Chips = 100
+Base Mult = 10
+Level Chips = 45
+Level Mult = 3
+Eval = {
+    (a of x, a of x, a of x, b of y, b of z)
+}
+Author = Post Prototype
+Example = Ace of Hearts, Ace of Diamonds, 6 of Spades, 6 of Spades, 6 of Spades
+Planet Name = Janssen

@@ -1,0 +1,20 @@
+Name = Face Blackjack
+Desc = {
+    A Blackjack made with
+    an Ace and a face card
+    I'm sorry, John
+}
+Base Chips = 11
+Base Mult = 2
+Level Chips = 5
+Level Mult = 1
+> Above standard Blackjack
+Order Offset = 100
+Eval = {
+    (Ace of *, a of *, b of *; a = [nonunique face], b = [nonunique face]),
+    (Ace of *, a of *; a = [nonunique face]),
+}
+Rank Sum = 21
+Author = TamerSoup625
+Example = Ace of Spades, King of Hearts
+Planet Name = Space Debris

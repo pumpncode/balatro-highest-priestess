@@ -1,0 +1,17 @@
+Name = Five Guys
+Desc = {
+    Five Jacks of different suits.
+}
+Base Chips = 39
+Base Mult = 43
+Level Chips = 19
+Level Mult = 8.6
+> Above Highway
+Order Offset = 500
+Eval = {
+    (Jack of Hearts, Jack of Spades, Jack of Clubs, Jack of Diamonds, Jack of Wilds)
+}
+Author = Kooziefer
+
+Example = Jack of Hearts, Jack of Spades, Jack of Clubs, Jack of Diamonds, Jack of Wilds
+Planet Name = Giftcard

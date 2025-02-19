@@ -1,0 +1,12 @@
+Name = Collector's Album
+Desc = {Five cards with different enhancements}
+Base Chips = 65
+Base Mult = 3
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Planet Name = Card Store 
+Different Enhancement = Yes
+Author = Talker DRIVE

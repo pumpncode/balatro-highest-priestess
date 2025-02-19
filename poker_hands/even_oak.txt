@@ -1,0 +1,24 @@
+Name = Even of a Kind
+Desc = {
+    Five cards with consecutive orders according to even numbers
+    (I have no idea what the author meant by this)
+}
+Base Chips = 60
+Base Mult = 10
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (Ace of *, 4 of *, 6 of *, 8 of *, 10 of *)
+}
+Author = Kooziefer
+Example = Ace of Spades, 4 of Clubs, 6 of Hearts, 8 of Diamonds, 10 of Hearts
+Order Offset = 5
+Planet Name = Lesser Being
+
+> Joker bonuses (not the names) added by TamerSoup625
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Joker Mult Name = Math Joker
+Joker Chips Name = Even Joker
+Joker XMult Name = Lesser Better

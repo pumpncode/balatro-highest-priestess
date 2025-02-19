@@ -1,0 +1,14 @@
+Name = Devil's Gambit
+Desc = {
+    Three 6s of any suit
+    When played, none of the cards score
+}
+Base Chips = 66
+Base Mult = 6
+Level Chips = 12
+Level Mult = 2
+Eval = {
+    (unscoring 6 of *, unscoring 6 of *, unscoring 6 of *)
+}
+Author = vasreall
+Example = nonscoring 6 of Spades, nonscoring 6 of Hearts, nonscoring 6 of Diamonds

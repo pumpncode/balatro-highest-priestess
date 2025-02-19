@@ -1,0 +1,29 @@
+Name = Candy Cane Straight
+
+Desc = {
+    5 cards in ascending order,
+    alternating between Hearts 
+    and Clubs
+}
+
+Base Chips = 125
+Base Mult = 9
+Level Chips = 50
+Level Mult = 4
+Eval = {
+    (a of Hearts, a+1 of Clubs, a+2 of Hearts, a+3 of Clubs, a+4 of Hearts),
+    (a of Clubs, a+1 of Hearts, a+2 of Clubs, a+3 of Hearts, a+4 of Clubs),
+}
+Author = Post Prototype
+
+
+Example =  8 of Clubs, 9 of Hearts, 10 of Clubs, Jack of Hearts, Queen of Clubs
+
+Joker Mult = 12
+Joker Chips = 125
+Joker XMult = 3.5
+Order Offset = 1
+Planet Name = Jupiter's Rings
+Joker Mult Name = Festive Joker
+Joker Chips Name = Hymnal Joker
+Joker XMult Name = The Season
