@@ -1,0 +1,34 @@
+Name = The Prime Hand
+Desc = {
+    A hand comprised of 5 prime ranks,
+    (2, 3, 5, 7, Jack = 11, and King = 13)
+}
+Author = Unexian
+Base Chips = 50
+Base Mult = 5
+Level Chips = 30
+Level Mult = 2
+Eval = {
+  (2 of *, 3 of *, 5 of *, 7 of *, Jack of *),
+  (2 of *, 3 of *, 5 of *, 7 of *, King of *),
+  (2 of *, 3 of *, 5 of *, King of *, Jack of *),
+  (2 of *, 3 of *, King of *, 7 of *, Jack of *),
+  (2 of *, King of *, 5 of *, 7 of *, Jack of *),
+  (King of *, 3 of *, 5 of *, 7 of *, Jack of *),
+}
+Example = 2 of Hearts, 3 of Clubs, 5 of Hearts, 7 of Spades, Jack of Diamonds
+Joker Mult = 3
+Joker Chips = 40
+Joker XMult = 4
+Planet Name = Prince Ganymede
+Joker Mult Name = Prime Joker
+Joker Chips Name = Prime Jester
+Joker XMult Name = The Prime
+
+Flush Name = The Prime Flush
+Flush Base Chips = 97
+Flush Base Mult = 7
+Flush Level Chips = 40
+Flush Level Mult = 3
+Flush Planet Name = Princess Callisto
+Flush Example = 2 of Clubs, 3 of Clubs, 5 of Clubs, 7 of Clubs, Jack of Clubs

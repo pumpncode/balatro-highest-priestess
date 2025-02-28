@@ -1,0 +1,16 @@
+Name = Perfect House
+Desc = {
+    A Full House where the total card ranks add up to 28 (perfect number)
+}
+Base Chips = 81
+Base Mult = 23
+Level Chips = 28
+Level Mult = 6
+Eval = {
+    (a of *, a of *, b of *, b of *, b of *)
+}
+Rank Sum = 28
+Example = 8 of Clubs, 8 of Hearts, 4 of Diamonds, 4 of Spades, 4 of Hearts
+Planet Name = sigma(n)House
+
+Author = verdant_thePOWER

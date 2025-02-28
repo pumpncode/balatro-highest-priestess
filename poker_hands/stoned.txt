@@ -1,0 +1,15 @@
+Name = Stoned
+Desc = {
+    A Face Card and a Stone Card.
+    The Face Card does not score.
+}
+Base Chips = 80
+Base Mult = 2
+Level Chips = 30
+Level Mult = 1.5
+Eval = {
+    (Stone, unscoring a of *; a = [face])
+}
+Author = Lolhappy909_lol
+Example = Stone, unscoring Jack of Spades
+Planet Name = Skipping Stone

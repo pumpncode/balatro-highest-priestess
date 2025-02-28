@@ -1,0 +1,11 @@
+Name = Stone Age
+Desc = {5 stones with all held in hand cards are also stone cards}
+Base chips = 550
+Base mult = 50
+Level chips = 50
+Level mult = 5
+
+Eval = {(Stone, Stone, Stone, Stone, Stone)}
+Example = Stone Stone Stone Stone Stone
+Everything is Stone = Yes
+Author = Sustato

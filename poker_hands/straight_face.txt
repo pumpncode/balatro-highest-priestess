@@ -7,8 +7,10 @@ Base Mult = 0
 Level Chips = 0
 Level Mult = 0
 Eval = {
-    (a of *, b of *, c of *, d of *, e of *; a = [face nonunique], b = [face nonunique], c = [face nonunique], d = [face nonunique], e = [face nonunique])
+>(a of *, b of *, c of *, d of *, e of *; a = [face nonunique], b = [face nonunique], c = [face nonunique], d = [face nonunique], e = [face nonunique])
+    (* of *, * of *, * of *, * of *, * of *)
 }
+All Face = Yes
 Composite Only = Yes
 Author = Sustato
 

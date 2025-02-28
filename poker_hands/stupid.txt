@@ -1,0 +1,16 @@
+Name = The Shittiest 5 Card Hand Mathematically Fucking Possible
+Credits Name = TS5CHMFP
+Desc = {
+    7, 5, 4, 3, 2
+}
+Base Chips = 15
+Base Mult = 1
+Level Chips = 1
+Level Mult = 0
+Order Offset = 106
+Eval = {
+    (7 of *, 5 of *, 4 of *, 3 of *, 2 of *)
+}
+Author = person9683
+Planet Name = I don't know actually
+Example = 7 of Clubs, 5 of Diamonds, 4 of Clubs, 3 of Spades, 2 of Diamonds

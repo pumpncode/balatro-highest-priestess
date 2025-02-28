@@ -1,0 +1,15 @@
+Name = Perfect Pairs
+Desc = {
+    A Two Pair where the total card ranks add up to 28 (perfect number)
+}
+Base Chips = 49
+Base Mult = 6
+Level Chips = 6
+Level Mult = 4
+Eval = {
+    (a of *, a of *, b of *, b of *)
+}
+Rank Sum = 28
+Example = 10 of Clubs, 10 of Hearts, 4 of Diamonds, 4 of Spades
+Planet Name = sigma(n)Pair^2
+Author = verdant_thePOWER

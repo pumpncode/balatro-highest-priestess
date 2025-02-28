@@ -1,0 +1,14 @@
+Name = Tragedy
+Desc = {
+    Exactly one normal card and one debuffed card.
+}
+Base Chips = 25
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2.5
+Eval = {
+    (* of * nondebuffed, * of * debuffed)
+}
+Card Count = 2
+Author = Lolhappy909_lol
+Planet Name = Star-Crossed

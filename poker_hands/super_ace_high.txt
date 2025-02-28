@@ -2,7 +2,7 @@ Name = Aces High
 Desc = {
     5 Wild Aces
 }
-Base Chips = 200
+Base Chips = 250
 Base Mult = 50
 Level Chips = 100
 Level Mult = 25
@@ -11,3 +11,12 @@ Eval = {
 }
 Author = HotlineJolteon
 Example = Ace of Wilds, Ace of Wilds, Ace of Wilds, Ace of Wilds, Ace of Wilds
+
+> Added by Gladofdingldill
+Joker Mult = 40
+Joker Chips = 300
+Joker XMult = 8
+Joker Mult Name = Airborne Joker
+Joker Chips Name = Bomber Joker
+Joker XMult Name = The Air Raid
+Planet Name = Aircraft

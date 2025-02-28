@@ -1,0 +1,30 @@
+Name = Rollover
+Desc = {
+    5 cards of descending ranks with increasing gap size,
+    going from no gap to a 3-rank gap
+}
+Base Chips = 60
+Base Mult = 7
+Level Chips = 30
+Level Mult = 2
+Order Offset = -180
+Eval = {
+    (a of *, a+4 of *, a+7 of *, a+9 of *, a+10 of *)
+}
+Author = TamerSoup625
+Example = Queen of Diamonds, Jack of Spades, 9 of Clubs, 6 of Spades, 2 of Clubs
+Planet Name = Ethernet
+Joker Mult = 20
+Joker Chips = 150
+Joker XMult = 2
+Joker Mult Name = RJ-45 Joker
+Joker Chips Name = Cabled Joker
+Joker XMult Name = The Console
+
+Flush Name = Rollover Flush
+Flush Base Chips = 150
+Flush Base Mult = 11
+Flush Level Chips = 40
+Flush Level Mult = 3
+Flush Planet Name = GigabitEthernet
+Flush Example = Queen of Spades, Jack of Spades, 9 of Spades, 6 of Spades, 2 of Spades

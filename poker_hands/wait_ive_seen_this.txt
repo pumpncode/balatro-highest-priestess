@@ -1,0 +1,16 @@
+Name = Wait, I've seen this one before
+Desc = {
+    4 Kings or Jacks and a Queen iykyk
+    "Where's the fifth guy tho"
+}
+Base Chips = 50
+Base Mult = 5
+Level Chips = 25
+Level Mult = 2
+Eval = {
+    (Queen of *, a of *, a of *, a of *, a of *; a = [King, Jack])
+    (Queen of *, a of *, a of *, a of *, b of *; a = [King, Jack], b = [King, Jack])
+    (Queen of *, King of *, King of *, a of Jack, a of Jack)
+}
+Author = Batu
+Example = King of Spades, King of Clubs, Queen of Hearts, Jack of Spades, King of Spades

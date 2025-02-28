@@ -1,0 +1,16 @@
+Name = Right-Handed
+Desc = {
+    5 Cards More than half-rank (8-A) that don't conform to any other poker hand.
+    Excludes High Card, Low Card, Nothing, and Discard-Worthy.
+}
+Base Chips = 25
+Base Mult = 3
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Rank Min = 8
+Order Offset = -68
+Author = Lolhappy909_lol
+Example = Ace of Hearts, 8 of Diamonds, King of Clubs, Jack of Hearts, 10 of Diamonds

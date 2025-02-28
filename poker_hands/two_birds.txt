@@ -9,6 +9,7 @@ Level Mult = 2
 Eval = {
     (Stone, x of *, x of *)
 }
+Card Count = 3
 Author = Lolhappy909_lol
 Example = Stone, Queen of Spades, Queen of Clubs.
 Joker Chips = 70

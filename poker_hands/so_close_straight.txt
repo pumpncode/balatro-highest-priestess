@@ -1,0 +1,21 @@
+Name = So-Close Straight
+Desc = {
+    A straight just below a Royal Straight
+}
+Base Chips = 30
+Base Mult = 4
+Level Chips = 30
+Level Mult = 3
+Eval = {
+        (King of *, Queen of *, Jack of *, 10 of *, 9 of *)
+}
+Example = King of Spades, Queen of Clubs, Jack of Clubs, 10 of Hearts, 9 of Spades
+Joker Mult = 20
+Joker Chips = 80
+Joker XMult = 4
+Joker Mult Name = Really? Joker
+Joker Chips Name = Come on! Joker
+Joker XMult Name = The Ridiculousness
+Planet Name = The Joke
+>(The planet on the card is 🫵)
+Author = tHotoe

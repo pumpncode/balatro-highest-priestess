@@ -1,0 +1,16 @@
+Name = Obtuse
+Desc = {
+   Three cards with a single rank,
+   if there are two pairs of cards with different ranks in held hand.
+}
+Base Chips = 40
+Base Mult = 4
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (a of *, a of *, a of *)
+}
+Two Pair in Hand = Yes
+Author = Post Prototype
+Example = Queen of Clubs, Queen of Diamonds, Queen of Spades, unscoring 10 of Clubs, unscoring 10 of Hearts, unscoring 5 of Spades, unscoring 5 of Hearts
+Planet Name = Tanzanite

@@ -1,0 +1,15 @@
+Name = The Hand Where He Kills You
+Desc = {
+    This is that hand.
+}
+Base Chips = 1
+Base Mult = -100
+Level Chips = 0
+Level Mult = -10
+Order Offset = 521
+Eval = {
+    (9 of *, 9 of *, 9 of *, 9 of *, 2 of *)
+}
+Author = Papyrus Semi
+Example = 9 of Spades, 9 of Clubs, 9 of Hearts, 9 of Diamonds, 2 of Hearts
+Planet Name = The Part Where He Kills You

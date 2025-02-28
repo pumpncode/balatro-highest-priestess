@@ -1,0 +1,9 @@
+Name = Stone Royal
+Desc = {5 stone face cards}
+Base chips = 225
+Base mult = 5
+Level chips = 20
+Level mult = 3
+Eval = {(Stone Stone Stone Stone Stone)}
+All Face = Yes
+Author = Sustato

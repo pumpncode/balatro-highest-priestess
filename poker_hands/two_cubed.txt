@@ -1,0 +1,16 @@
+Name = Two Cubed
+Desc = {
+   2 pairs of cards with different ranks,
+   if there are 2 pairs of cards with different ranks in held hand.
+}
+Base Chips = 40
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of *, a of *, b of *, b of *)
+}
+Two Pair in Hand = Yes
+Author = Post Prototype
+Example = unscoring 10 of Clubs, unscoring 10 of Diamonds, Queen of Spades, Queen of Hearts, 8 of Hearts, 8 of Diamonds, unscoring 3 of Clubs, unscoring 3 of Hearts
+Planet Name = AEgir

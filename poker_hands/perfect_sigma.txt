@@ -16,4 +16,21 @@ Eval = {
 }
 Rank Sum = 28
 Example = 10 of Hearts, 10 of Clubs, 8 of Spades, Stone, Stone
+
+Planet Name = sigma(n)
+Joker Mult = 28
+Joker Chips = 128
+Joker XMult = 4
+Joker Mult Name = Sum of Joker
+Joker Chips Name = Divisor Joker
+Joker XMult Name = The Function
+
+Flush Name = Perfect Flush
+Flush Base Chips = 49
+Flush Base Mult = 28
+Flush Level Chips = 6
+Flush Level Mult = 6
+Flush Example = 10 of Hearts, 8 of Hearts, 4 of Hearts, 4 of Hearts, 2 of Hearts
+Flush Planet Name = sigma(n)Flush
 Author = verdant_thePOWER
+Planet Texture ID = 2

@@ -1,0 +1,23 @@
+Name = Six and the City
+Desc = {
+    A full house of Sixes and Queens
+}
+Base Chips = 46
+Base Mult = 4
+Level Chips = 31
+Level Mult = 2
+> Above Devil's Gambit
+Order Offset = 213
+Eval = {
+        (6 of *, 6 of *, 6 of *, Queen of *, Queen of *),
+        (6 of *, 6 of *, Queen of *, Queen of *, Queen of *)
+}
+Example = 6 of Hearts, 6 of Diamonds, 6 of Diamonds, Queen of Hearts, Queen of Spades
+Joker Mult = 16
+Joker Chips = 106
+Joker XMult = 6
+Joker Mult Name = Dramatic Joker
+Joker Chips Name = Like That Joker
+Joker XMult Name = The Spoof
+Planet Name = DVD
+Author = tHotoe

@@ -1,0 +1,21 @@
+Name = Twosseract
+Desc = {
+   Two pairs of cards with different ranks,
+   if there are two pairs of cards with different ranks in held hand,
+   and that hand was played last hand.
+}
+Base Chips = 80
+Base Mult = 8
+Level Chips = 40
+Level Mult = 4
+Eval = {
+    (a of *, a of *, b of *, b of *)
+}
+Two Pair in Hand = Yes
+Possible Last Hand IDs = {
+    vhp_two_cubed
+    vhp_two_tesseract
+}
+Author = Post Prototype
+Example = unscoring 7 of Clubs, unscoring 7 of Diamonds, 10 of Spades, 10 of Hearts, 9 of Hearts, 9 of Diamonds, unscoring 6 of Clubs, unscoring 6 of Hearts
+Planet Name = Ymir

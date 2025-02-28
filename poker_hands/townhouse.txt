@@ -8,8 +8,12 @@ Base Mult = 8
 Level Chips = 35
 Level Mult = 3
 Eval = {
-    (a of w, a of x, a of y, b of z, b of z)
+>(a of w, a of x, a of y, b of z, b of z)
+    (a of Spades, a of Hearts, a of Clubs, b of Diamonds, b of Diamonds)
+    (a of Diamonds, a of Hearts, a of Clubs, b of Spades, b of Spades)
+    (a of Spades, a of Diamonds, a of Clubs, b of Hearts, b of Hearts)
+    (a of Spades, a of Hearts, a of Diamonds, b of Clubs, b of Clubs)
 }
 Author = Post Prototype
 Example = Queen of Spades, Queen of Clubs, Queen of Diamonds, 5 of Hearts, 5 of Hearts
-Planet Name = Planet V 
+Planet Name = Theia

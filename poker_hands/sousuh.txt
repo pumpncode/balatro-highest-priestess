@@ -1,0 +1,14 @@
+Name = Super Omega Ultra Super Ultra Hand
+Desc = {
+    6 sixes
+}
+Base Chips = -666
+Base Mult = 6666
+Level Chips = 0
+Level Mult = 6666
+Order Offset = 8900000
+Eval = {
+    (6 of *, 6 of *, 6 of *, 6 of *, 6 of *, 6 of *)
+}
+Author = noobie
+Example = 6 of Hearts, 6 of Spades, 6 of Diamonds, 6 of Clubs, 6 of Hearts, 6 of Diamonds

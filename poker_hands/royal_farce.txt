@@ -1,0 +1,15 @@
+Name = Royal Farce
+Desc = {
+    A debuffed Royal Flush
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 100
+Level Mult = 10
+Order Offset = 1000
+Eval = {
+    (Ace of a, King of a, Queen of a, Jack of a, 10 of a)
+}
+All Debuffed = Yes
+Author = Vermilingus
+Planet Name = Debris
