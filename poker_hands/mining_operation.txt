@@ -1,0 +1,21 @@
+Name = Mining Operation
+Desc = {
+    A 5-card hand with 1 Steel, 1 Gold, and 3 Stones.
+    The Steel and Gold card score twice.
+}
+Base Chips = 38
+Base Mult = 4
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (X2 a of *, Stone, Stone, Stone, X2 * of b)
+}
+Exact Enhancements = Steel, Gold, Stone, Stone, Stone
+Joker Mult = 15
+Joker Chips = 120
+Joker XMult = 3.375
+Joker Mult Name = Laborious Joker
+Joker Chips Name = Arduous Joker
+Joker XMult Name = The Mines
+Planet Name = 617 Patroclus
+Author = hatstack

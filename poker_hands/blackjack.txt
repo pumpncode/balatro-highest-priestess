@@ -20,11 +20,13 @@ Author = Sustato (+ John Dorian Smith)
 Example = Ace of Hearts 2 of Clubs 3 of Diamonds King of Hearts 5 of Spades
 Planet Name = Sagittarius A*
 
-> Joker Bonuses added by TamerSoup625 (not the names)
+Joker XMult = 2.1
+Joker XMult Name = The Sum
+> These Joker Bonuses added by TamerSoup625 (names by Gladofdingldill)
 Joker Mult = 8
 Joker Chips = 50
-Joker XMult = 2
-Joker XMult Name = The Sum
+Joker Mult Name = Dungeon Joker
+Joker Chips Name = Degenerate Joker
 
 Flush Name = Flush Blackjack
 Flush Base Chips = 21

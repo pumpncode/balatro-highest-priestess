@@ -1,0 +1,16 @@
+Name = Doubled House
+Desc = {
+    Three face cards with the same rank and suit,
+    and two face cards with a different rank and suit.
+}
+Base Chips = 200
+Base Mult = 16
+Level Chips = 60
+Level Mult = 6
+Eval = {
+    (a of x, a of x, a of x, b of y, b of y; a = [face], b = [face])
+}
+Author = Post Prototype
+
+Example = King of Diamonds, King of Diamonds, King of Diamonds, Queen of Spades, Queen of Spades
+Planet Name = Kepler-452b

@@ -1,0 +1,23 @@
+Name = Insurance
+Desc = {
+    Exactly 3 gold cards.
+    The first gold card does not score, the third one scores twice.
+}
+Base Chips = 55
+Base Mult = 4
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (unscoring * of *, a of b, X2 c of d; a = [nonunique], b = [nonunique], c = [nonunique], d = [nonunique])
+}
+All Enhanced = Gold
+Example = unscoring King of Hearts, 8 of Clubs, 6 of Diamonds
+Card Count = 3
+Joker Mult = 20
+Joker Chips = 20
+Joker XMult = 1.7
+Joker Mult Name = Actuary Joker
+Joker Chips Name = Appraiser Joker
+Joker XMult Name = Agent Joker
+Planet Name = Endorsement
+Author = verdant_thePOWER

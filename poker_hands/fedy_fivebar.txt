@@ -1,0 +1,14 @@
+Name = Fedy Fivebar
+Desc = {
+    A, 9, 8, and 7
+    har har ha har har
+}
+Base Chips = 87
+Base Mult = 5
+Level Chips = 19
+Level Mult = 1.9
+Eval = {
+    (Ace of *, 9 of *, 8 of *, 7 of *)
+}
+Author = Batu
+Example = Ace of Diamonds, 9 of Hearts, 8 of Clubs, 7 of Diamonds

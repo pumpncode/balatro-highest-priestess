@@ -10,3 +10,9 @@ Eval = {
 Planet Name = Card Store 
 Different Enhancement = Yes
 Author = Talker DRIVE
+
+> Added by Gladofdingldill
+Joker Mult = 15
+Joker Chips = 100
+Joker Mult Name = Geek Joker
+Joker Chips Name = Snotty Joker

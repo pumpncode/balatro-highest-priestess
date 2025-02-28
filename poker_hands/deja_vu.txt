@@ -1,0 +1,12 @@
+Name = Deja vu
+Desc = {A poker contains 5 first scored card of 5 latest played hands}
+Base chips = 383
+Base mult = 38
+Level chips = 83
+Level mult = 8
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Deja Vu = Yes
+Author = Sustato
+Example = Stone, Stone, Stone, Stone, Stone

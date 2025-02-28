@@ -1,0 +1,14 @@
+Name = Disgraced Flush
+Desc = {
+    A Royal Flush entirely made of debuffed cards
+}
+Base Chips = 151
+Base Mult = 8
+Level Chips = 40
+Level Mult = 4
+Eval = {
+    (Ace of a, King of a, Queen of a, Jack of a, 10 of a)
+}
+All Debuffed = Yes
+Planet Name = The Lowest Priestess
+Author = tHotoe

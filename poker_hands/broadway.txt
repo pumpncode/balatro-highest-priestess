@@ -1,6 +1,6 @@
 Name = Broadway
 Desc = {
-    An 10 to Ace Straight
+    A 10 to Ace Straight
     that is not a Flush
 }
 Base Chips = 50

@@ -1,0 +1,14 @@
+Name = All In
+Desc = {
+    All the cards currently held in hand
+}
+Base Chips = 80
+Base Mult = 7
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (* of *)
+}
+All In = Yes
+Author = TamerSoup625
+Planet Name = Solar System

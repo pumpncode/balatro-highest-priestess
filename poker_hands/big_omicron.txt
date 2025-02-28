@@ -1,0 +1,24 @@
+Name = Big Omicron
+Desc = {
+    2 7s and 2 Stone Cards.
+}
+Base Chips = 20
+Base Mult = 10
+Level Chips = 15
+Level Mult = 4
+Eval = {
+    (7 of *, 7 of *, Stone, Stone)
+}
+Example = 7 of Spades, Stone, 7 of Clubs, Stone
+
+Planet Name = omicronNIL
+Joker Mult = 20
+Joker Chips = 200
+Joker XMult = 3
+Joker Mult Name = Empty Cell Joker
+Joker Chips Name = Sexagesimal Joker
+Joker XMult Name = The Big-O
+
+
+Planet Texture ID = 3
+Author = verdant_thePOWER

@@ -1,0 +1,16 @@
+Name = Left-Handed
+Desc = {
+    5 Cards less than half-rank (A-7) that don't conform to any other poker hand.
+    Excludes High Card, Low Card, Nothing, and Discard-Worthy.
+}
+Base Chips = 25
+Base Mult = 3
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Rank Max = 7
+Order Offset = -68
+Author = Lolhappy909_lol
+Example = Ace of Hearts, 5 of Spades, 3 of Clubs, 4 of Hearts, 7 of Diamonds

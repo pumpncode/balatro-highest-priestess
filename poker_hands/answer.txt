@@ -1,0 +1,32 @@
+Name = Answer
+Desc = {
+    Any number of cards whose ranks total exactly 42.
+}
+Base Chips = 42
+Base Mult = 4
+Level Chips = 24
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+    (* of *, * of *, * of *, * of *)
+    (* of *, * of *, * of *),
+    (* of *, * of *),
+    (* of *),
+}
+Rank Sum = 42
+Author = Post Prototype
+Example = 10 of Diamonds, 9 of Hearts, 9 of Hearts, 8 of Diamonds, 6 of Clubs
+Joker Mult = 4
+Joker Chips = 42
+Joker XMult = 4
+Planet Name = Deep Thought
+Joker Mult Name = Forty Joker
+Joker Chips Name = Two Joker
+Joker XMult Name = The Ultimate
+Flush Name = Question
+Flush Base Chips = 222
+Flush Base Mult = 4
+Flush Level Chips = 42
+Flush Level Mult = 4
+Flush Example = 10 of Clubs, 9 of Clubs, 8 of Clubs, 8 of Clubs, 7 of Clubs
+Flush Planet Name = Deep Blue

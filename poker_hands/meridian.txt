@@ -5,8 +5,8 @@ Desc = {
 }
 Base Chips = 50
 Base Mult = 6
-Level Chips = 25
-Level Mult = 2
+Level Chips = 40
+Level Mult = 3
 Eval = {
     (a of *, a+3 of *, a+6 of *, a+9 of *, a+12 of *)
 }

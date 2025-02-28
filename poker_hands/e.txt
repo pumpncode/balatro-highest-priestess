@@ -1,0 +1,21 @@
+Name = e
+Desc = {
+   No description needed.
+}
+Base Chips = 27
+Base Mult = 2
+Level Chips = 18
+Level Mult = 2
+Eval = {
+    (2 of *, 7 of *, Ace of *, 8 of *, 2 of *)
+}
+Author = Post Prototype
+Example = 2 of Diamonds, 7 of Hearts, Ace of Spades, 8 of Hearts, 2 of Clubs
+Planet Name = Euler
+
+Flush Name = Flush E
+Flush Base Chips = 182
+Flush Base Mult = 2
+Flush Level Chips = 45
+Flush Level Mult = 2
+Flush Planet Name = Marquaad

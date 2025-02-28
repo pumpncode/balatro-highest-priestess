@@ -1,0 +1,20 @@
+Name = Metallic Madness
+Desc = {A Full House of 5 Steel cards.}
+Base Chips = 120
+Base Mult = 9
+Level Chips = 40
+Level Mult = 4.5
+Eval = {
+    (a of *, a of *, a of *, b of *, b of *)
+}
+All Enhanced = Steel
+Author = hatstack
+Planet Name = Little Planet
+Example = 7 of Spades, 7 of Clubs, 7 of Hearts, 4 of Clubs, 4 of Hearts, 
+
+Joker Mult = 20
+Joker Chips = 150
+Joker XMult = 4
+Joker Mult Name = Mecha Joker
+Joker Chips Name = Silver Joker
+Joker XMult Name = The Artificial

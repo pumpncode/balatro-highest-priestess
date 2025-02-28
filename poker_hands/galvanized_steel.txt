@@ -14,7 +14,6 @@ Eval = {
 Author = asmor_
 All Enhanced = Steel
 Card Count = 4
-Money Min = 0
 Money Max = 0
 Example = Jack of Clubs, 7 of Clubs, 5 of Hearts, 2 of Diamonds
 Planet Name = 0.01m2 apartment

@@ -1,0 +1,21 @@
+Name = every middle schooler's favorite poker hand
+Desc = {
+	A pair of 8s and a pair of 10s.
+	:)
+}
+Base Chips = 40
+Base Mult = 2
+Level Chips = 20
+Level Mult = 2
+Eval = {
+	(8 of *, 10 of *, 10 of *, 8 of *)
+}
+Example = 8 of Hearts, 10 of Clubs, 10 of Hearts, 8 of Spades
+Joker Chips = 120
+Joker Mult = 15
+Joker XMult = 4
+Planet Name = Planet no.80-08
+Joker Chips Name = Immature Joker
+Joker Mult Name = Excited Joker
+Joker XMult Name = The Honkers
+Author = TheLemon27

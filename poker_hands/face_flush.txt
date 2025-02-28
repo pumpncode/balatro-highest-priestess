@@ -6,7 +6,8 @@ Level chips = 11
 Level mult = 5
 Author = Sustato
 Eval = {
-    (a of x, b of x, c of x, d of x, e of x; a = [face nonunique], b = [face nonunique], c = [face nonunique], d = [face nonunique], e = [face nonunique])
+    (* of x, * of x, * of x, * of x, * of x)
 } 
+All Face = Yes
 Example = King of Spades, Queen of Spades, Queen of Spades, Queen of Spades, Jack of Spades
 Planet Name = Ganymede

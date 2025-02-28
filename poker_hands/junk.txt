@@ -11,6 +11,5 @@ Eval = {
   (a of Spades, b of Hearts, c of Clubs, d of Diamonds, e of Wilds),
 }
 Author = Papyrus Semi
-
 Example = 2 of Spades, 4 of Hearts, 7 of Clubs, Jack of Diamonds, King of Wilds
 Planet Name = Space Junk

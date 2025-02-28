@@ -1,0 +1,16 @@
+Name = Double Negative
+Desc = {
+    A Glass Card Pair.
+    When played, Glass Cards will not score.
+}
+Base Chips = 60
+Base Mult = 5
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (unscoring a of *, unscoring a of *)
+}
+All Enhanced = Glass
+Author = Lolhappy909_lol
+Example = unscoring Queen of Hearts, unscoring Queen of Spades
+Planet Name = Negativity

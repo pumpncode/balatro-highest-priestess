@@ -1,16 +1,19 @@
 Name = Kingdom
 Desc = {
-    Three face cards with the same rank and suit,
-    and two face cards with a different rank and suit.
+    Three face cards with the same rank,
+    and two face cards with a different rank,
+    if all are enhanced and money is at least $100.
 }
 Base Chips = 200
 Base Mult = 16
 Level Chips = 60
 Level Mult = 6
 Eval = {
-    (a of x, a of x, a of x, b of y, b of y; a = [face], b = [face])
+    (a of *, a of *, a of *, b of *, b of *; a = [face], b = [face])
 }
+Any Enhancement = Yes
+Money Min = 100
 Author = Post Prototype
 
-Example = King of Diamonds, King of Diamonds, King of Diamonds, Queen of Spades, Queen of Spades
-Planet Name = Yvaga
+Example = King of Hearts, King of Diamonds, King of Spades, Queen of Clubs, Queen of Hearts
+Planet Name = Mastika

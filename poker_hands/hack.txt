@@ -12,3 +12,10 @@ Eval = {
 }
 Author = TamerSoup625
 Example = 5 of Clubs, 4 of Spades, 3 of Hearts, 2 of Spades
+Planet Name = Kepler-37b
+Joker Mult = 22
+Joker Chips = 55
+Joker XMult = 2.3
+Joker Mult Name = Copycat Joker
+Joker Chips Name = Trite Joker
+Joker XMult Name = The Comedian

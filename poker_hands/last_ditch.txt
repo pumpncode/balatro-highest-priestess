@@ -10,3 +10,9 @@ Eval = {
     (* of * debuffed, * of * debuffed, * of * debuffed, * of * debuffed, * of * debuffed)
 }
 Author = hatstack
+Joker Texture ID = 7
+
+> Joker Bonuses added by TamerSoup625
+Joker Mult = 20
+Joker Chips = 150
+Joker XMult = 5

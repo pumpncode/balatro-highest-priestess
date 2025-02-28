@@ -1,0 +1,16 @@
+Name = Lopside
+Desc = {
+   4 cards with a single rank,
+   if there are 2 pairs of cards with different ranks in held hand.
+}
+Base Chips = 120
+Base Mult = 12
+Level Chips = 30
+Level Mult = 4
+Eval = {
+    (a of *, a of *, a of *, a of *)
+}
+Two Pair in Hand = Yes
+Author = Post Prototype
+Example = unscoring 5 of Spades, unscoring 5 of Hearts, 10 of Clubs, 10 of Clubs, 10 of Hearts, 10 of Diamonds, unscoring Ace of Clubs, unscoring Ace of Diamonds
+Planet Name = Ditso

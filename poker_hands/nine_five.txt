@@ -1,0 +1,14 @@
+Name = 9-5
+Desc = {
+  A straight of cards you'd normally discard for a straight
+}
+Base Chips = 30
+Base Mult = 5
+Level Chips = 30
+Level Mult = 4
+Eval = {
+  (9 of *, 8 of *, 7 of *, 6 of *, 5 of *)
+}
+Example = 9 of Clubs, 8 of Hearts, 7 of Clubs, 6 of Diamonds, 5 of Hearts
+Planet Name = The Crevice
+Author = tHotoe

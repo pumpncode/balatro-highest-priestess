@@ -11,3 +11,13 @@ Eval = {
 }
 Author = NinjaBanana
 Example = Ace of Spades, Ace of Hearts, Ace of Hearts, Ace of Clubs, Ace of Diamonds
+
+> Added by Gladofdingldill
+Joker Mult = 30
+Joker Chips = 225
+Joker XMult = 6
+Joker Mult Name = Screaming Joker
+Joker Chips Name = Agonizing Joker
+Joker XMult Name = AAAAAAAAAAAAAAAAA
+Planet Name = KELT-9b
+Joker Texture ID = 6

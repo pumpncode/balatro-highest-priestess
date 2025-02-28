@@ -20,3 +20,5 @@ Joker Chips = 47
 Joker XMult = 2.5
 Joker Mult Name = Guns Ajimbo
 Joker Chips Name = Sniper Joker
+> This Joker name added by Gladofdingldill
+Joker XMult Name = The Battlefield Assault

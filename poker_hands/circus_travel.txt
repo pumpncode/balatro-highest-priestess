@@ -8,3 +8,11 @@ Planet Name = Carnival
 Eval = {(Jack of *, Jack of *, Jack of *, Jack of *)}
 Author = Violet
 Example = Jack of Clubs, Jack of Diamonds, Jack of Spades, Jack of Spades
+
+> Added by Gladofdingldill
+Joker Mult = 25
+Joker Chips = 175
+Joker XMult = 4.5
+Joker Mult Name = Monty Joker
+Joker Chips Name = Python Joker
+Joker XMult Name = The Flying Circus

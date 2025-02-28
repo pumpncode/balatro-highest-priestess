@@ -11,5 +11,5 @@ Eval = {
       (* of *, * of *, * of *, * of *, * of *)
 }
 Order Offset = -73.5
-Example = Ace of Hearts, 6 of Hearts, 3 of Diamonds, 2 of Diamonds, 8 of Spades
+Example = Ace of Hearts, 6 of Hearts, 3 of Diamonds, 2 of Diamonds, 10 of Spades
 Author = verdant_thePOWER

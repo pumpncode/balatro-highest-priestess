@@ -1,0 +1,13 @@
+Name = Holoflush
+Desc = {
+    A Flush with all cards of the same enhancement
+}
+Base Chips = 70
+Base Mult = 8
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (* of a, * of a, * of a, * of a, * of a)
+}
+Same Enhancement = Yes
+Author = ^FoxDeploy

@@ -1,0 +1,22 @@
+Name = Bobtail 3D
+Desc = {
+    3 cards in ascending or descending order
+    alongside 2 unscoring Editioned cards
+    (Original hand by Plzbeans)
+}
+Base Chips = 30
+Base Mult = 30
+Level Chips = 3
+Level Mult = 3
+Eval = {
+    (a of *, a+1 of *, a+2 of *, unscoring * of * editioned, unscoring * of * editioned),
+}
+Author = Gladofdingldill
+
+Joker Mult = 30
+Joker Chips = 30
+Joker XMult = 3
+Planet Name = Rayon
+Joker Mult Name = Woolie Joker
+Joker Chips Name = Impawsible Joker
+Joker XMult Name = The Classic Gaming Action

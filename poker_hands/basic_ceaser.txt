@@ -1,0 +1,15 @@
+Name = Basic Ceasar
+Desc = {
+    A poker hands contains 5 cards that suit is same as the
+    last hand and all ranks are the last hand's ranks but +3
+}
+Base chips = 333
+Base mult = 33
+Level chips = 33
+Level mult = 3
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Ceasar = +3
+Example = Stone, Stone, Stone, Stone, Stone
+Author = Sustato

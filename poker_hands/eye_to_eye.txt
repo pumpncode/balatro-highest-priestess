@@ -1,0 +1,20 @@
+Name = Eye to Eye
+Desc = {
+	Two face cards and a 2.
+}
+Base Chips = 22
+Base Mult = 2
+Level Chips = 20
+Level Mult = 1
+Eval = {
+	(a of *, 2 of *, b of *; a = [face nonunique], b = [face nonunique])
+}
+Example = King of Diamonds, 2 of Diamonds, Queen of Clubs
+Joker Mult = 10
+Joker Chips = 90
+Joker XMult = 2.75
+Planet Name = XFa-01 & XFa-02
+Joker Chips Name = Tense Joker
+Joker Mult Name = Staring Joker
+Joker XMult Name = The Conflict
+Author = TheLemon27

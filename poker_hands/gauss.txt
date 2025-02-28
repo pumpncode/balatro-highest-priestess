@@ -1,0 +1,30 @@
+Name = Gauss
+Desc = {
+    5 cards of ascending ranks with increasing gap size,
+    going from no gap to a 3-rank gap
+}
+Base Chips = 60
+Base Mult = 1
+Level Chips = 30
+Level Mult = 4
+Order Offset = 180
+Eval = {
+    (a of *, a+1 of *, a+3 of *, a+6 of *, a+10 of *)
+}
+Author = TamerSoup625
+Example = 3 of Diamonds, 4 of Spades, 6 of Clubs, 9 of Spades, King of Clubs
+Planet Name = Equation
+Joker Mult = 8
+Joker Chips = 50
+Joker XMult = 5
+Joker Mult Name = Magnetic Joker
+Joker Chips Name = Geodesic Joker
+Joker XMult Name = The Normal
+
+Flush Name = Gauss Flush
+Flush Base Chips = 150
+Flush Base Mult = 5
+Flush Level Chips = 40
+Flush Level Mult = 5
+Flush Planet Name = Cannon
+Flush Example = 3 of Spades, 4 of Spades, 6 of Spades, 9 of Spades, King of Spades

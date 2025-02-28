@@ -1,0 +1,24 @@
+Name = every middle schooler's actual favorite poker hand
+Desc = {
+	A pair of 8s, a pair of 10s and a 5.
+	:)
+}
+Base Chips = 80
+Base Mult = 8
+Level Chips = 40
+Level Mult = 2
+Eval = {
+	(8 of *, 10 of *, 10 of *, 8 of *, 5 of *)
+}
+Example = 8 of Hearts, 10 of Clubs, 10 of Hearts, 8 of Spades, 5 of Diamonds
+Joker Chips = 200
+Joker Mult = 17
+Joker XMult = 4
+Planet Name = Planet no.80-08.5
+Flush Name = every middle schooler's actual favorite flush poker hand
+Flush Base Chips = 280
+Flush Base Mult = 14
+Flush Level Chips = 80
+Flush Level Mult = 4
+Flush Planet Name = Planet no.80-08.5-F
+Author = TheLemon27

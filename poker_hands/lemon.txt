@@ -1,0 +1,20 @@
+Name = Lemon
+Desc = {
+	A 2 and 7 of diamonds.
+}
+Base Chips = 27
+Base Mult = 2
+Level Chips = 7
+Level Mult = 2
+Eval = {
+	(2 of Diamonds, 7 of Diamonds)
+}
+Example = 2 of Diamonds, 7 of Diamonds
+Joker Chips = 72
+Joker Mult = 14
+Joker XMult = 2.7
+Planet Name = L3-m-07
+Joker Chips Name = Sour Joker
+Joker Mult Name = Puckered Joker
+Joker XMult Name = The Citrus
+Author = TheLemon27

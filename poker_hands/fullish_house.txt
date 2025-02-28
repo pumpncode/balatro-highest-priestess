@@ -1,0 +1,17 @@
+Name = Full-ish House
+Desc = {
+    A pair and a three of a kind
+    1 in 255 chance to get this hand
+}
+Base Chips = 60
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of *, a of *, b of *, b of *, b of *)
+}
+Chance = 255
+Author = Plzbeans
+Example = Ace of Spades, Ace of Hearts, 5 of Diamonds, 5 of Diamonds, 5 of Clubs
+Order Offset = 2
+Planet Name = Earth 2

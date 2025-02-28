@@ -13,3 +13,11 @@ All Editioned = Foil
 Example = Ace of Clubs, Ace of Clubs
 Planet Name = Dominara
 Author = scross
+
+> Added by Gladofdingldill
+Joker Mult = 10
+Joker Chips = 80
+Joker XMult = 2.5
+Joker Mult Name = Magic Joker
+Joker Chips Name = Gathering Joker
+Joker XMult Name = The Instant

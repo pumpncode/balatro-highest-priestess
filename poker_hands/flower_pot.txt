@@ -13,3 +13,4 @@ Eval = {
 }
 Example = Jack of Spades, unscoring 8 of Hearts, 6 of Clubs, 3 of Diamonds
 Author = TamerSoup625
+Planet Name = The Starry Night

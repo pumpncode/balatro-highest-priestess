@@ -1,0 +1,16 @@
+Name = Fifth Wheel
+Desc = {
+  A Two Pair along with its kicker.
+}
+Base Chips = 15
+Base Mult = 2
+Level Chips = 18
+Level Mult = 1.5
+> Above Two Pair
+Order Offset = 11
+Eval = {
+    (a of *, a of *, b of *, b of *, c of *)
+}
+Author = Lolhappy909_lol
+Example = Queen of Hearts, Queen of Spades, 7 of Hearts, 7 of Diamonds, 3 of Clubs
+Planet Name = Bucket

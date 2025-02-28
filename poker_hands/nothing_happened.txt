@@ -1,0 +1,14 @@
+Name = Nothing Happened.
+Desc = {
+    Ace, 9, 8, 9
+}
+Base Chips = 0
+Base Mult = 0
+Level Chips = 19
+Level Mult = 3
+Order Offset = 57
+Eval = {
+    (Ace of *, 9 of *, 8 of *, 9 of *)
+}
+Author = Batu
+Example = Ace of Spades, 9 of Spades, 8 of Hearts, 9 of Clubs

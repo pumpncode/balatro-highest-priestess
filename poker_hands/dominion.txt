@@ -1,0 +1,19 @@
+Name = Dominion
+Desc = {
+    Three face cards with the same rank,
+    and two face cards with a different rank,
+    if all are the same suit, gold, and money is at least $200.
+}
+Base Chips = 400
+Base Mult = 32
+Level Chips = 120
+Level Mult = 12
+Eval = {
+    (a of x, a of x, a of x, b of x, b of x; a = [face], b = [face])
+}
+All Enhanced = Gold
+Money Min = 200
+Author = Post Prototype
+
+Example = King of Diamonds, King of Diamonds, King of Diamonds, Jack of Diamonds, Jack of Diamonds
+Planet Name = Yvaga

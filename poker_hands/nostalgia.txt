@@ -13,3 +13,4 @@ Eval = {
 Nostalgic = When the Flush was 40X3
 Example = Stone, Stone, Stone, Stone, Stone
 Author = TamerSoup625
+Planet Name = Gamma Cephei Ab

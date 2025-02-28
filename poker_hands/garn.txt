@@ -1,0 +1,19 @@
+Name = RNG Hand No. 47
+Desc = {
+    1 in 47 chance to happen when you
+    play a Flush, Straight, or Full House.
+}
+Base Chips = 47
+Base Mult = 4.7
+Level Chips = 2.7
+Level Mult = 31
+Eval = {
+    (* of a, * of a, * of a, * of a, * of a),
+    (x of *, x+1 of *, x+2 of *, x+3 of *, x+4 of *),
+    (x of *, x of *, x of *, y of *, y of *)
+}
+Chance = 47
+Author = Papyrus Semi
+Example = 4 of Diamonds, 4 of Diamonds, 4 of Diamonds, 7 of Diamonds, 7 of Diamonds
+Planet Name = Garn47
+Planet Texture ID = 1
