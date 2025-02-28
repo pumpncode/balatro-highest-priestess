@@ -8,9 +8,7 @@ from os.path import isfile, join
 REGEX_KEYVALUE = re.compile(r"^(.+?)\s*=\s*(?:{((?:.|\n)*?)}|(.+))", re.MULTILINE)
 REGEX_PARENTHESIS_GROUP = re.compile(r"\((.*?)\)", re.MULTILINE | re.DOTALL)
 REGEX_WHITESPACE = re.compile(r"\s+")
-#REGEX_ANY_CARD = re.compile(r"((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)", re.IGNORECASE)
-#REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone))", re.IGNORECASE)
-REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)) ?(debuffed)?", re.IGNORECASE)
+REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)) ?(debuffed|editioned|nondebuffed)?", re.IGNORECASE)
 REGEX_RANK = re.compile(r"(?:(\*)|([a-z]+)(?:\+(\d+))?)", re.IGNORECASE)
 REGEX_OPTIONS = re.compile(r"(\w) ?= ?\[(.+?)\]", re.IGNORECASE)
 REGEX_VALUES_GENERIC = re.compile(r"[a-z0-9]+", re.IGNORECASE)
@@ -80,7 +78,7 @@ def parse_hand_pattern(raw_text: str):
         if card.group(1):
             card_dict["times"] = int(card.group(1))
         if card.group(6):
-            card_dict["debuffed"] = True
+            card_dict["special"] = card.group(6).lower()
         card_list.append(card_dict)
     options_iter = re.finditer(REGEX_OPTIONS, options_text)
     options_dict: dict = {}
@@ -281,6 +279,32 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["rng"] = True
             case "all debuffed":
                 result["all_debuffed"] = True
+            case "everything is stone":
+                result["everything_is_stone"] = True
+            case "all in":
+                result["all_in"] = True
+            case "all face":
+                result["all_face"] = True
+            case "measure time":
+                print("MEASURE TIME")
+                result["measure_time"] = True
+            case "two pair in hand":
+                result["two_pair_in_hand"] = True
+            case "deja vu":
+                result["deja_vu"] = True
+            case "ceasar":
+                result["ceasar"] = int(value)
+            case "rank max":
+                result["rank_max"] = int(value)
+            case "rank min":
+                result["rank_min"] = int(value)
+            case "any enhancement":
+                result["any_enhancement"] = True
+            case "possible last hand ids":
+                hand_list = [x.strip() for x in value_multiline.strip().split("\n")]
+                result["possible_last_hand_ids"] = hand_list
+            case _:
+                raise RuntimeError(f"Invalid key '{key}'")
     return result
 
 
@@ -307,7 +331,8 @@ def main():
         file.write("Thanks to everyone <3\n")
         file.write(f"Total poker hand count: {len(result)}\n")
         for author, hands in author_hands_map.items():
-            file.write(f"- {author}: " + ", ".join(x.get("credits_name", x["name"]) for x in hands) + "\n")
+            hand_count_text = f" ({len(hands)} hands)" if len(hands) >= 5 else ""
+            file.write(f"- {author}{hand_count_text}: " + ", ".join(x.get("credits_name", x["name"]) for x in hands) + "\n")
 
 
 main()
