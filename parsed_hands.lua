@@ -290,7 +290,7 @@ return [[ [
         "key": "answer"
     },
     {
-        "name": "Basic Ceasar",
+        "name": "Basic Caesar",
         "desc": [
             "A poker hands contains 5 cards that suit is same as the",
             "last hand and all ranks are the last hand's ranks but +3"
@@ -2645,6 +2645,98 @@ return [[ [
         "key": "ear"
     },
     {
+        "name": "Even Hand",
+        "desc": [
+            "A hand containing all even ranks,",
+            "(2, 4, 6, 8, and 10)"
+        ],
+        "author": "Electrum",
+        "base_chips": 60.0,
+        "base_mult": 5.0,
+        "level_chips": 40.0,
+        "level_mult": 4.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 2
+                    },
+                    {
+                        "rank": 4
+                    },
+                    {
+                        "rank": 6
+                    },
+                    {
+                        "rank": 8
+                    },
+                    {
+                        "rank": 10
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 2,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 4,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Diamonds"
+            },
+            {
+                "rank": 6,
+                "suit": "Spades"
+            },
+            {
+                "rank": 10,
+                "suit": "Spades"
+            }
+        ],
+        "joker_mult": 14.0,
+        "joker_chips": 120.0,
+        "joker_xmult": 4.0,
+        "planet_name": "Haumea",
+        "joker_mult_name": "Even Joker",
+        "joker_chips_name": "Perfect Joker",
+        "joker_xmult_name": "The Perfection",
+        "flush_name": "Even Flush",
+        "flush_base_chips": 200.0,
+        "flush_base_mult": 10.0,
+        "flush_level_chips": 60.0,
+        "flush_level_mult": 6.0,
+        "flush_planet_name": "136108 Haumea",
+        "flush_example": [
+            {
+                "rank": 2,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 4,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 6,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 8,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 10,
+                "suit": "Clubs"
+            }
+        ],
+        "key": "even_hand"
+    },
+    {
         "name": "Even of a Kind",
         "desc": [
             "Five cards with consecutive orders according to even numbers",
@@ -4778,6 +4870,39 @@ return [[ [
         "key": "gauss"
     },
     {
+        "name": "Ghostly",
+        "desc": [
+            "A Glass Card."
+        ],
+        "base_chips": 10.0,
+        "base_mult": 2.0,
+        "level_chips": 15.0,
+        "level_mult": 1.5,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "all_enhanced": "glass",
+        "author": "Lolhappy909_lol",
+        "example": [
+            {
+                "rank": 7,
+                "suit": "Spades"
+            }
+        ],
+        "planet_name": "Poltergeist",
+        "key": "ghostly"
+    },
+    {
         "name": "Glass Houses",
         "desc": [
             "A full house of Glass cards"
@@ -6013,6 +6138,7 @@ return [[ [
         "joker_mult_name": "Puckered Joker",
         "joker_xmult_name": "The Citrus",
         "author": "TheLemon27",
+        "planet_texture_id": 4,
         "key": "lemon"
     },
     {
@@ -6280,6 +6406,39 @@ return [[ [
         "joker_xmult_name": "The Prole",
         "joker_texture_id": 1,
         "key": "low_card"
+    },
+    {
+        "name": "Macbeth",
+        "desc": [
+            "Exactly one 9 of Diamonds"
+        ],
+        "base_chips": 9.0,
+        "base_mult": 1.6,
+        "level_chips": 9.0,
+        "level_mult": 1.6,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 9,
+                        "suit": [
+                            "Diamonds",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "card_count": 1,
+        "author": "Unexian",
+        "example": [
+            {
+                "rank": 9,
+                "suit": "Diamonds"
+            }
+        ],
+        "key": "macbeth"
     },
     {
         "name": "Meridian",
@@ -11069,6 +11228,43 @@ return [[ [
         "author": "Lolhappy909_lol",
         "planet_name": "Star-Crossed",
         "key": "tragedy"
+    },
+    {
+        "name": "Troll",
+        "desc": [
+            "A Jack along with a debuffed card that does not form a pair."
+        ],
+        "base_chips": 50.0,
+        "base_mult": 3.0,
+        "level_chips": 40.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "j",
+                            0
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "special": "debuffed"
+                    }
+                ],
+                "options": {
+                    "j": [
+                        11
+                    ]
+                }
+            }
+        ],
+        "author": "Lolhappy909_lol",
+        "planet_name": "Trollface",
+        "key": "troll"
     },
     {
         "name": "Two Birds",
