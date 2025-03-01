@@ -21,6 +21,7 @@ local CUSTOM_PLANETS_ATLAS_MAP = {
     "custom_planet_garn47.png",
     "custom_planet_sigma_n.png",
     "custom_planet_omicron.png",
+    "custom_planet_lemon.png",
 }
 
 local json = assert(SMODS.load_file('json.lua'))()
@@ -30,6 +31,14 @@ local nostalgic_hand_ids = {}
 local rng_hand_ids = {}
 local dejavu_hand_ids = {}
 local ceasar_ids_values = {}
+
+
+local function talis_num(x)
+    if to_big then
+        return to_big(x)
+    end
+    return x
+end
 
 
 -- WARNING: Only works with positive rotation
@@ -828,10 +837,10 @@ for _, hand_stats in pairs(poker_hands) do
                 end
             end
         end
-        if hand_stats.money_min and G.GAME.dollars < hand_stats.money_min then
+        if hand_stats.money_min and G.GAME.dollars < talis_num(hand_stats.money_min) then
             return
         end
-        if hand_stats.money_max and G.GAME.dollars > hand_stats.money_max then
+        if hand_stats.money_max and G.GAME.dollars > talis_num(hand_stats.money_max) then
             return
         end
         if hand_stats.unmodified then
@@ -1465,8 +1474,7 @@ SMODS.Voucher {
 }
 
 local Back_trigger_effect_ref = Back.trigger_effect
-function Back:trigger_effect(args)
-    local ret = Back_trigger_effect_ref(self, args)
+function Back:trigger_effect(args, ...)
     if G.GAME.used_vouchers.v_vhp_discoverer then
         if
             args.context == "eval" and
@@ -1491,7 +1499,7 @@ function Back:trigger_effect(args)
                 end)}))
         end
     end
-    return ret
+    return Back_trigger_effect_ref(self, args, ...)
 end
 
 
