@@ -279,6 +279,7 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["rng"] = True
             case "all debuffed":
                 result["all_debuffed"] = True
+            # New stuff from here
             case "everything is stone":
                 result["everything_is_stone"] = True
             case "all in":

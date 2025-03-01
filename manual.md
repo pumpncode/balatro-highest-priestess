@@ -113,10 +113,15 @@ All Sealed = Red
 - `Card Count Min`: If added, the poker hand must have at least this number of cards.
 - `Card Count Max`: If added, the poker hand must have at most this number of cards.
 - `All Debuffed`: If added, all cards must be debuffed.
+- `Everything is Stone`: If added, all cards played and held in hand must be Stone Cards.
+- `All In`: If added, all cards in hand must be played.
+- `All Face`: If added, all cards must be face cards. This is more optimized than using options.
+- `Two Pair in Hand`: If added, a Two Pair must be held in hand.
 - `Nostalgic`: Used by the "Nostalgia" hand. If added, all cards must match the rank and suits of the first 5-card hand that was played this run. Does not count if you haven't played a 5-card hand this run.
 - `RNG`: Used by the "RNG" hand. If added, all cards must match the rank and suits of a set of 5 cards randomly-generated at the start of the run.
 - `Joker Texture ID`: Used internally. If added, Jokers created for the poker hand have custom art.
 - `Planet Texture ID`: Used internally. If added, planets created for the poker hand have custom art.
+- `Deja Vu`: Used internally. This is basically the condition for Deja Vu hand.
 
 ### Grouped Poker Hand Properties
 

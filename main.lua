@@ -837,10 +837,10 @@ for _, hand_stats in pairs(poker_hands) do
                 end
             end
         end
-        if hand_stats.money_min and G.GAME.dollars < talis_num(hand_stats.money_min) then
+        if hand_stats.money_min and talis_num(G.GAME.dollars) < talis_num(hand_stats.money_min) then
             return
         end
-        if hand_stats.money_max and G.GAME.dollars > talis_num(hand_stats.money_max) then
+        if hand_stats.money_max and talis_num(G.GAME.dollars) > talis_num(hand_stats.money_max) then
             return
         end
         if hand_stats.unmodified then
