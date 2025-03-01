@@ -1,0 +1,13 @@
+Name = Troll
+Desc = {
+    A Jack along with a debuffed card that does not form a pair.
+}
+Base Chips = 50
+Base Mult = 3
+Level Chips = 40
+Level Mult = 2
+Eval = {
+    (j of *, a of * debuffed; j = [Jack])
+}
+Author = Lolhappy909_lol
+Planet Name = Trollface

@@ -18,3 +18,4 @@ Joker Chips Name = Sour Joker
 Joker Mult Name = Puckered Joker
 Joker XMult Name = The Citrus
 Author = TheLemon27
+Planet Texture ID = 4

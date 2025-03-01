@@ -1,0 +1,29 @@
+Name = Even Hand
+Desc = {
+    A hand containing all even ranks,
+    (2, 4, 6, 8, and 10)
+}
+Author = Electrum
+Base Chips = 60
+Base Mult = 5
+Level Chips = 40
+Level Mult = 4
+Eval = {
+  (2 of *, 4 of *, 6 of *, 8 of *, 10 of *)
+}
+Example = 2 of Clubs, 4 of Hearts, 8 of Diamonds, 6 of Spades, 10 of Spades
+Joker Mult = 14
+Joker Chips = 120
+Joker XMult = 4
+Planet Name = Haumea
+Joker Mult Name = Even Joker
+Joker Chips Name = Perfect Joker
+Joker XMult Name = The Perfection
+
+Flush Name = Even Flush
+Flush Base Chips = 200
+Flush Base Mult = 10
+Flush Level Chips = 60
+Flush Level Mult = 6
+Flush Planet Name = 136108 Haumea
+Flush Example = 2 of Clubs, 4 of Clubs, 6 of Clubs, 8 of Clubs, 10 of Clubs

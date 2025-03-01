@@ -1,0 +1,15 @@
+Name = Ghostly
+Desc = {
+    A Glass Card.
+}
+Base Chips = 10
+Base Mult = 2
+Level Chips = 15
+Level Mult = 1.5
+Eval = {
+    (a of *)
+}
+All Enhanced = Glass
+Author = Lolhappy909_lol
+Example = 7 of Spades
+Planet Name = Poltergeist

@@ -1,4 +1,4 @@
-Name = Basic Ceasar
+Name = Basic Caesar
 Desc = {
     A poker hands contains 5 cards that suit is same as the
     last hand and all ranks are the last hand's ranks but +3
