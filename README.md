@@ -4,6 +4,8 @@
 
 [Discord Server](https://discord.gg/XbfZc48t8B)
 
+[How to Install](https://github.com/Steamodded/smods?tab=readme-ov-file#how-to-install-a-mod)
+
 - NinjaBanana: AAAAAAAAAAA, Two Flush Pair
 - HotlineJolteon: Ace High, Aces High, Ultimate Gambit
 - Papyrus Semi (12 hands): AK-47, Fun Is Infinite, RNG Hand No. 47, Double House, Flush Garage, Pseudo House, Junk, The Hand Where He Kills You, Sawtooth, Seximal Straight, Sine, The Ultimate Flush
