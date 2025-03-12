@@ -116,7 +116,13 @@ All Sealed = Red
 - `Everything is Stone`: If added, all cards played and held in hand must be Stone Cards.
 - `All In`: If added, all cards in hand must be played.
 - `All Face`: If added, all cards must be face cards. This is more optimized than using options.
+- `All Nonface`: If added, all cards must not be face cards. This is more optimized than using options.
 - `Two Pair in Hand`: If added, a Two Pair must be held in hand.
+- `Ceasar`: If added, the cards played must be the cards on last hand with rank shifted by `Ceasar`. Check Basic Caesar hand for an example.
+- `Rank Min`: If added, all cards must have atleast the specified rank.
+- `Rank Max`: If added, all cards must have at most the specified rank.
+- `Any Enhancement`: If added, all cards must be enhanced.
+- `Possible Last Hand IDS`: Uses multiline text. If added, the last hand played must be any of the hands on each row.
 - `Nostalgic`: Used by the "Nostalgia" hand. If added, all cards must match the rank and suits of the first 5-card hand that was played this run. Does not count if you haven't played a 5-card hand this run.
 - `RNG`: Used by the "RNG" hand. If added, all cards must match the rank and suits of a set of 5 cards randomly-generated at the start of the run.
 - `Joker Texture ID`: Used internally. If added, Jokers created for the poker hand have custom art.
@@ -252,6 +258,14 @@ Eval = {
 }
 ```
 
+A card pattern can be succeded by a word. This indicates a special pattern for that card. See Special Patterns section.
+
+```
+Eval = {
+    (* of * debuffed, * of * editioned, * of * nondebuffed),
+}
+```
+
 A playing card can't match multiple card patterns but, for getting the scoring cards, a card pattern can match multiple playing cards.
 
 ```
@@ -310,6 +324,14 @@ Eval = {
 }
 ```
 If you want to allow different letters to correspond to the same suit, see the `nonunique` option in the Pattern Options section.
+
+### Special Patterns
+
+This is the list of all possible special patterns. If specified, the special pattern must match along with the rank and suit ones.
+
+- `debuffed`: Matches a Debuffed card.
+- `editioned`: Matches a card with an Edition.
+- `nondebuffed`: Matches a card that is not Debuffed.
 
 ### Pattern Options
 

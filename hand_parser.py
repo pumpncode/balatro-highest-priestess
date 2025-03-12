@@ -8,7 +8,7 @@ from os.path import isfile, join
 REGEX_KEYVALUE = re.compile(r"^(.+?)\s*=\s*(?:{((?:.|\n)*?)}|(.+))", re.MULTILINE)
 REGEX_PARENTHESIS_GROUP = re.compile(r"\((.*?)\)", re.MULTILINE | re.DOTALL)
 REGEX_WHITESPACE = re.compile(r"\s+")
-REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)) ?(debuffed|editioned|nondebuffed)?", re.IGNORECASE)
+REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)) ?(debuffed|editioned|nondebuffed|nonface|gold|midranked|dark|light|special)?", re.IGNORECASE)
 REGEX_RANK = re.compile(r"(?:(\*)|([a-z]+)(?:\+(\d+))?)", re.IGNORECASE)
 REGEX_OPTIONS = re.compile(r"(\w) ?= ?\[(.+?)\]", re.IGNORECASE)
 REGEX_VALUES_GENERIC = re.compile(r"[a-z0-9]+", re.IGNORECASE)
@@ -51,7 +51,7 @@ def get_suit_token(suit_text: str) -> Optional[list]:
     return [suit_text, False]
 
 
-def parse_hand_pattern(raw_text: str):
+def parse_hand_pattern(raw_text: str, warn_for_missing_support: bool = True):
     text = re.sub(REGEX_WHITESPACE, " ", raw_text)
     if ";" in text:
         cards_text, options_text = text.split(";")
@@ -97,22 +97,21 @@ def parse_hand_pattern(raw_text: str):
             possible_values = ["_nonunique" if x.lower() == "nonunique" else get_rank_token(x, True) for x in possible_values_str]
         options_dict[var_key] = possible_values
     # If the pattern contains any (X of *) and (* of Y) it may not work with a greedy algorithm
-    # We can fix this by adding a nonunique rank var like this (X of *) (_internal of Y)
-    has_suit_only = False
-    has_rank_only = False
+    # We can fix this manually by adding a nonunique rank var like this (X of *) (j of Y)
+    requirements_count_association = {}
+    needs_support = False
     for x in card_list: # type: ignore
-        if "rank" in x and "suit" not in x:
-            has_rank_only = True
-        if "suit" in x and "rank" not in x:
-            has_suit_only = True
-    needs_support = has_rank_only and has_suit_only
-    if needs_support:
-        i = 0
-        for x in card_list: # type: ignore
-            if "suit" in x and "rank" not in x:
-                x["rank"] = [f"_support{i}", 0] # type: ignore
-                options_dict[f"_support{i}"] = ["_nonunique"]
-                i += 1
+        requirements_count = ("rank" in x) + ("suit" in x) + ("special" in x)
+        requirements_id = ("rank" in x) * 2**0 + ("suit" in x) * 2**1 + ("special" in x) * 2**2
+        if (
+            requirements_count in requirements_count_association and
+            requirements_count_association[requirements_count] != requirements_id
+        ):
+            needs_support = True
+            break
+        requirements_count_association[requirements_count] = requirements_id
+    if needs_support and warn_for_missing_support:
+        print(f"WARNING! Pattern ({raw_text}) needs support (clashing requirements)")
     return dict(pattern=card_list, options=options_dict)
 
 
@@ -135,6 +134,8 @@ def parse_example_pattern(raw_text: str):
             card_dict["suit"] = suit_token
         if card.group(2):
             card_dict["unscoring"] = True
+        if card.group(6):
+            card_dict["special"] = card.group(6).lower()
         card_list.append(card_dict)
     return card_list
 
@@ -165,7 +166,7 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["desc"] = loc_table
             case "eval" | "evaluation":
                 patterns_iter = re.finditer(REGEX_PARENTHESIS_GROUP, value_multiline)
-                patterns_list = [parse_hand_pattern(x.group(1)) for x in patterns_iter]
+                patterns_list = [parse_hand_pattern(x.group(1), not result.get("no_support_warning", False)) for x in patterns_iter]
                 result["eval"] = patterns_list
             case "order offset":
                 result["order_offset"] = float(value)
@@ -279,13 +280,14 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["rng"] = True
             case "all debuffed":
                 result["all_debuffed"] = True
-            # New stuff from here
             case "everything is stone":
                 result["everything_is_stone"] = True
             case "all in":
                 result["all_in"] = True
             case "all face":
                 result["all_face"] = True
+            case "all nonface":
+                result["all_nonface"] = True
             case "measure time":
                 print("MEASURE TIME")
                 result["measure_time"] = True
@@ -301,9 +303,65 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["rank_min"] = int(value)
             case "any enhancement":
                 result["any_enhancement"] = True
+            case "math identity":
+                result["math_identity"] = value.lower()
             case "possible last hand ids":
                 hand_list = [x.strip() for x in value_multiline.strip().split("\n")]
                 result["possible_last_hand_ids"] = hand_list
+            case "chill hands":
+                result["chill_hands"] = int(value)
+            case "all facedown":
+                result["all_facedown"] = True
+            case "slayer":
+                result["slayer"] = True
+            case "no cards in deck":
+                result["no_cards_in_deck"] = True
+            case "everything is enhanced":
+                result["everything_is_enhanced"] = value.lower()
+            case "required hands left":
+                result["required_hands_left"] = int(value)
+            case "no hand":
+                result["no_hand"] = True
+            case "no support warning":
+                result["no_support_warning"] = True
+            case "all steel red seal king in hand":
+                result["kingmaxxing"] = True
+            case "reset nostalgia":
+                result["reset_nostalgia"] = True
+            case "money ease":
+                result["money_ease"] = float(value)
+            case "banana scoring":
+                result["banana_scoring"] = True
+            case "todo":
+                print("TODO")
+            case "special mult":
+                result["special_mult"] = float(value)
+            case "enhance kicker":
+                result["enhance_kicker"] = True
+            case "special joker":
+                result["special_joker"] = True
+            case "special xmult":
+                result["special_xmult"] = float(value)
+            case "probability mod":
+                result["probability_mod"] = float(value)
+            case "gene dupes":
+                result["gene_dupes"] = int(value)
+            case "required hands played":
+                result["required_hands_played"] = int(value)
+            case "create joker id":
+                result["create_joker_id"] = value
+            case "hand size mod":
+                result["hand_size_mod"] = int(value)
+            case "all cards in hand of rank":
+                result["all_cards_in_hand_of_rank"] = rank_to_id(value)
+            case "special wild":
+                result["special_wild"] = True
+            case "high special":
+                result["high_special"] = True
+            case "draw extra":
+                result["draw_extra"] = int(value)
+            case "ritual":
+                result["ritual"] = True
             case _:
                 raise RuntimeError(f"Invalid key '{key}'")
     return result

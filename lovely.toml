@@ -14,3 +14,56 @@ pattern = '''local card = Card(0,0, 0.5*G.CARD_W, 0.5*G.CARD_H, G.P_CARDS[v[1]],
 position = "at"
 payload = '''local card = Card(0,0, 0.5*G.CARD_W, 0.5*G.CARD_H, G.P_CARDS[v[1]], G.P_CENTERS[v[3] or 'c_base'])'''
 match_indent = true
+
+
+# Multiscoring
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''local unsplashed = SMODS.never_scores(G.play.cards[i])'''
+position = "after"
+payload = '''
+local vhp_multiscoring_times = 0
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''if card == G.play.cards[i] then splashed = true end'''
+position = "after"
+payload = '''
+if card == G.play.cards[i] then
+    vhp_multiscoring_times = vhp_multiscoring_times + 1
+end
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''if splashed and not unsplashed then table.insert(final_scoring_hand, G.play.cards[i]) end'''
+position = "after"
+payload = '''
+if splashed and not unsplashed then
+    for _ = 1, vhp_multiscoring_times - 1, 1 do
+        table.insert(final_scoring_hand, G.play.cards[i])
+    end
+end
+'''
+match_indent = true
+
+
+# Draw Extra
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''if G.GAME.blind.name == 'The Serpent' and'''
+position = "before"
+payload = '''
+if G.GAME.vhp_draw_extra then
+    hand_space = math.min(#G.deck.cards, hand_space + G.GAME.vhp_draw_extra)
+    G.GAME.vhp_draw_extra = nil
+end
+'''
+match_indent = true

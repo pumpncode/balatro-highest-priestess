@@ -259,7 +259,12 @@ end
 local function parse_number(str, i)
   local x = next_char(str, i, delim_chars)
   local s = str:sub(i, x - 1)
+  -- THERE'S A CHANGE HERE TO STANDARD IMPLEMENTATION
+  -- Allow parsing NaN
   local n = tonumber(s)
+  if s == "NaN" then
+    n = 0/0
+  end
   if not n then
     decode_error(str, i, "invalid number '" .. s .. "'")
   end
@@ -341,6 +346,8 @@ local function parse_object(str, i)
 end
 
 
+-- THERE'S A CHANGE HERE TO STANDARD IMPLEMENTATION
+-- Allow parsing NaN
 local char_func_map = {
   [ '"' ] = parse_string,
   [ "0" ] = parse_number,
@@ -359,6 +366,7 @@ local char_func_map = {
   [ "n" ] = parse_literal,
   [ "[" ] = parse_array,
   [ "{" ] = parse_object,
+  [ "N" ] = parse_number,
 }
 
 
