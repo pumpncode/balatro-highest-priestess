@@ -1,0 +1,15 @@
+Name = Under the Sea
+Desc = {
+    All the cards currently held in hand
+    without any cards left in remaining deck
+}
+Base Chips = 142
+Base Mult = 12
+Level Chips = 60
+Level Mult = 4
+Eval = {
+    (* of *)
+}
+All In = Yes
+No Cards in Deck = Yes
+Author = CookieAlien

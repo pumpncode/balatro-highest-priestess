@@ -4,7 +4,7 @@ Desc = {5oak 10s.}
 Base Chips = 100
 Base Mult = 15
 Level Chips = +50
-Level Mult = +5
+Level Mult = +3
 
 Eval = {
     (10 of *, 10 of *, 10 of *, 10 of *, 10 of *)
@@ -13,3 +13,8 @@ Eval = {
 Example = 10 of Diamonds, 10 of Spades, 10 of Diamonds, 10 of Hearts, 10 of Diamonds
 
 Author = Runtem
+Planet Name = Beautiful Rings
+Joker Chips = 100
+Joker Chips Name = Blue Beautifulness
+Joker Mult = 7
+Joker Mult Name = Red Beautifulness

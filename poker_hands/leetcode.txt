@@ -1,0 +1,13 @@
+Name = l33t
+Desc = {
+    Ace, 3, 3, and 7. Nerd.
+}
+Base Chips = 13
+Base Mult = 3.7
+Level Chips = 13
+Level Mult = 1.7
+Eval = {
+    (Ace of *, 3 of *, 3 of *, 7 of *)
+}
+Author = CookieAlien
+Example = Ace of Diamonds, 3 of Spades, 3 of Clubs, 7 of Hearts

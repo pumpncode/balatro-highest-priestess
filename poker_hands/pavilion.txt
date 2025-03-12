@@ -1,0 +1,14 @@
+Name = Pavilion
+Desc = {
+    A 5 to Ace straight
+}
+Base Chips = 25
+Base Mult = 9
+Level Chips = 40
+Level Mult = 3
+Planet Name = Saturn's Debris
+Eval = {
+    (Ace of *, 2 of *, 3 of *, 4 of *, 5 of *)
+}
+Author = Salsa
+Example = Ace of Spades, 2 of Clubs, 3 of Hearts, 4 of Diamonds, 5 of Diamonds

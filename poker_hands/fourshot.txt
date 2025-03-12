@@ -1,0 +1,14 @@
+Name = Fourshot
+Desc = {
+    Four cards sharing a rank, and a special card with a different rank
+    The special card scores four times, all others don't
+}
+Base Chips = 70
+Base Mult = 8
+Level Chips = 35
+Level Mult = 4
+Eval = {
+    (X4 a of * special, nonscoring b of *, nonscoring b of *, nonscoring b of *, nonscoring b of *)
+}
+Author = Post Prototype
+Example = Ace of Diamonds special, nonscoring 3 of Spades, nonscoring 3 of Clubs, nonscoring 3 of Hearts, nonscoring 3 of Diamonds

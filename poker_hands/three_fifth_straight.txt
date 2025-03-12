@@ -1,0 +1,25 @@
+Name = Three-Fifths Straight
+Desc = {
+  Three of a Kind with two consecutive ranks above or below.
+  (3 cards of consecutive ranks and two cards
+  with the rank of either high or low card)
+}
+Base Chips = 40
+Base Mult = 4
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (x of *, x of *, x of *, x+1 of *, x+2 of *)
+    (x of *, x+2 of *, x+2 of *, x+2 of *, x+1 of *)
+}
+Author = Lolhappy909_lol
+Example = 10 of hearts, 10 of Spades, 10 of Spades, Jack of Diamonds, Queen of Hearts
+Planet Name = Civilization
+
+Flush Name = Three-Flush Straight
+Flush Base Chips = 70
+Flush Base Mult = 5
+Flush Level Chips = 55
+Flush Level Mult = 4.25
+Flush Example = 10 of Hearts, 10 of Hearts, 10 of Hearts, Jack of Hearts, Queen of Hearts
+Flush Planet Name = Futuristic

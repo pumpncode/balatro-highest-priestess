@@ -1,0 +1,17 @@
+Name = Baseball
+Desc = {
+    3, 6, and 9, all with the same suit
+}
+Base Chips = 36
+Base Mult = 9
+Level Chips = 15
+Level Mult = 3
+Eval = {
+    (3 of a, 6 of a, 9 of a),
+}
+Author = Salsa
+Example = 3 of Diamonds, 6 of Diamonds, 9 of Diamonds
+
+Joker Mult = 39
+Joker Chips = 96
+Joker XMult = 3

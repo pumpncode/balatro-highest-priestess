@@ -1,0 +1,16 @@
+Name = King of the Kings
+Desc = {
+    Exactly one special King with all held in hand cards also Kings
+    Creates Baron when played (Must have room)
+}
+Base chips = 777
+Base mult = 77
+Level chips = 99 
+Level mult = 9
+Eval = {
+    (King of * special),
+}
+All Cards in Hand of Rank = King
+Card Count = 1
+Author = Sustato
+Create Joker ID = j_baron

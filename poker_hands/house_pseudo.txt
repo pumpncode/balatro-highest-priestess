@@ -18,3 +18,11 @@ Example = 2 of Diamonds, 7 of Diamonds, Ace of Spades, 5 of Spades, 10 of Spades
 Joker Mult = 8
 Joker Chips = 50
 Joker XMult = 2
+
+Straight Name = Straight House
+Straight Base Chips = 32
+Straight Base Mult = 4
+Straight Level Chips = 2.5
+Straight Level Mult = 20
+Straight Planet Name = Cancri b
+Straight Example = 3 of Diamonds, 4 of Diamonds, 5 of Spades, 6 of Spades, 7 of Spades

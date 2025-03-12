@@ -1,0 +1,26 @@
+Name = Middle Card
+Desc = {
+    If the played hand is not any of the above
+    hands, only the middle ranked card scores
+}
+> sqrt(5)
+Base Chips = 2.24
+Base Mult = 2.24
+Level Chips = 10
+Level Mult = 1
+Eval = {
+    (nonscoring * of *, * of * midranked, nonscoring * of *)
+}
+Example = unscoring 9 of Diamonds, 4 of Clubs, unscoring 3 of Diamonds
+Card Count = 3
+Author = Post Prototype
+>’s Boredom
+Order Offset = 2
+
+Joker Mult = 4
+Joker Chips = 25
+Joker XMult = 2
+Planet Name = 11 Hygiea
+Joker Mult Name = Middling Joker
+Joker Chips Name = Well-Off Joker
+Joker XMult Name = The Man

@@ -8,6 +8,7 @@ Base Chips = 40
 Base Mult = 6
 Level Chips = 15
 Level Mult = 3
+Order Offset = -120
 Eval = {
     (* of a, nonscoring * of b, nonscoring * of b, nonscoring * of b, nonscoring * of b)
 }

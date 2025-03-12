@@ -1,0 +1,26 @@
+Name = The Gay
+Desc = {
+    A Straight but all cards are polychrome.
+}
+Base Chips = 115
+Base Mult = 10
+Level Chips = 30
+Level Mult = 5
+Eval = {
+    (a of *, a+1 of *, a+2 of *, a+3 of *, a+4 of *)
+}
+Author = Helena (i_want_helenussy)
+All Editioned = Polychrome
+Joker Mult = 20
+Joker Chips = 120
+Joker XMult = 5
+Planet Name = Prismara
+Joker Mult Name = Ray the Gay
+Joker Chips Name = Gay Joker
+Joker XMult Name = The Gaymers
+Flush Name = Gay Flush
+Flush Base Chips = 150
+Flush Base Mult = 15
+Flush Level Chips = 50
+Flush Level Mult = 8
+Flush Planet Name = Aurelian

@@ -1,0 +1,15 @@
+Name = Dual Contrast
+Desc = {
+   Five cards all from a single suit, if there are two pairs of cards with different ranks in held hand.
+}
+Base Chips = 45
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (* of x, * of x, * of x, * of x, * of x)
+}
+Two Pair in Hand = Yes
+Author = Post Prototype
+Example = unscoring 7 of Hearts, unscoring 7 of Diamonds, Ace of Spades, 8 of Spades, 7 of Spades, 3 of Spades, 2 of Spades, unscoring 6 of Spades, unscoring 6 of Diamonds
+Planet Name = Dimidium

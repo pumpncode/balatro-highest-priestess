@@ -1,0 +1,24 @@
+Name = What Is This a Crossover Episode?
+Credits Name = WITaCE?
+Desc = {
+    4 of the same face card with no repeating suits.
+    Wild cards count as the missing fourth suit.
+}
+Base Chips = 70
+Base Mult = 9
+Level Chips = 10
+Level Mult = 3
+Eval = {
+    (King of Spades, King of Hearts, King of Clubs, King of Diamonds)
+    (Queen of Spades, Queen of Hearts, Queen of Clubs, Queen of Diamonds)
+    (Jack of Spades, Jack of Hearts, Jack of Clubs, Jack of Diamonds)
+}
+Example = King of Spades, King of Diamonds, King of Clubs, King of Hearts
+Joker Mult = 40
+Joker Chips = 250
+Joker XMult = 4
+Joker Mult Name = Multiverse Joker
+Joker Chips Name = Reference Joker
+Joker XMult Name = The Friends of Jimbo
+Planet Name = Multiverse
+Author = verdant_thePOWER

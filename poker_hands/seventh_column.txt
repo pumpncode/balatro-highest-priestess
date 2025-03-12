@@ -1,0 +1,27 @@
+Name = Seventh Column
+Desc = {
+    Seven 7s of any suit
+}
+Base Chips = 777
+Base Mult = 77
+Level Chips = 77
+Level Mult = 7.7
+Eval = {
+    (7 of *, 7 of *, 7 of *, 7 of *, 7 of *, 7 of *, 7 of *)
+}
+Author = Cobalt_Ignis
+Example = 7 of Hearts, 7 of Diamonds, 7 of Clubs, 7 of Spades, 7 of Hearts, 7 of Diamonds, 7 of Clubs
+Planet Name = Nessos
+
+Flush Name = Seventh Flush
+Flush Base Chips = 7777
+Flush Base Mult = 777
+Flush Level Chips = 777
+Flush Level Mult = 77
+Flush Example = 7 of Spades, 7 of Spades, 7 of Spades, 7 of Spades, 7 of Spades, 7 of Spades, 7 of Spades
+Flush Planet Name = The Dreaming City
+
+Joker Mult = 77
+Joker XMult = 7
+Joker Mult Name = Lord Shaxx
+Joker XMult Name = The Recluse

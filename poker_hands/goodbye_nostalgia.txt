@@ -1,0 +1,19 @@
+Name = Goodbye Nostalgia
+Desc = {
+    The first 5-card hand you've played this run,
+    matching both suits and ranks. All special.
+    Resets the hand considered as nostalgic when played.
+    (Play another 5-card hand to re-enable nostalgic poker hands)
+}
+Base Chips = 320
+Base Mult = 24
+Level Chips = 60
+Level Mult = 8
+Eval = {
+    (* of * special, * of * special, * of * special, * of * special, * of * special)
+}
+Nostalgic = When the imposter is sus
+Reset Nostalgia = Yes
+Example = Stone, Stone, Stone, Stone, Stone
+Author = Post Prototype
+Planet Name = Tadmor

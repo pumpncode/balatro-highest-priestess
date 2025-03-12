@@ -1,0 +1,19 @@
+Name = Negative One
+Desc = {
+    Any amount of cards with sum of ranks equal to -1
+    Negative cards are considered the oppposite of their normal rank
+    (ex. Negative 4 has rank -4)
+}
+Base Chips = -10000
+Base Mult = -10000
+Level Chips = 0
+Level Mult = 0
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *),
+    (* of *, * of *, * of *, * of *),
+    (* of *, * of *, * of *),
+    (* of *, * of *),
+    (* of *),
+}
+Rank Sum = -1
+Author = Poppycars

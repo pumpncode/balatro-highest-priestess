@@ -1,0 +1,17 @@
+NO SUPPORT WARNING = Clashing patterns are used only to get scoring cards, not to evaluate hands
+Name = Unlimited Bacon
+Desc = {
+    Ace, Queen, 10, and an extra card. Ace, Queens, and 10 don't score
+    Special Cards create a random Joker (Must have room)
+}
+Base Chips = 20
+Base Mult = 5
+Level Chips = -5
+Level Mult = 3
+Eval = {
+    (nonscoring Ace of *, nonscoring Queen of *, nonscoring 10 of *, * of * special),
+    (nonscoring Ace of *, nonscoring Queen of *, nonscoring 10 of *),
+}
+Author = TamerSoup625 (+ verdant_thePOWER)
+Example = nonscoring Ace of Hearts, nonscoring Queen of Spades, nonscoring 10 of Hearts, 9 of Clubs special, 4 of Diamonds special
+Special Joker = Yes

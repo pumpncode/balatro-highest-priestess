@@ -1,0 +1,17 @@
+Name = Bananana
+Desc = {
+    A pair of special 7s. (In Japanese, 7 can be pronounced as "nana")
+    Scored Cards give +3 Mult, or X2.7 Mult if Gros Michel ever went extinct.
+}
+Base Chips = 27
+Base Mult = 2.7
+Level Chips = 17
+Level Mult = 1.7
+
+Eval = {
+    (7 of * special, 7 of * special)
+}
+
+Banana Scoring = Yes
+Author = CookieAlien
+Example = 7 of Spades special, 7 of Clubs special

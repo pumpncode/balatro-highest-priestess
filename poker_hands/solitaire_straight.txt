@@ -1,0 +1,15 @@
+Name = Solitaire Straight
+Desc = {
+    A Straight with suits in alternating colours (dark and light).
+}
+Base Chips = 55
+Base Mult = 5
+Level Chips = 35
+Level Mult = 3
+Eval = {
+    (x of * dark, x+1 of * light, x+2 of * dark, x+3 of * light, x+4 of * dark),
+    (x of * light, x+1 of * dark, x+2 of * light, x+3 of * dark, x+4 of * light),
+}
+Author = Papyrus Semi
+Example = 6 of Hearts, 7 of Clubs, 8 of Hearts, 9 of Spades, 10 of Diamonds
+Planet Name = Chiron

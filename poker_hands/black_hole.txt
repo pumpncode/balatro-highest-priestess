@@ -1,0 +1,19 @@
+Name = Black Hole's Hand
+Desc = {
+    Spaghettification.
+    (uhhh how do i explain this idk just see the eval code)
+    (a of b, a+1 of c, d of c, a+2 of c, d+1 of b)
+}
+Base Chips = 1000
+Base Mult = 1
+Level Chips = 250
+Level Mult = 1
+Eval = {
+    (a of b, a+1 of c, d of c, a+2 of c, d+1 of b)
+}
+Author = Helena (i_want_helenussy)
+Joker Mult = 2
+Joker Chips = 800
+Joker XMult = 2
+Planet Name = Duh
+Example = Queen of Spades, King of Hearts, 3 of Hearts, Ace of Hearts, 4 of Spades

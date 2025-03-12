@@ -1,0 +1,16 @@
+Name = Just Plain Special Lucky
+Desc = {
+    1 in 2000 to get this hand. (can be modified by oa6s)
+    Must contain at least one special card
+    Create oa6s when played (must have room)
+}
+Base chips = 7777
+Base mult = 777
+Level chips = 777
+Level mult = 77
+Eval = {
+    (* of * special)
+}
+Create Joker ID = j_oops
+Author = Sustato
+Chance = 2000

@@ -1,0 +1,22 @@
+Name = Silver Ratio
+Desc = {
+   A 2, a 4, an Ace, a 4, and a 2.
+}
+Base Chips = 42
+Base Mult = 4
+Level Chips = 14
+Level Mult = 2
+Eval = {
+    (2 of *, 4 of *, Ace of *, 4 of *, 2 of *)
+}
+Author = Post Prototype
+Example = 2 of Hearts, 4 of Diamonds, Ace of Clubs, 4 of Hearts, 2 of Spades
+Planet Name = Maru
+
+Flush Name = Silver Flush
+Flush Base Chips = 142
+Flush Base Mult = 5
+Flush Level Chips = 42
+Flush Level Mult = 5
+Flush Example = 2 of Spades, 4 of Spades, Ace of Spades, 4 of Spades, 2 of Spades
+Flush Planet Name = Z

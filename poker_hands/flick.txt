@@ -8,7 +8,7 @@ Base Mult = 3
 Level Chips = 20
 Level Mult = 2
 Eval = {
-    (a of *, b of *, * of Wilds, Stone; a = [face], b = [nonface]),
+    (a of *, b of *, j of Wilds, Stone; a = [face], b = [nonface], j = [nonunique]),
 }
 Author = Plzbeans
 

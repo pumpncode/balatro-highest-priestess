@@ -1,0 +1,14 @@
+Name = Mod Incompatibility
+Desc = {
+    Get this hand if somehow G.hand == nil
+    Who's evaluating poker hands at the title screen?
+}
+Base Chips = 1e308
+Base Mult = 1e308
+Level Chips = 1e308
+Level Mult = 1e308
+Eval = {
+    ()
+}
+Author = CookieAlien
+No Hand = https://discord.com/channels/1116389027176787968/1337113295391555595/1346123921648255087

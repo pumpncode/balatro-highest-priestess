@@ -1,0 +1,15 @@
+Name = Helena's Hand
+Desc = {
+    A hand? owned by the HAVOC (Helena's Anti-Vortex Oblivion Catalyst).
+}
+Base Chips = 100
+Base Mult = 9
+Level Chips = 30
+Level Mult = 4
+Eval = {
+    (Ace of Spades, Ace of Spades, Ace of Spades)
+}
+Example = Ace of Spades, Ace of Spades, Ace of Spades
+Card Count = 3
+All Enhanced = Glass
+Author = Helena (i_want_helenussy)

@@ -1,0 +1,17 @@
+Name = Golden Hand
+Desc = {
+    5 gold cards with all held in hand cards also gold cards.
+    Must have at least $100 to play.
+}
+Base chips = 300
+Base mult = 99
+Level chips = 30
+Level mult = 9
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Author = Sustato
+
+Money min = 100
+All Enhanced = Gold
+Everything is enhanced = gold

@@ -8,7 +8,7 @@ Base Mult = 4
 Level Chips = 15
 Level Mult = 2
 Eval = {
-    (X2 a of *, Stone, Stone, Stone, X2 * of b)
+    (X2 a of *, Stone, Stone, Stone, X2 j of b; j = [nonunique])
 }
 Exact Enhancements = Steel, Gold, Stone, Stone, Stone
 Joker Mult = 15

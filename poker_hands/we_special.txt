@@ -1,0 +1,15 @@
+Name = We're Special :)
+Desc = {
+    Three cards with the same rank and two special cards with unique ranks.
+    Special Cards score twice, all other cards don't score.
+}
+Base Chips = 30
+Base Mult = 4
+Level Chips = 30
+Level Mult = 2
+Eval = {
+    (X2 a of * special, X2 b of * special, nonscoring c of *, nonscoring c of *, nonscoring c of *)
+}
+Example = King of Clubs special, Jack of Hearts special, nonscoring 6 of Diamonds, nonscoring 6 of Diamonds, nonscoring 6 of Hearts 
+Author = Post Prototype
+Planet Name = Ixion

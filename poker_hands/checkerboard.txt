@@ -1,0 +1,16 @@
+Name = Checkerboard
+Desc = {
+    Two Pair with an extra card,
+    with one of the pairs being Special Cards
+    When played, convert extra card into a Special Card
+}
+Base Chips = 60
+Base Mult = 6
+Level Chips = 30
+Level Mult = 3
+Eval = {
+    (a of * special, a of * special, b of *, b of *, c of *)
+}
+Author = GoldenLeaf
+Example = Ace of Hearts, Ace of Diamonds, Queen of Clubs, 4 of Hearts special, 4 of Clubs special
+Enhance Kicker = Yes

@@ -1,0 +1,28 @@
+Name = Huh?
+Desc = {
+    Somehow play a hand containing no cards and 5 cards at the same time
+}
+Author = person9683
+Base Chips = 280
+Base Mult = 16
+Level Chips = 50
+Level Mult = 5
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Card Count = 0
+Joker Mult = 35
+Joker XMult = 11
+Joker Chips = 600
+Planet Name = Quantum Field
+Joker Mult Name = Quantum Joker
+Joker Chips Name = Very Confused Joker
+Joker XMult Name = Legally Distinct Superposition 
+
+
+Flush Name = I Don't Even Know How You Played This
+Flush Base Chips = 800
+Flush Base Mult = 36
+Flush Level Chips = 280
+Flush Level Mult = 60
+Flush Planet Name = What

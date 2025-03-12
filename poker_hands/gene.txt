@@ -1,0 +1,17 @@
+Name = Gene
+Desc = {
+    Exactly one Special Card on the first hand of round
+    When played, destroy played card and create 4 copies of it without enhancement
+}
+Base Chips = -1320
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0.25
+Order Offset = 3000
+Eval = {
+    (* of * special)
+}
+Card Count = 1
+Author = GoldenLeaf
+Gene Dupes = 4
+Required Hands Played = 0

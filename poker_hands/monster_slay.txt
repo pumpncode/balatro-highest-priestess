@@ -1,0 +1,23 @@
+Name = Slay the Monster
+Desc = {
+  Exactly 4 cards with: A face card (Monster),
+  plus two nonface card with combined ranks equal to or greater than the face card (Weapon),
+  plus a nonface card with the same suit as the face card (Trigger).
+  in this setting, Jack's rank is 11, Queen 12, King 13, Ace 1.
+}
+Base Chips = 39
+Base Mult = 3
+Level Chips = 19
+Level Mult = 2
+Eval = {
+    (a of x, * of * nonface, * of * nonface, d of x; a=[face],d=[nonface,nonunique])
+}
+Slayer = Yes
+Author = CookieAlien
+Example = Queen of Clubs, 8 of Hearts, 6 of Spades, 3 of Clubs
+Joker Mult = 9
+Joker Chips = 90
+Joker XMult = 2
+Joker Mult Name = Goblin Joker
+Joker Chips Name = Mimic Joker
+Joker XMult Name = The Dungeon

@@ -1,0 +1,15 @@
+Name = Logarithm
+Desc = {
+    Exactly 3 cards with ranks X, Y, and Z, where X ^ Y = Z
+    (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 32
+Base Mult = 5
+Level Chips = 16
+Level Mult = 2.7182
+Eval = {
+    (* of *, * of *, * of *),
+}
+Math Identity = Log
+Author = GoldenLeaf
+Example = 2 of Hearts, 3 of Diamonds, 8 of Clubs

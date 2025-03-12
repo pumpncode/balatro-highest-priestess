@@ -1,0 +1,14 @@
+Name = Macbeth
+Desc = {
+    Exactly one 9 of Diamonds
+}
+Base Chips = 9
+Base Mult = 1.6
+Level Chips = 9
+Level Mult = 1.6
+Eval = {
+    (9 of Diamonds),
+}
+Card Count = 1
+Author = Unexian
+Example = 9 of Diamonds

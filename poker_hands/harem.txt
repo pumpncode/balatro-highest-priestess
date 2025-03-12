@@ -1,0 +1,17 @@
+Name = The Harem
+Desc = {
+    A king of hearts with 4 queens of hearts.
+}
+Base Chips = 20
+Base Mult = 36
+Level Chips = 6
+Level Mult = 6
+Order Offset = 1000
+Eval = {
+    (King of Hearts, Queen of Hearts, Queen of Hearts, Queen of Hearts, Queen of Hearts)
+}
+Author = Helena (i_want_helenussy)
+Joker Mult = 32
+Joker Chips = 26
+Joker XMult = 5
+Planet Name = Lust Planet

@@ -1,0 +1,16 @@
+Name = Pythagoras' Hand
+Desc = {
+    A pythagorean triple
+    (3 4 5, 6 8 10, 5 Q K)
+}
+Base Chips = 34
+Base Mult = 5
+Level Chips = 16
+Level Mult = 1.4142
+Eval = {
+    (3 of *, 4 of *, 5 of *),
+    (6 of *, 8 of *, 10 of *),
+    (5 of *, Queen of *, King of *),
+}
+Author = GoldenLeaf
+Example = 3 of Diamonds, 4 of Hearts, 5 of Spades

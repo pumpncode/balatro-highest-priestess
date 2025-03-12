@@ -1,0 +1,17 @@
+Name = I'm Special :)
+Desc = {
+    A special card.
+    Special Cards give +1 Mult if this hand is played
+}
+Base Chips = 20
+Base Mult = 1
+Level Chips = 20
+Level Mult = 1
+Order Offset = 1
+Eval = {
+    (* of * special)
+}
+Example = 3 of Hearts special
+Planet Name = SPCL-1
+Author = TheLemon27
+Special Mult = 1

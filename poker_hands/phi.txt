@@ -1,0 +1,21 @@
+Name = Golden Ratio
+Desc = {
+   An Ace, a 6, an Ace, and an 8.
+}
+Base Chips = 18
+Base Mult = 6
+Level Chips = 16
+Level Mult = 4
+Eval = {
+    (Ace of *, 6 of *, Ace of *, 8 of *)
+}
+Author = Post Prototype
+Example = Ace of Diamonds, 6 of Spades, Ace of Clubs, 8 of Hearts
+Planet Name = Phidias
+
+Flush Name = Golden Flush
+Flush Base Chips = 74
+Flush Base Mult = 9
+Flush Level Chips = 33
+Flush Level Mult = 5
+Flush Planet Name = Pipitea

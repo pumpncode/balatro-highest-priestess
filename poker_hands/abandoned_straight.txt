@@ -1,0 +1,13 @@
+Name = Abandoned Straight
+Desc = {
+    An Ace-high Straight that skips over face cards
+}
+Base Chips = 100
+Base Mult = 7
+Level Chips = 30
+Level Mult = 5
+Eval = {
+    (Ace of *, 10 of *, 9 of *, 8 of *, 7 of *)
+}
+Author = jonahbaumgartner
+Example = Ace of Spades, 10 of Clubs, 9 of Clubs, 8 of Hearts, 7 of Spades

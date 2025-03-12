@@ -1,0 +1,19 @@
+Name = The Shit
+Desc = {
+    A set of cards that spells S.H.I.T. ([S]even of [H]earts, [J]ack (looks like "I"), [T]en).
+}
+Base Chips = 25
+Base Mult = 3
+Level Chips = 10
+Level Mult = 2
+Eval = {
+    (7 of Hearts, Jack of *, 10 of *)
+}
+Author = Helena (i_want_helenussy)
+Joker Mult = 10
+Joker Chips = 80
+Joker XMult = 2
+Planet Name = Cacarthis
+Joker Mult Name = Gritty
+Joker Chips Name = Witty
+Joker XMult Name = The Bathroom

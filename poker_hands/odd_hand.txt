@@ -1,0 +1,27 @@
+Name = Odd Hand
+Desc = {
+    A hand containing all odd ranks,
+    (Ace, 3, 5, 7, and 9)
+}
+Author = Electrum
+Base Chips = 49
+Base Mult = 6
+Level Chips = 41
+Level Mult = 3
+Eval = {
+  (Ace of *, 3 of *, 5 of *, 7 of *, 9 of *)
+}
+Example = Ace of Clubs, 3 of Hearts, 5 of Diamonds, 7 of Spades, 9 of Spades
+Joker Mult = 15
+Joker Chips = 121
+Joker XMult = 3
+Joker chips name = Odd Joker
+Joker mult name = Weird Joker
+Joker Xmult name = The Non-Confirmed
+
+Flush Name = Odd Flush
+Flush Base Chips = 199
+Flush Base Mult = 11
+Flush Level Chips = 61
+Flush Level Mult = 5
+Flush Example = Ace of Clubs, 3 of Clubs, 5 of Clubs, 7 of Clubs, 9 of Clubs

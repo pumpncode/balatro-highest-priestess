@@ -1,0 +1,26 @@
+Name = Games, Unlimited Games, But No Games.
+Credits Name = GUGBNG
+Desc = {
+    The last hand of a round that contains an Ace, 3, and 5.
+    Score all cards twice and score all other once.
+}
+Base Chips = -20
+Base Mult = 20
+Level Chips = 0
+Level Mult = 3
+Eval = {
+    (X2 Ace of *, X2 3 of *, X2 5 of *, * of *, * of *)
+    (X2 Ace of *, X2 3 of *, X2 5 of *, * of *)
+    (X2 Ace of *, X2 3 of *, X2 5 of *)
+}
+Order Offset = 420
+Required Hands Left = 0
+Joker Mult = 15
+Joker Chips = 153
+Joker XMult = 1
+Joker Mult Name = Bacon Joker
+Joker Chips Name = Game Joker
+Joker XMult Name = The Question
+Planet Name = Sarkworld
+Example = Ace of Hearts, 3 of Spades, 5 of Hearts, unscoring 6 of spades, unscoring 9 of Diamonds
+Author = verdant_thePOWER

@@ -1,0 +1,19 @@
+Name = Special House
+Desc = {
+    Three of a kind special card and either a pair
+    of stones or 2 enhanced cards with same rank
+    When played, gain +1 hand size until end of round
+}
+Base Chips = 100
+Base mult = 6
+Level chips = 25
+Level mult = 4
+> Above Stone House
+Order Offset = 50
+Eval = {
+    (a of * special, a of * special, a of * special, stone, stone)
+    (a of * special, a of * special, a of * special, b of *, b of *)
+}
+Any Enhancement = Yes
+Author = Sustato
+Hand Size Mod = 1

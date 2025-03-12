@@ -1,0 +1,18 @@
+Name = Ritual
+Desc = {
+    Exactly 4 Special Cards and a non-Special card
+    The non-Special Card becomes Negative and Special
+    and all other played cards lose enhancement
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 666
+Eval = {
+    (* of *, * of * special, * of * special, * of * special, * of * special)
+}
+Card Count = 5
+Ritual = Yes
+Author = TamerSoup625
+Example = 2 of Clubs special, 3 of Diamonds special, Ace of Hearts, King of Hearts special, 5 of Spades special

@@ -1,0 +1,15 @@
+Name = Neighborhood
+Desc = {
+    A Full House with all Special Cards
+    Special Cards give X1.25 Mult
+}
+Base Chips = 60
+Base Mult = 6
+Level Chips = 37.5
+Level Mult = 3
+Eval = {
+    (a of * special, a of * special, a of * special, b of * special, b of * special)
+}
+Author = verdant_thePOWER
+Example = King of Hearts special, King of Clubs special, King of Diamonds special, 2 of Spades special, 2 of Diamonds special
+Special XMult = 1.25

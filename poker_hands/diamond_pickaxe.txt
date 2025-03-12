@@ -1,0 +1,21 @@
+Name = Diamond Pickaxe
+Desc = {
+  3 Diamonds cards, with any combination of gold and stone cards.
+}
+Base Chips = 54
+Base Mult = 4
+Level Chips = 24
+Level Mult = 3
+Eval = {
+    (* of Diamonds, * of Diamonds, * of Diamonds, * of j gold, stone; j = [nonunique]),
+    (* of Diamonds, * of Diamonds, * of Diamonds, * of j gold; j = [nonunique]),
+    (* of Diamonds, * of Diamonds, * of Diamonds, stone),
+}
+>Example = Jack of Diamonds, 9 of Diamonds, 4 of Diamonds, Gold 3 of Spades, stone
+Author = CookieAlien
+Joker Mult = 9
+Joker Chips = 100
+Joker XMult = 2
+Joker Mult Name = Spelunker Joker
+Joker Chips Name = Prospector Joker
+Joker XMult Name = The Gold Vein

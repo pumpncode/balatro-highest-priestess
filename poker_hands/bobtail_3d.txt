@@ -9,7 +9,7 @@ Base Mult = 30
 Level Chips = 3
 Level Mult = 3
 Eval = {
-    (a of *, a+1 of *, a+2 of *, unscoring * of * editioned, unscoring * of * editioned),
+    (a of *, a+1 of *, a+2 of *, unscoring j of * editioned, unscoring k of * editioned; j = [nonunique], k = [nonunique]),
 }
 Author = Gladofdingldill
 

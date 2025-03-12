@@ -1,0 +1,15 @@
+Name = Product
+Desc = {
+    Exactly 3 cards with a card's rank being the product of the other
+    2 cards' rank. (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 25
+Base Mult = 4
+Level Chips = 12.5
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *),
+}
+Math Identity = Product
+Author = GoldenLeaf
+Example = 2 of Hearts, 3 of Diamonds, 6 of Clubs

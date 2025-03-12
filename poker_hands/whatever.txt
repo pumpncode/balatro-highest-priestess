@@ -1,0 +1,19 @@
+Name = Whatever
+Desc = {
+    4 Special Cards and a Special 7 of Clubs
+    Special Cards give X1.5 Mult
+}
+Base Chips = 125
+Base Mult = 5
+Level Chips = 25
+Level Mult = 5
+Eval = {
+    (* of * special, * of * special, * of * special, * of * special, 7 of Clubs special)
+}
+Author = TamerSoup625
+Example = Ace of Clubs special, 8 of Hearts special, 7 of Clubs special, 4 of Hearts special, 2 of Diamonds special
+Joker Mult = 25
+Joker Chips = 125
+Joker XMult = 5
+Joker XMult Name = uervireuabbreuivoeruvbrjowume
+Special XMult = 1.5

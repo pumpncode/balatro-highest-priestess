@@ -1,0 +1,23 @@
+Name = Na Mu Ko
+Desc = {
+  A 7, 6 and 5 all of diamonds (That sounds oddly familiar...)
+}
+Base Chips = 76
+Base Mult = 5
+Level Chips = 38
+Level Mult = 2.5
+Eval = {
+    (7 of diamonds, 6 of diamonds, 5 of diamonds)
+}
+Author = Cobalt_Ignis
+Example = 7 of diamonds, 6 of diamonds, 5 of diamonds.
+Planet Name = Solvalou
+
+Joker Mult = 10
+Joker Mult Name = Pellet
+Joker Chips = 100
+Joker Chips Name = Cherry
+Joker XMult = 7.65
+Joker XMult Name = Power Pellet
+Planet Texture ID = 6
+Joker Texture ID = 8

@@ -3,10 +3,11 @@ Desc = {
     A 4-card Straight going from 2 to 5
     Cards that make up this hand score twice
 }
-Base Chips = 5
-Base Mult = 2
+Base Chips = 15
+Base Mult = 4
 Level Chips = 3
 Level Mult = 1
+Order Offset = 120
 Eval = {
     (X2 2 of *, X2 3 of *, X2 4 of *, X2 5 of *)
 }

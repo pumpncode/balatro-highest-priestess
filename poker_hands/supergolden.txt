@@ -1,0 +1,22 @@
+Name = Supergolden Ratio
+Desc = {
+   A Ace, a 4, a 6, a 5, and a 5. All gold.
+}
+Base Chips = 87
+Base Mult = 7
+Level Chips = 46
+Level Mult = 5
+Eval = {
+    (Ace of *, 4 of *, 6 of *, 5 of *, 5 of *)
+}
+All Enhanced = Gold
+Author = Post Prototype
+Example = Ace of Diamonds, 4 of Spades, 6 of Clubs, 5 of Hearts, 5 of Diamonds
+Planet Name = Oriola
+
+Flush Name = Supergolden Flush
+Flush Base Chips = 123
+Flush Base Mult = 12
+Flush Level Chips = 57
+Flush Level Mult = 5
+Flush Planet Name = Danae

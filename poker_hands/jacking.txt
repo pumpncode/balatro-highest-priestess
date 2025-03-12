@@ -1,0 +1,20 @@
+Name = Jacking
+Desc = {
+    Four Jacks Jacking a Special King.
+    The Special King scores five times
+}
+Base Chips = 160
+Base Mult = 10
+Level Chips = 50
+Level Mult = 5
+Eval = {
+    (Jack of *, Jack of *, Jack of *, Jack of *, X5 King of * special)
+}
+Author = Helena (i_want_helenussy)
+Joker Mult = 16
+Joker Chips = 160
+Joker XMult = 3
+Planet Name = Jizztopia
+Joker Mult Name = Jacking Joker
+Joker Chips Name = Jacked Joker
+Joker XMult Name = The Jackers

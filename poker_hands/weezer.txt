@@ -1,19 +1,22 @@
 Name = Weezer
 Desc = {
-    Four Kings of different suits
+    Four Kings
 }
 Base Chips = 80
 Base Mult = 7
 Level Chips = 35
 Level Mult = 3
 Eval = {
-    (King of A, King of B, King of C, King of D)
+    (King of *, King of *, King of *, King of *)
 }
 Author = KotetsuRedwood
-Example = King of Spades, King of Clubs, King of Hearts, King of Diamonds
+Example = King of Spades, King of Clubs, King of Clubs, King of Diamonds
 Joker Mult = 20
 Joker Chips = 160
 Joker XMult = 4
 Joker Mult Name = Buddy Joker
 Joker Chips Name = Holly Joker
 Joker XMult Name = The Blue Album
+> https://discord.com/channels/1116389027176787968/1337113295391555595/1348324115408486570
+Planet Name = Nomis the Plant
+Planet Texture ID = 5

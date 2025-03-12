@@ -1,0 +1,19 @@
+Name = Fully Concealed Hand
+Desc = {
+  a hand of 5 face-down cards
+}
+Base Chips = 100
+Base Mult = 10
+Level Chips = 50
+Level Mult = 5
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+All Facedown = Yes
+Author = CookieAlien
+Joker Mult = 25
+Joker Chips = 250
+Joker XMult = 5
+Joker Mult Name = Unseen Joker
+Joker Chips Name = Concealed Joker
+Joker XMult Name = The Shrouded

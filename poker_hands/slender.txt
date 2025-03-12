@@ -1,0 +1,44 @@
+Name = Slender
+Desc = {
+    5 faceless cards with all Spades or Clubs (black suits)
+}
+Base Chips = 66
+Base Mult = 3
+Level Chips = 17
+Level Mult = 3
+Eval = {
+    (* of a, * of a, * of a, * of a, * of a; a = [Spades, Clubs]),
+    (* of a, * of a, * of a, * of a, * of b; a = [Spades, Clubs], b = [Spades, Clubs]),
+    (* of a, * of a, * of a, * of b, * of b; a = [Spades, Clubs], b = [Spades, Clubs]),
+}
+All Nonface = Yes
+Author = GoldenLeaf
+Example = 10 of Spades, 6 of Clubs, Ace of Spades, 3 of Spades, 10 of Clubs
+Joker Mult = 66
+Joker Chips = 333
+Joker XMult = 6
+Planet Name = Kepler 666
+Joker Mult Name = Slim Joker
+Joker Chips Name = Slender Joker
+Joker XMult Name = The Operator
+Flush Name = Flush Slender
+Flush Base Chips = 66
+Flush Base Mult = 6.6
+Flush Level Chips = 33
+Flush Level Mult = 6
+Flush Planet Name = Kepler 66
+Flush Example = 10 of Spades, 6 of Spades, Ace of Spades, 3 of Spades, 10 of Spades
+Straight Name = Straight Slender
+Straight Base Chips = 66
+Straight Base Mult = 6.6
+Straight Level Chips = 33
+Straight Level Mult = 6
+Straight Planet Name = Kepler 66b
+Straight Example =  4 of Spades, 5 of Clubs, 6 of Spades, 7 of Spades, 8 of Clubs 
+House Name = Candleverse
+House Base Chips = 333
+House Base Mult = 6.6
+House Level Chips = 33
+House Level Mult = 6
+House Planet Name = Kepler 66c.
+House Example = 4 of Spades, 4 of Clubs, 4 of Spades, 7 of Spades, 7 of Clubs

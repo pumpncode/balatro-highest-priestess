@@ -1,0 +1,14 @@
+Name = Queens of Seasons
+Desc = {
+    4 special Queens of 4 different base suit
+    When played, all cards can be temporarily used as any suit
+}
+Base chips = 365
+Base mult = 5.2
+Level chips = 144
+Level mult = 12
+Eval = {
+    (Queen of Spades special, Queen of Hearts special, Queen of Clubs special, Queen of Diamonds special),
+}
+Author = Sustato
+Special Wild = Yes

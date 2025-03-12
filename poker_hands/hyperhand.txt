@@ -1,0 +1,15 @@
+Name = HyperHand
+Desc = {
+    Exactly 3 cards with ranks X, Y, and Z, where X[Y]X = Z (Hyperoperation with X[1]X = X + X)
+    (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 256
+Base Mult = 4
+Level Chips = nan
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *),
+}
+Math Identity = Hyper
+Author = GoldenLeaf
+Example = 3 of Hearts, 2 of Diamonds, 9 of Clubs

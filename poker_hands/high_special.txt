@@ -1,0 +1,15 @@
+Name = High Special
+Desc = {
+    5 cards with the highest ranked one being a Special Card (no pairs)
+    All played cards count in scoring
+}
+Base chips = 10
+Base mult = 2
+Level chips = 20
+Level mult = 3
+Order Offset = 2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+High Special = Yes
+Author = Sustato

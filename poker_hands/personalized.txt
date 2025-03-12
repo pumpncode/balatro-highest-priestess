@@ -1,0 +1,14 @@
+Name = Personalized Hand
+Desc = {
+    3 threes and 1 Ace
+    This is a reference to the hit super mario 64 rom hack b3313
+}
+Base Chips = 64
+Base Mult = 13
+Level Chips = 13
+Level Mult = 3
+Eval = {
+    (3 of *, 3 of *, 3 of *, Ace of *),
+}
+Author = jonahbaumgartner
+Example = 3 of Diamonds, 3 of Spades, Ace of Spades, 3 of Clubs

@@ -1,0 +1,21 @@
+Name = Thirteen
+Desc = {
+  An Ace and a special 3. Creates a Jolly Joker. (Must have room)
+}
+Base Chips = 31
+Base Mult = 3
+Level Chips = 13
+Level Mult = 1
+Eval = {
+    (Ace of *, 3 of * special)
+}
+Author = Post Prototype
+Example = Ace of Diamonds, 3 of Hearts special
+Joker Mult = 13
+Joker Chips = 113
+Joker XMult = 3
+Joker Mult Name = Jolliest Joker
+Joker Chips Name = Jollier Joker
+Joker XMult Name = The Letter
+Planet Name = Jole
+Create Joker ID = j_jolly

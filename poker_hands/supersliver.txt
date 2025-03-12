@@ -1,0 +1,22 @@
+Name = Supersilver Ratio
+Desc = {
+   A 2, a 2, a 5, and a 5. All steel.
+}
+Base Chips = 55
+Base Mult = 6
+Level Chips = 20
+Level Mult = 5
+Eval = {
+    (2 of *, 2 of *, 5 of *, 5 of *)
+}
+All Enhanced = Steel
+Author = Post Prototype
+Example = 2 of Spades, 2 of Clubs, 5 of Hearts, 5 of Hearts
+Planet Name = Argentina
+
+Flush Name = Supersilver Flush
+Flush Base Chips = 94
+Flush Base Mult = 11
+Flush Level Chips = 43
+Flush Level Mult = 4
+Flush Planet Name = Selene

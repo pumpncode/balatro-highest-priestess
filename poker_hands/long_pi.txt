@@ -1,0 +1,27 @@
+Name = Long Pi
+Desc = {
+    3 or more cards that sum up to 31 in total
+    and at least one of them has to be 3. (3+1+4+1+5+9+2+6)
+}
+Base Chips = 3.14
+Base Mult = 15.9
+Level Chips = 3.14
+Level Mult = 1.59
+Rank Sum = 31
+Card Count Min = 3
+> Above Blackjack (possible with an Ace)
+Order Offset = 62.8
+Eval = {
+    (3 of *, * of *, * of *, * of *, * of *),
+    (3 of *, * of *, * of *, * of *),
+    (3 of *, * of *, * of *),
+}
+Joker Mult = 14
+Joker Chips = 31
+Joker XMult = 1.5
+Joker Mult Name = The True Pi
+Joker Chips Name = Pi of It
+Joker XMult Name = 4 and 5
+Planet Name = Pi Earth
+Example = 3 of Hearts, King of Diamonds, Queen of Clubs, 8 of Spades
+Author = L1s3L

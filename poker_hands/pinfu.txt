@@ -1,0 +1,25 @@
+Name = Pinfu
+Desc = {
+  3 nonface cards of consecutive ranks,
+  plus a pair of nonface cards
+}
+Base Chips = 32
+Base Mult = 4
+Level Chips = 16
+Level Mult = 2
+Eval = {
+    (a of *, a+1 of *, a+2 of *, b of *, b of *; a = [nonunique], b = [nonunique])
+}
+All Nonface = Yes
+Author = CookieAlien
+Example = 6 of Clubs, 7 of Spades, 8 of Hearts, 3 of Diamonds, 3 of Spades
+Joker Mult = 13
+Joker Chips = 108
+Joker XMult = 3.2
+
+Flush name = Flush Pinfu
+Flush Base Chips = 120
+Flush Base Mult = 8
+Flush Level Chips = 40
+Flush Level Mult = 4
+Flush Example = 6 of Clubs, 7 of Clubs, 8 of Clubs, 3 of Clubs, 3 of Clubs

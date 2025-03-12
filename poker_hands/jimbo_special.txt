@@ -1,0 +1,17 @@
+Name = Jimbo's Special Hand
+Desc = {
+    Three special Kings and two Aces.
+    When played, Special Cards give +4 Mult
+}
+Base Chips = 50
+Base Mult = 5
+Level Chips = 25
+Level Mult = 2
+Order Offset = 75
+Eval = {
+    (Ace of *, Ace of *, King of * special, King of * special, King of * special)
+}
+Example = Ace of Spades, Ace of Clubs, King of Spades special, King of Clubs special, King of Hearts special
+Author = Post Prototype
+Planet Name = Jimboland
+Special Mult = 4

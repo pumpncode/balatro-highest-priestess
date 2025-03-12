@@ -1,0 +1,13 @@
+Name = Chill Out, Man!
+Desc = {
+    Get this hand every 10th unique poker hand played consecutively this run
+}
+Base Chips = 1000
+Base Mult = 100
+Level Chips = 100
+Level Mult = 10
+Eval = {
+    ()
+}
+Chill Hands = 10
+Author = GoldenLeaf

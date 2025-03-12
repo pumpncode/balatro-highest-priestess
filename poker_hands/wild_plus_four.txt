@@ -1,0 +1,17 @@
+Name = Wild Plus Four
+Desc = {
+    A wild card, plus a special 4.
+    When played, draw 4 extra cards for the next hand.
+}
+Base Chips = 10
+Base Mult = 4
+Level Chips = 10
+Level Mult = 2
+
+Eval = {
+    (* of wilds, 4 of j special, j = [nonunique])
+}
+
+Draw Extra = 4
+Author = CookieAlien
+Example = 10 of wilds, 4 of Clubs special

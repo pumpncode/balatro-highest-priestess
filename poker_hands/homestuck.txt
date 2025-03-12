@@ -1,0 +1,28 @@
+Name = Homestuck
+Desc = {
+    A hand comprising of a 4, then Ace, then 3
+}
+Author = Beanstewoo
+Base Chips = 130
+Base Mult = 1.6
+Level Chips = 12
+Level Mult = 2
+Eval = {
+  (4 of *, Ace of *, 3 of *)
+}
+Example = 4 of Hearts, Ace of Clubs, 3 of Spades,
+Joker Mult = 41
+Joker Chips = 61
+Joker XMult = 2.1
+Planet Name = Beta Earth
+Joker Mult Name = John Joker
+Joker Chips Name = Stuffed harlequin
+Joker XMult Name = The Heir
+
+Flush Name = Flushstuck
+Flush Base Chips = 413
+Flush Base Mult = 4.1
+Flush Level Chips = 61
+Flush Level Mult = 4.1
+Flush Planet Name = Alpha Earth
+Flush Example = 4 of Clubs, Ace of Clubs, 3 of Clubs

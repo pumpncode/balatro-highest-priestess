@@ -1,0 +1,16 @@
+Name = We Three Kings
+Desc = {
+    Three scoring Kings
+}
+Base Chips = 60
+Base Mult = 3
+Level Chips = 23
+Level Mult = 2
+Eval = {
+    (King of *, King of *, King of *)
+}
+Author = Salsa
+Example = King of Spades, King of Diamonds, King of Hearts
+Joker Mult = 13
+Joker Chips = 130
+Joker XMult = 3.1
