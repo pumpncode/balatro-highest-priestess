@@ -9,6 +9,12 @@ Highest Priestess uses a custom markup language to define poker hands and all th
 
 This section shows an example of what you need to write to create a poker hand and how. I suggest looking at this example, and reading further sections only if you have any doubts or want more information.
 
+### Post Scriptum Note
+
+As of the writing of this section, the game contains over 260 new poker hands. I realized, as more and more features were added, that the below example is of little use and would require costant update to stay relevant. Looking at the markup of a poker hand that's in the game is personally a much better and more practical example. So go into the `poker_hands` folder to see how you can make your own hand. If you want to experiment with it, you can create a new .txt file to make a markup for another poker hand, and then run `hand_parser.py` on the mod's root folder to add your poker hand into the game. Keep reading this manual further if you have any doubts or want more information. 
+
+### the outdated example I was talking about
+
 ```
 > Lines that start with a greater than sign are ignored
 
@@ -88,7 +94,6 @@ Example = Ace of Spades, Stone, 7 of Wilds
 - `Joker Chips Name`: If you defined `Joker Chips`, sets the name of the Joker created by `Joker Chips`. Defaults to "`Name` Jester".
 - `Joker XMult Name`: If you defined `Joker XMult`, sets the name of the Joker created by `Joker XMult`. Defaults to "The `Name`".
 - `Credits Name`: How the poker hand will be named in the credits. Used for long hand names.
-
 - `Chance`: If added, the poker hand has only a 1 in `Chance` probability to be considered (affected by `G.GAME.probabilities.normal`)
 - `Rank Sum`: If added, the poker hand must have the sum of the cards' ranks to be equal to `Rank Sum`. Jack, Queen, and King count as 10, and Ace as 1.
 - `Composite Only`: If added, the non-composite variant of the poker hand won't be added (see Composite Hands section). No support for Jokers.
@@ -97,9 +102,9 @@ Example = Ace of Spades, Stone, 7 of Wilds
 - `Different Enhancement`: If added, each card must have a different enhancement for the poker hand to be considered. Never counts with unenhanced cards.
 - `Card Count`: If added, the poker hand must have this exact number of cards.
 - `All Editioned`: If added, all cards must have the specified edition for the poker hand to be considered.
-- `Exact Enhancements`: If added, cards that make up this poker hand must have the listed enhancements, one for each.
+- `Exact Enhancements`: If added, cards that make up this poker hand must have the listed enhancements, one for each. `None` can be used to specify an unenhanced card.
 ```
-Exact Enhancements = Steel, Gold, Steel, Gold, Steel
+Exact Enhancements = Steel, Gold, Steel, Gold, None
 ```
 - `Money Min`: If added, you must have atleast the specified amount of money.
 - `Money Max`: If added, you must have at most the specified amount of money.
@@ -123,11 +128,38 @@ All Sealed = Red
 - `Rank Max`: If added, all cards must have at most the specified rank.
 - `Any Enhancement`: If added, all cards must be enhanced.
 - `Possible Last Hand IDS`: Uses multiline text. If added, the last hand played must be any of the hands on each row.
+- `Chill Hands`: If added, you must play [`Chill Hands`] consecutive unique poker hands to get this hand.
+- `All Facedown`: If added, all played cards must be face down.
+- `All Facedown`: If added, your remaining deck must have no cards.
+- `Math Identity`: This basically indicates the special condition for "math" poker hands.
+- `Everything is Enhanced`: If added, all cards played and held in hand must have the specified enhancement.
+- `Required Hands Left`: If added, you must have the specified amount of hands left when playing this hand. `Required Hands Left = 0` means this has to be the last hand of round.
+- `No Hand`: If `G.hand == nil`, all the Highest Priestess hands switch their requirements to just "Has the property `No Hand`". This means, regardless of the cards played, that only poker hands that have this property are considered to be played. `G.hand == nil` can happen if a mod [for some reason](https://discord.com/channels/1116389027176787968/1337113295391555595/1346123921648255087) is evaluating poker hands at the title screen.
+- `No Support Warning`: If the poker hand doesn't have this property, and the conditions a card pattern checks (see Card Pattern section) are not a subset or superset of the conditions another card pattern of the same hand pattern checks (see Hand Pattern section), then a warning is raised on the parser. Go to Support Warning section to learn more about this.
+- `All Steel Red Seal King in Hand`: Exactly what it says. If added, you have to do some kingmaxxing.
+- `Reset Nostalgia`: If added, the set of cards that's memorized for the `Nostalgic` property is reset. That means the first 5-card hand played this run will now be the next 5-card hand you'll play after this hand.
+- `Money Ease`: If added, change your current money by the specified amount when this hand is played. Amount can be positive or negative.
+- `Banana Scoring`: If added, all played cards give +3 Mult when scored, or X2.7 Mult if Gros Michel ever went extinct.
+- `Special Mult`: If added, Special Cards temporarily give the specified +Mult when played and scored.
+- `Enhance Kicker`: If added, all cards that don't make up a Two Pair become Special Cards when this hand is played.
+- `Special Joker`: If added, Special Cards temporarily create a Joker if there's room when played and scored.
+- `Special XMult`: If added, Special Cards temporarily give the specified XMult when played and scored.
+- `Probability Mod`: If added, all listed probabilities are temporarily multiplied by the specified amount when this hand is played, from the calculation of the blind's debuff to the end of this hand's evaluation.
+- `Gene Dupes`: If added, Special Cards self destruct and create the specified amount of copies without enhancement when played and scored and this hand is played.
+- `Required Hands Played`: If added, you must have played for this round the specified amount of hands before. `Required Hands Played = 0` means this has to be the first hand of round.
+- `Create Joker ID`: If added, create the specified Joker when this hand is played, referring by their full key. For example `Create Joker ID = j_jolly` creates Jolly Joker.
+- `Hand Size Mod`: If added, temporarily change the hand size by the specified amount for this round when this hand is played. The amount can be positive or negative.
+- `All Cards in Hand of Rank`: If added, all cards played and held in hand must be of the specified rank.
+- `Special Wild`: If added, all Special Cards temporarily count as any suit when this hand is played.
+- `High Special`: If added, played hand can't contain a Pair and the highest ranking card must be a Special Card.
+- `Draw Extra`: If added, temporarily change the amount of cards drawn by the specified amount after playing this hand. The amount can be positive or negative.
 - `Nostalgic`: Used by the "Nostalgia" hand. If added, all cards must match the rank and suits of the first 5-card hand that was played this run. Does not count if you haven't played a 5-card hand this run.
 - `RNG`: Used by the "RNG" hand. If added, all cards must match the rank and suits of a set of 5 cards randomly-generated at the start of the run.
 - `Joker Texture ID`: Used internally. If added, Jokers created for the poker hand have custom art.
 - `Planet Texture ID`: Used internally. If added, planets created for the poker hand have custom art.
 - `Deja Vu`: Used internally. This is basically the condition for Deja Vu hand.
+- `Slayer`: Used internally. This is basically the condition for Slay the Monster hand.
+- `Ritual`: Used internally. This is basically the special effect for the Ritual hand.
 
 ### Grouped Poker Hand Properties
 
@@ -248,7 +280,7 @@ Eval = {
 }
 ```
 
-A card pattern can be preceded by `X` immediately followed by a number to make it score multiple times. This is referred to as "multiscoring" and is different than retriggering (cards that score twice and are retriggered trigger 4 times in total!)
+A card pattern can be preceded by `X` immediately followed by a number to make it score multiple times. This is referred to as "multiscoring" and is different than retriggering (cards that score twice and are retriggered trigger 4 times in total!). Currently, multiscoring for Stone Cards is not supported.
 
 ```
 > Two Hearts and one Club
@@ -332,6 +364,17 @@ This is the list of all possible special patterns. If specified, the special pat
 - `debuffed`: Matches a Debuffed card.
 - `editioned`: Matches a card with an Edition.
 - `nondebuffed`: Matches a card that is not Debuffed.
+- `nonface`: Matches a card that is not a Face Card. Includes effect from Pareidolia.
+- `gold`: Matches a Gold Card.
+- `face`: Matches a Face Card. Includes effect from Pareidolia.
+- `midranked`: Used by Middle Card hand. When evaluating the scoring cards, takes the rank of the first 3 played cards and matches the card with median rank. Always matches on all other evaluation steps. For example, playing 6, 2, and 5 matches the rank 5.
+- `dark`: Matches a card that's either Spades or Clubs (Wild cards included).
+- `light`: Matches a card that's either Hearts or Diamonds (Wild cards included).
+- `special`: Matches a Special Card. All hands that require Special Cards must have a special effect like multiscoring (ex. X2 a of b), special mult, etc.
+- `lucky`: Matches a Lucky Card.
+- `bonus`: Matches a Bonus Card.
+- `mult`: Matches a Mult Card.
+- `nonspecial`: Matches anything but Special Cards.
 
 ### Pattern Options
 

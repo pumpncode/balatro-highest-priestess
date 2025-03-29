@@ -3,12 +3,13 @@ from typing import Any, Optional
 import json
 from os import listdir
 from os.path import isfile, join
+from random import randint, seed
 
 
 REGEX_KEYVALUE = re.compile(r"^(.+?)\s*=\s*(?:{((?:.|\n)*?)}|(.+))", re.MULTILINE)
 REGEX_PARENTHESIS_GROUP = re.compile(r"\((.*?)\)", re.MULTILINE | re.DOTALL)
 REGEX_WHITESPACE = re.compile(r"\s+")
-REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)) ?(debuffed|editioned|nondebuffed|nonface|gold|midranked|dark|light|special)?", re.IGNORECASE)
+REGEX_ANY_CARD = re.compile(r"(?:X(\d+)?)? ?(?:((?:unscoring|nonscoring) ?)?([a-z0-9*+]+) ?of ?([a-z0-9*]+)|(stone)) ?(debuffed|editioned|nondebuffed|nonface|gold|midranked|dark|light|special|lucky|bonus|mult|nonspecial|steel|face|glass|negative)?", re.IGNORECASE)
 REGEX_RANK = re.compile(r"(?:(\*)|([a-z]+)(?:\+(\d+))?)", re.IGNORECASE)
 REGEX_OPTIONS = re.compile(r"(\w) ?= ?\[(.+?)\]", re.IGNORECASE)
 REGEX_VALUES_GENERIC = re.compile(r"[a-z0-9]+", re.IGNORECASE)
@@ -62,7 +63,10 @@ def parse_hand_pattern(raw_text: str, warn_for_missing_support: bool = True):
     card_list: list[dict] = []
     for card in cards_iter:
         if card.group(5):
-            card_list.append({"stone": True})
+            card_dict: dict = {"stone": True}
+            if card.group(1):
+                print("WARNING! Multiscoring for stone cards not supported")
+            card_list.append(card_dict)
             continue
         rank = card.group(3)
         suit = card.group(4)
@@ -151,6 +155,8 @@ def parse_poker_hand(raw_text: str) -> dict:
         match key.lower():
             case "name":
                 result["name"] = value
+                seed(value)
+                result["polyhedra_group"] = randint(1, 12)
             case "credits name":
                 result["credits_name"] = value
             case "base chips":
@@ -179,6 +185,8 @@ def parse_poker_hand(raw_text: str) -> dict:
             
             case "flush name":
                 result["flush_name"] = value
+                seed(value)
+                result["flush_polyhedra_group"] = randint(1, 12)
             case "flush base chips":
                 result["flush_base_chips"] = float(value)
             case "flush base mult":
@@ -194,6 +202,8 @@ def parse_poker_hand(raw_text: str) -> dict:
             
             case "straight name":
                 result["straight_name"] = value
+                seed(value)
+                result["straight_polyhedra_group"] = randint(1, 12)
             case "straight base chips":
                 result["straight_base_chips"] = float(value)
             case "straight base mult":
@@ -209,6 +219,8 @@ def parse_poker_hand(raw_text: str) -> dict:
             
             case "house name":
                 result["house_name"] = value
+                seed(value)
+                result["house_polyhedra_group"] = randint(1, 12)
             case "house base chips":
                 result["house_base_chips"] = float(value)
             case "house base mult":
@@ -238,7 +250,7 @@ def parse_poker_hand(raw_text: str) -> dict:
             case "chance":
                 result["chance"] = float(value)
             case "rank sum":
-                result["rank_sum"] = int(value)
+                result["possible_rank_sums"] = [int(value)]
             case "composite only":
                 result["composite_only"] = True
             case "all enhanced":
@@ -362,6 +374,149 @@ def parse_poker_hand(raw_text: str) -> dict:
                 result["draw_extra"] = int(value)
             case "ritual":
                 result["ritual"] = True
+            # Here
+            case "disable boss blind":
+                result["disable_boss_blind"] = True
+            case "change blind req":
+                result["change_blind_req"] = float(value)
+            case "ritual type edition":
+                result["ritual_type_edition"] = value.lower()
+            case "ritual type enhancement":
+                result["ritual_type_enhancement"] = value.lower()
+            case "special perma bonus":
+                result["special_perma_bonus"] = float(value)
+            case "special perma mult":
+                result["special_perma_mult"] = float(value)
+            case "add first card seal":
+                result["add_first_card_seal"] = value.capitalize()
+            case "low special":
+                result["low_special"] = True
+            case "draw before scoring":
+                result["draw_before_scoring"] = True
+            case "special horsemen xmult":
+                result["special_horsemen_xmult"] = float(value)
+            case "held in hand scoring rank":
+                result["held_in_hand_scoring_rank"] = rank_to_id(value)
+            case "create consumable id":
+                result["create_consumable_id"] = value
+            case "create consumable count":
+                result["create_consumable_count"] = int(value)
+            case "create consumable negative":
+                result["create_consumable_negative"] = True
+            case "special destroy":
+                result["special_destroy"] = True
+            case "special chips":
+                result["special_chips"] = float(value)
+            case "special copy":
+                result["special_copy"] = True
+            case "rng hint":
+                result["rng_hint"] = True
+            case "enhance faces held in hand":
+                result["enhance_faces_held_in_hand"] = True
+            case "debuff faces held in hand":
+                result["debuff_faces_held_in_hand"] = True
+            case "rank sum multi":
+                result["possible_rank_sums"] = [int(x) for x in value.split()]
+            case "leaf rank sum":
+                result["leaf_rank_sum"] = True
+            case "triangular":
+                result["triangular"] = True
+            case "rank product multi":
+                result["possible_rank_products"] = [int(x) for x in value.split()]
+            case "yin yan":
+                result["yin_yan"] = True
+            case "special chance":
+                result["special_chance"] = float(value)
+            case "trolley debuff":
+                result["trolley_debuff"] = True
+            case "rank constrain":
+                result["rank_constrain"] = {rank_to_id(x): True for x in value.split()}
+            case "suit constrain":
+                result["suit_constrain"] = [get_suit_token(x)[0] for x in value.split()]
+            case "game speed":
+                result["game_speed"] = float(value)
+            case "open url":
+                result["open_url"] = value
+            case "class dived":
+                result["class_dived"] = True
+            case "exact editions":
+                editions_list = REGEX_VALUES_GENERIC.findall(value)
+                result["exact_editions"] = [x.lower() for x in editions_list]
+            case "super ritual type":
+                result["super_ritual_type"] = value.lower()
+            case "spicy hands":
+                result["spicy_hands"] = int(value)
+            case "keyed":
+                result["keyed"] = True
+            case "less exact editions":
+                result["less_exact_editions"] = True
+            case "statistic":
+                result["statistic"] = value.lower()
+            case "special balance":
+                result["special_balance"] = True
+            case "special swap":
+                result["special_swap"] = True
+            case "special maximize":
+                result["special_maximize"] = True
+            case "exact seals":
+                seals_list = REGEX_VALUES_GENERIC.findall(value)
+                result["exact_seals"] = [x.capitalize() for x in seals_list]
+            case "joker slots filled":
+                result["joker_slots_filled"] = True
+            case "omni mult":
+                result["omni_mult"] = float(value)
+            case "date check":
+                result["date_check"] = value.split("=")
+            case "neutral hands":
+                result["neutral_hands"] = int(value)
+            case "hand ease":
+                result["hand_ease"] = int(value)
+            case "hand ease permanent":
+                result["hand_ease_permanent"] = True
+            case "joker stat target":
+                result["joker_stat_target"] = value
+            case "joker stat property":
+                result["joker_stat_property"] = value
+            case "joker stat min":
+                result["joker_stat_min"] = float(value)
+            case "no wee":
+                result["no_wee"] = True
+            case "perma all cards rank count as":
+                result["perma_all_cards_rank_count_as"] = rank_to_id(value)
+            case "nonspecial convert":
+                result["nonspecial_convert"] = value.lower()
+            case "any seal":
+                result["any_seal"] = True
+            case "planet badge":
+                result["planet_badge"] = value
+            case "nonspecial remove mods":
+                result["nonspecial_remove_mods"] = True
+            case "base emult":
+                result["base_emult"] = float(value)
+            case "nostalgic ranks":
+                result["nostalgic_ranks"] = True
+            case "tsunami and dupe":
+                result["tsunami_and_dupe"] = int(value)
+            case "cigarette chance":
+                result["cigarette_chance"] = float(value)
+            case "no cigarette":
+                result["no_cigarette"] = True
+            case "chance or lucky high":
+                result["chance_or_lucky_high"] = float(value)
+            case "play atleast hand":
+                result["play_atleast_hand"] = value
+            case "play atleast times":
+                result["play_atleast_times"] = int(value)
+            case "idol cards":
+                result["idol_cards"] = True
+            case "omni chips":
+                result["omni_chips"] = float(value)
+            case "play in order":
+                hand_list = [x.strip() for x in value_multiline.strip().split("\n")]
+                result["play_in_order"] = hand_list
+            case "level up multi":
+                hand_list = [x.strip() for x in value_multiline.strip().split("\n")]
+                result["level_up_multi"] = hand_list
             case _:
                 raise RuntimeError(f"Invalid key '{key}'")
     return result

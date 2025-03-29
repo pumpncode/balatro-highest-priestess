@@ -67,3 +67,62 @@ if G.GAME.vhp_draw_extra then
 end
 '''
 match_indent = true
+
+
+# Scoring held in hand cards
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = '''scoring_hand = final_scoring_hand'''
+position = "before"
+payload = '''
+-- Not yet
+for _, vhp_card in pairs(scoring_hand) do
+    if vhp_card.area == G.hand then
+        table.insert(final_scoring_hand, vhp_card)
+    end
+end
+'''
+match_indent = true
+
+
+# Omni Mult and Chips
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''if not instant then'''
+position = "before"
+payload = '''
+G.GAME.hands[hand].mult = G.GAME.hands[hand].mult + (G.GAME.omni_mult or 0)
+G.GAME.hands[hand].chips = G.GAME.hands[hand].chips + (G.GAME.omni_chips or 0)
+'''
+match_indent = true
+
+
+# Polyhedra cards do not spawn if the type "Planet" is queued
+# Chance for replacement is done by hooking
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''if v.no_pool_flag and G.GAME.pool_flags[v.no_pool_flag] then add = nil end'''
+position = "before"
+payload = '''
+if _type == "Planet" and v.pools and v.pools.Polyhedra then
+    add = nil
+end
+'''
+match_indent = true
+
+
+# Blind reward
+[[patches]]
+[patches.pattern]
+target = "blind.lua"
+pattern = '''self.dollars = blind and blind.dollars or 0'''
+position = "after"
+payload = '''
+if G.GAME.vhp_blind_reward_extra then
+    self.dollars = self.dollars + G.GAME.vhp_blind_reward_extra
+end
+'''
+match_indent = true
