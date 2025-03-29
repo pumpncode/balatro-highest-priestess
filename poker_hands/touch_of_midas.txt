@@ -1,0 +1,14 @@
+Name = Touch of Midas
+Desc = {
+  a Special King and a Gold card.
+  All other played cards become Gold cards before scoring.
+}
+Base Chips = 63
+Base Mult = 4
+Level Chips = 23
+Level Mult = 2.3
+Eval = {
+    (King of * special, j of * gold)
+}
+Nonspecial Convert = Gold
+Author = CookieAlien

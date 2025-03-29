@@ -1,0 +1,15 @@
+Name = Factorial
+Desc = {
+    3 or more cards with the factorial of one card's rank being the sum of all
+    the other cards' ranks. (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 52.3
+Base Mult = 4.5
+Level Chips = 6
+Level Mult = 3
+Eval = {
+    (* of *, * of *, * of *),
+}
+Math Identity = Factorial
+Author = GoldenLeaf
+Example = 4 of Hearts, 7 of Spades, 8 of Hearts, 9 of Clubs

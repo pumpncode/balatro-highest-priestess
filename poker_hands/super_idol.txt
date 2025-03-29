@@ -1,0 +1,17 @@
+Name = Super Idols
+Desc = {
+    Five cards that fit the requirement of The Idol and being special cards.
+    Must have The Idol. Each played Special card gives X2 Mult when scored.
+}
+Base chips = 300
+Base mult = 15
+Level chips = 25
+Level mult = 4
+Order Offset = 140000
+Eval = {
+    (* of * special, * of * special, * of * special, * of * special, * of * special)
+}
+Special XMult = 2
+Idol Cards = Yes
+Joker Stat Target = j_idol
+Author = Sustato

@@ -1,0 +1,24 @@
+Name = Polygamy
+Description = {
+    5 polychrome cards, 4 of the same suit, 1 of a different suit
+}
+Base Chips = 240
+Base Mult = 5
+Level Chips = 30
+Level Mult = 2
+Eval = {
+    (* of a, * of a, * of a, * of a, * of b)
+}
+All Editioned = Polychrome
+>Example = 5 of Hearts Polychrome, 6 of Hearts Polychrome, 8 of Hearts Polychrome, Jack of Hearts Polychrome, Queen of Diamonds Polychrome
+Joker Mult = 8
+>not a typo, for the bit :3
+Joker Chips = -200
+Joker XMult = 1.5
+Joker Mult Name = Polyamorous Joker
+Joker Chips Name = Monogamous Joker
+Joker XMult Name = The Partners
+Planet Name = Kepler-16B
+Author = AuraNova
+Planet Texture ID = 12
+Joker Texture ID = 11

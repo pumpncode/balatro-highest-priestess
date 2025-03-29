@@ -10,6 +10,7 @@ Eval = {
     (7 of Hearts, Jack of *, 10 of *)
 }
 Author = Helena (i_want_helenussy)
+Example = 7 of Hearts, Jack of Spades, 10 of Clubs
 Joker Mult = 10
 Joker Chips = 80
 Joker XMult = 2

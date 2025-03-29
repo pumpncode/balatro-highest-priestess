@@ -1,0 +1,19 @@
+Name = Rain Ritual
+Desc = {
+    Exactly 4 bonus foil cards and a special negative card;
+    the former lose their modifiers and the latter is destroyed.
+    All of your playing cards permanently gain 50 chips immediately
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 1010
+Eval = {
+    (* of * special, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Bonus Bonus Bonus Bonus
+Exact Editions = Negative Foil Foil Foil Foil
+Special Destroy = Yes
+Super Ritual Type = PermaBonus
+Author = Sustato

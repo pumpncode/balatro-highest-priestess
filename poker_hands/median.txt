@@ -1,0 +1,17 @@
+Name = Median
+Desc = {
+    A 5 card hand with exactly 1 special card in which the median rank of all cards (including the special)
+    is the special card's rank. (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+    When played, Special Card balances Chips and Mult.
+}
+Base Chips = 37.5
+Base Mult = 4
+Level Chips = 27.5
+Level Mult = 2.5
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Statistic = Median
+Special Balance = Yes
+Author = GoldenLeaf
+Example = Ace of Spades, 2 of Hearts, 3 of Clubs special, 5 of Hearts, King of Clubs

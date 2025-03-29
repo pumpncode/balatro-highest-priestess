@@ -1,0 +1,19 @@
+Name = Forest Ritual
+Desc = {
+    Exactly 4 wild holographic cards and a special negative card;
+    the former lose their modifiers and the latter is destroyed.
+    Gain +1 booster pack selection. (Card Choice)
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 919
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Wild Wild Wild Wild 
+Exact Editions = Negative Holo Holo Holo Holo
+Special Destroy = Yes
+Super Ritual Type = PackSelection
+Author = Sustato

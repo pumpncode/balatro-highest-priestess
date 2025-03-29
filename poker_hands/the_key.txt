@@ -1,0 +1,15 @@
+Name = Key
+Desc = {
+    An Ace 5oak, with randomized enhancements determined at the start of the run.
+    Required enhancements change every time Key is played.
+}
+Base Chips = 80
+Base Mult = 20000
+Level Chips = 1
+Level Mult = 1
+Eval = {
+    (Ace of *, Ace of *, Ace of *, Ace of *, Ace of *)
+}
+Keyed = Yes
+Planet Name = Limbo
+Author = GoldenLeaf

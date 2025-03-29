@@ -1,0 +1,17 @@
+Name = Mode
+Desc = {
+    A 5 card hand with exactly 1 special card in which the mode rank of all cards (including the special)
+    is the special card's rank. (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+    When played, Special Card maximizes of Chips and Mult.
+}
+Base Chips = 30
+Base Mult = 4
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Statistic = Mode
+Special Maximize = Yes
+Author = GoldenLeaf
+Example = 2 of Spades, 7 of Hearts, 7 of Clubs special, 8 of Hearts, Jack of Clubs

@@ -1,0 +1,21 @@
+Name = Jacking Ritual
+Desc = {
+    Exactly 3 glass jacks and a special purple seal jack;
+    the latter is destroyed and all listed probabilities are temporarily quadrupled.
+    +1 Consumable slot.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 969
+Eval = {
+    (Jack of *, Jack of *, Jack of *, Jack of *)
+}
+Card Count = 4
+Exact Enhancements = Glass Glass Glass Special
+Exact Seals = None None None Purple
+Special Destroy = Yes
+Probability Mod = 4
+Super Ritual Type = ConsumableSlot
+Author = Helena (i_want_helenussy)

@@ -1,0 +1,15 @@
+Name = The Hand Of Universe
+Desc = {
+    424242424242424242424242424242
+}
+>(Hidden) = a 4 card poker hand that ranks are 4242 and all special.
+>      Create a blackhole when played.
+Base chips = 42
+Base mult = 42
+Level chips = 0
+Level mult = 0
+Eval = {
+    (4 of * special, 2 of * special, 4 of * special, 2 of * special)
+}
+Create Consumable ID = c_black_hole
+Author = Sustato

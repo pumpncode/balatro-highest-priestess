@@ -1,0 +1,25 @@
+Name = Match-3
+Desc = {
+    Three cards with the same suit and in consecutive order, allowing for duplicate ranks.
+}
+Base Chips = 25
+Base Mult = 2
+Level Chips = 15
+Level Mult = 1
+Eval = {
+    (a of x, a of x, a of x),
+    (a of x, a of x, a+1 of x),
+    (a of x, a+1 of x, a+1 of x),
+    (a of x, a+1 of x, a+2 of x)
+}
+Joker Mult = 10
+Joker Chips = 80
+Joker XMult = 2
+Joker Mult Name = Rich Joker
+Joker Chips Name = Fancy Joker
+Joker XMult Name = The Match
+Planet Name = BJWLD
+Author = Post Prototype (+ AuraNova)
+Example = 6 of Diamonds, 6 of Diamonds, 5 of Diamonds
+
+Planet Texture ID = 11

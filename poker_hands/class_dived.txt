@@ -1,0 +1,13 @@
+Name = Class Dived
+Desc = {
+    One polychrome, red seal, steel king and one unmodified 2.
+}
+Base Chips = 2
+Base Mult = 200
+Level Chips = 0
+Level Mult = 10
+Eval = {
+    (* of *)
+}
+Class Dived = Yes
+Author = jonahbaumgartner

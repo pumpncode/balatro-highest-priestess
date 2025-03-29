@@ -1,0 +1,23 @@
+Name = Wee Ritual
+Desc = {
+    With a Wee joker with over 500 gined chips, play exactly 5 special polychrome cards with a rank of 2;
+    Set all wee jokers' gained chips to 0 and destroy all played Special Cards.
+    After playing this hand, every single card (including cards required after ritual is played) counts as a 2.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 22222
+Eval = {
+    (2 of *, 2 of *, 2 of *, 2 of *, 2 of *)
+}
+All Enhanced = Special
+All Editioned = Polychrome
+Joker Stat Target = j_wee
+Joker Stat Property = chips
+Joker Stat Min = 500
+No Wee = Yes
+Special Destroy = Yes
+Perma all cards rank count as = 2
+Author = GoldenLeaf

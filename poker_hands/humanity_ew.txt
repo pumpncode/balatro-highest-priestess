@@ -1,0 +1,23 @@
+Name = Humanity. Disgraceful.
+Desc = {
+    The 3 face cards, all of which must be special.
+    All cards are destroyed after hand is played, but gain $20.
+}
+Base Chips = 100
+Base Mult = 2
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (Jack of * special, Queen of * special, King of * special)
+}
+Money Ease = 20
+Special Destroy = Yes
+Author = Helena (i_want_helenussy)
+Example = Jack of Spades special, Queen of Hearts special, King of Diamonds special
+Joker Mult = 12
+Joker Chips = 100
+Joker XMult = 3
+Planet Name = Special Earth
+Joker Mult Name = Grim
+Joker Chips Name = Reaper
+Joker XMult Name = The Death

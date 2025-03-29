@@ -1,0 +1,12 @@
+Name = The Highest Priestess
+Desc = {
+    Q, 4, 2, 10
+}
+Base Chips = 125
+Base Mult = 5
+Level Chips = 25
+Level Mult = 1
+Eval = {
+    (Queen of *, 4 of *, 2 of *, 10 of *)
+}
+Author = jonahbaumgartner

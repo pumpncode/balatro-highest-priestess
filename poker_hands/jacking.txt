@@ -11,6 +11,7 @@ Eval = {
     (Jack of *, Jack of *, Jack of *, Jack of *, X5 King of * special)
 }
 Author = Helena (i_want_helenussy)
+Example = Jack of Spades, Jack of Hearts, Jack of Hearts, Jack of Clubs, King of Clubs special
 Joker Mult = 16
 Joker Chips = 160
 Joker XMult = 3

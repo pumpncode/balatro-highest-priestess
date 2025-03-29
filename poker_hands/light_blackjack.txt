@@ -1,0 +1,19 @@
+Name = Light Blackjack
+Desc = {
+    Blackjack poker hand with all cards being special cards and having light suit
+    1 in 21 chance for each card permanently gains 2.1 mult when triggered (can be modifies by oa6s)
+}
+Base chips = 0.21
+Base mult = 210
+Level chips = 0.21
+Level mult = 21
+Special perma mult = 2.1
+Special chance = 21
+Order Offset = 4365.9
+Eval = {
+    (* of *)
+}
+Suit Constrain = Hearts Diamonds
+All Enhanced = Special
+Rank sum = 21
+Author = Sustato

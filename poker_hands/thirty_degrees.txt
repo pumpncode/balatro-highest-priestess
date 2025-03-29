@@ -1,0 +1,21 @@
+Name = 30 Degrees Right TriHand
+Credits Name = 30DRTH
+Desc = {
+    A hand in which the sum of all the cards' ranks is 30 and one card's rank
+    is double that of another. (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 30
+Base Mult = 6
+Level Chips = 15
+Level Mult = 3
+Eval = {
+    (Ace of *, 2 of *, * of *),
+    (2 of *, 4 of *, * of *),
+    (3 of *, 6 of *, * of *),
+    (4 of *, 8 of *, * of *),
+    (5 of *, 10 of *, * of *),
+    (6 of *, Queen of *, * of *),
+}
+Rank Sum Multi = 30 60 90
+Leaf Rank Sum = Yes
+Author = GoldenLeaf

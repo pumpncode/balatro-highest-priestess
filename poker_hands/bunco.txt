@@ -1,0 +1,17 @@
+Name = Bunco
+Desc = {
+    First played hand in the new Bunco trailer
+}
+Base Chips = 55
+Base Mult = 5
+Level Chips = 25
+Level Mult = 2
+Joker Chips = 155
+Joker Mult = 15
+Joker Chips Name = Bunkin' Bunco
+Joker Mult Name = Bunker Bunco
+Eval = {
+  (King of Clubs, 10 of Clubs, 8 of Clubs, 6 of Clubs, 5 of Clubs mult)
+}
+Example = King of Clubs, 10 of Clubs, 8 of Clubs, 6 of Clubs, 5 of Clubs mult
+Author = Runtem

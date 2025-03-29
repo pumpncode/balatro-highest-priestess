@@ -1,0 +1,23 @@
+Name = Incognito
+Desc = {
+    A 6, a 2 and an Ace.
+}
+Base Chips = 69
+Base Mult = 3
+Level Chips = 61
+Level Mult = 2
+Eval = {
+    (6 of *, 2 of *, Ace of *)
+}
+Example = 6 of Clubs, 2 of Hearts, Ace of Diamonds
+Joker Chips = 162
+Joker Mult = 16
+Joker XMult = 4
+Planet Name = Corneria-U6921
+Joker Mult Name = Basement Joker
+Joker Chips Name = Fluffy Joker
+Joker XMult Name = The Fur
+Author = TheLemon27 (+ AuraNova)
+
+Planet Texture ID = 19
+Joker Texture ID = 12

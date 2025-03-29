@@ -1,0 +1,19 @@
+Name = Sun Ritual
+Desc = {
+    Exactly 4 mult holographic cards and a special negative card;
+    The former lose their modifiers and the latter is destroyed.
+    All of your playing cards permanently gains 5 mult immediately.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 1010
+Eval = {
+    (* of * special, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Mult Mult Mult Mult
+Exact Editions = Negative Holo Holo Holo Holo 
+Special Destroy = Yes
+Super Ritual Type = PermaMult
+Author = Sustato

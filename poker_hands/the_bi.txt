@@ -1,0 +1,14 @@
+Name = The Bi
+Desc = {
+    A straight with 2 foil cards, 2 holographic card, and 1 extra card with an edition
+}
+Base Chips = 115
+Base Mult = 10
+Level Chips = 30
+Level Mult = 5
+Eval = {
+    (a of * editioned, a+1 of * editioned, a+2 of * editioned, a+3 of * editioned, a+4 of * editioned)
+}
+Exact Editions = Foil Foil Holo Holo
+Less Exact Editions = Yes
+Author = jonahbaumgartner

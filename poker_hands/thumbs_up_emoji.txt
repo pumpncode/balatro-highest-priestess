@@ -1,0 +1,17 @@
+Name = Thumbs-up Emoji
+Desc = {
+    Exactly 4 Aces without any enhancements, seals, or editions.
+    Gain +12 chips on every hand globally after this hand is played. 
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 500
+Eval = {
+    (Ace of *, Ace of *, Ace of *, Ace of *)
+}
+Unmodified = Yes
+Card Count = 4
+Omni Chips = 12
+Author = Helena (i_want_helenussy)

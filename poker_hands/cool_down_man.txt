@@ -1,0 +1,15 @@
+Name = Cool down, man
+Desc = {
+    Get this hand every 25th unique special poker hand played consecutively this run (Chill out, man! included).
+    This hand must contain at least 5 special cards. When played, set game speed to x1
+}
+Base chips = 10000
+Base mult = 1000
+Level chips = 1000
+Level mult = 100
+Eval = {
+    (* of * special, * of * special, * of * special, * of * special, * of * special)
+}
+Chill Hands = 25
+Game Speed = 1
+Author = Sustato

@@ -1,0 +1,17 @@
+Name = Rofl Emoji
+Desc = {
+    Exactly 4 special queens and a lucky queen;
+    Temporarily quintuples all probabilities while this hand is played.
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 9005
+Eval = {
+    (Queen of * special, Queen of * special, Queen of * special, Queen of * special, Queen of *)
+}
+Card Count = 5
+Exact Enhancements = Special Special Special Special Lucky
+Probability Mod = 5
+Author = Helena (i_want_helenussy)

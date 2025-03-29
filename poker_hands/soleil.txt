@@ -1,0 +1,14 @@
+Name = Soleil
+Desc = {
+    A hand that contains two 7s, a 5, a 3, and a 10
+}
+Base Chips = 100
+Base Mult = 7
+Level Chips = 20
+Level Mult = 3
+Eval = {
+    (7 of *, 10 of *, 3 of *, 7 of *, 5 of *)
+}
+Author = Cobalt_Ignis
+Example = 7 of hearts, 10 of spades, 3 of diamonds, 7 of clubs, 5 of hearts
+Planet Name = Soleil

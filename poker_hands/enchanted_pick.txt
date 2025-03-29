@@ -1,0 +1,23 @@
+NO SUPPORT WARNING = Has fallback
+Name = Enchanted Diamond Pickaxe
+Desc = {
+    3 Diamonds cards, at least 1 with special enhancement, with any combination of gold and stone cards.
+    Gold cards score an additional time for every special card.
+}
+Base Chips = 64
+Base Mult = 6
+Level Chips = 32
+Level Mult = 4
+Eval = {
+    (* of Diamonds special, * of Diamonds special, * of Diamonds special, X4 * of * gold, stone),
+    (* of Diamonds special, * of Diamonds special, * of Diamonds special, X4 * of * gold),
+    (* of Diamonds special, * of Diamonds special, * of Diamonds special, stone),
+    (* of Diamonds special, * of Diamonds special, * of Diamonds, X3 * of * gold, stone),
+    (* of Diamonds special, * of Diamonds special, * of Diamonds, X3 * of * gold),
+    (* of Diamonds special, * of Diamonds special, * of Diamonds, stone),
+    (* of Diamonds special, * of Diamonds, * of Diamonds, X2 * of * gold, stone),
+    (* of Diamonds special, * of Diamonds, * of Diamonds, X2 * of * gold),
+    (* of Diamonds special, * of Diamonds, * of Diamonds, stone),
+}
+Example = Jack of Diamonds special, 9 of Diamonds, 4 of Diamonds, Gold 3 of Spades, stone
+Author = CookieAlien

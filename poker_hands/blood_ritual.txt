@@ -1,0 +1,19 @@
+Name = Blood Ritual
+Desc = {
+    Exactly 4 wild polychrome cards and a special negative card;
+    the former lose their modifiers and the latter is destroyed.
+    Gain +1 discard.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 555
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Wild Wild Wild Wild
+Exact Editions = Negative Polychrome Polychrome Polychrome Polychrome
+Special Destroy = Yes
+Super Ritual Type = Discard
+Author = Post Prototype

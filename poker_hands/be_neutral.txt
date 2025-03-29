@@ -1,0 +1,13 @@
+Name = Be neutral, Dude
+Desc = {
+    Get this hand every 50 hands played, unique or not.
+}
+Base Chips = 316.2
+Base Mult = 316.2
+Level Chips = 31.6
+Level Mult = 31.6
+Eval = {
+    ()
+}
+Neutral Hands = 50
+Author = GoldenLeaf

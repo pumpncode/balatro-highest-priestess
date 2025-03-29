@@ -1,0 +1,18 @@
+Name = The Ritual
+Desc = {
+    5 special negative cards, which are all destroyed.
+    Gain +1 Joker slot.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 5555
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+All Enhanced = Special
+All Editioned = Negative
+Special Destroy = Yes
+Super Ritual Type = JokerSlot
+Author = Post Prototype

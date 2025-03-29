@@ -1,0 +1,32 @@
+Name = Shiny Five And Dime
+Desc = {
+    A 5 and a 10, with 3 cards in between
+    (no pairs). All special. Gain $15 when played.
+}
+Base Chips = 75
+Base Mult = 15
+Level Chips = 30
+Level Mult = 2
+Eval = {
+    (5 of * special, a of * special, a+1 of * special, a+2 of * special, 10 of * special; a=[6, 7]),
+    (5 of * special, 6 of * special, a of * special, 9 of * special, 10 of * special; a=[7, 8]),
+}
+Author = Post Prototype
+
+Money Ease = 15
+Example = 5 of Hearts special, 6 of Clubs special, 8 of Clubs special, 9 of Diamonds special, 10 of Hearts special
+Joker Mult = 12
+Joker Chips = 125
+Joker XMult = 4
+>Order Offset = 1
+Planet Name = Intergalactic Space Station
+Joker Mult Name = Miserly Joker
+Joker Chips Name = Treasurer Joker
+Joker XMult Name = The Shop
+Flush Name = Shiny Dime Flush
+Flush Base Chips = 500
+Flush Base Mult = 80
+Flush Level Chips = 60
+Flush Level Mult = 8
+Flush Planet Name = Interdimensional Space Station
+Flush Example = 5 of Clubs special, 6 of Clubs special, 7 of Clubs special, 8 of Clubs special, 10 of Clubs special

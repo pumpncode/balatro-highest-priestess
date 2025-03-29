@@ -1,13 +1,14 @@
 Name = Eye to Eye
 Desc = {
-	Two face cards and a 2.
+    Two face cards and a 2.
 }
 Base Chips = 22
 Base Mult = 2
 Level Chips = 20
 Level Mult = 1
+Order Offset = -5
 Eval = {
-	(a of *, 2 of *, b of *; a = [face nonunique], b = [face nonunique])
+    (a of *, 2 of *, b of *; a = [face nonunique], b = [face nonunique])
 }
 Example = King of Diamonds, 2 of Diamonds, Queen of Clubs
 Joker Mult = 10

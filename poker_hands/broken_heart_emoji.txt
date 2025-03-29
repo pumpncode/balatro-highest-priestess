@@ -1,0 +1,19 @@
+Name = Broken Heart Emoji
+Desc = {
+    A queen, heartbroken by a special king leaving her.
+    What did you think was gonna happen?
+    -1 hand every round.
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 456
+Eval = {
+    (Queen of *, special King of *)
+}
+Card Count = 2
+Hand Ease = -1
+Hand Ease Permanent = Yes
+Special Destroy = True
+Author = Helena (i_want_helenussy)

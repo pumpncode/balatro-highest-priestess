@@ -1,0 +1,18 @@
+Name = Ritual Mons
+Desc = {
+    Exactly 4 cards a mix of special and stone, and a card that is neither.
+    That card becomes foil and stone and the special and stone cards lose their enhancements.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 147
+Eval = {
+    (* of * special, * of * special, * of * special, Stone, * of *),
+    (* of * special, * of * special, Stone, Stone, * of *),
+    (* of * special, Stone, Stone, Stone, * of *)
+}
+Ritual Type Edition = Foil
+Ritual Type Enhancement = Stone
+Author = Post Prototype

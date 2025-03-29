@@ -1,0 +1,30 @@
+Name = Match-T
+Desc = {
+    Five cards with the same suit, with three in consecutive order, and two in another consecutive order, both allowing duplicate ranks.
+    The Match-3's middle card must be special and all other must be unenhanced. Create an Earth Planet card.
+}
+Base Chips = 45
+Base Mult = 4
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (a of x, a of x, a of x, b of x, b of x),
+    (a of x, a of x, a+1 of x, b of x, b of x),
+    (a of x, a+1 of x, a+1 of x, b of x, b of x),
+    (a of x, a+1 of x, a+2 of x, b of x, b of x),
+    (a of x, a of x, a of x, b of x, b+1 of x),
+    (a of x, a of x, a+1 of x, b of x, b+1 of x),
+    (a of x, a+1 of x, a+1 of x, b of x, b+1 of x),
+    (a of x, a+1 of x, a+2 of x, b of x, b+1 of x)
+}
+Create Consumable ID = c_earth
+Exact Enhancements = None, Special, None, None, None
+Joker Mult = 10
+Joker Chips = 100
+Joker XMult = 4
+Joker Mult Name = High Rich Joker
+Joker Chips Name = High Fancy Joker
+Joker XMult Name = The High Match
+Planet Name = BJWLD-TWST
+Author = Post Prototype
+Example = King of Diamonds, Queen of Diamonds special, Jack of Diamonds, 2 of Diamonds, 2 of Diamonds

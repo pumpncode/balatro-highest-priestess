@@ -1,0 +1,18 @@
+Name = Joker Emoji
+Desc = {
+    1 in 200 chance to get this hand if joker slots are filled.
+    +20 Mult every hand, increases by 20 each time this hand is played.
+    (Permanently adds +20 Mult to all poker hands)
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 100000
+Eval = {
+    (* of *)
+}
+Joker Slots Filled = Yes
+Chance = 200
+Omni Mult = 20
+Author = Helena (i_want_helenussy)

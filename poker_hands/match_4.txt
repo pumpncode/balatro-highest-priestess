@@ -1,0 +1,31 @@
+Name = Match-4
+Desc = {
+    Four cards with the same suit and in consecutive order, allowing for duplicate ranks.
+    One of the middle cards must be special and all other must be unenhanced. Create a Saturn Planet card.
+}
+Base Chips = 40
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (a of x, a of x, a of x, a of x),
+    (a of x, a of x, a of x, a+1 of x),
+    (a of x, a of x, a+1 of x, a+1 of x),
+    (a of x, a of x, a+1 of x, a+2 of x),
+    (a of x, a+1 of x, a of x, a+2 of x),
+    (a of x, a+1 of x, a+1 of x, a+1 of x),
+    (a of x, a+1 of x, a+1 of x, a+2 of x),
+    (a of x, a+1 of x, a+2 of x, a+2 of x),
+    (a of x, a+1 of x, a+2 of x, a+3 of x)
+}
+Exact Enhancements = None, Special, None, None
+Create Consumable ID = c_saturn
+Joker Mult = 10
+Joker Chips = 100
+Joker XMult = 3
+Joker Mult Name = Richer Joker
+Joker Chips Name = Fancier Joker
+Joker XMult Name = The Matchier
+Planet Name = BJWLD-2
+Author = Post Prototype
+Example = 7 of Diamonds, 6 of Diamonds, 5 of Diamonds special, 4 of Diamonds

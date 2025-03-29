@@ -6,6 +6,7 @@ Base Chips = 30
 Base Mult = 4
 Level Chips = 30
 Level Mult = 3
+Order Offset = 0.1
 Eval = {
         (King of *, Queen of *, Jack of *, 10 of *, 9 of *)
 }
@@ -18,4 +19,5 @@ Joker Chips Name = Come on! Joker
 Joker XMult Name = The Ridiculousness
 Planet Name = The Joke
 >(The planet on the card is 🫵)
-Author = tHotoe
+Author = tHotoe (+ AuraNova)
+Planet Texture ID = 17

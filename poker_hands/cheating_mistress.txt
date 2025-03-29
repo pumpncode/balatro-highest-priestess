@@ -1,0 +1,16 @@
+Name = Cheating Mistress
+Desc = {
+    He belongs on the streets...
+    2 Queens with a King and A Ace of Hearts
+}
+Base Chips = 70
+Base Mult = 9
+Level Chips = 25
+Level Mult = 3
+Eval = {
+    (King of *, Queen of *, Queen of *, Ace of Hearts)
+}
+Example = King of Spades, Queen of Diamonds, Queen of Hearts, Ace of Hearts
+Planet Name = SPCL-LOVE
+Author = Wolfy Stroker
+>Planet = Broken Locket

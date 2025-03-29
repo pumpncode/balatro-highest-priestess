@@ -1,0 +1,14 @@
+Name = Zero of a Kind
+Desc = {
+  A singular, unenhanced, unsealed, uneditioned debuffed card.
+}
+Base Chips = 10
+Base Mult = 2
+Level Chips = 10
+Level Mult = 1
+Eval = {
+    (* of * debuffed)
+}
+Unmodified = yes
+Card Count = 1
+Author = GoldenLeaf

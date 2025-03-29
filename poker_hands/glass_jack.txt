@@ -1,0 +1,14 @@
+Name = Glass Jack
+Desc = {
+  a Special Jack and a Glass card.
+  All other played cards become Glass cards before scoring.
+}
+Base Chips = 31
+Base Mult = 11
+Level Chips = 11
+Level Mult = 3
+Eval = {
+    (Jack of * special, j of * glass)
+}
+Nonspecial Convert = Glass
+Author = CookieAlien

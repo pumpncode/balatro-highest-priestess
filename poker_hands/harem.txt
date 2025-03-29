@@ -11,6 +11,7 @@ Eval = {
     (King of Hearts, Queen of Hearts, Queen of Hearts, Queen of Hearts, Queen of Hearts)
 }
 Author = Helena (i_want_helenussy)
+Example = King of Hearts, Queen of Hearts, Queen of Hearts, Queen of Hearts, Queen of Hearts
 Joker Mult = 32
 Joker Chips = 26
 Joker XMult = 5

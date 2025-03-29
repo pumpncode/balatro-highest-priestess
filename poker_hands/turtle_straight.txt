@@ -1,0 +1,13 @@
+Name = Turtle Straight
+Desc = {
+    A short flush straight from Ace to King
+}
+Base chips = 4.2
+Base mult = 1
+Level chips = 10.4
+Level mult = 2.6
+Order Offset = 118
+Eval = {
+    (Ace of x, King of x)
+}
+Author = GoldenLeaf

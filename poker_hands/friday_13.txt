@@ -1,0 +1,20 @@
+Name = Friday 13th
+Desc = { 
+    Exactly 3 cards with 6, Ace and 3 all special card
+    Creates Immolate when played. Must play on Friday 13th.
+}
+>(hidden) (You can change time on your devices to Friday 13th)
+Base chips = 13
+Base mult = 6
+Level chips = 13
+Level mult = 6
+Order Offset = 1313
+Card count = 3
+Create Consumable ID = c_immolate
+> https://www.lua.org/pil/22.1.html
+Date Check = %A%d=Friday13
+Eval = {
+    (6 of * special, Ace of * special, 3 of * special)
+}
+Example = 6 of Hearts special, Ace of Spades special, 3 of Clubs special
+Author = Sustato

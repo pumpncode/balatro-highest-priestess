@@ -1,0 +1,19 @@
+Name = Uno
+Desc = {
+    Your only card held in hand
+    without any cards left in remaining deck
+}
+Base Chips = 200
+Base Mult = 18
+Level Chips = 80
+Level Mult = 5
+Eval = {
+    (* of *)
+}
+Card Count = 1
+All In = Yes
+No Cards in Deck = Yes
+Author = AuraNova
+Planet Name = CFBDSIR2149
+Planet Texture ID = 8
+Planet Badge = Rogue Planet?

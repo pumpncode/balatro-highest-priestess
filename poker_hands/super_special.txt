@@ -1,0 +1,25 @@
+Name = Oops! All Specials
+Desc = {
+    5 Special Cards
+    Special Cards give +30 Chips, +4 Mult, and X1.25 Mult
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 7.5
+Level Mult = 1
+Order Offset = 1000
+Eval = {
+    (* of * special, * of * special, * of * special, * of * special, * of * special)
+}
+Special Chips = 30
+Special Mult = 4
+Special XMult = 1.25
+Author = TamerSoup625
+Example = Ace of Hearts special, Queen of Diamonds special, 9 of Diamonds special, 4 of Clubs special, 3 of Diamonds special
+Planet Name = Highest Priestess
+Joker Mult = 20
+Joker Chips = 150
+Joker XMult = 5
+Joker Mult Name = Special Joker
+Joker Chips Name = Special Jester
+Joker XMult Name = The Special

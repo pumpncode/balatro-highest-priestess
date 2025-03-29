@@ -1,0 +1,14 @@
+Name = Rigged Erratic
+Desc = {
+    A flush five of 10 of Spades.
+    You certainly didn't Start with a deck full of 10 of Spades right?
+}
+Base Chips = 16
+Base Mult = 1.6
+Level Chips = 50
+Level Mult = 3
+Eval = {
+    (10 of Spades, 10 of Spades, 10 of Spades, 10 of Spades, 10 of Spades)
+}
+Order offset = 2535
+Author = jonahbaumgartner (+ CookieAlien)

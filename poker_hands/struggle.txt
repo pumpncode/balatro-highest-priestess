@@ -1,0 +1,15 @@
+Name = Struggle
+Desc = {
+    Play the entire hand... of a single card.
+}
+Base Chips = 2480
+Base Mult = 1
+Level Chips = 200
+Level Mult = 0
+Eval = {
+    (* of *)
+}
+All In = Yes
+Card Count = 1
+Author = CookieAlien
+Planet Name = Piece of Planet X

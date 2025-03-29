@@ -1,0 +1,16 @@
+Name = Cubic Hand
+Desc = {
+    A hand in which the product of all the cards' ranks is a cube number
+    (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 27
+Base Mult = 8
+Level Chips = 8
+Level Mult = 1
+> Below 3oak
+Order Offset = -130
+Eval = {
+    (* of *, * of *, * of *)
+}
+Rank Product Multi = 1 8 27 64 125 216 343 512 729 1000 1331 1728
+Author = GoldenLeaf

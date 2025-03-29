@@ -1,0 +1,15 @@
+Name = Square Hand
+Desc = {
+    4 or more cards in which the sum of all the cards' ranks add up to a square number
+    (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 25
+Base Mult = 5
+Level Chips = 4
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *, * of *),
+}
+Rank Sum Multi = 1 4 9 16 25 36 49 64
+Leaf Rank Sum = Yes
+Author = GoldenLeaf

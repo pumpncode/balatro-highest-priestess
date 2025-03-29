@@ -1,0 +1,25 @@
+Name = Wraparound Straight
+Desc = {
+    5 cards in a row and an Ace used as an intermediate rank
+    (Between King and 2)
+}
+Base Chips = 30
+Base Mult = 10
+Level Chips = 20
+Level Mult = 4
+Eval = {
+    (King of *, Ace of *, 2 of *, 3 of *, 4 of *),
+    (Queen of *, King of *, Ace of *, 2 of *, 3 of *),
+    (Jack of *, Queen of *, King of *, Ace of *, 2 of *),
+}
+Author = TamerSoup625
+Example = King of Diamonds, Ace of Clubs, 2 of Clubs, 3 of Spades, 4 of Hearts
+Planet Name = Urnsat
+
+Flush Name = Wraparound Strush
+Flush Base Chips = 100
+Flush Base Mult = 20
+Flush Level Chips = 25
+Flush Level Mult = 5
+Flush Planet Name = Tunenep
+Flush Example = King of Spades, Ace of Spades, 2 of Spades, 3 of Spades, 4 of Spades

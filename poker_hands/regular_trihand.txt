@@ -1,0 +1,14 @@
+Name = Regular TriHand
+Desc = {
+    A hand consistent of exactly 3 cards of rank X, Y, Z in which X+Y>Z, X+Z>Y, Y+Z>X.
+}
+Base Chips = 12
+Base Mult = 2
+Level Chips = 11
+Level Mult = 1
+Eval = {
+    (* of *, * of *, * of *)
+}
+Card Count = 3
+Triangular = Yes
+Author = GoldenLeaf

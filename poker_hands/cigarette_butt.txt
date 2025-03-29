@@ -1,0 +1,17 @@
+Name = Cigarette Butt
+Desc = {
+    After Cigarette's Chips/Mult reduces to 0, either a lucky high card
+    or 1 in 4 chance to get this hand when you play a hand containing any lucky cards.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 41
+Eval = {
+    (* of * lucky, * of *),
+    (* of * lucky),
+}
+No Cigarette = Yes
+Chance or Lucky High = 4
+Author = GoldenLeaf

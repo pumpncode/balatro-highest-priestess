@@ -1,0 +1,19 @@
+Name = Bones Ritual
+Desc = {
+    Exactly 4 stone foil cards and a special negative card;
+    the former lose their modifiers and the latter is destroyed.
+    Gain +1 hand.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 555
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Stone Stone Stone Stone
+Exact Editions = Negative Foil Foil Foil Foil
+Special Destroy = Yes
+Super Ritual Type = Hand
+Author = Post Prototype

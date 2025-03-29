@@ -1,0 +1,15 @@
+Name = Medusa
+Desc = {
+  a Special Queen and a Stone card.
+  All other played cards become Stone cards before scoring.
+}
+Base Chips = 112
+Base Mult = 5
+Level Chips = 50
+Level Mult = 2
+Eval = {
+    (Queen of * special, stone, * of *)
+    (Queen of * special, stone)
+}
+Nonspecial Convert = Stone
+Author = CookieAlien

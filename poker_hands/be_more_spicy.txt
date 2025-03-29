@@ -1,0 +1,14 @@
+Name = Be More Spicy, Man!
+Desc = {
+    Play the same hand 10 times in a row.
+    Obtainable only once for every poker hand.
+}
+Base Chips = 100
+Base Mult = 1000
+Level Chips = 10
+Level Mult = 100
+Eval = {
+    ()
+}
+Spicy Hands = 10
+Author = jonahbaumgartner

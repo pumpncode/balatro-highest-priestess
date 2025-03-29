@@ -1,0 +1,16 @@
+Name = "E"xtinct
+Desc = {
+  a 5-card hand with the rank and suit of the cards don't contain any "e".
+}
+Base Chips = 55
+Base Mult = 3.3
+Level Chips = 22
+Level Mult = 2.2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *),
+}
+Rank Constrain = 2 4 6 Jack King
+Suit Constrain = Clubs Diamonds
+Author = CookieAlien
+Planet Name = _arth
+Example = 2 of Clubs, 4 of Diamonds, 6 of Clubs, 6 of Diamonds, King of Clubs

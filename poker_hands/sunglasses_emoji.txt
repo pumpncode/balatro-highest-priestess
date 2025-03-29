@@ -1,0 +1,17 @@
+Name = Sunglasses Emoji
+Desc = {
+    Exactly 2 lucky jacks and a special king;
+    +2 Hands this round.
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 2001
+Eval = {
+    (Jack of *, Jack of *, King of * special)
+}
+Card Count = 3
+Exact Enhancements = Lucky Lucky Special
+Hand Ease = 2
+Author = Helena (i_want_helenussy)

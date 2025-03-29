@@ -1,0 +1,17 @@
+Name = Feels So Right And Yet It Feels So Wrong
+Credits Name = FSRAYIFSW
+Desc = {
+    The first 5-card hand you've played this run,
+    matching ranks (but not suits)
+}
+Base Chips = 120
+Base Mult = 9
+Level Chips = 20
+Level Mult = 3
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Nostalgic Ranks = Yes
+Example = Stone, Stone, Stone, Stone, Stone
+Author = GoldenLeaf
+Planet Name = Gamma Cephei A

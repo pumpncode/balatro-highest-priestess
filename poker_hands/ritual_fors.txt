@@ -1,0 +1,18 @@
+Name = Ritual Fors
+Desc = {
+    Exactly 4 cards a mix of special and lucky, and a card that is neither.
+    That card becomes holographic and lucky and the special and lucky cards lose their enhancements.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 555
+Eval = {
+    (* of * special, * of * special, * of * special, * of * lucky, * of *),
+    (* of * special, * of * special, * of * lucky, * of * lucky, * of *),
+    (* of * special, * of * lucky, * of * lucky, * of * lucky, * of *)
+}
+Ritual Type Edition = Holo
+Ritual Type Enhancement = Lucky
+Author = Post Prototype

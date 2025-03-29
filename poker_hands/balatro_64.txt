@@ -1,0 +1,22 @@
+Name = Balatro 64
+Desc = {
+    A hand made up of 3 6's and 2 4's. All cards must be bonus and foil.
+    Exactly 1 6 and 1 4 must be special instead.
+    Special cards are destroyed, remaining cards are stripped of editions and enhacements.
+    Initial Mult is temporarily cubed.
+}
+Base Chips = 60
+Base Mult = 4
+Level Chips = 6
+Level Mult = 0.4
+Order Offset = 256
+Eval = {
+    (6 of * special ,6 of *,6 of *,4 of * special,4 of *)
+}
+All Editioned = Foil
+Exact Enhancements = Bonus Bonus Bonus Special Special
+Special Destroy = Yes
+NonSpecial Remove Mods = Yes
+Base EMult = 3
+>not sure how to actually implement the special joker correctly but basically it would be (mult x mult) x mult or in simpler terms mult^3
+Author = AuraNova

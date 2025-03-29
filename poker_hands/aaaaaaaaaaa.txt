@@ -21,3 +21,5 @@ Joker Chips Name = Agonizing Joker
 Joker XMult Name = AAAAAAAAAAAAAAAAA
 Planet Name = KELT-9b
 Joker Texture ID = 6
+
+Planet Texture ID = 10

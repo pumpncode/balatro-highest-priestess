@@ -1,0 +1,16 @@
+Name = Yin - Yang
+Desc = {
+    At least 2 dark suit and 2 light suit cards. (Wild cards count as both dark and light)
+    The rank sum of dark suit cards equal to rank sum of light ones.
+}
+Base chips = 69
+Base mult = 3
+Level chips = 6
+Level mult = 0.9
+Eval = {
+    (* of * light, * of * light, * of * dark, * of * dark)
+}
+Yin Yan = Yes
+Author = CookieAlien
+
+Example = Queen of Spades, 7 of Clubs, 8 of Hearts, 10 of Diamonds, Ace of Hearts

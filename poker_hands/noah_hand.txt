@@ -1,0 +1,17 @@
+Name = Noah's Hand
+Desc = {
+    A hand consistent of atleast 5 unique enhancements with one being a special card, all without seals or editions.
+    When Played, Destroy all other cards left in deck and make 3 duplicates of played hand.
+}
+Base Chips = 0
+Base Mult = -2000
+Level Chips = 0
+Level Mult = 0
+Order Offset = 2000
+Eval = {
+    (* of * special, * of *, * of *, * of *, * of *)
+}
+Unmodified = Yes
+Different Enhancement = Yes
+Tsunami and Dupe = 3
+Author = GoldenLeaf

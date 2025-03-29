@@ -1,0 +1,19 @@
+NO SUPPORT WARNING = The patterns are mutually exclusive
+Name = Ritual Eros
+Desc = {
+    Exactly 4 cards of a mix of special and wild, and a card that is neither.
+    That card becomes polychrome and wild and the special and wild cards lose their enhancements.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 369
+Eval = {
+    (* of * special, * of Wilds, * of Wilds, * of Wilds, * of *),
+    (* of * special, * of * special, * of Wilds, * of Wilds, * of *),
+    (* of * special, * of * special, * of * special, * of Wilds, * of *),
+}
+Ritual Type Edition = Polychrome
+Ritual Type Enhancement = Wild
+Author = Post Prototype

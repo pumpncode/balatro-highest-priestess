@@ -13,5 +13,6 @@ Eval = {
 }
 Example = 3 of Hearts special
 Planet Name = SPCL-1
-Author = TheLemon27
+Author = TheLemon27 (+ AuraNova)
 Special Mult = 1
+Planet Texture ID = 14

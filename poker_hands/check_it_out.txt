@@ -12,7 +12,8 @@ Eval = {
     (a of *, a of *, b of *, b of *, b of *)
 }
 Chance = 10000
-Author = Plzbeans
+Author = Plzbeans (+ AuraNova)
 Example = Stone, Stone, Stone, Stone, Stone
 Order Offset = 6
 Planet Name = Like Carpet
+Planet Texture ID = 15

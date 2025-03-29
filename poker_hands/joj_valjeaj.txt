@@ -1,0 +1,16 @@
+Name = Joj Valjeaj
+Desc = {
+    24601, where the 0 is a stone and the 1 is an Ace
+    with all non-stone cards as Special
+    When played, play the YTP
+}
+Base Chips = 1001
+Base Mult = 191
+Level Chips = 191
+Level Mult = 5
+Eval = {
+    (2 of * Special, 4 of * Special, 6 of * Special, stone, Ace of * Special)
+}
+Author = TamerSoup625
+Open URL = https://www.youtube.com/watch?v=JEVago2PKn0&t=81s
+Example = 2 of Hearts Special, 4 of Spades Special, 6 of Diamonds Special, Stone, Ace of Spades Special

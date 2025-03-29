@@ -1,0 +1,13 @@
+Name = Literally 1984
+Desc = {
+    Ace, 9, 8, 4
+}
+Base Chips = 98
+Base Mult = 4
+Level Chips = 19
+Level Mult = 1.9
+Eval = {
+    (Ace of *, 9 of *, 8 of *, 4 of *)
+}
+Author = jonahbaumgartner
+Example = Ace of Diamonds, 9 of Hearts, 8 of Clubs, 4 of Diamonds

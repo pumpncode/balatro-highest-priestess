@@ -1,0 +1,16 @@
+Name = 60 Degrees Isosceles TriHand
+Credits Name = 60DITH
+Desc = {
+    A hand in which the sum of all the cards' ranks is 60 and at least 2 cards have equal rank.
+    (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+Base Chips = 60
+Base Mult = 3
+Level Chips = 15
+Level Mult = 3
+Eval = {
+    (a of *, a of *, * of *),
+}
+Rank Sum = 60
+Leaf Rank Sum = Yes
+Author = GoldenLeaf

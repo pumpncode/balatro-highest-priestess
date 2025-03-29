@@ -1,0 +1,20 @@
+Name = Midas' Ritual
+Desc = {
+    Exactly 4 poly gold cards and a special card with gold seal;
+    The former lose their modifiers and the latter is destroyed.
+    Permanently increase money gained from interest by $1 per $5.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 797
+Eval = {
+    (* of * special, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Gold Gold Gold Gold
+Exact Seals = Gold None None None None
+Exact Editions = Base Polychrome Polychrome Polychrome Polychrome
+Special Destroy = Yes
+Super Ritual Type = Interest
+Author = GoldenLeaf

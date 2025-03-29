@@ -1,0 +1,33 @@
+Name  = 2048
+Desc = {
+    A hand containing a 2, a "0", a 4 and an 8 ONLY
+}
+Base Chips = 256
+Base Mult = 16
+Level Chips = 32
+Level Mult = 4
+Eval = {
+    (2 of *, stone, 4 of *, 8 of *)
+}
+Example = 2 of Hearts, stone, 4 of Diamonds, 8 of Spades
+Card Count = 4
+Planet Name = Binary Planets
+Joker Mult = 16
+Joker Chips = 256
+Joker xMult = 4
+Joker Mult Name = 2,4,8,16
+Joker Chips Name = 32,64,128,256
+Joker xMult Name = 4096
+>The Flush version, everything is 1.5x more than 2048 including name
+Flush Name = 3072
+Flush Base Chips = 384
+Flush Base Mult = 24
+Flush Level Chips = 48
+Flush Level Mult = 6
+Example = 2 of Hearts, stone, 4 of Hearts, 8 of Hearts
+Planet Name = Stellar Collision
+
+Planet Texture ID = 9
+Joker Texture ID = 10
+
+Author = AuraNova

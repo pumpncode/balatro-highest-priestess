@@ -10,5 +10,6 @@ Eval = {
     (* of *)
 }
 All In = Yes
-Author = TamerSoup625
+Author = TamerSoup625 (+ AuraNova)
 Planet Name = Solar System
+Planet Texture ID = 13

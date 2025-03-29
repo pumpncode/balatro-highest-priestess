@@ -1,0 +1,17 @@
+Name = Cigarette
+Desc = {
+    A lucky high card. 1 in 4 chance to permanently debuff played card when scored.
+    Otherwise, this hand permanantly loses 100 Chips and 2.5 Mult.
+}
+Base Chips = 400
+Base Mult = 10
+Level Chips = 100
+Level Mult = 2.5
+Order Offset = -3960
+Eval = {
+    (* of *),
+}
+Card Count = 1
+All Enhanced = Lucky
+Cigarette Chance = 4
+Author = GoldenLeaf

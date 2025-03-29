@@ -1,0 +1,21 @@
+Name = Failure's ritual?
+Desc = {
+    Exactly 4 enhancement cards and a special negative card.
+    All must have a seal. All cards must be debuffed and have different enhancement;
+    Non-Special Cards lose their modifiers.
+    Decreases the blind requirement by 25%.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 555
+Eval = {
+    (* of * special, * of *, * of *, * of *, * of *)
+}
+All Debuffed = Yes
+Different Enhancement = Yes
+Any Seal = Yes
+Special Destroy = Yes
+Super Ritual Type = BlindReq
+Author = Sustato

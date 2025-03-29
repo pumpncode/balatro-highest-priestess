@@ -1,0 +1,18 @@
+Name = Season Ceremony
+Desc = {
+    4 special cards with different base suits and seals and a negative wild card
+    The former loses its modifies and destroys the others.
+    Gains +1 booster pack card
+}
+Base chips = 0
+Base mult = 1
+Level chips = 0
+Level mult = 0
+Order Offset = 969
+Eval = {
+    (* of Spades special, * of Hearts special, * of Clubs special, * of Diamonds special, * of Wilds negative)
+}
+Exact Seals = Red Purple Blue Gold None
+Special Destroy = yes
+Super Ritual Type = PackCard
+Author = Sustato

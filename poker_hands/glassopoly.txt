@@ -12,6 +12,7 @@ Eval = {
     (* of a, * of a, * of a, * of a, * of a)
 }
 Author = Helena (i_want_helenussy)
+Example = 7 of Spades, King of Spades, 10 of Spades, 2 of Spades, Jack of Spades
 All Enhanced = Glass
 Joker Mult = 16
 Joker Chips = 100

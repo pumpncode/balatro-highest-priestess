@@ -1,0 +1,14 @@
+Name = Trolley Problem
+Desc = {
+    Three face cards of one suit, one face card of a different suit, and a steel card.
+    When played 70% chance to debuff the one face of different suit, otherwise debuff the three face cards.
+}
+Base Chips = 50
+Base Mult = 10
+Level Chips = 1
+Level Mult = 5
+Eval = {
+    (* of a face, * of a face, * of a face, * of b face, * of * steel),
+}
+Author = jonahbaumgartner
+Trolley Debuff = Yes

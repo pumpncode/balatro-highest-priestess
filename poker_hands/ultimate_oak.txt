@@ -1,0 +1,27 @@
+Name = Ultimate OAK
+Desc = {
+    Get this hand after playing High Card, Pair, 3oak, 4oak and 5oak in this order.
+    When this hand is played, level up said hands.
+}
+Base Chips = 225
+Base Mult = 25
+Level Chips = 110
+Level Mult = 10
+Eval = {
+    (* of *)
+}
+Play in Order = {
+    High Card
+    Pair
+    Three of a Kind
+    Four of a Kind
+    Five of a Kind
+}
+Level Up Multi = {
+    High Card
+    Pair
+    Three of a Kind
+    Four of a Kind
+    Five of a Kind
+}
+Author = GoldenLeaf

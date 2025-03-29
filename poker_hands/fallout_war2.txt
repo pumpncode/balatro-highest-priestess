@@ -1,0 +1,13 @@
+Name = Throught The Roads
+Desc = {
+    Two couples of cards, with one card in each couple one rank higher than the other 
+}
+Base Chips = 15
+Base Mult = 3
+Level Chips = 15
+Level Mult = 2
+Eval = {
+    (a of *, a+1 of *, b of *, b+1 of *)
+}
+Author = Post Prototype
+Example = 2 of Clubs, Ace of Hearts, Queen of Hearts, Jack of Spades

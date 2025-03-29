@@ -1,0 +1,23 @@
+Name = Polychrome of the Week
+Desc = {
+    Only available after you play Polychrome of the Day 7 times.
+    2 Polychrome Face Cards
+    Cards that make up this hand score 3 times
+}
+Base Chips = 100
+Base Mult = 40
+Level Chips = 50
+Level Mult = 10
+Eval = {
+  (X3 * of *, X3 * of *)
+}
+All Face = Yes
+Author = Runtem
+All Editioned = Polychrome
+Joker Mult = 20
+Joker Chips = 250
+Planet Name = 7 Rainbows
+Joker mult name = Red of the Rainbow
+Joker chips name = Blue of the Rainbow
+Play Atleast Hand = vhp_poly_of_the_day
+Play Atleast Times = 7

@@ -1,6 +1,7 @@
 Name = The Highest Card
 Desc = {
     A single High Card, with all Steel Red Seal Kings in hand.
+    Must have at least one card held in hand.
 > The most common way to get to naneinf.
 }
 Base Chips = 5000
@@ -14,6 +15,7 @@ Eval = {
 Card Count = 1
 
 All Steel Red Seal King in Hand = Yes
-Author = CookieAlien
+Author = CookieAlien (+ AuraNova)
 Example = King of Diamonds
 Planet Name = Pluto^inf
+Planet Texture ID = 16

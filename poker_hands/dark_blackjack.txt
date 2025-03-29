@@ -1,0 +1,18 @@
+Name = Dark Blackjack
+Desc = {
+    Blackjack poker hand with all cards being special cards and having dark suit
+    1 in 21 chance for each card permanently gains 21 chips when triggered (can be modifies by oa6s)
+}
+Base chips = 2100
+Base mult = 2.1
+Level chips = 210
+Level mult = 2.1
+Special perma bonus = 21
+Special chance = 21
+Eval = {
+    (* of *)
+}
+Suit Constrain = Spades Clubs
+All Enhanced = Special
+Rank sum = 21
+Author = Sustato

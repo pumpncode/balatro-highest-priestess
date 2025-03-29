@@ -1,0 +1,13 @@
+Name = F-Zero 99
+Desc = {
+    4 or 5, 10, 9, 9
+}
+Base Chips = 99
+Base Mult = 4
+Level Chips = 10
+Level Mult = 3
+Eval = {
+    (4 of *, 10 of *, 9 of *, 9 of *),
+    (5 of *, 10 of *, 9 of *, 9 of *),
+}
+Author = jonahbaumgartner

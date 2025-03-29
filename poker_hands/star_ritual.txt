@@ -1,0 +1,19 @@
+Name = Star Ritual
+Desc = {
+    Exactly 4 steal cards and a special negative card, all has planet seal;
+    the former lose their modifiers and the latter is destroyed.
+    Destroys all planet cards and create blackhole cards equally the number of planet cards destroyed.
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 555
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Exact Enhancements = Special Steel Steel Steel Steel
+All Sealed = Blue
+Special Destroy = Yes
+Super Ritual Type = BlackHole
+Author = Sustato

@@ -1,0 +1,19 @@
+Name = Mammon's Ritual
+Desc = {
+    Exactly 4 special cards and a negative gold King card. All must have gold seal;
+    the former loses its modifiers and the latter is destroyed.
+    Gain +$2 for blinds' rewards
+}
+Base chips = 0
+Base mult = 1
+Level chips = 0
+Level mult = 0
+Order Offset = 777
+Eval = {
+    (King of * negative, * of * special, * of * special, * of * special, * of * special)
+}
+Exact Enhancements = Gold Special Special Special Special
+All Sealed = Gold
+Special Destroy = yes
+Super Ritual Type = BlindReward
+Author = Sustato

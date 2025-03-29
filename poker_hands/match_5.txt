@@ -1,0 +1,37 @@
+Name = Match-5
+Desc = {
+    Five cards with the same suit and in consecutive order, allowing duplicate ranks.
+    The middle card must be special and all other must be unenhanced. Create a Planet X card.
+}
+Base Chips = 100
+Base Mult = 10
+Level Chips = 50
+Level Mult = 5
+Eval = {
+    (a of x, a of x, a of x, a of x, a of x),
+    (a of x, a of x, a of x, a of x, a+1 of x),
+    (a of x, a of x, a of x, a+1 of x, a+1 of x),
+    (a of x, a of x, a of x, a+1 of x, a+2 of x),
+    (a of x, a of x, a+1 of x, a+1 of x, a+1 of x),
+    (a of x, a of x, a+1 of x, a+1 of x, a+2 of x),
+    (a of x, a of x, a+1 of x, a+2 of x, a+2 of x),
+    (a of x, a of x, a+1 of x, a+2 of x, a+3 of x),
+    (a of x, a+1 of x, a+1 of x, a+1 of x, a+1 of x),
+    (a of x, a+1 of x, a+1 of x, a+1 of x, a+2 of x),
+    (a of x, a+1 of x, a+1 of x, a+2 of x, a+2 of x),
+    (a of x, a+1 of x, a+1 of x, a+2 of x, a+3 of x),
+    (a of x, a+1 of x, a+2 of x, a+2 of x, a+3 of x),
+    (a of x, a+1 of x, a+2 of x, a+3 of x, a+3 of x),
+    (a of x, a+1 of x, a+2 of x, a+3 of x, a+4 of x)
+}
+Create Consumable ID = c_planet_x
+Exact Enhancements = None, None, Special, None, None
+Joker Mult = 14
+Joker Chips = 120
+Joker XMult = 5
+Joker Mult Name = Richest Joker
+Joker Chips Name = Fanciest Joker
+Joker XMult Name = The Matchiest
+Planet Name = BJWLD-3
+Author = Post Prototype
+Example = Ace of Diamonds, King of Diamonds, King of Diamonds special, Queen of Diamonds, Queen of Diamonds

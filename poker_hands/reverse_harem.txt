@@ -1,0 +1,18 @@
+Name = The Reverse Harem
+Desc = {
+    A queen of hearts with 4 kings of hearts.
+}
+Base Chips = 36
+Base Mult = 20
+Level Chips = 6
+Level Mult = 6
+Order Offset = 1000
+Eval = {
+    (Queen of Hearts, King of Hearts, King of Hearts, King of Hearts, King of Hearts)
+}
+Author = jonahbaumgartner
+Example = Queen of Hearts, King of Hearts, King of Hearts, King of Hearts, King of Hearts
+Joker Mult = 26
+Joker Chips = 32
+Joker XMult = 5
+Planet Name = Planet Lust

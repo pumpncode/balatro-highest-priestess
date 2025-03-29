@@ -25,3 +25,4 @@ Joker XMult Name = 4 and 5
 Planet Name = Pi Earth
 Example = 3 of Hearts, King of Diamonds, Queen of Clubs, 8 of Spades
 Author = L1s3L
+Planet Texture ID = 18

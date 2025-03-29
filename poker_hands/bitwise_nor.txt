@@ -1,0 +1,18 @@
+Name = Bitwise NOR
+Desc = {
+    Exactly 3 cards with each of one card's rank's digits in binary being 1 if no other
+    card's rank in binary has 1 in that place value. (A, J, Q, K count as 1, 11, 12, and 13 respectively.)
+}
+> 1 = 0001, 2 = 0010, 3 = 0011, 4 = 0100, 5 = 0101
+> 1 NOR 4 = 10, 2 NOR 4 = 9, 3 NOR 5 = 8
+Base Chips = 14
+Base Mult = 4
+Level Chips = 12
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *),
+}
+Card Count = 3
+Math Identity = BitNOR
+Author = Post Prototype
+Example = Jack of Hearts, 4 of Spades, 4 of Diamonds

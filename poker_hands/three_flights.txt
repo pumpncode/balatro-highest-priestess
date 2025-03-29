@@ -1,0 +1,24 @@
+Name = Three Flights, Two Entrances
+Credits Name = Three Flights Two Entrances
+Desc = {
+    3 special red seal 2's of any suit and 2 non-special red seal 2's of any suit
+    When played, create two Negative Emperor
+}
+base chips = 230
+base mult = 30
+level chips = 22
+level mult = 22
+Eval = {
+    (2 of * special, 2 of * special, 2 of * special, 2 of * nonspecial, 2 of * nonspecial)
+}
+All Sealed = Red
+author = Runtem
+planet name = Not Enough Holes
+>planet sprite = a black planet that has only two circular holes in it, with circular places highlighted in red where more holes can be made
+Joker mult = 22
+Joker chips = 222
+Joker mult name = Two Two Joker
+Joker chips name = Three Joker
+Create Consumable ID = c_emperor
+Create Consumable Negative = Yes
+Create Consumable Count = 2

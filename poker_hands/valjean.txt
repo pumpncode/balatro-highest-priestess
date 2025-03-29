@@ -1,0 +1,14 @@
+Name = Valjean
+Desc = {
+     24601, where the 0 is a stone
+     and the 1 is an Ace
+}
+Base Chips = 110
+Base Mult = 19
+Level Chips = 19
+Level Mult = 3
+Eval = {
+     (2 of *, 4 of *, 6 of *, stone, Ace of *)
+}
+Author = Lafta
+Example = 2 of Hearts, 4 of Spades, 6 of Diamonds, Stone, Ace of Spades
