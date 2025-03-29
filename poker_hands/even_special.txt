@@ -1,0 +1,22 @@
+Name = Even Special
+Desc = {
+       5 different special even cards
+       Each scored card gives 31 chips
+}
+Base chips = 140
+Base mult = 10
+Level chips = 10
+Level mult = 6
+Eval = {
+         (10 of * special, 8 of * special, 6 of * special, 4 of * special, 2 of * special)
+}
+Special mult = 4
+Author = Sustato
+
+Example = 10 of Spades, 8 of Diamonds, 6 of Clubs, 4 of Clubs, 2 of Hearts
+
+Flush name = Flush Even Special
+Flush base chips = 170
+Flush Base mult = 18
+Flush level chips = 12
+Flush level mult = 8

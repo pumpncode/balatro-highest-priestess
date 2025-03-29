@@ -12,6 +12,7 @@ Eval = {
 Author = Cobalt_Ignis
 Example = 7 of Hearts, 7 of Diamonds, 7 of Clubs, 7 of Spades, 7 of Hearts, 7 of Diamonds, 7 of Clubs
 Planet Name = Nessos
+Planet Texture ID = 7
 
 Flush Name = Seventh Flush
 Flush Base Chips = 7777

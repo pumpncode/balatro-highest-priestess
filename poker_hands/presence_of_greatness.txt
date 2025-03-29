@@ -1,0 +1,15 @@
+Name = Presence of Greatness
+Desc = {
+    One Polychrome, red seal, steel king of hearts
+}
+Base Chips = 150
+Base Mult = 15
+Level Chips = 15
+Level Mult = 1.5
+Eval = {
+    (King of Hearts)
+}
+All Editioned = Polychrome
+All Sealed = Red
+All Enhanced = Steel
+Author = jonahbaumgartner (+ Lolhappy909_Lol)

@@ -1,0 +1,19 @@
+Name = Collective
+Desc = {
+    5 special faceless cards with all Spades or Clubs (black suits).
+    When played, enhance all face cards held in hand, but they are permanantly disabled.
+}
+Base Chips = 666
+Base Mult = 3
+Level Chips = 33
+Level Mult = 3
+Eval = {
+    (* of a special, * of a special, * of a special, * of a special, * of a special; a = [Spades, Clubs]),
+    (* of a special, * of a special, * of a special, * of a special, * of b special; a = [Spades, Clubs], b = [Spades, Clubs]),
+    (* of a special, * of a special, * of a special, * of b special, * of b special; a = [Spades, Clubs], b = [Spades, Clubs]),
+}
+All Nonface = Yes
+Enhance Faces Held in Hand = Yes
+Debuff Faces Held in Hand = Yes
+Author = GoldenLeaf
+Example = 10 of Spades Special, 6 of Clubs Special, Ace of Spades Special, 3 of Spades Special, 10 of Clubs Special

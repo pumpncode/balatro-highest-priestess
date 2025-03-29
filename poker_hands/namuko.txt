@@ -1,6 +1,6 @@
 Name = Na Mu Ko
 Desc = {
-  A 7, 6 and 5 all of diamonds (That sounds oddly familiar...)
+  Exactly a 7, 6 and 5 all of diamonds (That sounds oddly familiar...)
 }
 Base Chips = 76
 Base Mult = 5
@@ -9,6 +9,7 @@ Level Mult = 2.5
 Eval = {
     (7 of diamonds, 6 of diamonds, 5 of diamonds)
 }
+Card Count = 3
 Author = Cobalt_Ignis
 Example = 7 of diamonds, 6 of diamonds, 5 of diamonds.
 Planet Name = Solvalou

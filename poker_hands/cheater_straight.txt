@@ -1,0 +1,15 @@
+Name = Cheater's Straight
+Desc = {
+    An Abandoned Straight that
+    also skips the ranks 6, 7, 8, and 9.
+}
+Base Chips = 69
+Base Mult = 4
+Level Chips = 30
+Level Mult = 4
+Planet Name = The asteroid that killed the dinosaurs
+Eval = {
+    (Ace of *, 10 of *, 5 of *, 4 of *, 3 of *)
+}
+Author = Papyrus Semi
+Example = Ace of Spades, 10 of Spades, 5 of Clubs, 4 of Clubs, 3 of Clubs

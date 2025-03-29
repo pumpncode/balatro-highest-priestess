@@ -1,0 +1,18 @@
+Name = True Counterspell
+Desc = {
+    Two Special Foil Ace of Clubs
+    When played, disable Boss Blind
+}
+Base Chips = 30
+Base Mult = 3
+Level Chips = 20
+Level Mult = 1
+
+Eval = {
+    (Ace of Clubs special, Ace of Clubs special)
+}
+All Editioned = Foil
+Disable Boss Blind = Yes
+
+Example = Ace of Clubs special, Ace of Clubs special
+Author = scross + Lolhappy909_Lol

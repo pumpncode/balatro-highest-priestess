@@ -4,6 +4,8 @@ Base chips = 383
 Base mult = 38
 Level chips = 83
 Level mult = 8
+> Above Pair
+Order Offset = -14530
 Eval = {
     (* of *, * of *, * of *, * of *, * of *)
 }

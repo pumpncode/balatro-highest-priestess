@@ -1,0 +1,30 @@
+Name = Fitting In
+Desc = {
+    A five of a kind with exactly one special card.
+    Create a copy of the special card.
+}
+Base Chips = 200
+Base Mult = 45
+Level Chips = 150
+Level Mult = 15
+Eval = {
+    (a of * nonspecial, a of * nonspecial, a of * nonspecial, a of * nonspecial, a of * special)
+}
+Special Copy = Yes
+Joker Mult = 50
+Joker Chips = 300
+Joker XMult = 6
+Joker Mult Name = Normie Joker
+Joker Chips Name = Fictitious Joker
+Joker XMult Name = The Copycat
+Planet Name = Bullying
+Example = 10 of Hearts, 10 of Spades, 10 of Diamonds, 10 of Clubs, Special 10 of Hearts
+
+Flush Name = Normalcy
+Flush Base Chips = 150
+Flush Base Mult = 70
+Flush Level Chips = 100
+Flush Level Mult = 35
+Flush Example = 10 of Hearts, 10 of Hearts, 10 of Hearts, 10 of Hearts, Special 10 of Hearts
+
+Author = verdant_thePOWER

@@ -1,0 +1,15 @@
+Name = Combination
+Desc = {
+    A Pair made with Bonus Cards, a Pair made with Mult Cards,
+    and a Special Card. The special card permanently gains 15 chips and 2 mult.
+}
+Base chips = 30
+Base mult = 4
+Level chips = 15
+Level mult = 2
+Eval = {
+    (a of * bonus, a of * bonus, * of * special, b of * mult, b of * mult)
+}
+Special Perma Bonus = 15
+Special Perma Mult = 2
+Author = Sustato

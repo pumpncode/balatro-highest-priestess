@@ -1,0 +1,17 @@
+Name = Just Plain Special Unlucky
+Desc = {
+    1 in 2000 chance to get this hand. (can be modifies by oa6s)
+    Must contain at least one special card
+    When played, increase current Blind requirements by 50%
+}
+Base chips = 0
+Base mult = 1
+Level chips = 1
+Level mult = 1
+Order Offset = 6042730
+Eval = {
+    (* of * special)
+}
+Chance = 2000
+Change Blind Req = 0.5
+Author = Sustato

@@ -1,0 +1,17 @@
+Name = Oops! All 1s.
+Desc = {
+    1 in 6 chance to get this hand after playing Chill out, bro!
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 1
+Level Mult = 1
+Order Offset = 100000
+Eval = {
+    (* of *)
+}
+Chance = 6
+Possible Last Hand IDs = {
+    vhp_chill_out
+}
+Author = Helena (i_want_helenussy)

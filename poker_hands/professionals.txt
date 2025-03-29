@@ -1,0 +1,16 @@
+Name = The Professionals
+Desc = {
+    4 special Aces with 4 different base suits
+    Create 4 Negative Highest Priestess
+}
+Base chips = 1111
+Base mult = 1
+Level chips = 111
+Level mult = 1
+Create Consumable id = c_vhp_highest_priestess
+Create Consumable Count = 4
+Create Consumable Negative = Yes
+Eval = {
+    (Ace of Spades special, Ace of Hearts special, Ace of clubs special, Ace of diamonds special)
+}
+Author = Sustato

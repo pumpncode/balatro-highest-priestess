@@ -1,6 +1,6 @@
 Name = Just Plain Special Lucky
 Desc = {
-    1 in 2000 to get this hand. (can be modified by oa6s)
+    1 in 2000 chance to get this hand. (can be modified by oa6s)
     Must contain at least one special card
     Create oa6s when played (must have room)
 }

@@ -1,0 +1,15 @@
+Name = Four Kings
+Desc = {
+       4 special Kings with 4 different base suits
+      Also scores all held in hand Kings
+}
+Base chips = 40
+Base mult = 8
+Level chips = 32
+Level mult = 4
+Order Offset = 400
+Eval = {
+       ( King of Spades special, King of Hearts special, King of Clubs special, King of Diamonds special)
+}
+Author = Sustato
+Held in Hand Scoring Rank = King

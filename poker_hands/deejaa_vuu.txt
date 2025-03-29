@@ -1,0 +1,17 @@
+Name = Deeeejaaaa vuuuuuuuuu
+Desc = {
+    Deja vu poker hand but all cards being special cards
+    Adds/replace the first scored card by red seal
+}
+Base chips = 767
+Base mult = 38
+Level chips = 76
+Level mult = 7
+Order Offset = -14530
+Eval = {
+    (* of * special, * of * special, * of * special, * of * special, * of * special)
+}
+Deja Vu = Yes
+Author = Sustato
+Add First Card Seal = Red
+Example = Stone, Stone, Stone, Stone, Stone

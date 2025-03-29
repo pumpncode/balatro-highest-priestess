@@ -1,0 +1,15 @@
+Name = Hint
+Desc = {
+    Fill in the gaps to learn a very powerful hand...
+}
+Base Chips = 30
+Base Mult = 3
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (* of *, * of *, * of *, * of *, * of *)
+}
+Example = Stone, Stone, Stone, Stone, Stone
+RNG Hint = Yes
+Planet Name = Italy
+Author = Post Prototype

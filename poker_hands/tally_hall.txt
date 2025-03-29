@@ -1,0 +1,12 @@
+Name = Tally Hall
+Desc = {
+    Five Kings
+}
+Base Chips = 240
+Base Mult = 24
+Level Chips = 55
+Level Mult = 4
+Eval = {
+    (King of *, King of *, King of *, King of *, King of *)
+}
+Author = jonahbaumgartner

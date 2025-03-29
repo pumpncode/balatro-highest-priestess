@@ -1,0 +1,15 @@
+Name = Kaprekar's constant
+Desc = {
+      4-card poker hand containg special cards of 6, Ace, 7 and 4
+      Each played card permanently gains 7 chips for each time triggered
+}
+Base chips = 617
+Base mult = 4
+Level chips = 7
+Level mult = 7
+Eval = {
+    (6 of * special, Ace of * special, 7 of * special, 4 of * special)
+}
+Card count = 4
+Special perma bonus = 7
+Author = Sustato

@@ -1,0 +1,11 @@
+Name = Lesser Kaprekar
+Desc = {
+    3-card poker hand containing cards of 4, 9, 5.
+}
+Base chips = 49
+Base mult = 5
+Level chips = 5
+Level mult = 0.9
+Eval = {(4 of *, 9 of *, 5 of *)}
+Card count = 3
+Author = Post Prototype

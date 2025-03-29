@@ -1,0 +1,22 @@
+Name = Odd Special
+Desc = {
+       5 different special odd cards
+       Each scored card gives 31 chips
+}
+Base chips = 135
+Base mult = 11
+Level chips = 11
+Level mult = 5
+Eval = {
+         (Ace of * special, 9 of * special, 7 of * special, 5 of * special, 3 of * special)
+}
+Special chips = 31
+Author = Sustato
+
+Example = Ace of Spades, 9 of Diamonds, 7 of Clubs, 5 of Clubs, 3 of Hearts
+
+Flush name = Flush Odd Special
+Flush base chips = 175
+Flush Base mult = 15
+Flush level chips = 15
+Flush level mult = 7
