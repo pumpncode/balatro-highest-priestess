@@ -93,8 +93,12 @@ target = "functions/common_events.lua"
 pattern = '''if not instant then'''
 position = "before"
 payload = '''
-G.GAME.hands[hand].mult = G.GAME.hands[hand].mult + (G.GAME.omni_mult or 0)
-G.GAME.hands[hand].chips = G.GAME.hands[hand].chips + (G.GAME.omni_chips or 0)
+if G.GAME.omni_mult then
+    G.GAME.hands[hand].mult = G.GAME.hands[hand].mult + G.GAME.omni_mult
+end
+if G.GAME.omni_chips then
+    G.GAME.hands[hand].chips = G.GAME.hands[hand].chips + G.GAME.omni_chips
+end
 '''
 match_indent = true
 

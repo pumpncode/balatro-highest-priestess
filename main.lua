@@ -1018,8 +1018,12 @@ local function update_all_hands_chips_mult()
     for _, hand in pairs(G.GAME.hands) do
         hand.mult = math.max(hand.s_mult + hand.l_mult*(hand.level - 1), 1)
         hand.chips = math.max(hand.s_chips + hand.l_chips*(hand.level - 1), 0)
-        hand.mult = hand.mult + (G.GAME.omni_mult or 0)
-        hand.chips = hand.chips + (G.GAME.omni_chips or 0)
+        if G.GAME.omni_mult then
+            hand.mult = hand.mult + G.GAME.omni_mult
+        end
+        if G.GAME.omni_chips then
+            hand.chips = hand.chips + G.GAME.omni_chips
+        end
     end
 end
 
@@ -1260,13 +1264,13 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
         end
         if omni_mult_hand_map[handname] then
             G.GAME.omni_mult = G.GAME.omni_mult or 0
-            G.GAME.omni_mult = G.GAME.omni_mult + omni_mult_hand_map[handname]
+            G.GAME.omni_mult = talis_num(G.GAME.omni_mult) + talis_num(omni_mult_hand_map[handname])
             level_up_hand(G.jokers.cards[1], handname)
             update_all_hands_chips_mult()
         end
         if omni_chips_hand_map[handname] then
             G.GAME.omni_chips = G.GAME.omni_chips or 0
-            G.GAME.omni_chips = G.GAME.omni_chips + omni_chips_hand_map[handname]
+            G.GAME.omni_chips = talis_num(G.GAME.omni_chips) + talis_num(omni_chips_hand_map[handname])
             level_up_hand(G.jokers.cards[1], handname)
             update_all_hands_chips_mult()
         end
@@ -1292,8 +1296,8 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
                     }))
                 end
             else
-                G.GAME.hands[handname].s_chips = G.GAME.hands[handname].s_chips - 100
-                G.GAME.hands[handname].s_mult = G.GAME.hands[handname].s_mult - 2.5
+                G.GAME.hands[handname].s_chips = G.GAME.hands[handname].s_chips - talis_num(100)
+                G.GAME.hands[handname].s_mult = G.GAME.hands[handname].s_mult - talis_num(2.5)
                 level_up_hand(G.play.cards[1], handname, false, 0)
             end
         end
@@ -1787,7 +1791,7 @@ for _, hand_stats in pairs(poker_hands) do
         if hand_stats.chance and not (pseudorandom("plain_luck") < G.GAME.probabilities.normal/hand_stats.chance) then
             return
         end
-        if hand_stats.no_cigarette and (G.GAME.hands.vhp_cigarette.mult > 1 or G.GAME.hands.vhp_cigarette.chips > 0) then
+        if hand_stats.no_cigarette and (G.GAME.hands.vhp_cigarette.mult > talis_num(1) or G.GAME.hands.vhp_cigarette.chips > talis_num(0)) then
             return
         end
         if hand_stats.chance_or_lucky_high then
