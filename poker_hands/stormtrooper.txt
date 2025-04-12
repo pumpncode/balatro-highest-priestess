@@ -1,0 +1,22 @@
+Name = Stormtrooper
+Desc = {
+    TK421, why aren't you at your post?
+}
+Base Chips = 77
+Base Mult = 4
+Level Chips = 11
+Level Mult = 2
+Eval = {
+    (10 of * , King of *, 4 of *, 2 of *, Ace of *),
+}
+Author = trav.5
+
+Example = 10 of Spades, King of Hearts, 4 of Clubs, 2 of Diamonds, Ace of Spades
+
+Joker Mult = 11
+Joker Chips = 80
+Joker XMult = 3
+Planet Name = Death Star
+Joker Chips Name = Rebel Joker
+Joker Mult Name = Darth Joker
+Joker XMult Name = The Empire

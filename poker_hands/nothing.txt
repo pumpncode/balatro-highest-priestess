@@ -10,11 +10,12 @@ Eval = {
 ()
 }
 order offset = 0
-AUTHOR = TamerSoup625
+AUTHOR = TamerSoup625 (+ wilfredlam0418)
 
 Joker Mult = 4
 Joker Chips = 25
 Joker XMult = 1.001
 Joker Texture ID = 2
 
+Planet Texture ID = 29
 Planet Name =                        

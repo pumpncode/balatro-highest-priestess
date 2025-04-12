@@ -2,8 +2,8 @@ Name = Pi
 Desc = {
     Self Explanatory
 }
-Base Chips = 31
-Base Mult = 4
+Base Chips = 31.4
+Base Mult = 15
 Level Chips = 14
 Level Mult = 3
 Eval = {

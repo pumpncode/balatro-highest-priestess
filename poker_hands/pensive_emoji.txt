@@ -1,0 +1,19 @@
+Name = Pensive Emoji
+Desc = {
+    Exactly 2 special cards at 0 discards.
+    Gain +2 discards after this hand is played. Can only be played twice per round.
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 400
+Eval = {
+    (* of * special, * of * special)
+}
+Example = 2 of Hearts special, 5 of Spades special
+Card Count = 2
+No Discards = Yes
+Discard Ease = 2
+Max Times Per Round = 2
+Author = Helena (i_want_helenussy)

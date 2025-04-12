@@ -9,9 +9,9 @@ Level Mult = 7
 Eval = {
     (7 of *, 7 of *, 7 of *),
 }
-Author = Twilight
+Author = Twilight (+ wilfredlam0418)
 Example = 7 of Spades, 7 of Clubs, 7 of Diamonds
-Planet Name = Zoozve
+Planet Name = Slot Machine
 
 Flush Name = Vegas
 Flush Base Chips = 177
@@ -19,3 +19,4 @@ Flush Base Mult = 17
 Flush Level Chips = 17
 Flush Level Mult = 7
 Flush Example = 9 of Diamonds, 7 of Diamonds, 7 of Diamonds, 7 of Diamonds, 3 of Diamonds
+Planet Texture ID = 27

@@ -1,0 +1,19 @@
+Name = Chromosome
+Desc = {
+   Exactly 2 special cards. Both cards get destroyed, but create 2 copies of both cards.
+}
+Base Chips = 140
+Base Mult = 20
+Level Chips = 30
+Level Mult = 4
+Eval = {
+    (* of * special, * of * special)
+}
+Card Count = 2
+Special Destroy = Yes
+Special Copy = 2
+Joker Chips = 120
+Joker Mult = 12
+Joker XMult = 4
+Planet Name = Cell
+Author = Helena (i_want_helenussy)

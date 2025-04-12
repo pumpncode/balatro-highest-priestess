@@ -24,7 +24,7 @@ Eval = {
     (King of *, unscoring * of *),
 }
 Example = unscoring Ace of Hearts, unscoring Queen of Diamonds, unscoring 9 of Diamonds, unscoring 4 of Clubs, 3 of Diamonds
-Author = WilsontheWolf (+ Super S.F)
+Author = WilsontheWolf (+2)
 > Higher priority than HC
 Order Offset = 1
 
@@ -36,3 +36,4 @@ Joker Mult Name = Lowly Joker
 Joker Chips Name = Peasant Joker
 Joker XMult Name = The Prole
 Joker Texture ID = 1
+Planet Texture ID = 28

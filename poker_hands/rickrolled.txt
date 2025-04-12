@@ -1,0 +1,14 @@
+Name = Rickrolled
+Desc = {
+    a 2, two stones and a 7.
+}
+Base Chips = 207
+Base Mult = 25
+Level Chips = 10
+Level Mult = 2
+Eval = {
+    (2 of *, stone, stone, 7 of *)
+}
+Author = GoldenLeaf
+Open URL = https://www.youtube.com/watch?v=dQw4w9WgXcQ
+Example = 2 of Spades, stone, stone, 7 of Clubs

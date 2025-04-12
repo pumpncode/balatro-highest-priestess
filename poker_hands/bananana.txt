@@ -13,5 +13,6 @@ Eval = {
 }
 
 Banana Scoring = Yes
-Author = CookieAlien
+Author = CookieAlien (+ AuraNova)
 Example = 7 of Spades special, 7 of Clubs special
+Planet Texture ID = 23

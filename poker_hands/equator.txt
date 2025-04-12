@@ -1,0 +1,23 @@
+Name = Equator
+Desc = {
+    Meridian if Meridian is held in hand.
+}
+Base Chips = 100
+Base Mult = 12
+Level Chips = 80
+Level Mult = 6
+Eval = {
+    (a of *, a+3 of *, a+6 of *, a+9 of *, a+12 of *)
+}
+Eval Held in Hand = {
+    (a of *, a+3 of *, a+6 of *, a+9 of *, a+12 of *)
+}
+Author = Post Prototype
+Example = Ace of Clubs, Jack of Diamonds, 8 of Spades, 5 of Hearts, 2 of Diamonds
+Flush Name = Circumference
+Flush Base Chips = 260
+Flush Base Mult = 18
+Flush Level Chips = 95
+Flush Level Mult = 7
+Flush Example = Ace of Diamonds, 4 of Diamonds, 7 of Diamonds, 10 of Diamonds, King of Diamonds
+Flush Planet Name = Rocinante

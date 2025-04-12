@@ -1,0 +1,15 @@
+Name = Schrodinger's Hand
+Desc = {
+    Get this hand if played hand is both the most and least played hand.
+    (Includes this hand in calculation)
+}
+Base Chips = 0
+Base Mult = 5e55
+Level Chips = 0
+Level Mult = 5e5
+Order Offset = 5e55
+Eval = {
+    (* of *)
+}
+Author = GoldenLeaf
+Schrodinger = Yes

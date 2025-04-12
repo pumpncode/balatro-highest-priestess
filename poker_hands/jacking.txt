@@ -10,7 +10,7 @@ Level Mult = 5
 Eval = {
     (Jack of *, Jack of *, Jack of *, Jack of *, X5 King of * special)
 }
-Author = Helena (i_want_helenussy)
+Author = Helena (i_want_helenussy) (+ AuraNova)
 Example = Jack of Spades, Jack of Hearts, Jack of Hearts, Jack of Clubs, King of Clubs special
 Joker Mult = 16
 Joker Chips = 160
@@ -19,3 +19,4 @@ Planet Name = Jizztopia
 Joker Mult Name = Jacking Joker
 Joker Chips Name = Jacked Joker
 Joker XMult Name = The Jackers
+Planet Texture ID = 25

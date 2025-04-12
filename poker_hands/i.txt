@@ -1,0 +1,31 @@
+Name = i
+Desc = {
+    e^(this hand)pi + 1 = 0
+}
+Base Chips = 21
+Base Mult = 12
+Level Chips = 12
+Level Mult = 10
+Order Offset = 240
+Eval = {
+    (3 of *, Ace of *, 4 of *, Ace of *, 5 of *),
+}
+Eval Held in Hand = {
+    (2 of *, 7 of *, Ace of *, 8 of *, 2 of *)
+}
+Author = Post Prototype (+ AuraNova)
+
+Example = 3 of Hearts, Ace of Hearts, 4 of Diamonds, Ace of Spades, 5 of Clubs
+
+Joker Mult = 21
+Joker Chips = 120
+Joker XMult = 10
+
+Flush Name = Flush i
+Flush Base Chips = 201
+Flush Base Mult = 10
+Flush Level Chips = 22
+Flush Level Mult = 10
+Flush Example = 3 of Diamonds, Ace of Diamonds, 4 of Diamonds, Ace of Diamonds, 5 of Diamonds
+Planet Texture ID = 26
+Joker Texture ID = 14

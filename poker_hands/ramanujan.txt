@@ -1,0 +1,18 @@
+Name = The first Hardy-Ramanujan numer
+Credits Name = TfHRn
+Desc = {
+    The first number can be expressed as the sum of two cubes in two different ways-1729
+    Exactly a hand with Ace, 7, 2, 9 in order. All must be special cards
+    1 in 3 chance for each card to give x3Mult
+}
+Base chips = 17
+Base mult = 29
+Level chips = 12.1
+Level mult = 1.9
+Eval = {
+    (Ace of * special, 7 of * special, 2 of * special, 9 of * special)
+}
+Card count = 4
+Special Xmult = 3
+Special chance = 3
+Author = Sustato

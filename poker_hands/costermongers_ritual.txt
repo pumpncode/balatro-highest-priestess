@@ -1,0 +1,19 @@
+Name = Costermongers' Ritual
+Desc = {
+    Exactly 4 special Jacks and a negative glass Jack. All must have polychrome;
+    the former loses its modifiers and the latter is destroyed.
+    +1 shop slot
+}
+Base chips = 0
+Base mult = 1
+Level chips = 0
+Level mult = 0
+Order Offset = 9999
+Eval = {
+    (Jack of * negative, Jack of * special, Jack of * special, Jack of * special, Jack of * special)
+}
+Exact Enhancements = Glass Special Special Special Special
+Exact Editions = Negative Polychrome Polychrome Polychrome Polychrome
+Special Destroy = yes
+Super Ritual Type = ShopSlots
+Author = Sustato

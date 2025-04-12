@@ -1,0 +1,21 @@
+Name = Requiem Ritual
+Desc = {
+    Exactly 4 cards with different vanilla enhancements, editions and seals and a Special Ace.
+    Destroy all other cards left in full deck and the special card
+    Create a soul card
+}
+Base chips = 0
+Base mult = 1
+Level chips = 0
+Level mult = 0
+Order Offset = 1e5
+Eval = {
+    (Ace of * special, * of *, * of *, * of *, * of *)
+}
+Different enhancement = yes
+Exact seals = None, Red, Blue, Purple, Gold
+Exact editions = Base, Negative, Polychrome, Holo, Foil
+Special Destroy = yes
+Tsunami and Dupe = 0
+Create Consumable ID = c_soul
+Author = Sustato

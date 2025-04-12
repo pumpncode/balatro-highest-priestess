@@ -1,7 +1,7 @@
 Name = Noah's Hand
 Desc = {
     A hand consistent of atleast 5 unique enhancements with one being a special card, all without seals or editions.
-    When Played, Destroy all other cards left in deck and make 3 duplicates of played hand.
+    When Played, Destroy all other cards left in full deck and make 3 duplicates of played hand.
 }
 Base Chips = 0
 Base Mult = -2000

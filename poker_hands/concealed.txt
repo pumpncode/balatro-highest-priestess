@@ -10,7 +10,7 @@ Eval = {
     (* of *, * of *, * of *, * of *, * of *)
 }
 All Facedown = Yes
-Author = CookieAlien
+Author = CookieAlien (+ AuraNova)
 Joker Mult = 25
 Joker Chips = 250
 Joker XMult = 5
@@ -36,3 +36,5 @@ House Base Mult = 15
 House Level Chips = 65
 House Level Mult = 6
 House Planet Name = Dark Earth
+Joker Texture ID = 13
+Planet Texture ID = 24

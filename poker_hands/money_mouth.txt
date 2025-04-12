@@ -1,0 +1,14 @@
+Name = Money Mouth Emoji
+Desc = {
+   A flush of at least 2 special cards. Every special card played gives $5.
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 250
+Eval = {
+    (* of a special, * of a special)
+}
+Special Money = 5
+Author = Helena (i_want_helenussy)

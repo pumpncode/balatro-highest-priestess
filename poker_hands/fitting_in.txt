@@ -10,7 +10,7 @@ Level Mult = 15
 Eval = {
     (a of * nonspecial, a of * nonspecial, a of * nonspecial, a of * nonspecial, a of * special)
 }
-Special Copy = Yes
+Special Copy = 1
 Joker Mult = 50
 Joker Chips = 300
 Joker XMult = 6

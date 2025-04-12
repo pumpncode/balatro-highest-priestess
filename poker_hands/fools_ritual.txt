@@ -1,0 +1,16 @@
+Name = The Fool's Ritual
+Description = {
+    3 Special Sixes and 2 Negative Aces
+    Causes a special surprise to happen :3
+}
+Base Chips = 0
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 1111
+Eval = {
+    (6 of * special, 6 of * special, 6 of * special, Ace of * negative, Ace of * negative)
+}
+Special Destroy = yes
+Trolled = Yes
+Author = AuraNova

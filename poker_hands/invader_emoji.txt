@@ -1,0 +1,16 @@
+Name = Invader Emoji
+Desc = {
+    A royal flush of special cards.
+    When played, destroy all cards and gain x8 mult on every hand.
+}
+Base Chips = 1
+Base Mult = 1
+Level Chips = 0
+Level Mult = 0
+Order Offset = 10000
+Eval = {
+    (Ace of a special, King of a special, Queen of a special, Jack of a special, 10 of a special)
+}
+Special Destroy = Yes
+Omni XMult = 8
+Author = Helena (i_want_helenussy)

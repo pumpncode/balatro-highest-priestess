@@ -1,0 +1,26 @@
+Name = Absolute Zero
+Desc = {
+    A hand with the ranks in order 2, 3, 7, Ace, 5 or 4, 5, 9, 6, 7. Must have at least a special card and all card being negative.
+    All special cards permanently gains 32 chips. Set game speed at the value as low as possible.
+}
+Base chips = 312
+Base mult = 32
+Level chips = 100
+Level mult = 3.2
+Order Offset = -9000
+Eval = {
+    (2 of * special, 3 of *, 7 of *, Ace of *, 5 of *)
+    (2 of *, 3 of * special, 7 of *, Ace of *, 5 of *)
+    (2 of *, 3 of *, 7 of * special, Ace of *, 5 of *)
+    (2 of *, 3 of *, 7 of *, Ace of * special, 5 of *)
+    (2 of *, 3 of *, 7 of *, Ace of *, 5 of * special)
+    (4 of * special, 5 of *, 9 of *, 6 of *, 7 of *)
+    (4 of *, 5 of * special, 9 of *, 6 of *, 7 of *)
+    (4 of *, 5 of *, 9 of * special, 6 of *, 7 of *)
+    (4 of *, 5 of *, 9 of *, 6 of * special, 7 of *)
+    (4 of *, 5 of *, 9 of *, 6 of *, 7 of * special)
+}
+Game speed = 0.5
+Special perma bonus = 32
+All editioned = Negative
+Author = Sustato

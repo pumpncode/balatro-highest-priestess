@@ -1,0 +1,18 @@
+Name = Time Ritual
+Desc = {
+    Exactly 4 special cards and a negative Stone card. All must have Foil;
+    the former loses its modifiers and the latter is destroyed.
+    -1 ante
+}
+Base chips = 0
+Base mult = 1
+Level chips = 0
+Level mult = 0
+Order Offset = 777
+Eval = {
+    (stone, * of * special, * of * special, * of * special, * of * special)
+}
+Exact Editions = Negative Foil Foil Foil Foil
+Special Destroy = yes
+Super Ritual Type = Ante
+Author = Sustato

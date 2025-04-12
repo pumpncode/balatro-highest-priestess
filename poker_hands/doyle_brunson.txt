@@ -1,0 +1,14 @@
+Name = Doyle Brunson
+Desc = {
+    a hand with just a 10 and a 2 of different suits.
+}
+Base Chips = 10
+Base Mult = 2
+Level Chips = 10
+Level Mult = 2
+Eval = {
+    (10 of a, 2 of b)
+}
+Card Count = 2
+Author = BlitzThePianist
+Example = 10 of Diamonds, 2 of Spades

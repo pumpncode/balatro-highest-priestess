@@ -1,0 +1,13 @@
+Name = Scarecrow's Hand
+Description = {
+    5Clubs,3Hearts,AHearts,5Hearts,8Clubs trans gender pizza hut hand.
+}
+Base Chips = 328
+Base Mult = 13
+Level Chips = 33
+Level Mult = 8
+Eval = {
+    (5 of Clubs, 3 of Hearts, Ace of Hearts, 5 of Hearts, 8 of Clubs)
+}
+Example = 5 of Clubs, 3 of Hearts, Ace of Hearts, 5 of Hearts, 8 of Clubs
+Author = jonahbaumgartner

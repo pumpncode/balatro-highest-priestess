@@ -1,0 +1,13 @@
+Name = Basel Problem
+Desc = {
+    pi^2/6
+    I wonder how pi can related to an infinite sum of inverse squares.
+}
+Base chips = 16
+Base mult = 44
+Level chips = 9
+Level mult = 3
+Eval = {
+    (Ace of *, 6 of *, 4 of *, 4 of *, 9 of *)
+}
+Author = Sustato
