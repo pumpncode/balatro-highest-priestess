@@ -408,7 +408,7 @@ def parse_poker_hand(raw_text: str) -> dict:
             case "special chips":
                 result["special_chips"] = float(value)
             case "special copy":
-                result["special_copy"] = True
+                result["special_copy"] = int(value)
             case "rng hint":
                 result["rng_hint"] = True
             case "enhance faces held in hand":
@@ -517,6 +517,24 @@ def parse_poker_hand(raw_text: str) -> dict:
             case "level up multi":
                 hand_list = [x.strip() for x in value_multiline.strip().split("\n")]
                 result["level_up_multi"] = hand_list
+            case "schrodinger":
+                result["schrodinger"] = True
+            case "trolled":
+                result["trolled"] = True
+            case "discard ease":
+                result["discard_ease"] = int(value)
+            case "no discards":
+                result["no_discards"] = True
+            case "max times per round":
+                result["max_times_per_round"] = int(value)
+            case "omni xmult":
+                result["omni_xmult"] = float(value)
+            case "special money":
+                result["special_money"] = float(value)
+            case "eval held in hand":
+                patterns_iter = re.finditer(REGEX_PARENTHESIS_GROUP, value_multiline)
+                patterns_list = [parse_hand_pattern(x.group(1), not result.get("no_support_warning", False)) for x in patterns_iter]
+                result["eval_held_in_hand"] = patterns_list
             case _:
                 raise RuntimeError(f"Invalid key '{key}'")
     return result

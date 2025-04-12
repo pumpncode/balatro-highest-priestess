@@ -44,6 +44,8 @@ local CUSTOM_JOKERS_ATLAS_MAP = {
     "custom_jokers_2048.png", -- 10
     "custom_jokers_polygamy.png",
     "custom_jokers_incognito.png",
+    "custom_jokers_concealed.png",
+    "custom_jokers_i.png",
 }
 local CUSTOM_PLANETS_ATLAS_MAP = {
     "custom_planet_garn47.png",
@@ -65,6 +67,22 @@ local CUSTOM_PLANETS_ATLAS_MAP = {
     "custom_planet_joke.png",
     "custom_planet_long_pi.png",
     "custom_planet_incognito.png",
+    "custom_planet_mean.png", -- 20
+    "custom_planet_median.png",
+    "custom_planet_mode.png",
+    "custom_planet_bananana.png",
+    "custom_planet_concealed.png",
+    "custom_planet_ew.png", -- 25
+    "custom_planet_i.png",
+    "custom_planet_jackpot.png",
+    "custom_planet_low_card.png",
+    "custom_planet_nothing.png",
+}
+local PLAYSTYLE_SILLY = "silly"
+local PLAYSTYLE_SERIOUS = "serious"
+local hands_with_multi_planets_set = {
+    hand_2048 = true,
+    concealed = true,
 }
 
 local json = assert(SMODS.load_file('json.lua'))()
@@ -115,6 +133,7 @@ local special_swap_hand_set = {}
 local special_maximize_hand_set = {}
 local omni_mult_hand_map = {}
 local omni_chips_hand_map = {}
+local omni_xmult_hand_map = {}
 local hand_ease_hand_map = {}
 local no_wee_hand_set = {}
 local perma_all_cards_rank_count_as_hand_map = {}
@@ -124,6 +143,9 @@ local base_emult_hand_map = {}
 local tsunami_dupe_hand_map = {}
 local cigarette_chance_hand_map = {}
 local level_up_multi_hand_map = {}
+local trolled_hand_set = {}
+local discard_ease_hand_map = {}
+local special_money_hand_map = {}
 
 local loc_debuff_text_replacement = nil
 
@@ -1024,6 +1046,9 @@ local function update_all_hands_chips_mult()
         if G.GAME.omni_chips then
             hand.chips = hand.chips + G.GAME.omni_chips
         end
+        if G.GAME.omni_xmult then
+            hand.mult = hand.mult * G.GAME.omni_xmult
+        end
     end
 end
 
@@ -1058,6 +1083,9 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
     if not check then
         if money_ease_hand_map[handname] then
             ease_dollars(money_ease_hand_map[handname])
+        end
+        if discard_ease_hand_map[handname] then
+            ease_discard(discard_ease_hand_map[handname])
         end
         if probability_mod_hand_map[handname] then
             for k, v in pairs(G.GAME.probabilities) do
@@ -1148,21 +1176,23 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
         if special_copy_hand_map[handname] then
             for _, card in pairs(G.play.cards) do
                 if card.config.center_key == "m_vhp_special" then
-                    G.playing_card = (G.playing_card and G.playing_card + 1) or 1
-                    local _card = copy_card(card, nil, nil, G.playing_card)
-                    _card:add_to_deck()
-                    G.deck.config.card_limit = G.deck.config.card_limit + 1
-                    table.insert(G.playing_cards, _card)
-                    G.hand:emplace(_card)
-                    _card.states.visible = nil
-                    playing_card_joker_effects({ _card })
-    
-                    G.E_MANAGER:add_event(Event({
-                        func = function()
-                            _card:start_materialize()
-                            return true
-                        end
-                    }))
+                    for i = 1, special_copy_hand_map[handname], 1 do
+                        G.playing_card = (G.playing_card and G.playing_card + 1) or 1
+                        local _card = copy_card(card, nil, nil, G.playing_card)
+                        _card:add_to_deck()
+                        G.deck.config.card_limit = G.deck.config.card_limit + 1
+                        table.insert(G.playing_cards, _card)
+                        G.hand:emplace(_card)
+                        _card.states.visible = nil
+                        playing_card_joker_effects({ _card })
+        
+                        G.E_MANAGER:add_event(Event({
+                            func = function()
+                                _card:start_materialize()
+                                return true
+                            end
+                        }))
+                    end
                 end
             end
         end
@@ -1274,6 +1304,12 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
             level_up_hand(G.jokers.cards[1], handname)
             update_all_hands_chips_mult()
         end
+        if omni_xmult_hand_map[handname] then
+            G.GAME.omni_xmult = G.GAME.omni_xmult or 1
+            G.GAME.omni_xmult = talis_num(G.GAME.omni_xmult) * talis_num(omni_xmult_hand_map[handname])
+            level_up_hand(G.jokers.cards[1], handname)
+            update_all_hands_chips_mult()
+        end
         if nonspecial_remove_mods_hand_set[handname] then
             for _, card in pairs(G.play.cards) do
                 if card.config.center_key ~= "m_vhp_special" then
@@ -1377,6 +1413,12 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
             elseif super_ritual_type_hand_map[handname] == "blindreward" then
                 G.GAME.blind.dollars = G.GAME.blind.dollars + 2
                 G.GAME.vhp_blind_reward_extra = (G.GAME.vhp_blind_reward_extra or 0) + 2
+            elseif super_ritual_type_hand_map[handname] == "ante" then
+                ease_ante(-1)
+                G.GAME.round_resets.blind_ante = G.GAME.round_resets.blind_ante or G.GAME.round_resets.ante
+                G.GAME.round_resets.blind_ante = G.GAME.round_resets.blind_ante - 1
+            elseif super_ritual_type_hand_map[handname] == "shopslots" then
+                change_shop_size(1)
             else
                 error("Unknown ritual: " .. tostring(super_ritual_type_hand_map[handname]))
             end
@@ -1461,6 +1503,9 @@ function Blind:debuff_hand(cards, hand, handname, check, ...)
                 used_card:juice_up(0.8, 0.5)
                 return true end }))
         end
+        if trolled_hand_set[handname] then
+            G.GAME.vhp_get_trolled = true
+        end
     end
 
     return Blind_debuff_hand_ref(self, cards, hand, handname, check, ...)
@@ -1498,8 +1543,12 @@ function Card:set_debuff(should_debuff, ...)
 end
 
 
+local config = SMODS.current_mod.config
 SMODS.current_mod.reset_game_globals = function (run_start)
+    G.GAME.vhp_playstyle = config.playstyle
+    G.vhp_faster_level_up = config.faster_level_up
     if run_start then
+
         local rank_count = 0
         for _, __ in pairs(SMODS.Ranks) do
             rank_count = rank_count + 1
@@ -1576,6 +1625,9 @@ local function update_hand_cache(hand)
     -- They all call internally stuff like SMODS.has_no_rank or SMODS.has_any_suit
     -- Which then call Card:calculate_joker a ton of times, very bad!
     -- So let's just cache these results
+    if G.hand then
+        hand = G.hand.cards
+    end
     for _, card in pairs(hand) do
         card._vhp_cache = {}
         card._vhp_cache.get_id = card:get_id()
@@ -1598,7 +1650,20 @@ function evaluate_poker_hand(hand)
 end
 
 
-local config = SMODS.current_mod.config
+local hand_group_stats = {
+    {planet_name = "Mercury", poly_name = "Cube", pos = {x = 1, y = 0}},
+    {planet_name = "Venus", poly_name = "Octahedron", pos = {x = 2, y = 0}},
+    {planet_name = "Earth", poly_name = "Cuboctahedron", pos = {x = 3, y = 0}},
+    {planet_name = "Mars", poly_name = "Dodecahedron", pos = {x = 1, y = 1}},
+    {planet_name = "Jupiter", poly_name = "Prism", pos = {x = 4, y = 0}},
+    {planet_name = "Saturn", poly_name = "Pyramid", pos = {x = 5, y = 0}},
+    {planet_name = "Uranus", poly_name = "Rhombic Dodeca.", pos = {x = 0, y = 1}},
+    {planet_name = "Neptune", poly_name = "Frustum", pos = {x = 2, y = 1}},
+    {planet_name = "Pluto", poly_name = "Tetrahedron", pos = {x = 0, y = 0}},
+    {planet_name = "Planet X", poly_name = "Icosahedron", pos = {x = 3, y = 1}},
+    {planet_name = "Ceres", poly_name = "Antiprism", pos = {x = 4, y = 1}},
+    {planet_name = "Eris", poly_name = "Sphere", pos = {x = 5, y = 1}},
+}
 local new_hands_visible = not config.new_hands_secret
 
 SMODS.Atlas { key = 'planets', path = 'planets.png', px = 71, py = 95 }
@@ -1627,6 +1692,10 @@ for _, hand_stats in pairs(poker_hands) do
         money_ease_hand_map["vhp_" .. hand_stats.key] = hand_stats.money_ease
         money_ease_hand_map["vhp_" .. hand_stats.key .. "_flush"] = hand_stats.money_ease
     end
+    if hand_stats.discard_ease then
+        discard_ease_hand_map["vhp_" .. hand_stats.key] = hand_stats.discard_ease
+        discard_ease_hand_map["vhp_" .. hand_stats.key .. "_flush"] = hand_stats.discard_ease
+    end
     if hand_stats.probability_mod then
         probability_mod_hand_map["vhp_" .. hand_stats.key] = hand_stats.probability_mod
     end
@@ -1636,6 +1705,10 @@ for _, hand_stats in pairs(poker_hands) do
     if hand_stats.special_mult then
         special_mult_hand_map["vhp_" .. hand_stats.key] = hand_stats.special_mult
         special_mult_hand_map["vhp_" .. hand_stats.key .. "_flush"] = hand_stats.special_mult
+    end
+    if hand_stats.special_money then
+        special_money_hand_map["vhp_" .. hand_stats.key] = hand_stats.special_money
+        special_money_hand_map["vhp_" .. hand_stats.key .. "_flush"] = hand_stats.special_money
     end
     if hand_stats.special_xmult then
         special_xmult_hand_map["vhp_" .. hand_stats.key] = hand_stats.special_xmult
@@ -1748,6 +1821,9 @@ for _, hand_stats in pairs(poker_hands) do
     if hand_stats.omni_chips then
         omni_chips_hand_map["vhp_" .. hand_stats.key] = hand_stats.omni_chips
     end
+    if hand_stats.omni_xmult then
+        omni_xmult_hand_map["vhp_" .. hand_stats.key] = hand_stats.omni_xmult
+    end
     if hand_stats.hand_ease then
         hand_ease_hand_map["vhp_" .. hand_stats.key] = {hand_stats.hand_ease, hand_stats.hand_ease_permanent}
     end
@@ -1774,6 +1850,9 @@ for _, hand_stats in pairs(poker_hands) do
     end
     if hand_stats.level_up_multi then
         level_up_multi_hand_map["vhp_" .. hand_stats.key] = hand_stats.level_up_multi
+    end
+    if hand_stats.trolled then
+        trolled_hand_set["vhp_" .. hand_stats.key] = true
     end
 
     local function custom_hand_eval(hand)
@@ -2610,6 +2689,46 @@ for _, hand_stats in pairs(poker_hands) do
                 end
             end
         end
+        if hand_stats.schrodinger then
+            local times_to_play = nil
+            for key, p_hand in pairs(G.GAME.hands) do
+                local played_times = p_hand.played
+                if key == ("vhp_" .. hand_stats.key) then
+                    played_times = played_times + 1
+                end
+                if times_to_play == nil then
+                    times_to_play = played_times
+                end
+                if played_times ~= times_to_play then
+                    return
+                end
+            end
+        end
+        if hand_stats.no_discards and G.GAME.current_round.discards_left ~= 0 then
+            return
+        end
+        if hand_stats.max_times_per_round and G.GAME.hands["vhp_" .. hand_stats.key].played_this_round > hand_stats.max_times_per_round - 1 then
+            return
+        end
+        if hand_stats.eval_held_in_hand then
+            local cards_held = {}
+            for _, card in pairs(G.hand.cards) do
+                if not card.highlighted then
+                    table.insert(cards_held, card)
+                end
+            end
+            local broke = false
+            for key, value in pairs(hand_stats.eval_held_in_hand) do
+                local pattern_ret = eval_pattern(cards_held, value.pattern, value.options)
+                if pattern_ret then
+                    broke = true
+                    break
+                end
+            end
+            if not broke then
+                return
+            end
+        end
         
         local eval = hand_stats.eval
         for key, value in pairs(eval) do
@@ -2634,7 +2753,7 @@ for _, hand_stats in pairs(poker_hands) do
 
     if not hand_stats.composite_only then
         local base_hand_desc = copy_table(hand_stats.desc)
-        table.insert(base_hand_desc, "Author: " .. hand_stats.author)
+        table.insert(base_hand_desc, "Group: " .. hand_group_stats[hand_stats.polyhedra_group].planet_name .. ", Author: " .. hand_stats.author)
         if not hand_stats.example then
             table.insert(base_hand_desc, "(No example hand given)")
         end
@@ -2661,7 +2780,7 @@ for _, hand_stats in pairs(poker_hands) do
 
     if hand_stats.flush_name then
         local flush_hand_desc = copy_table(hand_stats.desc)
-        table.insert(flush_hand_desc, "all along with a Flush. Author: " .. hand_stats.author)
+        table.insert(flush_hand_desc, "all along with a Flush. Group: " .. hand_group_stats[hand_stats.flush_polyhedra_group].planet_name .. ", Author: " .. hand_stats.author)
         if not hand_stats.flush_example then
             table.insert(flush_hand_desc, "(No example hand given)")
         end
@@ -2690,7 +2809,7 @@ for _, hand_stats in pairs(poker_hands) do
 
     if hand_stats.straight_name then
         local straight_hand_desc = copy_table(hand_stats.desc)
-        table.insert(straight_hand_desc, "all along with a Straight. Author: " .. hand_stats.author)
+        table.insert(straight_hand_desc, "all along with a Straight. Group: " .. hand_group_stats[hand_stats.straight_polyhedra_group].planet_name .. ", Author: " .. hand_stats.author)
         if not hand_stats.straight_example then
             table.insert(straight_hand_desc, "(No example hand given)")
         end
@@ -2719,7 +2838,7 @@ for _, hand_stats in pairs(poker_hands) do
 
     if hand_stats.house_name then
         local house_hand_desc = copy_table(hand_stats.desc)
-        table.insert(house_hand_desc, "all along with a Full House. Author: " .. hand_stats.author)
+        table.insert(house_hand_desc, "all along with a Full House. Group: " .. hand_group_stats[hand_stats.house_polyhedra_group].planet_name .. ", Author: " .. hand_stats.author)
         if not hand_stats.house_example then
             table.insert(house_hand_desc, "(No example hand given)")
         end
@@ -2751,12 +2870,13 @@ for _, hand_stats in pairs(poker_hands) do
 
     local function create_planet(stats)
         math.randomseed(pseudohash(stats.name))
+        local uses_random_anyway = (not hands_with_multi_planets_set[hand_stats.key]) and stats.xpos ~= 0
         local planet_atlas = ("custom_planet" .. tostring(hand_stats.planet_texture_id))
-        if (not hand_stats.planet_texture_id) or (stats.xpos == nil) then
+        if (not hand_stats.planet_texture_id) or (stats.xpos == nil) or uses_random_anyway then
             planet_atlas = "planets"
         end
         local planet_texture_pos = {x = stats.xpos, y = 0}
-        if (not hand_stats.planet_texture_id) or (stats.xpos == nil) then
+        if (not hand_stats.planet_texture_id) or (stats.xpos == nil) or uses_random_anyway then
             planet_texture_pos = {x = math.random(0, 5), y = math.random(0, 1)}
         end
         SMODS.Consumable {
@@ -2789,10 +2909,10 @@ for _, hand_stats in pairs(poker_hands) do
         create_planet{name = hand_stats.flush_name, planet_name = hand_stats.flush_planet_name, suffix = "_flush", xpos = 1}
     end
     if hand_stats.straight_name then
-        create_planet{name = hand_stats.straight_name, planet_name = hand_stats.straight_planet_name, suffix = "_straight"}
+        create_planet{name = hand_stats.straight_name, planet_name = hand_stats.straight_planet_name, suffix = "_straight", xpos = 2}
     end
     if hand_stats.house_name then
-        create_planet{name = hand_stats.house_name, planet_name = hand_stats.house_planet_name, suffix = "_house"}
+        create_planet{name = hand_stats.house_name, planet_name = hand_stats.house_planet_name, suffix = "_house", xpos = 3}
     end
 
 
@@ -2834,7 +2954,7 @@ for _, hand_stats in pairs(poker_hands) do
             cost = 4,
             blueprint_compat = true,
             in_pool = function (self)
-                if not config.autogen_jokers then
+                if G.GAME.vhp_playstyle == PLAYSTYLE_SERIOUS then
                     return false
                 end
                 return new_hands_visible or G.GAME.hands["vhp_" .. hand_stats.key].played > 0
@@ -2864,7 +2984,7 @@ for _, hand_stats in pairs(poker_hands) do
             cost = 4,
             blueprint_compat = true,
             in_pool = function (self)
-                if not config.autogen_jokers then
+                if G.GAME.vhp_playstyle == PLAYSTYLE_SERIOUS then
                     return false
                 end
                 return new_hands_visible or G.GAME.hands["vhp_" .. hand_stats.key].played > 0
@@ -2894,7 +3014,7 @@ for _, hand_stats in pairs(poker_hands) do
             cost = 8,
             blueprint_compat = true,
             in_pool = function (self)
-                if not config.autogen_jokers then
+                if G.GAME.vhp_playstyle == PLAYSTYLE_SERIOUS then
                     return false
                 end
                 return new_hands_visible or G.GAME.hands["vhp_" .. hand_stats.key].played > 0
@@ -2921,10 +3041,34 @@ local function update_poker_hands_visibility()
     end
 end
 
+G.FUNCS.vhp_set_playstyle_key = function (args)
+    local selected_key = args.to_key
+    config.playstyle = ({[1] = "silly", [2] = "serious"})[selected_key]
+    if G.GAME then
+        G.GAME.vhp_playstyle = config.playstyle
+    end
+end
+
+local function update_game_level_up_speed()
+    G.vhp_faster_level_up = config.faster_level_up
+end
+
 SMODS.current_mod.config_tab = function()
     return {n=G.UIT.ROOT, config = {align = "cm", minh = G.ROOM.T.h*0.25, padding = 0.0, r = 0.1, colour = G.C.CLEAR}, nodes = {
         create_toggle({label = "Added poker hands are Secret", ref_table = config, ref_value = 'new_hands_secret', callback = update_poker_hands_visibility}),
-        create_toggle({label = "Add auto-generated Jokers", ref_table = config, ref_value = 'autogen_jokers'}),
+        create_option_cycle({
+            label = "Playstyle", options = {"Silly", "Serious"},
+            opt_callback = 'vhp_set_playstyle_key',
+            current_option = ({silly = 1, serious = 2})[config.playstyle],
+        }),
+        create_toggle({label = "Faster hand level up", ref_table = config, ref_value = 'faster_level_up', callback = update_game_level_up_speed}),
+        {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+            {n=G.UIT.T, config={text = "Warning! Faster level up may break content unlocking", scale = 0.3, colour = G.C.UI.TEXT_LIGHT}},
+        }},
+        {n=G.UIT.R, config={align = "cm", padding = 0}, nodes={
+            {n=G.UIT.T, config={text = "(Won't break already unlocked content)", scale = 0.3, colour = G.C.UI.TEXT_LIGHT}},
+        }},
+        --create_toggle({label = "Add auto-generated Jokers", ref_table = config, ref_value = 'autogen_jokers'}),
     }}
 end
 
@@ -3163,6 +3307,10 @@ function Back:trigger_effect(args, ...)
                 end)}))
         end
     end
+    if G.GAME.vhp_get_trolled and args.context == 'final_scoring_step' then
+        G.GAME.vhp_get_trolled = nil
+        return args.chips, -args.mult
+    end
     return Back_trigger_effect_ref(self, args, ...)
 end
 
@@ -3243,11 +3391,12 @@ SMODS.Enhancement {
             end
         end
         if context.cardarea == G.play and context.main_scoring then
-            if special_mult_hand_map[context.scoring_name] or special_xmult_hand_map[context.scoring_name] or special_chips_hand_map[context.scoring_name] then
+            if special_mult_hand_map[context.scoring_name] or special_xmult_hand_map[context.scoring_name] or special_chips_hand_map[context.scoring_name] or special_money_hand_map[context.scoring_name] then
                 return {
                     mult = special_mult_hand_map[context.scoring_name],
                     xmult = special_xmult_hand_map[context.scoring_name],
                     chips = special_chips_hand_map[context.scoring_name],
+                    dollars = special_money_hand_map[context.scoring_name],
                 }
             elseif special_balance_hand_set[context.scoring_name] then
                 -- https://github.com/MathIsFun0/Cryptid/blob/ecc305c5b0c3423455df891fd646d12572641b46/items/epic.lua#L241
@@ -3415,13 +3564,9 @@ SMODS.Consumable {
 }
 
 
--- Support for modded planets (serious mode must allow other modded planets that don't level up just one hand)
--- Art (Pixelorama)
--- Planets should correspond to polyhedra
--- Faster level up
 SMODS.Atlas {
     key = "polyhedra",
-    path = "polyhedras.png",
+    path = "polyhedra1.png",
     px = 71,
     py = 95,
 }
@@ -3432,29 +3577,13 @@ SMODS.ObjectType {
     cards = {},
 }
 
-local hand_group_stats = {
-    {planet_name = "Mercury", poly_name = "Cube"},
-    {planet_name = "Venus", poly_name = "Octahedron"},
-    {planet_name = "Earth", poly_name = "Cuboctahedron"},
-    {planet_name = "Mars", poly_name = "Dodecahedron"},
-    {planet_name = "Jupiter", poly_name = "Prism"},
-    {planet_name = "Saturn", poly_name = "Pyramid"},
-    {planet_name = "Uranus", poly_name = "Snub Cube"},
-    {planet_name = "Neptune", poly_name = "Frustum"},
-    {planet_name = "Pluto", poly_name = "Tetrahedron"},
-    {planet_name = "Planet X", poly_name = "Icosahedron"},
-    {planet_name = "Ceres", poly_name = "Antiprism"},
-    {planet_name = "Eris", poly_name = "Sphere"},
-}
-hand_group_stats = {}
-
 for type_index, stats in pairs(hand_group_stats) do
     SMODS.Consumable {
         key = "polyhedra" .. type_index,
         set = "Planet",
         atlas = "polyhedra",
         pools = {Polyhedra = true},
-        pos = {x = 0, y = 0},
+        pos = stats.pos,
         config = {polyhedra_type = type_index, group_name = stats.planet_name},
         loc_txt = {
             name = stats.poly_name,
@@ -3483,7 +3612,7 @@ for type_index, stats in pairs(hand_group_stats) do
             return {vars = {level_average, center.group_name, colours = {level_color}}}
         end,
         set_card_type_badge = function(self, card, badges)
-            badges[1] = create_badge(type_index == 12 and "Polyhedra?" or "Polyhedra", get_type_colour(self or card.config, card), nil, 1.2)
+            badges[1] = create_badge(type_index == 12 and "Polyhedron?" or "Polyhedron", get_type_colour(self or card.config, card), nil, 1.2)
         end,
         can_use = function (self, card)
             return true
@@ -3518,12 +3647,42 @@ for type_index, stats in pairs(hand_group_stats) do
     }
 end
 
---[[local get_current_pool_ref = get_current_pool
+local get_current_pool_ref = get_current_pool
 function get_current_pool(_type, _rarity, _leg, _append, ...)
-    if _type == "Planet" and pseudorandom("vhp_polyhedra") < 1 then
+    if G.GAME and G.GAME.vhp_playstyle == PLAYSTYLE_SILLY and _type == "Planet" and pseudorandom("vhp_polyhedra") < 0.2 then
         return get_current_pool_ref("Polyhedra", _rarity, _leg, _append, ...)
     end
     return get_current_pool_ref(_type, _rarity, _leg, _append, ...)
+end
+
+
+local UIBox_hand_row_ref = create_UIBox_current_hand_row
+function create_UIBox_current_hand_row(handname, simple, ...)
+    local ret = UIBox_hand_row_ref(handname, simple, ...)
+    if G.GAME.hands[handname].visible and not simple then
+        local group_abbreviation = string.sub(hand_group_stats[G.GAME.hands[handname].polyhedra_group].planet_name, 1, 2)
+        if hand_group_stats[G.GAME.hands[handname].polyhedra_group].planet_name == "Planet X" then
+            group_abbreviation = "X"
+        end
+        table.insert(ret.nodes, 2,
+        {n=G.UIT.C, config={align = "cm", padding = 0.05, r = 0.1, colour = G.C.BLACK, minw = 0.7}, nodes={
+            {n=G.UIT.C, config={align = "cm", padding = 0.01, r = 0.1, colour = G.C.SECONDARY_SET.Planet, minw = 0.6}, nodes={
+                {n=G.UIT.T, config={text = group_abbreviation, scale = 0.45, colour = G.C.FILTER, shadow = true}},
+            }},
+        }})
+    end
+    return ret
+end
+
+
+--[[local Card_init_ref = Card.init
+function Card:init(X, Y, W, H, card, center, params, ...)
+    if type(center) == "table" and not G.OVERLAY_MENU then
+        if center.key == "c_pluto" then
+            center = G.P_CENTERS.c_vhp_polyhedra9
+        end
+    end
+    return Card_init_ref(self, X, Y, W, H, card, center, params, ...)
 end]]
 
 

@@ -99,11 +99,15 @@ end
 if G.GAME.omni_chips then
     G.GAME.hands[hand].chips = G.GAME.hands[hand].chips + G.GAME.omni_chips
 end
+if G.GAME.omni_xmult then
+    G.GAME.hands[hand].mult = G.GAME.hands[hand].mult * G.GAME.omni_xmult
+end
 '''
 match_indent = true
 
 
-# Polyhedra cards do not spawn if the type "Planet" is queued
+# Polyhedra cards do not spawn if the type "Planet" is queued and the playstyle is silly
+# Planet cards do not spawn if they have hand_type (vanilla behaviour, level up a single hand)
 # Chance for replacement is done by hooking
 [[patches]]
 [patches.pattern]
@@ -111,7 +115,10 @@ target = "functions/common_events.lua"
 pattern = '''if v.no_pool_flag and G.GAME.pool_flags[v.no_pool_flag] then add = nil end'''
 position = "before"
 payload = '''
-if _type == "Planet" and v.pools and v.pools.Polyhedra then
+if G.GAME and G.GAME.vhp_playstyle == "silly" and _type == "Planet" and v.pools and v.pools.Polyhedra then
+    add = nil
+end
+if G.GAME and G.GAME.vhp_playstyle == "serious" and v.config.hand_type then
     add = nil
 end
 '''
@@ -127,6 +134,25 @@ position = "after"
 payload = '''
 if G.GAME.vhp_blind_reward_extra then
     self.dollars = self.dollars + G.GAME.vhp_blind_reward_extra
+end
+'''
+match_indent = true
+
+
+# Faster level up
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''
+G.E_MANAGER:add_event(Event({
+    trigger = 'immediate',
+    func = (function() check_for_unlock{type = 'upgrade_hand', hand = hand, level = G.GAME.hands[hand].level} return true end)
+}))
+'''
+position = "before"
+payload = '''
+if G.vhp_faster_level_up and instant then
+    return
 end
 '''
 match_indent = true
