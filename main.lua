@@ -2826,7 +2826,7 @@ for _, hand_stats in pairs(poker_hands) do
         end
     end
 
-    if true then
+    if false then
         custom_hand_eval = to_timing(custom_hand_eval, hand_stats.key)
     end
 
