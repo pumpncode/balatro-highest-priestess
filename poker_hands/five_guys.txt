@@ -9,8 +9,9 @@ Level Mult = 8.6
 > Above Highway
 Order Offset = 500
 Eval = {
-    (Jack of Hearts, Jack of Spades, Jack of Clubs, Jack of Diamonds, Jack of Wilds)
+    (Jack of *, Jack of *, Jack of *, Jack of *, Jack of *)
 }
+Different Suits Count = 5
 Author = Kooziefer
 
 Example = Jack of Hearts, Jack of Spades, Jack of Clubs, Jack of Diamonds, Jack of Wilds

@@ -7,9 +7,11 @@ Base Chips = 100
 Base Mult = 10
 Level Chips = 45
 Level Mult = 3
+>    (a of x, a of x, a of x, b of y, b of z)
 Eval = {
-    (a of x, a of x, a of x, b of y, b of z)
+    (a of x, a of y, * of *)
 }
+With Flush Three = Yes
 Author = Post Prototype
 Example = Ace of Hearts, Ace of Diamonds, 6 of Spades, 6 of Spades, 6 of Spades
 Planet Name = Janssen

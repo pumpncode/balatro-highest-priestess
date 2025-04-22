@@ -1,0 +1,15 @@
+Name = Overly Flushed And Straight House
+Credits Name = OFaSH
+Desc = {
+    3 of the same card in the same suit + 2 of the number after that in that suit
+    (ion_kuru had the idea before me)
+}
+Base Chips = 150
+Base Mult = 15
+Level Chips = 50
+Level Mult = 5
+Eval = {
+    (a of x, a of x, a of x, a+1 of x, a+1 of x)
+}
+Example = 8 of Hearts, 8 of Hearts, 7 of Hearts, 7 of Hearts, 7 of Hearts
+Author = TamerSoup625

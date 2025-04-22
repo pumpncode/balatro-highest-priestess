@@ -1,0 +1,13 @@
+Name = The Wildcards
+Desc = {
+    Wild Jack, Wild Queen, Wild King
+}
+Base Chips = 40
+Base Mult = 4
+Level Chips = 20
+Level Mult = 2
+Eval = {
+    (Jack of Wilds, Queen of Wilds, King of Wilds)
+}
+Example = Jack of Wilds, Queen of Wilds, King of Wilds
+Author = jonahbaumgartner

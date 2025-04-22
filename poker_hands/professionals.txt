@@ -11,6 +11,7 @@ Create Consumable id = c_vhp_highest_priestess
 Create Consumable Count = 4
 Create Consumable Negative = Yes
 Eval = {
-    (Ace of Spades special, Ace of Hearts special, Ace of clubs special, Ace of diamonds special)
+    (Ace of * special, Ace of * special, Ace of * special, Ace of * special)
 }
+Different Suits Count = 4
 Author = Sustato

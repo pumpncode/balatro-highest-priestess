@@ -1,6 +1,6 @@
 Name = Flower Pot
 Desc = {
-    4 cards of different suits
+    A Diamond card, Club card, Heart card, and Spade card
     The Heart card won't score
 }
 Base Chips = 4

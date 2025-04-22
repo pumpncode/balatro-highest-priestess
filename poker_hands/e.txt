@@ -19,3 +19,4 @@ Flush Base Mult = 2
 Flush Level Chips = 45
 Flush Level Mult = 2
 Flush Planet Name = Marquaad
+Planet Texture ID = 30

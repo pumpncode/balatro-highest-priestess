@@ -28,3 +28,4 @@ Joker Chips = 100
 Joker Chips Name = Sprayer Joker
 Joker XMult = 3
 Joker XMult Name = The Pelters
+Planet Texture ID = 34

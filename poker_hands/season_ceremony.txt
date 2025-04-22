@@ -10,8 +10,9 @@ Level chips = 0
 Level mult = 0
 Order Offset = 969
 Eval = {
-    (* of Spades special, * of Hearts special, * of Clubs special, * of Diamonds special, * of Wilds negative)
+    (* of * special, * of * special, * of * special, * of * special, * of Wilds negative)
 }
+Different Suits Count = 5
 Exact Seals = Red Purple Blue Gold None
 Special Destroy = yes
 Super Ritual Type = PackCard

@@ -535,6 +535,15 @@ def parse_poker_hand(raw_text: str) -> dict:
                 patterns_iter = re.finditer(REGEX_PARENTHESIS_GROUP, value_multiline)
                 patterns_list = [parse_hand_pattern(x.group(1), not result.get("no_support_warning", False)) for x in patterns_iter]
                 result["eval_held_in_hand"] = patterns_list
+            case "different suits count":
+                result["different_suits_count"] = int(value)
+            case "with flush three":
+                result["with_flush_three"] = True
+            case "contrast mode":
+                suit, contrast = value.split()
+                result["contrast_mode"] = [suit.capitalize(), contrast.lower()]
+            case "game state":
+                result["game_state"] = value.upper()
             case _:
                 raise RuntimeError(f"Invalid key '{key}'")
     return result

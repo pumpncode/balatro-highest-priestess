@@ -9,7 +9,8 @@ Level chips = 32
 Level mult = 4
 Order Offset = 400
 Eval = {
-       ( King of Spades special, King of Hearts special, King of Clubs special, King of Diamonds special)
+       ( King of * special, King of * special, King of * special, King of * special)
 }
+Different Suits Count = 4
 Author = Sustato
 Held in Hand Scoring Rank = King

@@ -1,0 +1,14 @@
+Name = Mod Shenanigans
+Desc = {
+    Play an hand while in the shop
+    Opening a Booster Pack or using a Consumable does not count
+}
+Base Chips = 1e100
+Base Mult = 1e100
+Level Chips = 1e100
+Level Mult = 1e100
+Eval = {
+    ()
+}
+Author = TamerSoup625
+Game State = SHOP

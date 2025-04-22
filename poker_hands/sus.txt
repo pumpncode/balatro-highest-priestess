@@ -20,3 +20,4 @@ Planet Name = Missing Texture
 Joker Mult = 100
 Joker Chips = 1000
 Joker XMult = 10
+Planet Texture ID = 32

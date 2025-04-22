@@ -29,8 +29,12 @@ local TROLLEY_FIND_THREE = {
         {suit = {"a", false}, special = "face"},
         {suit = {"b", false}, special = "face", unscoring = true},
 }
-local RANK_CARD_KEY_MAP = {[10] = "T", [11] = "J", [12] = "Q", [13] = "K", [14] = "A"}
-local SUIT_CARD_KEY_MAP = {Spades = "S", Hearts = "H", Clubs = "C", Diamonds = "D"}
+local FLUSH_THREE_PATTERN = {
+        {rank = {"a", 0}, suit = {"x", false}},
+        {rank = {"a", 0}, suit = {"x", false}},
+        {rank = {"a", 0}, suit = {"x", false}},
+}
+--local RANK_CARD_KEY_MAP = {[10] = "T", [11] = "J", [12] = "Q", [13] = "K", [14] = "A"}
 local CUSTOM_JOKERS_ATLAS_MAP = {
     "custom_jokers_low_card.png",
     "custom_jokers_nothing.png",
@@ -77,6 +81,13 @@ local CUSTOM_PLANETS_ATLAS_MAP = {
     "custom_planet_jackpot.png",
     "custom_planet_low_card.png",
     "custom_planet_nothing.png",
+    "custom_planet_e.png", -- 30
+    "custom_planet_ak47.png",
+    "custom_planet_missingtex.png",
+    "custom_planet_space_junk.png",
+    "custom_planet_comet.png",
+    "custom_planet_saggittarius_a.png", -- 35
+    "custom_planet_vault111.png",
 }
 local PLAYSTYLE_SILLY = "silly"
 local PLAYSTYLE_SERIOUS = "serious"
@@ -197,7 +208,7 @@ local function time_and_return(func, ...)
     local start_time = love.timer.getTime()
     local ret = func(...)
     local end_time = love.timer.getTime()
-    if 1000*(end_time-start_time) > 0 then
+    if 1000*(end_time-start_time) > 1000 then
         if current_extra_print then
             print(current_extra_print)
         end
@@ -407,9 +418,9 @@ local function match_special(card, special, whole_hand_for_scoring)
     elseif special == "nondebuffed" then
         return not card.debuff
     elseif special == "dark" then
-        return card._vhp_cache.is_suit.Spades or card._vhp_cache.is_suit.Clubs
+        return card._vhp_cache.is_suit.Spades or card._vhp_cache.is_suit.Clubs or card._vhp_cache.is_suit.bunc_Halberds
     elseif special == "light" then
-        return card._vhp_cache.is_suit.Hearts or card._vhp_cache.is_suit.Diamonds
+        return card._vhp_cache.is_suit.Hearts or card._vhp_cache.is_suit.Diamonds or card._vhp_cache.is_suit.bunc_Fleurons
     elseif special == "gold" then
         return card.config.center_key == "m_gold"
     elseif special == "special" then
@@ -429,9 +440,9 @@ local function match_special(card, special, whole_hand_for_scoring)
     elseif special == "negative" then
         return card.edition and card.edition.negative
     elseif special == "nonface" then
-        return not (card._vhp_cache.get_id == 11 or card._vhp_cache.get_id == 12 or card._vhp_cache.get_id == 13 or (next(find_joker("Pareidolia")) or false))
+        return not card._vhp_cache.is_face
     elseif special == "face" then
-        return card._vhp_cache.get_id == 11 or card._vhp_cache.get_id == 12 or card._vhp_cache.get_id == 13 or (next(find_joker("Pareidolia")) or false)
+        return card._vhp_cache.is_face
     elseif special == "midranked" then
         if not whole_hand_for_scoring then
             return true
@@ -439,12 +450,12 @@ local function match_special(card, special, whole_hand_for_scoring)
         -- Too lazy to make a loop
         -- What procedural programming does to a man
         local ranks_list = {
-                whole_hand_for_scoring[1]._vhp_cache.get_id,
-                whole_hand_for_scoring[2]._vhp_cache.get_id,
-                whole_hand_for_scoring[3]._vhp_cache.get_id,
+                whole_hand_for_scoring[1]._vhp_cache.get_nominal,
+                whole_hand_for_scoring[2]._vhp_cache.get_nominal,
+                whole_hand_for_scoring[3]._vhp_cache.get_nominal,
         }
         table.sort(ranks_list)
-        return ranks_list[2] == card._vhp_cache.get_id
+        return ranks_list[2] == card._vhp_cache.get_nominal
     else
         error("Unknown special effect: " .. tostring(special))
     end
@@ -629,9 +640,9 @@ local function eval_pattern(hand, pattern, options, debug_this)
     local possible_suits_set = {}
     for key, value in pairs(hand) do
         possible_ranks_set[value._vhp_cache.get_id] = true
-        for _, suit in pairs({"Spades", "Hearts", "Clubs", "Diamonds"}) do
-            --                                                     Makes sure it doesn't become false
-            possible_suits_set[suit] = possible_suits_set[suit] or value._vhp_cache.is_suit[suit] or nil
+        for suit_key, _ in pairs(SMODS.Suits) do
+            --                                                             Makes sure it doesn't become false
+            possible_suits_set[suit_key] = possible_suits_set[suit_key] or value._vhp_cache.is_suit[suit_key] or nil
         end
     end
     local possible_ranks = {}
@@ -768,6 +779,9 @@ local function eval_pattern(hand, pattern, options, debug_this)
                             if rank_value == 14 and value.rank[2] ~= 0 then
                                 rank_value = 1 -- Ace as low of a straight
                             end
+                            if rank_value > 14 and value.rank[2] ~= 0 then
+                                rank_value = -999999999999
+                            end
                             rank_value = rank_value + value.rank[2]
                             pattern_slot.rank = rank_value
                         end
@@ -799,34 +813,42 @@ local function create_example_hand(pattern, full_stats)
     if not pattern then
         return {}
     end
+
+    local id_key_map = {}
+    for _, value in pairs(SMODS.Ranks) do
+        id_key_map[value.id] = value.card_key
+    end
+
     local ret_hand = {}
     for key, value in pairs(pattern) do
-        local suit_key = SUIT_CARD_KEY_MAP[value.suit] or ""
+        local suit_key = (SMODS.Suits[value.suit] or {}).card_key or ""
+        --local suit_key = SUIT_CARD_KEY_MAP[value.suit] or ""
+        local rank_key = id_key_map[value.rank] or ""
         if value.stone then
             table.insert(ret_hand, {"S_A", not value.unscoring, "m_stone"})
         elseif value.suit == "Wilds" then
-            table.insert(ret_hand, {"H_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank), not value.unscoring, "m_wild"})
+            table.insert(ret_hand, {"H_" .. rank_key, not value.unscoring, "m_wild"})
         elseif full_stats.different_enhancement then
             table.insert(ret_hand, {
-                    suit_key .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    suit_key .. "_" .. rank_key,
                     not value.unscoring,
                     ({"m_mult", "m_bonus", "m_lucky", "m_glass", "m_steel"})[key]
             })
         elseif full_stats.any_enhancement then
             table.insert(ret_hand, {
-                    suit_key .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    suit_key .. "_" .. rank_key,
                     not value.unscoring,
                     ({"m_mult", "m_bonus", "m_bonus", "m_mult", "m_steel"})[key]
             })
         elseif full_stats.same_enhancement then
             table.insert(ret_hand, {
-                    suit_key .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    suit_key .. "_" .. rank_key,
                     not value.unscoring,
                     "m_lucky"
             })
         else
             table.insert(ret_hand, {
-                    suit_key .. "_" .. (RANK_CARD_KEY_MAP[value.rank] or value.rank),
+                    suit_key .. "_" .. rank_key,
                     not value.unscoring,
                     (full_stats.all_enhanced and ("m_" .. full_stats.all_enhanced)) or (value.special == "special" and "m_vhp_special" or (value.special == "mult" and "m_mult" or nil))
             })
@@ -882,7 +904,7 @@ G.FUNCS.evaluate_play = function (e)
             })
             table.insert(nostalgic_ranks_example, {
                 rank = card.base.id,
-                suit = pseudorandom_element({"Spades", "Hearts", "Clubs", "Diamonds"}, pseudoseed("vhp_nostalgia_ranks"))
+                suit = pseudorandom_element({'Spades', 'Hearts', 'Clubs', 'Diamonds'}, pseudoseed("vhp_nostalgia_ranks"))
             })
         end
         for _, id in pairs(nostalgic_hand_ids) do
@@ -1549,7 +1571,7 @@ SMODS.current_mod.reset_game_globals = function (run_start)
     G.vhp_faster_level_up = config.faster_level_up
     if run_start then
 
-        local rank_count = 0
+        --[[local rank_count = 0
         for _, __ in pairs(SMODS.Ranks) do
             rank_count = rank_count + 1
         end
@@ -1559,14 +1581,14 @@ SMODS.current_mod.reset_game_globals = function (run_start)
         end
         if rank_count > 13 or suit_count > 4 then
             sendWarnMessage("Custom ranks or suits detected. Currently they are not supported by Highest Priestess and may cause issues.", "HighestPriestess")
-        end
+        end]]
         G.GAME.vhp_rng_hand = {}
         G.GAME.vhp_rng_example = {}
         G.GAME.vhp_dejavu_hand = {{stone = true}, {stone = true}, {stone = true}, {stone = true}, {stone = true}}
         G.GAME.vhp_dejavu_example = {{stone = true}, {stone = true}, {stone = true}, {stone = true}, {stone = true}}
         for i = 1, 5, 1 do
             local chosen_rank = pseudorandom_element({2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}, pseudoseed("vhp_rng"))
-            local chosen_suit = pseudorandom_element({"Spades", "Hearts", "Clubs", "Diamonds"}, pseudoseed("vhp_rng"))
+            local chosen_suit = pseudorandom_element({'Spades', 'Hearts', 'Clubs', 'Diamonds'}, pseudoseed("vhp_rng"))
             table.insert(G.GAME.vhp_rng_hand, {rank = chosen_rank, suit = {chosen_suit, true}})
             table.insert(G.GAME.vhp_rng_example, {rank = chosen_rank, suit = chosen_suit})
         end
@@ -1630,14 +1652,15 @@ local function update_hand_cache(hand)
     end
     for _, card in pairs(hand) do
         card._vhp_cache = {}
+        card._vhp_cache.is_face = card:is_face()
+        card._vhp_cache.get_nominal = card:get_nominal()
         card._vhp_cache.get_id = card:get_id()
         card._vhp_cache.is_suit = {
-            Spades = card:is_suit("Spades", nil, true),
-            Hearts = card:is_suit("Hearts", nil, true),
-            Clubs = card:is_suit("Clubs", nil, true),
-            Diamonds = card:is_suit("Diamonds", nil, true),
             Wilds = card:is_suit("Wilds", nil, true),
         }
+        for suit_key, _ in pairs(SMODS.Suits) do
+            card._vhp_cache.is_suit[suit_key] = card:is_suit(suit_key, nil, true)
+        end
     end
 end
 
@@ -1647,6 +1670,15 @@ function evaluate_poker_hand(hand)
     update_hand_cache(hand)
     local ret = evaluate_poker_hand_ref(hand)
     return ret
+end
+
+
+function Card:vhp_get_leaf_value()
+    if self._vhp_cache.get_id > 14 then
+        -- Modded rank
+        return self.base.nominal
+    end
+    return ((self._vhp_cache.get_id == 14) and 1 or self._vhp_cache.get_id)
 end
 
 
@@ -1888,9 +1920,9 @@ for _, hand_stats in pairs(poker_hands) do
             for _, card in pairs(hand) do
                 if card.config.center_key ~= 'm_stone' then
                     if hand_stats.possible_rank_products then
-                        accumulator = accumulator * ((card._vhp_cache.get_id == 14) and 1 or card._vhp_cache.get_id)
+                        accumulator = accumulator * card:vhp_get_leaf_value()
                     elseif hand_stats.leaf_rank_sum then
-                        accumulator = accumulator + ((card._vhp_cache.get_id == 14) and 1 or card._vhp_cache.get_id)
+                        accumulator = accumulator + card:vhp_get_leaf_value()
                     else
                         if card.edition and card.edition.negative then
                             accumulator = accumulator - card.base.nominal
@@ -2258,6 +2290,11 @@ for _, hand_stats in pairs(poker_hands) do
                 return
             end
         end
+        if hand_stats.contrast_mode then
+            if G.SETTINGS.colour_palettes[hand_stats.contrast_mode[1]] ~= hand_stats.contrast_mode[2] then
+                return
+            end
+        end
         if hand_stats.all_debuffed then
             for _, card in pairs(hand) do
                 if not card.debuff then
@@ -2326,14 +2363,14 @@ for _, hand_stats in pairs(poker_hands) do
         end
         if hand_stats.rank_max then
             for _, card in pairs(hand) do
-                if card._vhp_cache.get_id ~= 14 and card._vhp_cache.get_id > hand_stats.rank_max then
+                if card._vhp_cache.get_id ~= 14 and card.base.nominal > hand_stats.rank_max then
                     return
                 end
             end
         end
         if hand_stats.rank_min then
             for _, card in pairs(hand) do
-                if card._vhp_cache.get_id ~= 14 and card._vhp_cache.get_id < hand_stats.rank_min then
+                if card._vhp_cache.get_id ~= 14 and card.base.nominal < hand_stats.rank_min then
                     return
                 end
             end
@@ -2354,11 +2391,11 @@ for _, hand_stats in pairs(poker_hands) do
             local light_sum = 0
             local dark_sum = 0
             for _, card in pairs(hand) do
-                local current_rank = (card._vhp_cache.get_id == 14) and 1 or card._vhp_cache.get_id
-                if card._vhp_cache.is_suit.Hearts or card._vhp_cache.is_suit.Diamonds then
+                local current_rank = card:vhp_get_leaf_value()
+                if card._vhp_cache.is_suit.Hearts or card._vhp_cache.is_suit.Diamonds or card._vhp_cache.is_suit.bunc_Fleurons then
                     light_sum = light_sum + current_rank
                 end
-                if card._vhp_cache.is_suit.Spades or card._vhp_cache.is_suit.Clubs then
+                if card._vhp_cache.is_suit.Spades or card._vhp_cache.is_suit.Clubs or card._vhp_cache.is_suit.bunc_Halberds then
                     dark_sum = dark_sum + current_rank
                 end
             end
@@ -2373,7 +2410,7 @@ for _, hand_stats in pairs(poker_hands) do
             local rank_values = {}
             local special_rank = nil
             for _, card in pairs(hand) do
-                local rank = (card._vhp_cache.get_id == 14) and 1 or card._vhp_cache.get_id
+                local rank = card:vhp_get_leaf_value()
                 table.insert(rank_values, rank)
                 if card.config.center_key == "m_vhp_special" then
                     if special_rank then
@@ -2408,7 +2445,7 @@ for _, hand_stats in pairs(poker_hands) do
         if hand_stats.math_identity then
             local rank_values = {}
             for _, card in pairs(hand) do
-                table.insert(rank_values, (card._vhp_cache.get_id == 14) and 1 or card._vhp_cache.get_id)
+                table.insert(rank_values, card:vhp_get_leaf_value())
             end
             if
                 hand_stats.math_identity == "product" or
@@ -2479,7 +2516,7 @@ for _, hand_stats in pairs(poker_hands) do
             end
             local rank_values = {}
             for _, card in pairs(hand) do
-                table.insert(rank_values, (card._vhp_cache.get_id == 14) and 1 or card._vhp_cache.get_id)
+                table.insert(rank_values, card:vhp_get_leaf_value())
             end
             if
                 rank_values[1] + rank_values[2] <= rank_values[3] or
@@ -2537,7 +2574,7 @@ for _, hand_stats in pairs(poker_hands) do
                     local weapon_sum = 0
                     for _, weapon in pairs(hand) do
                         if weapon ~= trigger and weapon ~= monster then
-                            weapon_sum = weapon_sum + ((weapon._vhp_cache.get_id == 14) and 1 or weapon._vhp_cache.get_id)
+                            weapon_sum = weapon_sum + weapon:vhp_get_leaf_value()
                         end
                     end
                     if weapon_sum >= monster._vhp_cache.get_id then
@@ -2593,7 +2630,7 @@ for _, hand_stats in pairs(poker_hands) do
             end
             local lowest_card = hand[1]
             for _, card in pairs(hand) do
-                if lowest_card._vhp_cache.get_id > card._vhp_cache.get_id then
+                if lowest_card._vhp_cache.get_nominal > card._vhp_cache.get_nominal then
                     lowest_card = card
                 end
             end
@@ -2606,6 +2643,12 @@ for _, hand_stats in pairs(poker_hands) do
                 if not hand_stats.rank_constrain[tostring(card._vhp_cache.get_id)] then
                     return
                 end
+            end
+        end
+        if hand_stats.with_flush_three then
+            local pattern_ret = eval_pattern(hand, FLUSH_THREE_PATTERN, {})
+            if not pattern_ret then
+                return
             end
         end
         if hand_stats.suit_constrain then
@@ -2729,6 +2772,42 @@ for _, hand_stats in pairs(poker_hands) do
                 return
             end
         end
+        if hand_stats.different_suits_count then
+            -- https://github.com/Aurelius7309/SixSuits/blob/d2044ee3590d7598cc9e4df6739aa8e3ee4b1258/SixSuits.lua#L120
+            local suits = {Wilds = 0}
+            for k, _ in pairs(SMODS.Suits) do
+                suits[k] = 0
+            end
+            if #hand < hand_stats.different_suits_count then return end
+            for i = 1, #hand do
+                if not hand[i].config.center_key ~= 'm_wild' then
+                    for k, v in pairs(suits) do
+                        if hand[i]._vhp_cache.is_suit[k] and v == 0 then
+                            suits[k] = v + 1; break
+                        end
+                    end
+                end
+            end
+            for i = 1, #hand do
+                if hand[i].config.center_key == 'm_wild' then
+                    for k, v in pairs(suits) do
+                        if hand[i]._vhp_cache.is_suit[k] and v == 0 then
+                            suits[k] = v + 1; break
+                        end
+                    end
+                end
+            end
+            local num_suits = 0
+            for _, v in pairs(suits) do
+                if v > 0 then num_suits = num_suits + 1 end
+            end
+            if num_suits < hand_stats.different_suits_count then
+                return
+            end
+        end
+        if hand_stats.game_state and G.STATE ~= G.STATES[hand_stats.game_state] then
+            return
+        end
         
         local eval = hand_stats.eval
         for key, value in pairs(eval) do
@@ -2747,7 +2826,7 @@ for _, hand_stats in pairs(poker_hands) do
         end
     end
 
-    if hand_stats.measure_time then
+    if false then
         custom_hand_eval = to_timing(custom_hand_eval, hand_stats.key)
     end
 
@@ -3130,6 +3209,65 @@ SMODS.current_mod.extra_tabs = function()
 end
 
 
+G.FUNCS.vhp_get_real_context_cardarea_cards = function (context)
+    if context.cardarea == G.play then
+        local ret = {}
+        for _, card_in_area in pairs(G.play.cards) do
+            local is_scoring = false
+            for _, card_in_scoring in pairs(context.scoring_hand) do
+                if card_in_area == card_in_scoring then
+                    table.insert(ret, card_in_area)
+                    is_scoring = true
+                end
+            end
+            if not is_scoring then
+                table.insert(ret, card_in_area)
+            end
+        end
+        for _, card_in_area in pairs(G.hand.cards) do
+            for _, card_in_scoring in pairs(context.scoring_hand) do
+                if card_in_area == card_in_scoring then
+                    table.insert(ret, card_in_area)
+                end
+            end
+        end
+        return ret
+    end
+    return context.cardarea.cards
+end
+
+
+-- Nah I don't think I should add this, it's mostly useful with non-secret poker hands
+-- But people probably rarely play with that
+
+-- While searching for this I found line 5971 in functions/UI_definitions.lua which feels kinda crazy
+-- https://github.com/Steamodded/smods/blob/ade0726002f963fcbee246cafc9eca4b2c1e90ad/src/overrides.lua#L1212
+-- This is kinda broken!!! There are some memory leaks happening, also search bar breaks when changing page
+--[[G.vhp_search_prompt = ""
+G.FUNCS.vhp_add_search_bar_to_ui = function (object)
+    local search_bar = {n=G.UIT.R, config={align = "cm", minw = 0.1}, nodes={
+        create_text_input({
+                max_length = 100,
+                ref_table = G,
+                ref_value = 'vhp_search_prompt',
+                prompt_text = "Search for hands",
+                w = 4.5,
+                h = 1,
+        }),
+        {n=G.UIT.C, config={align = "cm", minw = 0.1}, nodes={}},
+        UIBox_button({
+                label = {"Search"},
+                minw = 1, minh = 0.6,
+                button = 'your_hands_page',
+                colour = G.C.BLUE,
+                scale = 0.3,
+                col = true,
+        })
+    }}
+    table.insert(object.nodes, 1, search_bar)
+end]]
+
+
 SMODS.Atlas {
     key = "vhp_tarot",
     path = "tarot.png",
@@ -3180,8 +3318,8 @@ SMODS.Consumable {
     loc_txt = {
         name = "The Highest Priestess",
         text = {
-            "{C:planet}Discover{} a new poker hand",
-            "and level it up as many",
+            "{C:planet}Discover{} {C:attention}2{} new poker hands",
+            "and level them up as many",
             "times as the current {C:attention}Ante",
         }
     },
@@ -3202,16 +3340,18 @@ SMODS.Consumable {
                 table.insert(secret_hands, key)
             end
         end
-        local chosen_hand = pseudorandom_element(secret_hands, pseudoseed("blunt"))
+        for i = 1, 2 do
+            local chosen_hand = pseudorandom_element(secret_hands, pseudoseed("blunt"))
 
-        G.GAME.hands[chosen_hand].visible = true
-        update_hand_text(
-                {sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3},
-                {handname=localize(chosen_hand, 'poker_hands'),chips = G.GAME.hands[chosen_hand].chips,
-                mult = G.GAME.hands[chosen_hand].mult, level=G.GAME.hands[chosen_hand].level}
-        )
-        level_up_hand(card, chosen_hand, nil, G.GAME.round_resets.ante)
-        update_hand_text({sound = 'button', volume = 0.7, pitch = 1.1, delay = 0}, {mult = 0, chips = 0, handname = '', level = ''})
+            G.GAME.hands[chosen_hand].visible = true
+            update_hand_text(
+                    {sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3},
+                    {handname=localize(chosen_hand, 'poker_hands'),chips = G.GAME.hands[chosen_hand].chips,
+                    mult = G.GAME.hands[chosen_hand].mult, level=G.GAME.hands[chosen_hand].level}
+            )
+            level_up_hand(card, chosen_hand, nil, G.GAME.round_resets.ante)
+            update_hand_text({sound = 'button', volume = 0.7, pitch = 1.1, delay = 0}, {mult = 0, chips = 0, handname = '', level = ''})
+        end
     end,
 }
 
@@ -3605,6 +3745,10 @@ for type_index, stats in pairs(hand_group_stats) do
                 end
             end
             local level_average = math.floor((level_sum / hands_count) + 0.5)
+            if to_big then
+---@diagnostic disable-next-line: undefined-field
+                level_average = level_average:to_number()
+            end
             local level_color = G.C.HAND_LEVELS[math.min(level_average, 7)]
             if level_average == 1 then
                 level_color = G.C.UI.TEXT_DARK

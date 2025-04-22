@@ -24,8 +24,8 @@ Flush Base Chips = 384
 Flush Base Mult = 24
 Flush Level Chips = 48
 Flush Level Mult = 6
-Example = 2 of Hearts, stone, 4 of Hearts, 8 of Hearts
-Planet Name = Stellar Collision
+Flush Example = 2 of Hearts, stone, 4 of Hearts, 8 of Hearts
+Flush Planet Name = Stellar Collision
 
 Planet Texture ID = 9
 Joker Texture ID = 10
