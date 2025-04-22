@@ -14,8 +14,8 @@ Author = TamerSoup625
 Example = Jack of Diamonds, Ace of Clubs, Jack of Spades, Ace of Diamonds
 
 Flush Name = Spanish Flush
-Flush Base Chips = 141
-Flush Base Mult = 14
+Flush Base Chips = 161
+Flush Base Mult = 16
 Flush Level Chips = 41
 Flush Level Mult = 4
 Flush Planet Name = Barnard's Star

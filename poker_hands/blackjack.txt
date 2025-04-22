@@ -41,3 +41,4 @@ Straight Base Mult = 100
 Straight Level Chips = 110
 Straight Level Mult = 20
 > Requires Shortcut
+Planet Texture ID = 35

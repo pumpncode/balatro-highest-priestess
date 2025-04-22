@@ -9,10 +9,11 @@ Base Mult = 9
 Level Chips = 10
 Level Mult = 3
 Eval = {
-    (King of Spades, King of Hearts, King of Clubs, King of Diamonds)
-    (Queen of Spades, Queen of Hearts, Queen of Clubs, Queen of Diamonds)
-    (Jack of Spades, Jack of Hearts, Jack of Clubs, Jack of Diamonds)
+    (King of *, King of *, King of *, King of *)
+    (Queen of *, Queen of *, Queen of *, Queen of *)
+    (Jack of *, Jack of *, Jack of *, Jack of *)
 }
+Different Suits Count = 4
 Example = King of Spades, King of Diamonds, King of Clubs, King of Hearts
 Joker Mult = 40
 Joker Chips = 250

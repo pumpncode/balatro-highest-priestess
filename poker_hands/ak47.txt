@@ -23,3 +23,4 @@ Joker Chips Name = Sniper Joker
 > This Joker name added by Gladofdingldill
 Joker XMult Name = The Battlefield Assault
 Joker Texture ID = 9
+Planet Texture ID = 31

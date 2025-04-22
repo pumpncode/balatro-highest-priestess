@@ -1,6 +1,6 @@
 Name = Four Horsemen of the Apocalypse
 Desc = {
-    4 special Jacks with 4 different base suits
+    4 special Jacks with 4 different suits
     Each Special Card gives +X0.25 Mult for each Special Card held in hand
 }
 Base Chips = 44
@@ -8,8 +8,9 @@ Base Mult = 44
 Level Chips = 4
 Level Mult = 4
 Eval = {
-    (Jack of Spades special, Jack of Hearts special, Jack of Diamonds special, Jack of Clubs special)
+    (Jack of * special, Jack of * special, Jack of * special, Jack of * special)
 }
+Different Suits Count = 4
 Author = Sustato
 Example = Jack of Spades special, Jack of Hearts special, Jack of Diamonds special, Jack of Clubs special
 Special Horsemen XMult = 0.25

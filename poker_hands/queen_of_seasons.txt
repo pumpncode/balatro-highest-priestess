@@ -8,7 +8,8 @@ Base mult = 5.2
 Level chips = 144
 Level mult = 12
 Eval = {
-    (Queen of Spades special, Queen of Hearts special, Queen of Clubs special, Queen of Diamonds special),
+    (Queen of * special, Queen of * special, Queen of * special, Queen of * special),
 }
+Different Suits Count = 4
 Author = Sustato
 Special Wild = Yes

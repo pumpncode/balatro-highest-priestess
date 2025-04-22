@@ -5,7 +5,8 @@ Base Mult = 5
 Level Chips  = 30
 Level Mult = 3
 Eval = {
-    (* of Spades, * of Hearts, * of Clubs, * of Diamonds, Stone)
+    (* of *, * of *, * of *, * of *, Stone)
 }
+Different Suits Count = 4
 Example = King of Hearts, 4 of Spades, 8 of Clubs, 9 of Diamonds, Stone
 Author = tHotoe

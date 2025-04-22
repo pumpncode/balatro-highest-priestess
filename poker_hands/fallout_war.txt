@@ -19,3 +19,4 @@ Example = 10 of hearts, 9 of clubs
 Joker Mult = 8
 Joker Chips = 50
 Joker XMult = 2
+Planet Texture ID = 36
