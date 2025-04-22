@@ -445,6 +445,7 @@ return [[ [
         "joker_chips_name": "Sniper Joker",
         "joker_xmult_name": "The Battlefield Assault",
         "joker_texture_id": 9,
+        "planet_texture_id": 31,
         "key": "ak47"
     },
     {
@@ -1379,6 +1380,7 @@ return [[ [
         "straight_base_mult": 100.0,
         "straight_level_chips": 110.0,
         "straight_level_mult": 20.0,
+        "planet_texture_id": 35,
         "key": "blackjack"
     },
     {
@@ -3535,44 +3537,16 @@ return [[ [
                             0
                         ],
                         "suit": [
-                            "x",
-                            false
-                        ]
-                    },
-                    {
-                        "rank": [
-                            "a",
-                            0
-                        ],
-                        "suit": [
-                            "x",
-                            false
-                        ]
-                    },
-                    {
-                        "rank": [
-                            "b",
-                            0
-                        ],
-                        "suit": [
                             "y",
                             false
                         ]
                     },
-                    {
-                        "rank": [
-                            "b",
-                            0
-                        ],
-                        "suit": [
-                            "z",
-                            false
-                        ]
-                    }
+                    {}
                 ],
                 "options": {}
             }
         ],
+        "with_flush_three": true,
         "author": "Post Prototype",
         "example": [
             {
@@ -4798,6 +4772,7 @@ return [[ [
         "flush_level_chips": 45.0,
         "flush_level_mult": 2.0,
         "flush_planet_name": "Marquaad",
+        "planet_texture_id": 30,
         "key": "e"
     },
     {
@@ -4819,50 +4794,30 @@ return [[ [
                         "rank": [
                             "a",
                             0
-                        ],
-                        "suit": [
-                            "Spades",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "b",
                             0
-                        ],
-                        "suit": [
-                            "Hearts",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "c",
                             0
-                        ],
-                        "suit": [
-                            "Clubs",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "d",
                             0
-                        ],
-                        "suit": [
-                            "Diamonds",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "e",
                             0
-                        ],
-                        "suit": [
-                            "Wilds",
-                            true
                         ]
                     }
                 ],
@@ -4870,6 +4825,7 @@ return [[ [
             }
         ],
         "different_enhancement": true,
+        "different_suits_count": 5,
         "author": "Poppycars",
         "example": [
             {
@@ -6126,6 +6082,7 @@ return [[ [
         "joker_mult": 8.0,
         "joker_chips": 50.0,
         "joker_xmult": 2.0,
+        "planet_texture_id": 36,
         "key": "fallout_war"
     },
     {
@@ -6675,44 +6632,25 @@ return [[ [
             {
                 "pattern": [
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Spades",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Wilds",
-                            true
-                        ]
+                        "rank": 11
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 5,
         "author": "Kooziefer",
         "example": [
             {
@@ -6862,7 +6800,7 @@ return [[ [
         "name": "Flower Pot",
         "polyhedra_group": 11,
         "desc": [
-            "4 cards of different suits",
+            "A Diamond card, Club card, Heart card, and Spade card",
             "The Heart card won't score"
         ],
         "base_chips": 4.0,
@@ -6938,30 +6876,10 @@ return [[ [
         "eval": [
             {
                 "pattern": [
-                    {
-                        "suit": [
-                            "Spades",
-                            true
-                        ]
-                    },
-                    {
-                        "suit": [
-                            "Hearts",
-                            true
-                        ]
-                    },
-                    {
-                        "suit": [
-                            "Clubs",
-                            true
-                        ]
-                    },
-                    {
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ]
-                    },
+                    {},
+                    {},
+                    {},
+                    {},
                     {
                         "stone": true
                     }
@@ -6969,6 +6887,7 @@ return [[ [
                 "options": {}
             }
         ],
+        "different_suits_count": 4,
         "example": [
             {
                 "rank": 13,
@@ -7368,6 +7287,82 @@ return [[ [
         "key": "flush_two_pair"
     },
     {
+        "name": "Flush Water",
+        "polyhedra_group": 4,
+        "desc": [
+            "5 Clubs but only on high contrast mode"
+        ],
+        "base_chips": 45.0,
+        "base_mult": 5.0,
+        "level_chips": 15.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    },
+                    {
+                        "suit": [
+                            "Clubs",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "contrast_mode": [
+            "Clubs",
+            "hc"
+        ],
+        "example": [
+            {
+                "rank": 13,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 10,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 9,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 7,
+                "suit": "Clubs"
+            },
+            {
+                "rank": 4,
+                "suit": "Clubs"
+            }
+        ],
+        "author": "ion_kuru",
+        "key": "flush_water"
+    },
+    {
         "name": "The Fool's Ritual",
         "polyhedra_group": 8,
         "desc": [
@@ -7543,7 +7538,7 @@ return [[ [
         "name": "Four Horsemen of the Apocalypse",
         "polyhedra_group": 7,
         "desc": [
-            "4 special Jacks with 4 different base suits",
+            "4 special Jacks with 4 different suits",
             "Each Special Card gives +X0.25 Mult for each Special Card held in hand"
         ],
         "base_chips": 44.0,
@@ -7555,40 +7550,25 @@ return [[ [
                 "pattern": [
                     {
                         "rank": 11,
-                        "suit": [
-                            "Spades",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 11,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 11,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 11,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ],
                         "special": "special"
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 4,
         "author": "Sustato",
         "example": [
             {
@@ -7632,40 +7612,25 @@ return [[ [
                 "pattern": [
                     {
                         "rank": 13,
-                        "suit": [
-                            "Spades",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 13,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 13,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 13,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ],
                         "special": "special"
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 4,
         "author": "Sustato",
         "held_in_hand_scoring_rank": 13,
         "key": "four_kings"
@@ -9167,15 +9132,15 @@ return [[ [
             },
             {
                 "rank": 4,
-                "suit": "Hearts"
+                "suit": "Diamonds"
             },
             {
                 "rank": 8,
-                "suit": "Hearts"
+                "suit": "Spades"
             }
         ],
         "card_count": 4,
-        "planet_name": "Stellar Collision",
+        "planet_name": "Binary Planets",
         "joker_mult": 16.0,
         "joker_chips": 256.0,
         "joker_xmult": 4.0,
@@ -9188,6 +9153,24 @@ return [[ [
         "flush_base_mult": 24.0,
         "flush_level_chips": 48.0,
         "flush_level_mult": 6.0,
+        "flush_example": [
+            {
+                "rank": 2,
+                "suit": "Hearts"
+            },
+            {
+                "stone": true
+            },
+            {
+                "rank": 4,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            }
+        ],
+        "flush_planet_name": "Stellar Collision",
         "planet_texture_id": 9,
         "joker_texture_id": 10,
         "author": "AuraNova",
@@ -10918,56 +10901,37 @@ return [[ [
                         "rank": [
                             "a",
                             0
-                        ],
-                        "suit": [
-                            "Spades",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "b",
                             0
-                        ],
-                        "suit": [
-                            "Hearts",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "c",
                             0
-                        ],
-                        "suit": [
-                            "Clubs",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "d",
                             0
-                        ],
-                        "suit": [
-                            "Diamonds",
-                            true
                         ]
                     },
                     {
                         "rank": [
                             "e",
                             0
-                        ],
-                        "suit": [
-                            "Wilds",
-                            true
                         ]
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 5,
         "author": "Papyrus Semi",
         "example": [
             {
@@ -10992,6 +10956,7 @@ return [[ [
             }
         ],
         "planet_name": "Space Junk",
+        "planet_texture_id": 33,
         "key": "junk"
     },
     {
@@ -15754,6 +15719,193 @@ return [[ [
         "key": "odd_special"
     },
     {
+        "name": "Overly Flushed And Straight House",
+        "polyhedra_group": 3,
+        "credits_name": "OFaSH",
+        "desc": [
+            "3 of the same card in the same suit + 2 of the number after that in that suit",
+            "(ion_kuru had the idea before me)"
+        ],
+        "base_chips": 150.0,
+        "base_mult": 15.0,
+        "level_chips": 50.0,
+        "level_mult": 5.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            }
+        ],
+        "author": "TamerSoup625",
+        "key": "ofash"
+    },
+    {
+        "name": "Overly Straight And Flushed House",
+        "polyhedra_group": 8,
+        "credits_name": "OSaFH",
+        "desc": [
+            "2 of the same card in the same suit + 3 of the number after that in that suit"
+        ],
+        "base_chips": 150.0,
+        "base_mult": 15.0,
+        "level_chips": 50.0,
+        "level_mult": 5.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            0
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    },
+                    {
+                        "rank": [
+                            "a",
+                            1
+                        ],
+                        "suit": [
+                            "x",
+                            false
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 8,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            },
+            {
+                "rank": 7,
+                "suit": "Hearts"
+            }
+        ],
+        "author": "ion_kuru",
+        "key": "osafh"
+    },
+    {
         "name": "Parable",
         "polyhedra_group": 12,
         "desc": [
@@ -17082,40 +17234,25 @@ return [[ [
                 "pattern": [
                     {
                         "rank": 14,
-                        "suit": [
-                            "Spades",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 14,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 14,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 14,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ],
                         "special": "special"
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 4,
         "author": "Sustato",
         "key": "professionals"
     },
@@ -17259,40 +17396,25 @@ return [[ [
                 "pattern": [
                     {
                         "rank": 12,
-                        "suit": [
-                            "Spades",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 12,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 12,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
                         "rank": 12,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ],
                         "special": "special"
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 4,
         "author": "Sustato",
         "special_wild": true,
         "key": "queen_of_seasons"
@@ -18873,31 +18995,15 @@ return [[ [
             {
                 "pattern": [
                     {
-                        "suit": [
-                            "Spades",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
-                        "suit": [
-                            "Hearts",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
-                        "suit": [
-                            "Clubs",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ],
                         "special": "special"
                     },
                     {
@@ -18911,6 +19017,7 @@ return [[ [
                 "options": {}
             }
         ],
+        "different_suits_count": 5,
         "exact_seals": [
             "Red",
             "Purple",
@@ -20088,6 +20195,27 @@ return [[ [
         "key": "shiny_five_dime"
     },
     {
+        "name": "Mod Shenanigans",
+        "polyhedra_group": 2,
+        "desc": [
+            "Play an hand while in the shop",
+            "Opening a Booster Pack or using a Consumable does not count"
+        ],
+        "base_chips": 1e+100,
+        "base_mult": 1e+100,
+        "level_chips": 1e+100,
+        "level_mult": 1e+100,
+        "eval": [
+            {
+                "pattern": [],
+                "options": {}
+            }
+        ],
+        "author": "TamerSoup625",
+        "game_state": "SHOP",
+        "key": "shop"
+    },
+    {
         "name": "Oops! All 1s.",
         "polyhedra_group": 6,
         "desc": [
@@ -20512,6 +20640,7 @@ return [[ [
         "joker_chips_name": "Sprayer Joker",
         "joker_xmult": 3.0,
         "joker_xmult_name": "The Pelters",
+        "planet_texture_id": 34,
         "key": "skeet"
     },
     {
@@ -21263,8 +21392,8 @@ return [[ [
         ],
         "flush_name": "Spanish Flush",
         "flush_polyhedra_group": 3,
-        "flush_base_chips": 141.0,
-        "flush_base_mult": 14.0,
+        "flush_base_chips": 161.0,
+        "flush_base_mult": 16.0,
         "flush_level_chips": 41.0,
         "flush_level_mult": 4.0,
         "flush_planet_name": "Barnard's Star",
@@ -22492,6 +22621,7 @@ return [[ [
         "joker_mult": 100.0,
         "joker_chips": 1000.0,
         "joker_xmult": 10.0,
+        "planet_texture_id": 32,
         "key": "sus"
     },
     {
@@ -24896,6 +25026,61 @@ return [[ [
         "key": "what_hand"
     },
     {
+        "name": "The Wildcards",
+        "polyhedra_group": 3,
+        "desc": [
+            "Wild Jack, Wild Queen, Wild King"
+        ],
+        "base_chips": 40.0,
+        "base_mult": 4.0,
+        "level_chips": 20.0,
+        "level_mult": 2.0,
+        "eval": [
+            {
+                "pattern": [
+                    {
+                        "rank": 11,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 12,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    },
+                    {
+                        "rank": 13,
+                        "suit": [
+                            "Wilds",
+                            true
+                        ]
+                    }
+                ],
+                "options": {}
+            }
+        ],
+        "example": [
+            {
+                "rank": 11,
+                "suit": "Wilds"
+            },
+            {
+                "rank": 12,
+                "suit": "Wilds"
+            },
+            {
+                "rank": 13,
+                "suit": "Wilds"
+            }
+        ],
+        "author": "jonahbaumgartner",
+        "key": "wildcards"
+    },
+    {
         "name": "Wild Flush",
         "polyhedra_group": 3,
         "desc": [
@@ -25120,32 +25305,16 @@ return [[ [
             {
                 "pattern": [
                     {
-                        "rank": 13,
-                        "suit": [
-                            "Spades",
-                            true
-                        ]
+                        "rank": 13
                     },
                     {
-                        "rank": 13,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ]
+                        "rank": 13
                     },
                     {
-                        "rank": 13,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ]
+                        "rank": 13
                     },
                     {
-                        "rank": 13,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ]
+                        "rank": 13
                     }
                 ],
                 "options": {}
@@ -25153,32 +25322,16 @@ return [[ [
             {
                 "pattern": [
                     {
-                        "rank": 12,
-                        "suit": [
-                            "Spades",
-                            true
-                        ]
+                        "rank": 12
                     },
                     {
-                        "rank": 12,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ]
+                        "rank": 12
                     },
                     {
-                        "rank": 12,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ]
+                        "rank": 12
                     },
                     {
-                        "rank": 12,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ]
+                        "rank": 12
                     }
                 ],
                 "options": {}
@@ -25186,37 +25339,22 @@ return [[ [
             {
                 "pattern": [
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Spades",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Hearts",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Clubs",
-                            true
-                        ]
+                        "rank": 11
                     },
                     {
-                        "rank": 11,
-                        "suit": [
-                            "Diamonds",
-                            true
-                        ]
+                        "rank": 11
                     }
                 ],
                 "options": {}
             }
         ],
+        "different_suits_count": 4,
         "example": [
             {
                 "rank": 13,
