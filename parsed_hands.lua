@@ -7359,7 +7359,7 @@ return [[ [
                 "suit": "Clubs"
             }
         ],
-        "author": "ion_kuru",
+        "author": "iomkr",
         "key": "flush_water"
     },
     {
@@ -15724,7 +15724,7 @@ return [[ [
         "credits_name": "OFaSH",
         "desc": [
             "3 of the same card in the same suit + 2 of the number after that in that suit",
-            "(ion_kuru had the idea before me)"
+            "(iomkr had the idea before me)"
         ],
         "base_chips": 150.0,
         "base_mult": 15.0,
@@ -15902,7 +15902,7 @@ return [[ [
                 "suit": "Hearts"
             }
         ],
-        "author": "ion_kuru",
+        "author": "iomkr",
         "key": "osafh"
     },
     {

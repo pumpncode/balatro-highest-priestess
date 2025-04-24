@@ -11,4 +11,4 @@ Eval = {
     (a of x, a of x, a+1 of x, a+1 of x, a+1 of x)
 }
 Example = 8 of Hearts, 8 of Hearts, 8 of Hearts, 7 of Hearts, 7 of Hearts
-Author = ion_kuru
+Author = iomkr

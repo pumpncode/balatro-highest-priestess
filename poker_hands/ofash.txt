@@ -2,7 +2,7 @@ Name = Overly Flushed And Straight House
 Credits Name = OFaSH
 Desc = {
     3 of the same card in the same suit + 2 of the number after that in that suit
-    (ion_kuru had the idea before me)
+    (iomkr had the idea before me)
 }
 Base Chips = 150
 Base Mult = 15
