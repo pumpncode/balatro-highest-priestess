@@ -11,4 +11,4 @@ Eval = {
 }
 Contrast Mode = Clubs hc
 Example = King of Clubs, 10 of Clubs, 9 of Clubs, 7 of Clubs, 4 of Clubs
-Author = ion_kuru
+Author = iomkr
