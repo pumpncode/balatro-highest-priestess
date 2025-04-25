@@ -3745,7 +3745,7 @@ for type_index, stats in pairs(hand_group_stats) do
                 end
             end
             local level_average = math.floor((level_sum / hands_count) + 0.5)
-            if to_big then
+            if Big then
 ---@diagnostic disable-next-line: undefined-field
                 level_average = level_average:to_number()
             end
