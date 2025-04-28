@@ -16,3 +16,4 @@ Special Swap = Yes
 Author = GoldenLeaf
 Example = Ace of Spades, 2 of Hearts, 3 of Clubs, 5 of Hearts special, King of Clubs
 Planet Texture ID = 20
+Planet Name = X-Bar

@@ -16,3 +16,4 @@ Special Maximize = Yes
 Author = GoldenLeaf
 Example = 2 of Spades, 7 of Hearts, 7 of Clubs special, 8 of Hearts, Jack of Clubs
 Planet Texture ID = 22
+Planet Name = Z
