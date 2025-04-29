@@ -14070,6 +14070,7 @@ return [[ [
             }
         ],
         "planet_texture_id": 20,
+        "planet_name": "X-Bar",
         "key": "mean"
     },
     {
@@ -14123,6 +14124,7 @@ return [[ [
             }
         ],
         "planet_texture_id": 21,
+        "planet_name": "X-Tilde",
         "key": "median"
     },
     {
@@ -14708,6 +14710,7 @@ return [[ [
             }
         ],
         "planet_texture_id": 22,
+        "planet_name": "Z",
         "key": "mode"
     },
     {

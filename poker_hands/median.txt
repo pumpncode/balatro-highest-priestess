@@ -16,3 +16,4 @@ Special Balance = Yes
 Author = GoldenLeaf
 Example = Ace of Spades, 2 of Hearts, 3 of Clubs special, 5 of Hearts, King of Clubs
 Planet Texture ID = 21
+Planet Name = X-Tilde
