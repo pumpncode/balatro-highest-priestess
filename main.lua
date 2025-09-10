@@ -3745,7 +3745,7 @@ for type_index, stats in pairs(hand_group_stats) do
                 end
             end
             local level_average = math.floor((level_sum / hands_count) + 0.5)
-            if Big then
+            if type(level_average) ~= "number" then
 ---@diagnostic disable-next-line: undefined-field
                 level_average = level_average:to_number()
             end
@@ -3907,4 +3907,5 @@ SMODS.Challenge {
     jokers = {
         {id = "j_burnt"},
     },
+
 }
